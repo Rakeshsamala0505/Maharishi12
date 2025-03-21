@@ -22,7 +22,7 @@ const Header = () => {
             <i className="fas fa-times"></i>
           </label>
           <li>
-            <a href="/" onClick={(e) => e.preventDefault()}>
+            <a href="/">
               <i className="fas fa-home"></i>
             </a>
           </li>
