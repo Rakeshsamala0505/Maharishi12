@@ -1,0 +1,546 @@
+/* Container Styling */
+.home-container {
+    text-align: center;
+    width: 100%;
+    padding-top:100px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styling */
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Image Slider */
+  .image-slider {
+    width: 100%;  /* Full viewport width */
+    height: 80vh;  /* 25% of viewport height */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Image Styling */
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;  /* Smooth fade effect */
+  }
+  
+  /* Active Image - Crossfade Effect */
+  .slider-image.active {
+    opacity: 1;
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 970px) {
+    .header {
+      font-size: 20px;
+    }
+    .image-slider {
+      height: 30vh;
+    }
+    .slider-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;  /* Smooth fade effect */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 18px;
+    }
+    .image-slider {
+      height: 25vh;
+    }
+  }
+
+  /*updates*/
+  /* Base Styles */
+#latest-updates {
+  padding: 50px 0;
+}
+
+#latest-updates h2 {
+  color: #008cb3 !important;
+  font-size: 2rem !important;
+}
+
+
+#latest-updates h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top1 {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.custom-color {
+  color: #008cb3; /* Change color as needed */
+}
+
+.btn-primary {
+  background-color: transparent;
+  border: none;
+  border: 2px solid #008cb3;
+  color: #008cb3;
+  font-size: 1.3rem !important;
+  border-radius: 0.5rem;
+  padding: 5px 15px !important; 
+  font-weight: bold;
+
+}
+
+
+.btn-primary:hover {
+  background-color: #008cb3;
+  color: rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+
+/* Tablets and Small Screens */
+@media (max-width: 970px) {
+  #latest-updates {
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove margins to ensure full width */
+    width: 100vw; /* Force full viewport width */
+  }
+
+  #latest-updates h2 {
+    font-size: 1.5rem !important;
+    text-align: start;
+    margin-left: 30px; /* Ensure proper alignment */
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center; /* Center items properly */
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0 10px; /* Add slight padding for better readability */
+  }
+
+  .col-md-4 {
+    width: 100%;
+    margin: 0; /* Remove extra margin */
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto; /* Ensure full width and center alignment */
+    padding: 0px; /* Add padding for better readability */
+  }
+  .card-text {
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify; /* Ensures full width text fit */
+  }
+  .btn-primary {
+    font-size: 0.9rem !important;
+    padding: 5px 5px !important;
+  }
+
+  #latest-updates img {
+    width: 20%; /* Ensure images are responsive */
+    height: auto;
+    max-width: 100%; /* Prevent images from overflowing */
+  }
+}
+
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  #latest-updates {
+    padding: 30px 15px;
+  }
+
+  #latest-updates h2 {
+    font-size: 1.8rem;
+  }
+
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+/* Main Container */
+.millets-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 200px;
+  gap: 20px;
+}
+
+/* Left - Downloads */
+
+.downloads h3 {
+  color: #000000;
+  border-bottom: 2px solid #E67E22;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+  width: 20%;
+
+}
+
+.downloads ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.downloads li {
+  display: flex;
+  align-items: center; /* Aligns icon and text */
+  padding: 8px 0;
+  border-bottom: 0.1px solid #000000; /* Thin line below each item */
+}
+
+.downloads li :hover{
+  color: #000000;
+}
+
+.downloads li i {
+  color: #0073e6; /* Set icon color */
+  margin-right: 8px; /* Add space between icon and text */
+}
+
+
+.downloads a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: 500;
+  padding-left: 0px; /* Space between icon and text */
+}
+
+/* Middle - Research Content */
+.millets-content {
+  width: 45%;
+}
+
+.millets-content h2 {
+  color: #333;
+}
+
+.millets-content p {
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.millets-content a {
+  color: #E67E22;
+  font-weight: bold;
+}
+
+/* Right - Image */
+.millets-image {
+  width: 30%;
+}
+
+.millets-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+
+/* Tablet View - Ensuring Full-Screen Fit */
+@media (max-width: 970px) {
+  .millets-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; /* Ensuring no extra space on the sides */
+    box-sizing: border-box; /* Prevents overflow issues */
+  }
+
+  .downloads,
+  .millets-content,
+  .millets-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .downloads {
+    padding: 10px 0;
+  }
+
+  .downloads h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .downloads ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .downloads li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .downloads li i {
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  .downloads li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .millets-content {
+    padding: 10px;
+    text-align: justify;
+  }
+
+  .millets-content h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .millets-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .millets-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .millets-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .downloads ul {
+    text-align: left;
+  }
+  .downloads li {
+    display: flex;
+    align-items: start; /* Aligns icon and text */
+    padding: 8px 0;
+    border-bottom: 0.1px solid #000000; /* Thin line below each item */
+  }
+
+  .millets-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .millets-content p {
+    font-size: 0.9rem;
+  }
+  .millets-content h2 {
+    color: #00ffae;
+  }
+}
+#latest-news {
+  position: relative;
+  height: 77vh; /* Adjust to fit viewport */
+  overflow: hidden;
+  background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
+}
+
+.gx-4 {
+  gap: 20%;
+}
+
+#latest-news video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(4px); /* Background blur */
+}
+
+/* Text container styling */
+#latest-news .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 5%;
+  color: #fff; /* White text for contrast */
+}
+
+/* Text animation */
+#latest-news p {
+  font-size: 18px;
+  margin-top: 90px;
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+}
+
+/* Left side text animation */
+#latest-news p.left-text {
+  transform: translateX(-100px);
+}
+
+#latest-news p.left-text.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Right side text animation */
+#latest-news p.right-text {
+  transform: translateX(100px);
+}
+
+#latest-news p.right-text.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Button styles */
+#latest-news .btn-primary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 13px;
+  border-radius: 0;
+}
+
+#latest-news .btn-primary:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Responsive Styles */
+@media (max-width: 970px) {
+  #latest-news {
+    height: auto; /* Allow section to fit content */
+    padding: 20px 0;
+  }
+
+  #latest-news .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #latest-news .col-md-4 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #latest-news p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  #latest-news video {
+    filter: blur(2px); /* Reduce blur for small screens */
+  }
+
+  #latest-news .btn-primary {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+/* Default: Hide all sections initially */
+section {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Apply hover effect ONLY on screens wider than 1024px */
+@media screen and (min-width: 1024px) {
+  /* When hovering over a section, make it fully visible */
+  section:hover {
+    opacity: 1;
+  }
+
+  /* Make other sections invisible when one is hovered */
+  section:hover ~ section {
+    opacity: 0;
+  }
+
+  /* 🔹 Skip hover effect for the excluded section */
+  .no-hover-effect, 
+  .no-hover-effect:hover, 
+  .no-hover-effect ~ section {
+    opacity: 1 !important;
+  }
+}
+
+/* For small screens, always keep sections visible */
+@media screen and (max-width: 1023px) {
+  section {
+    opacity: 1 !important;
+  }
+}
+
+  
