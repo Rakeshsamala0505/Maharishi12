@@ -210,30 +210,9 @@ nav input {
     font-weight: 600;
   }
 
-@media screen and (max-width: 768px) {
-  .btn.menu-btn {
-    position: absolute;
-    top: 0px;
-    left: -14rem;
-    font-size: 25px;
-    cursor: pointer;
-    z-index: 100;
-    
-  }
-  .wrapper .nav-links {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align the items */
-}
-.millets-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0px 0px;
-  gap: 0px;
-}
-}
 
-@media screen and (max-width: 970px) {
+
+@media screen and (max-width: 480px) {
   .nav-links .drop-menu {
     background: #454545;}
   
@@ -250,7 +229,7 @@ nav input {
     align-items: center;
   }
   .logo {
-    padding-left: 20px;
+    padding-left: -50px;
     
   }
   
@@ -271,7 +250,7 @@ nav input {
   /* Style for the menu button */
   .wrapper .btn.menu-btn {
     position: absolute;
-    left: 100px;
+    left: 50px;
     top: 50%;
     transform: translateY(-50%);
     color: black;
