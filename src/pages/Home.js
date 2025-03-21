@@ -120,7 +120,7 @@ const Home = () => {
         <div className="downloads">
           <h3>Downloads</h3>
           <ul>
-            <li><i class="fa-solid fa-download"></i><a href="#">Annual Report</a></li>
+            <li><i class="fa-solid fa-download"></i><a href="/pdf/ALL_Millets_Varieties.pdf" download="ALL-Millets-Varieties.pdf">Millets</a></li>
             <li> <i class="fa-solid fa-download"></i><a href="#">AICRP Budget Releases</a></li>
             <li><i class="fa-solid fa-download"></i> <a href="#">For Farmers</a></li>
             <li><i class="fa-solid fa-download"></i> <a href="#">Publications</a></li>
