@@ -260,7 +260,7 @@ nav input {
 .btn.close-btn {
   position: absolute;
   padding-top: 50px;
-  left: 300px;
+  left: 15rem;
   font-size: 24px;
   cursor: pointer;
   z-index: 101;
@@ -273,7 +273,7 @@ nav input {
   .wrapper .nav-links {
     position: fixed;
     height: 105vh;
-    width: 100%;
+    width: 75%;
     max-width: 390px;
     top: -35px;
     left: -100%;
@@ -409,7 +409,7 @@ nav input {
     max-height: 300px;
     padding: 0px;
     line-height: 1rem;
-    width: 19rem;
+    width: 16rem;
   }
   
 }
