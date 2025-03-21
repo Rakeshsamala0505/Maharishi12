@@ -220,7 +220,7 @@ nav input {
     display: flex;
     align-items: center;
     justify-content: center; /* Center everything */
-    padding: 0 30px;
+    padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto; /* Prevents stretching beyond screen width */
   }
@@ -229,7 +229,7 @@ nav input {
     align-items: center;
   }
   .logo {
-    padding-left: -50px;
+    padding-left: -60px;
     
   }
   
