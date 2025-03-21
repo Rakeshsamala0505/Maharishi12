@@ -61,7 +61,7 @@ const Home = () => {
 
       {/* Latest Updates Section */}
       <section id="latest-updates" className="container py-5">
-        <h2 className="text-dark fs-1 text-start">HIGHLIGHTS</h2>
+        <h2 className="text-dark fs-1 text-start">HIGHLIGS</h2>
         <div className="row">
           {/* Update 1 */}
           <div className="col-md-4 mb-4">
