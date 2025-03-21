@@ -261,7 +261,9 @@
 }
 
 .millets-content h2 {
+  font-size: 1.1rem;
   color: #333;
+  font-weight: 550;
 }
 
 .millets-content p {
@@ -353,9 +355,9 @@
   }
 
   .millets-content h2 {
-    color: #ff0000;
-    font-size: 2rem;
-    text-align: center;
+    color: #000000;
+    font-size: 1.3rem;
+    text-align: left;
     margin-bottom: 10px;
   }
 
@@ -366,11 +368,11 @@
   }
 
   .millets-image {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    width: 100%;
+    width: 50%;
   }
 
   .millets-image img {
@@ -379,6 +381,7 @@
     height: auto;
     object-fit: cover;
   }
+
 }
 
 
@@ -511,30 +514,27 @@
 }
 
 /* Default: Hide all sections initially */
-section {
+/* section {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
+} */
 
 /* Apply hover effect ONLY on screens wider than 1024px */
-@media screen and (min-width: 1024px) {
-  /* When hovering over a section, make it fully visible */
+/* @media screen and (min-width: 1024px) {
   section:hover {
     opacity: 1;
   }
 
-  /* Make other sections invisible when one is hovered */
   section:hover ~ section {
     opacity: 0;
   }
 
-  /* 🔹 Skip hover effect for the excluded section */
   .no-hover-effect, 
   .no-hover-effect:hover, 
   .no-hover-effect ~ section {
     opacity: 1 !important;
   }
-}
+} */
 
 /* For small screens, always keep sections visible */
 @media screen and (max-width: 1023px) {

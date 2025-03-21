@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
+import aboutImage from "../assets/about_image.png"; 
+
 
 const images = [
   "/images/foxtail-home1.avif",
@@ -135,18 +137,20 @@ const Home = () => {
 
         {/* Research Description */}
         <div className="millets-content">
-          <h2>Indian Institute of Millets Research</h2>
+          <h2>Millet And OtHer Ancient GRains International ReSearcH Initiative</h2>
           <p>
-            The Indian Institute of Millets Research (IIMR) is a premier agricultural research institute engaged in basic and strategic research on sorghum and other millets under the Indian Council of Agricultural Research (ICAR).
+          This initiative was proposed in G20 MACS meeting in April 2023 in India and endorsed by G20 MACS participants to contribute to improving world food and nutritional security through bringing millets in global consumer’s diet.
+This initiative provides a framework to establish strategic research and organization priorities for millet research at the international level in both developed and developing countries. The MAHARISHI fosters communication between the research community, funders and global policy makers and aims at securing efficient and long-term investments to meet millet research and development goals. It also initiates and supports activities in order to enhance communication and increase access of all to information, resources, and technologies with respect to millets.
           </p>
           <p>
-            IIMR coordinates and facilitates millet research at the national level through the All India Coordinated Research Projects on Sorghum, Pearl Millet, and Small Millets and provides linkages with various national and international agencies. <a href="#">Read More</a>
+          The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge, and ideas to improve millet productivity, quality and sustainability          
           </p>
+          <p>The major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets, enhancing yield and promoting sustainable and resilient agricultural production systems while considering societal demands by broadening the platform to global level for maximising opportunities for gaining added value internationally.</p>
         </div>
 
         {/* Image Section */}
         <div className="millets-image">
-          <img src="https://i.imgur.com/XRfz1xX.jpg" alt="Millets Research Institute" />
+          <img src={aboutImage} alt="Millets Research Institute" />
         </div>
       </section>
       <section id="latest-news" className="no-hover-effect">
