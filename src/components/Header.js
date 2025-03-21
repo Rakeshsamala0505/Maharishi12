@@ -22,12 +22,12 @@ const Header = () => {
             <i className="fas fa-times"></i>
           </label>
           <li>
-            <a href="/">
+            <a href="/" onClick={(e) => e.preventDefault()}>
               <i className="fas fa-home"></i>
             </a>
           </li>
           <li>
-            <a href="#" className="desktop-item">MAHARISHI</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">MAHARISHI</a>
             <input type="checkbox" id="showDrop1" />
             <label htmlFor="showDrop1" className="mobile-item">
               Maharishi &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -40,7 +40,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">ABOUT</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">ABOUT</a>
             <input type="checkbox" id="showDrop2" />
             <label htmlFor="showDrop2" className="mobile-item">
               About &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -52,7 +52,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">MILLETS</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">MILLETS</a>
             <input type="checkbox" id="showDrop3" />
             <label htmlFor="showDrop3" className="mobile-item">
               Millets &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -63,7 +63,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">MILLET INITIATIVE</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">MILLET INITIATIVE</a>
             <input type="checkbox" id="showDrop4" />
             <label htmlFor="showDrop4" className="mobile-item">
               Millets Initiative &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -77,7 +77,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">PUBLICATIONS</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">PUBLICATIONS</a>
             <input type="checkbox" id="showDrop5" />
             <label htmlFor="showDrop5" className="mobile-item">
               Publications &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -88,7 +88,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">MEDIA</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">MEDIA</a>
             <input type="checkbox" id="showDrop6" />
             <label htmlFor="showDrop6" className="mobile-item">
               Media &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
@@ -100,7 +100,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="desktop-item">EXTERNAL LINKS</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="desktop-item">EXTERNAL LINKS</a>
             <input type="checkbox" id="showDrop7" />
             <label htmlFor="showDrop7" className="mobile-item">
               External Links &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
