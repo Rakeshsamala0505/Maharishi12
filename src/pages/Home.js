@@ -77,7 +77,7 @@ const Home = () => {
                   objectives. It provides a platform for knowledge sharing on
                   specific research and organizational development.
                 </p>
-                <a href="#" className="btn btn-primary py-3 px-4 fs-4">Learn More</a>
+                <a href="#" className="btn btn-primary py-0 px-4 fs-4">Learn More</a>
               </div>
             </div>
           </div>

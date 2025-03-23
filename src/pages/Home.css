@@ -65,6 +65,7 @@
     .image-slider {
       height: 25vh;
     }
+    
   }
 
   /*updates*/
@@ -142,36 +143,44 @@
   }
 
   .row {
-    flex-direction: column;
-    align-items: center; /* Center items properly */
-    margin: 0; /* Remove unnecessary margins */
-    padding: 0 10px; /* Add slight padding for better readability */
+    flex-wrap: wrap; /* Ensures proper stacking */
+    justify-content: center; /* Centers cards */
   }
 
   .col-md-4 {
-    width: 100%;
-    margin: 0; /* Remove extra margin */
+    width: 100% !important; /* Make sure each card takes full width */
+    padding: 0 10px; /* Add slight padding to prevent edge-cutting */
   }
 
   .card {
-    width: 100%;
-    margin: 0 auto; /* Ensure full width and center alignment */
-    padding: 0px; /* Add padding for better readability */
-  }
-  .card-text {
-    width: 100%;
-    font-size: 1rem;
-    text-align: justify; /* Ensures full width text fit */
-  }
-  .btn-primary {
-    font-size: 0.9rem !important;
-    padding: 5px 5px !important;
+    width: 100% !important; /* Ensure full width */
+    margin: 10px auto; /* Center cards properly */
+    padding: 0px; /* Remove unwanted padding */
   }
 
-  #latest-updates img {
-    width: 20%; /* Ensure images are responsive */
-    height: auto;
-    max-width: 100%; /* Prevent images from overflowing */
+  .card-img-top1 {
+    width: 100% !important; /* Ensure full width images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  .card-body {
+    text-align: left; /* Ensure text is properly aligned */
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    text-align: justify; /* Improve readability */
+  }
+
+  .btn-primary {
+    font-size: 1rem !important;
+    padding: 5px 10px !important;
   }
 }
 
@@ -186,21 +195,45 @@
     font-size: 1.8rem;
   }
 
+  .row {
+    flex-wrap: wrap; /* Ensures proper stacking */
+    justify-content: center; /* Centers cards */
+  }
+
   .col-md-4 {
-    width: 100%;
+    width: 100% !important; /* Make sure each card takes full width */
+    padding: 0 10px; /* Add slight padding to prevent edge-cutting */
+  }
+
+  .card {
+    width: 100% !important; /* Ensure full width */
+    margin: 10px auto; /* Center cards properly */
+    padding: 0px; /* Remove unwanted padding */
+  }
+
+  .card-img-top1 {
+    width: 100% !important; /* Ensure full width images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  .card-body {
+    text-align: left; /* Ensure text is properly aligned */
+    padding: 15px;
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem !important;
   }
 
   .card-text {
     font-size: 1rem;
+    text-align: justify; /* Improve readability */
   }
 
   .btn-primary {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    font-size: 1rem !important;
+    padding: 5px 10px !important;
   }
 }
 /* Main Container */
@@ -405,7 +438,7 @@
     font-size: 0.9rem;
   }
   .millets-content h2 {
-    color: #00ffae;
+    color: #5c5c5c;
   }
 }
 #latest-news {
