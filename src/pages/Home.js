@@ -121,17 +121,10 @@ const Home = () => {
           <h3>Downloads</h3>
           <ul>
             <li><i class="fa-solid fa-download"></i><a href="/pdf/ALL_Millets_Varieties.pdf" download="ALL-Millets-Varieties.pdf">Millets</a></li>
-            <li> <i class="fa-solid fa-download"></i><a href="#">AICRP Budget Releases</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">For Farmers</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">Publications</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">Millet Recipes</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">Millets News (External Links)</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">IIMR Newsletters</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">VIC Proforma</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">CVRC Proforma</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">Holiday List 2025</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">Pensioner’s Page</a></li>
-            <li><i class="fa-solid fa-download"></i> <a href="#">CGHS Hospital List</a></li>
+            <li><i class="fa-solid fa-download"></i><a href="/pdf/transfer_of_sorghum.pdf" download="transfer_of_sorghum.pdf">transfer of sorghum</a></li>
+            <li><i class="fa-solid fa-download"></i><a href="/pdf/Millets_news.pdf" download="Millets_news.pdf">Millets News</a></li>
+            <li><i class="fa-solid fa-download"></i><a href="/pdf/Millets_Recipes.pdf" download="Millets_Recipes.pdf">Millets Recipes</a></li>
+            <li><i class="fa-solid fa-download"></i><a href="/pdf/technology_kharif.pdf" download="technology_kharif.pdf">Kharif & sorghum</a></li>
           </ul>
         </div>
 
@@ -141,10 +134,10 @@ const Home = () => {
           <p>
           This initiative was proposed in G20 MACS meeting in April 2023 in India and endorsed by G20 MACS participants to contribute to improving world food and nutritional security through bringing millets in global consumer’s diet.
 This initiative provides a framework to establish strategic research and organization priorities for millet research at the international level in both developed and developing countries. The MAHARISHI fosters communication between the research community, funders and global policy makers and aims at securing efficient and long-term investments to meet millet research and development goals. It also initiates and supports activities in order to enhance communication and increase access of all to information, resources, and technologies with respect to millets.
-          </p>
+          </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <p>
           The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge, and ideas to improve millet productivity, quality and sustainability          
-          </p>
+          </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <p>The major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets, enhancing yield and promoting sustainable and resilient agricultural production systems while considering societal demands by broadening the platform to global level for maximising opportunities for gaining added value internationally.</p>
         </div>
 
