@@ -36,7 +36,7 @@ const Header = () => {
             <li><Link to="/purpose">Purpose of Maharishi</Link></li>
             <li><Link to ="/genesis">Genesis</Link></li>
               <li><Link to="/G20">G20 and Maharishi</Link></li>
-              <li><Link to="/Implementation">Implementation of Maharishi</Link></li>
+              {/*<li><Link to="/Implementation">Implementation of Maharishi</Link></li>*/}
             </ul>
           </li>
           <li>
@@ -47,7 +47,7 @@ const Header = () => {
             </label>
             <ul className="drop-menu">
               <li><Link to ="/Structure">Structure</Link></li>
-              <li><Link to="/ExpertWorkingGroups">Expert Working Groups</Link></li>
+              {/*<li><Link to="/ExpertWorkingGroups">Expert Working Groups</Link></li>*/}
               <li><Link to="/Charter">Charter</Link></li>
             </ul>
           </li>
@@ -71,9 +71,9 @@ const Header = () => {
             <ul className="drop-menu">
               <li><Link to="/SustainableFarming">Sustainable Farming</Link></li>
               <li><Link to="#">Nutrition Benefits</Link></li>
-              <li><Link to="/NutritionBenefits">Projects</Link></li>
+              {/*<li><Link to="/NutritionBenefits">Projects</Link></li>
               <li><Link to="/Projects">Partners</Link></li>
-              <li><Link to="/Partners">Themes</Link></li>
+              <li><Link to="/Partners">Themes</Link></li>*/}
             </ul>
           </li>
           <li>
@@ -83,7 +83,7 @@ const Header = () => {
               Publications &nbsp;<i className="fa fa-caret-down" aria-hidden="true"></i>
             </label>
             <ul className="drop-menu">
-              <li><Link to="/IIMRResearch">IIMR research reports</Link></li>
+              {/*<li><Link to="/IIMRResearch">IIMR research reports</Link></li>*/}
               <li><Link to="/AnnualReports">Annual reports</Link></li>
             </ul>
           </li>
