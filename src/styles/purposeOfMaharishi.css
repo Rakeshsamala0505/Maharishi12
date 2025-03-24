@@ -51,18 +51,25 @@
 
 
 /* Responsive adjustments */
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 480px) {
     .container {
         flex: 1;
         max-width: 1200px;
         margin: auto;
         padding: 30px;
-        padding-top: 10%; /* Adjust this based on your header height */
+        padding-top: 30%; /* Adjust this based on your header height */
     }
     
     .text_content {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 0px;
+        line-height: 1.6;
+    }
+    .text-content {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+        text-align: justify;
     }
     
     .title {
