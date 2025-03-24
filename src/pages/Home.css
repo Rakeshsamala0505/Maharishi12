@@ -687,7 +687,7 @@
   }
 }
 
-@media screen and (min-width: 1290px) {
+@media (min-width: 1290px) {
   .section-container .card {
     display: flex;
     flex-direction: row;
@@ -700,12 +700,88 @@
     margin: 20px 0;
   }
   /* Main Container */
-.millets-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 50px;
-  gap: 20px;
-}
+  .millets-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 200px;
+    gap: 20px;
+  }
+  
+  /* Left - Downloads */
+  
+  .downloads h3 {
+    color: #000000;
+    border-bottom: 2px solid #E67E22;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    width: 20%;
+  
+  }
+  
+  .downloads ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .downloads li {
+    display: flex;
+    align-items: center; /* Aligns icon and text */
+    padding: 8px 0;
+    border-bottom: 0.1px solid #000000; /* Thin line below each item */
+  }
+  
+  .downloads li :hover{
+    color: #000000;
+  }
+  
+  .downloads li i {
+    color: #0073e6; /* Set icon color */
+    margin-right: 8px; /* Add space between icon and text */
+  }
+  
+  
+  .downloads a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: 500;
+    padding-left: 0px; /* Space between icon and text */
+  }
+  
+  /* Middle - Research Content */
+  .millets-content {
+    width: 45%;
+  }
+  
+  .millets-content h2 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 550;
+  }
+  
+  .millets-content p {
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .millets-content a {
+    color: #E67E22;
+    font-weight: bold;
+  }
+  
+  /* Right - Image */
+  .millets-image {
+    width: 30%;
+  }
+  
+  .millets-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
 }
