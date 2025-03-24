@@ -183,6 +183,34 @@ This initiative provides a framework to establish strategic research and organiz
           </div>
         </div>
       </section>
+      <section className="section-container">
+      <div className="card">
+        <img src="images/PM.avif" alt="Chairman" />
+        <div className="card-content">
+          <p>
+            The Prime Minister noted that millets are primarily cultivated in
+            12-13 different states in the country where at-home consumption per
+            month per person was not more than 3 kilograms whereas the
+            consumption has increased to 14 kilograms per month today....
+          </p>
+          <a
+            href="https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr"
+          >
+            read more
+          </a>
+          <p className="quote-author">- Shri Narendra Modi</p>
+          <p className="quote-position">Prime Minister</p>
+        </div>
+      </div>
+
+      <div className="card">
+        <img src="images/DG.jpg" alt="Research" />
+        <div className="card-content">
+          <p className="quote-author">Dr Himanshu Pathak</p>
+          <p className="quote-position">DG, ICAR and Secretary DARE</p>
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
