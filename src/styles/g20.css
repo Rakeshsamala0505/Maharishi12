@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+    background-attachment: fixed;
+    background-position-y: 130px;
+    opacity: 0.2; /* Adjust transparency */
+    z-index: -1;
+}
+
+.container {
+    align-items: center;
+    padding-top: 10rem;
+}
+
+/* Text content styles */
+.text_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container__content {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Title Styling */
+.title, h1 {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    font-weight: 550;
+    color: #568203;
+}
+
+/* Paragraph styling */
+.container__content p {
+    width: 50%;
+    font-size: 16px;
+    color: #555;
+    line-height: 2;
+    text-align: justify;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+    background-attachment: fixed;
+    background-position-y: 130px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+
+/* Responsive styles for screens smaller than 480px */
+
+@media (max-width: 480px) {
+    body {
+        display: block; /* Prevent flex from squishing elements */
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        padding-top: 5rem;
+        text-align: center; /* Ensures proper alignment */
+    }
+
+    .title, h1 {
+        font-size: 20px;
+        text-align: center; /* Center-align titles for better mobile UX */
+        width: 100%;
+    }
+
+    .text_content {
+        display: block; /* Prevents flex from causing layout shifts */
+        text-align: center; 
+        padding: 0 15px; /* Add proper spacing */
+        max-width: 100%;
+    }
+
+    .container__content {
+        margin-bottom: 15px;
+    }
+
+    .container__content p {
+        width: 100%; /* Ensures paragraphs are full width */
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .container::before {
+        background-size: 70%; /* Adjusts image size */
+        background-position: center top;
+        background-attachment: scroll; /* Prevents issues with fixed background */
+        background-position-y: 100px; /* Moves background to proper position */
+    }
+
+    .text-center img {
+        width: 90%; /* Ensure images resize properly */
+        max-width: 280px;
+        height: auto;
+    }
+}

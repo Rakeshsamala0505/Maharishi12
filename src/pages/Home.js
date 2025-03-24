@@ -21,7 +21,7 @@ const Home = () => {
       setCurrentIndex((prevIndex) => 
         (prevIndex + 1) % images.length // Loop seamlessly
       );
-    }, 3000); // Change every 5 seconds
+    }, 2000); // Change every 2 seconds
 
     return () => clearInterval(interval);
   }, []);

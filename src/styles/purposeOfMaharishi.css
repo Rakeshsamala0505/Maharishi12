@@ -57,7 +57,7 @@
         max-width: 1200px;
         margin: auto;
         padding: 30px;
-        padding-top: 30%; /* Adjust this based on your header height */
+        padding-top: 20% !important; /* Adjust this based on your header height */
     }
     
     .text_content {
@@ -65,19 +65,13 @@
         padding: 0px;
         line-height: 1.6;
     }
-    .text-content {
-        font-size: 1rem;
-        color: #333;
-        line-height: 1.6;
-        text-align: justify;
-    }
-    
+
     .title {
         font-size: 1.5rem;
         color: #4c7c13;
         font-weight: bold;
         margin-bottom: 10px;
-        text-align: left;
+        text-align: left!important;
     }
     
     /* Fixed header (assuming you have one) */

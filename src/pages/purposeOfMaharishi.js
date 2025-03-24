@@ -1,5 +1,4 @@
-// purposeOfMaharishi.js
-// This component explains the purpose and significance of Maharishi with a focus on millets.
+
 
 import React from "react";
 import "../styles/purposeOfMaharishi.css"; // Importing external CSS
