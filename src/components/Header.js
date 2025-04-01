@@ -1,4 +1,3 @@
-// MegaMenu.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +28,11 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && event.target.id !== 'menu-btn') {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target) &&
+        event.target.id !== 'menu-btn'
+      ) {
         setMenuOpen(false);
       }
 
@@ -83,7 +86,7 @@ const Header = () => {
             src="/icons/maharshi_log.png"
             alt="Logo"
             className="logo"
-            style={{ height: '50px' }}
+            
           />
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
             <label htmlFor="close-btn" className="btn close-btn">
@@ -325,7 +328,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <label htmlFor="menu-btn" className="btn menu-btn">
+        <label htmlFor="menu-btn" className={`btn menu-btn ${menuOpen ? 'hidden' : ''}`}>
           <FontAwesomeIcon icon={faBars} />
         </label>
         <input type="checkbox" id="menu-btn" checked={menuOpen} onChange={toggleMenu} style={{ display: 'none' }} />

@@ -23,9 +23,16 @@ nav .wrapper {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center !important;
+  justify-content: center !important; /* Changed from center !important to space-between */
 }
-
+nav .wrapper .logo {
+  color: #fff;
+  font-size: 300px; /* Removed from here */
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin-right: auto;
+  height: 60px; /* Default height (small screen) */
+}
 .wrapper .logo a {
   color: #f2f2f2;
   font-size: 30px;
@@ -157,6 +164,10 @@ ul {
   font-size: 20px;
   cursor: pointer;
   display: none;
+  border: none; /* Remove the default button border */
+  outline: none; /* Remove the outline on focus/click */
+  background: transparent; /* Ensure the button has no background */
+  padding: 0; /* Reset padding to ensure consistent styling */
 }
 
 .wrapper .btn.close-btn {
@@ -168,6 +179,10 @@ ul {
 }
 
 @media screen and (max-width: 970px) {
+  nav .wrapper  {
+    justify-content:left !important;
+    
+  }
   .wrapper .btn {
     display: flex;
     justify-content: space-between;
@@ -181,11 +196,14 @@ ul {
     position: relative;
     padding-left: 8rem;
   }
-
-  .wrapper .logo {
-    margin-left: 10px;
+  
+  .wrapper .btn.menu-btn.hidden {
+    display: none;
   }
 
+  nav .wrapper .logo {
+    height: 40px; /* Larger height for big screens */
+  }
   .wrapper .nav-links {
     position: fixed;
     height: 100%;
