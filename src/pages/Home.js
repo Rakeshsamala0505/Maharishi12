@@ -116,36 +116,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="millets-section">
-        <div className="downloads">
-          <h3>Downloads</h3>
-          <ul>
-            <li><i class="fa-solid fa-download"></i><a href="/pdf/ALL_Millets_Varieties.pdf" download="ALL-Millets-Varieties.pdf">Millets</a></li>
-            <li><i class="fa-solid fa-download"></i><a href="/pdf/transfer_of_sorghum.pdf" download="transfer_of_sorghum.pdf">transfer of sorghum</a></li>
-            <li><i class="fa-solid fa-download"></i><a href="/pdf/Millets_news.pdf" download="Millets_news.pdf">Millets News</a></li>
-            <li><i class="fa-solid fa-download"></i><a href="/pdf/Millets_Recipes.pdf" download="Millets_Recipes.pdf">Millets Recipes</a></li>
-            <li><i class="fa-solid fa-download"></i><a href="/pdf/technology_kharif.pdf" download="technology_kharif.pdf">Kharif & sorghum</a></li>
-          </ul>
-        </div>
-
-        {/* Research Description */}
-        <div className="millets-content">
-          <h2>Millet And OtHer Ancient GRains International ReSearcH Initiative</h2>
-          <p>
-          This initiative was proposed in G20 MACS meeting in April 2023 in India and endorsed by G20 MACS participants to contribute to improving world food and nutritional security through bringing millets in global consumer’s diet.
-This initiative provides a framework to establish strategic research and organization priorities for millet research at the international level in both developed and developing countries. The MAHARISHI fosters communication between the research community, funders and global policy makers and aims at securing efficient and long-term investments to meet millet research and development goals. It also initiates and supports activities in order to enhance communication and increase access of all to information, resources, and technologies with respect to millets.
-          </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <p>
-          The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge, and ideas to improve millet productivity, quality and sustainability          
-          </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <p>The major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets, enhancing yield and promoting sustainable and resilient agricultural production systems while considering societal demands by broadening the platform to global level for maximising opportunities for gaining added value internationally.</p>
-        </div>
-
-        {/* Image Section */}
-        <div className="millets-image">
-          <img src={aboutImage} alt="Millets Research Institute" />
-        </div>
-      </section>
+      
       <section id="latest-news" className="no-hover-effect">
         <video autoPlay muted loop>
           <source src="images/millets_video2.mp4" type="video/mp4" />
