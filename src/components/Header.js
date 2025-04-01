@@ -93,7 +93,7 @@ const Header = () => {
               <FontAwesomeIcon icon={faTimes} />
             </label>
             <li>
-              <a href="#" onClick={closeMenuOnLinkClick}>
+              <a href="/" onClick={closeMenuOnLinkClick}>
                 <FontAwesomeIcon icon={faHome} />
               </a>
             </li>
@@ -164,7 +164,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="charter" className="subheader" onClick={closeMenuOnLinkClick}>
                     Charter
                   </a>
                 </li>
