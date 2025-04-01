@@ -166,9 +166,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>
-  Charter
-</Link>
+                <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Charter</Link>
                 </li>
               </ul>
             </li>
