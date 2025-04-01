@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -164,9 +166,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="charter" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Charter
-                  </a>
+                <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>
+  Charter
+</Link>
                 </li>
               </ul>
             </li>
