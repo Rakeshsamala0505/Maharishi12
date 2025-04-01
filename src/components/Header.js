@@ -4,7 +4,7 @@ import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-const MegaMenu = () => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdowns, setDropdowns] = useState({
     showDrop1: false,
@@ -327,4 +327,4 @@ const MegaMenu = () => {
   );
 };
 
-export default MegaMenu;
+export default Header;

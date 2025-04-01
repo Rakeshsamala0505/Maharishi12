@@ -9,7 +9,7 @@
 .home-container {
     text-align: center;
     width: 100%;
-    padding-top:100px;
+    padding-top:20px;
     box-sizing: border-box;
   }
   
@@ -89,7 +89,7 @@
 
 #latest-updates h2 {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 550;
 }
 
 .card {
