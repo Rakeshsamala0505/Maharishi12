@@ -196,10 +196,12 @@
 @media (max-width: 480px) {
   #latest-updates {
     padding: 30px 15px;
+    padding-top: 0rem !important
   }
 
   #latest-updates h2 {
     font-size: 1.8rem;
+    margin-left: 0;
   }
 
   .row {
@@ -214,7 +216,7 @@
 
   .card {
     width: 100% !important; /* Ensure full width */
-    margin: 10px auto; /* Center cards properly */
+    margin: 0px auto; /* Center cards properly */
     padding: 0px; /* Remove unwanted padding */
   }
 
@@ -234,7 +236,7 @@
 
   .card-text {
     font-size: 0.9rem; /* Smaller font for better fit */
-    padding: 5px 10px; /* Less padding to prevent gaps */
+    padding: 0px 0px; /* Less padding to prevent gaps */
     line-height: 1.5; /* Reduces extra space */
   }
   .btn-primary {
@@ -245,7 +247,7 @@
 
 #latest-news {
   position: relative;
-  height: 77vh; /* Adjust to fit viewport */
+  height: 50vh !important; /* Adjust to fit viewport */
   overflow: hidden;
   background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
 }
@@ -326,6 +328,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: -5rem;
   }
 
   #latest-news .col-md-4 {
