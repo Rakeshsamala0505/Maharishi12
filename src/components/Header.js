@@ -84,12 +84,12 @@ const Header = () => {
     <nav>
       <div className="wrapper d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center">
-          <img
+          <Link to="/"><img
             src="/icons/maharshi_log.png"
             alt="Logo"
             className="logo"
             
-          />
+          /></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
             <label htmlFor="close-btn" className="btn close-btn">
               <FontAwesomeIcon icon={faTimes} />
