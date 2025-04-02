@@ -173,15 +173,20 @@ ul {
 .wrapper .btn.close-btn {
   color: white;
   position: absolute;
-  left: 0%;
+  left: -10%;
   top: 10px;
   padding-left: 15rem;
 }
 
 @media screen and (max-width: 970px) {
   nav .wrapper  {
-    justify-content:left !important;
-    
+    display: flex;
+    justify-content: space-between; /* Changed from center !important to space-between */
+    align-items: center;
+  }
+  nav .wrapper .logo {
+    height: 40px; /* Larger height for big screens */
+    margin-left: 0;
   }
   .wrapper .btn {
     display: flex;
@@ -201,9 +206,7 @@ text-align: right;
     display: none;
   }
 
-  nav .wrapper .logo {
-    height: 40px; /* Larger height for big screens */
-  }
+  
   .wrapper .nav-links {
     position: fixed;
     height: 100%;
