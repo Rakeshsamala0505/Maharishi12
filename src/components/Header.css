@@ -181,12 +181,12 @@ ul {
 @media screen and (max-width: 970px) {
   nav .wrapper  {
     display: flex;
-    justify-content: space-between; /* Changed from center !important to space-between */
-    align-items: center;
+    justify-content: space-between !important; /* Changed from center !important to space-between */
   }
   nav .wrapper .logo {
     height: 40px; /* Larger height for big screens */
-    margin-left: 0;
+    text-align:left;
+    align-items: start;
   }
   .wrapper .btn {
     display: flex;
