@@ -180,13 +180,14 @@ ul {
 
 @media screen and (max-width: 970px) {
   nav .wrapper  {
-    display: flex;
-    justify-content: space-between !important; /* Changed from center !important to space-between */
-  }
+    position: relative;
+     }
   nav .wrapper .logo {
-    height: 40px; /* Larger height for big screens */
-    text-align:left;
-    align-items: start;
+    height: 40px; /* Adjusted height for smaller screens */
+    position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
   }
   .wrapper .btn {
     display: flex;
