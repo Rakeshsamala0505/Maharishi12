@@ -34,7 +34,7 @@ footer {
 }
 .footer-section h4 {
   color: #fdbf47;
-  font-size: 2em;
+  font-size: 1.8em; /* Reduced font size */
   font-weight: bold;
 }
 .footer-section a {
@@ -42,7 +42,7 @@ footer {
   text-decoration: none;
   display: block;
   margin: 5px 0;
-  font-size: 17px;
+  font-size: 16px; /* Reduced font size */
 }
 .footer-section a:hover {
   text-decoration: underline;
@@ -54,7 +54,7 @@ footer {
   gap: 20px;
 }
 .social-icons a {
-  font-size: 4em;
+  font-size: 3.5em; /* Reduced font size */
   color: white;
 }
 .social-icons a:hover {
@@ -64,7 +64,7 @@ footer {
 }
 /* Text styles */
 p {
-  font-size: 17px;
+  font-size: 16px; /* Reduced font size */
 }
 @media screen and (max-width: 700px) {
   /* Ensure the footer sticks to the bottom */
@@ -103,7 +103,7 @@ p {
   }
 
   .footer-section h4 {
-    font-size: 2em; /* Decreased font size */
+    font-size: 1.8em; /* Decreased font size */
   }
 
   .footer-section a {
@@ -127,5 +127,20 @@ p {
 @media screen and (min-width: 701px) and (max-width: 1024px) {
   .footer-container{
     justify-content: space-around;
+  }
+    .footer-section h4 {
+    font-size: 1.6em; /* Adjusted font size for laptops */
+  }
+
+  .footer-section a {
+    font-size: 15px; /* Adjusted font size for laptops */
+  }
+
+  p {
+    font-size: 15px; /* Adjusted font size for laptops */
+  }
+
+  .social-icons a {
+    font-size: 3.2em; /* Adjusted font size for laptops */
   }
 }
