@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
-import aboutImage from "../assets/about_image.png"; 
 
 
 const images = [
@@ -42,9 +41,6 @@ const Home = () => {
     window.addEventListener("scroll", animateTextOnScroll);
     return () => window.removeEventListener("scroll", animateTextOnScroll);
   }, []);
-
-  
-
   return (
     <div className="home-container">  
       {/* Image Slider */}

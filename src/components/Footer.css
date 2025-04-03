@@ -4,16 +4,19 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 /* Wrap everything in a full-height container */
 .page-container {
     display: flex;
     flex-direction: column;
 }
+
+
 /* Ensure the footer sticks to the bottom */
 footer {
     background-color: #002855;
     color: white;
-    padding: 0px 0px;
+    padding: 0px 60px;
     width: 100%;
 }
 
@@ -21,7 +24,7 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px 35px;
+    padding: 20px 10px;
     flex-wrap: wrap;
     font-size: 9px;
 }
@@ -44,7 +47,7 @@ footer {
     text-decoration: none;
     display: block;
     margin: 5px 0;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .footer-section a:hover {
