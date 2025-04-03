@@ -321,7 +321,7 @@
 /* Responsive Styles */
 @media (max-width: 970px) {
   #latest-news {
-    height: auto; /* Allow section to fit content */
+    height: auto !important; /* Allow section to fit content */
     padding: 20px 0;
   }
 
