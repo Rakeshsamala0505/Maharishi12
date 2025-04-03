@@ -248,7 +248,7 @@
 
 #latest-news {
   position: relative;
-  height: 65vh !important; /* Adjust to fit viewport */
+  height: 70vh !important; /* Adjust to fit viewport */
   overflow: hidden;
   background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
 }
@@ -272,7 +272,7 @@
 #latest-news .container {
   position: relative;
   z-index: 1;
-  padding-top: 5%;
+  padding-top: 0%;
   color: #fff; /* White text for contrast */
 }
 
