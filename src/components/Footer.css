@@ -1,132 +1,131 @@
 /* Ensure full height for the page */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
 /* Wrap everything in a full-height container */
 .page-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
-
 /* Ensure the footer sticks to the bottom */
 footer {
-    background-color: #002855;
-    color: white;
-    padding: 0px 60px;
-    width: 100%;
+  background-color: #002855;
+  color: white;
+  padding: 0px 60px;
+  width: 100%;
 }
-
 /* Footer container styling */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px;
-    flex-wrap: wrap;
-    font-size: 9px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+  font-size: 9px;
 }
-
 /* Footer sections */
 .footer-section {
-    margin: 0rem;
-    text-align: justify;
-    line-height: 2rem;
+  margin: 0rem;
+  text-align: justify;
+  line-height: 2rem;
+  min-width: 150px; /* added to ensure each section has a minimum width */
 }
-
 .footer-section h4 {
-    color: #fdbf47;
-    font-size: 2em;
-    font-weight: bold;
+  color: #fdbf47;
+  font-size: 2em;
+  font-weight: bold;
 }
-
 .footer-section a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
-    font-size: 17px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  font-size: 17px;
 }
-
 .footer-section a:hover {
-    text-decoration: underline;
-    color: #fdbf47;
+  text-decoration: underline;
+  color: #fdbf47;
 }
-
 /* Social Icons */
 .social-icons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
-
 .social-icons a {
-    font-size: 4em;
-    color: white;
+  font-size: 4em;
+  color: white;
 }
-
 .social-icons a:hover {
-    color: #fdbf47;
-    text-shadow: 0 0 10px #fdbf47;
-    text-decoration: none;
+  color: #fdbf47;
+  text-shadow: 0 0 10px #fdbf47;
+  text-decoration: none;
 }
-
 /* Text styles */
 p {
-    font-size: 17px;
+  font-size: 17px;
+}
+@media screen and (max-width: 700px) {
+  /* Ensure the footer sticks to the bottom */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 0vh;
+  }
+
+  .content {
+    flex: 1; /* Pushes footer to the bottom */
+  }
+
+  footer {
+    background-color: #002855;
+    color: white;
+    padding: 10px 15px; /* Reduced padding */
+    width: 100%;
+  }
+
+  /* Footer container styling */
+  .footer-container {
+    display: flex;
+    flex-direction: column; /* Changed to column for mobile view */
+    justify-content: flex-start; /* Aligns items to the top */
+    padding: 10px 5px; /* Reduced padding */
+    font-size: 8px; /* Decreased font size */
+  }
+
+  /* Footer sections */
+  .footer-section {
+    margin: 5px 0; /* Reduced margin */
+    text-align: left; /* Changed to left alignment */
+    line-height: 1.5rem; /* Reduced line height */
+    width: 100%; /* Full width for mobile view */
+  }
+
+  .footer-section h4 {
+    font-size: 2em; /* Decreased font size */
+  }
+
+  .footer-section a {
+    font-size: 14px; /* Reduced font size */
+  }
+
+  /* Social Icons */
+  .social-icons {
+    justify-content: flex-start; /* Aligns icons to the left */
+  }
+  .social-icons a {
+    font-size: 3em; /* Decreased icon size */
+  }
+
+  /* Text styles */
+  p {
+    font-size: 14px; /* Adjusted text size */
+  }
 }
 
-@media screen and (max-width: 700px) {
-    /* Ensure the footer sticks to the bottom */
-    .page-container {
-        display: flex;
-        flex-direction: column;
-        min-height: 0vh;
-    }
-
-    .content {
-        flex: 1; /* Pushes footer to the bottom */
-    }
-
-    footer {
-        background-color: #002855;
-        color: white;
-        padding: 10px 15px; /* Reduced padding */
-        width: 100%;
-    }
-
-    /* Footer container styling */
-    .footer-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 5px; /* Reduced padding */
-        flex-wrap: wrap;
-        font-size: 8px; /* Decreased font size */
-    }
-
-    /* Footer sections */
-    .footer-section {
-        margin: 5px; /* Reduced margin */
-        text-align: justify;
-        line-height: 1.5rem; /* Reduced line height */
-    }
-
-    .footer-section h4 {
-        font-size: 2em; /* Decreased font size */
-    }
-
-    .footer-section a {
-        font-size: 14px; /* Reduced font size */
-    }
-
-    /* Social Icons */
-    .social-icons a {
-        font-size: 3em; /* Decreased icon size */
-    }
-
-    /* Text styles */
-    p {
-        font-size: 14px; /* Adjusted text size */
-    }
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .footer-container{
+    justify-content: space-around;
+  }
 }
