@@ -127,7 +127,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="G20" className="subheader" onClick={closeMenuOnLinkClick}>
                     G20 and MAHARISHI
                   </a>
                 </li>
