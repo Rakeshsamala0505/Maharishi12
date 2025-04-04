@@ -122,7 +122,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="Genesis" className="subheader" onClick={closeMenuOnLinkClick}>
                     Genesis
                   </a>
                 </li>
