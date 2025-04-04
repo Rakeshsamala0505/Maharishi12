@@ -52,6 +52,7 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 480px) {
+    
     .container {
         flex: 1;
         max-width: 1200px;
@@ -64,10 +65,11 @@
         background-color: #ffffff;
         padding: 0px;
         line-height: 1.6;
+        padding-top:10%;
     }
 
     .title {
-        font-size: 1.5rem;
+        font-size: 1rem !important;
         color: #4c7c13;
         font-weight: bold;
         margin-bottom: 10px;

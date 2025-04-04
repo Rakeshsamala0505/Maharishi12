@@ -117,7 +117,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="Purpose" className="subheader" onClick={closeMenuOnLinkClick}>
                     Purpose of Maharishi
                   </a>
                 </li>
@@ -247,7 +247,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="IIMRResearch" className="subheader" onClick={closeMenuOnLinkClick}>
                     IIMR Research reports
                   </a>
                 </li>

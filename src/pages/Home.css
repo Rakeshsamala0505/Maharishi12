@@ -272,7 +272,7 @@
 #latest-news .container {
   position: relative;
   z-index: 1;
-  padding-top: 0%;
+  padding-top: 5%;
   color: #fff; /* White text for contrast */
 }
 

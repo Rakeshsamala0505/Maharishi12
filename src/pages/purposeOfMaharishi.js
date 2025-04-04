@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import "../styles/purposeOfMaharishi.css"; // Importing external CSS
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap for styling
