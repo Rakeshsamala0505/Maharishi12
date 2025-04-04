@@ -12,7 +12,7 @@
 
 
 .timeline {
-    padding-top: 10%; /* Increase padding to accommodate header */
+    padding-top: 6%; /* Increase padding to accommodate header */
     padding-bottom: 10%;
 }
 
@@ -143,7 +143,7 @@
 
 @media (max-width: 480px) {
     .timeline{
-        padding-top: 35%;
+        padding-top: 20%;
         padding-bottom: 10%;
     }
     /* Adjust header spacing */
