@@ -3,7 +3,7 @@
     max-width: 1200px;
     margin: auto;
     padding: 30px;
-    padding-top: 10%; /* Adjust this based on your header height */
+    padding-top: 6rem; /* Adjust this based on your header height */
 }
 
 .text_content {
@@ -30,8 +30,6 @@
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
 .text-content {
     font-size: 1rem;
     color: #333;

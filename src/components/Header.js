@@ -117,24 +117,24 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
                 <li>
-                  <a href="Purpose" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="Purpose" className="subheader" onClick={closeMenuOnLinkClick}>
                     Purpose of Maharishi
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="Genesis" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="genesis" className="subheader" onClick={closeMenuOnLinkClick}>
                     Genesis
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="G20" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="g20" className="subheader" onClick={closeMenuOnLinkClick}>
                     G20 and MAHARISHI
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="Implementation" className="subheader" onClick={closeMenuOnLinkClick}>
                     Implementation of MAHARISHI
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -156,14 +156,14 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
                     Structure
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/expert_working_group" className="subheader" onClick={closeMenuOnLinkClick}>
                     Expert Working Groups
-                  </a>
+                  </Link>
                 </li>
                 <li>
                 <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Charter</Link>
@@ -189,12 +189,12 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop3}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/millets" className="subheader" onClick={closeMenuOnLinkClick}>
                     Millets
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/ancient_grains" className="subheader" onClick={closeMenuOnLinkClick}>
                     Ancient Grains
                   </a>
                 </li>
@@ -218,12 +218,12 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop4}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/sustainable_farming" className="subheader" onClick={closeMenuOnLinkClick}>
                     Sustainable Farming
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
                     Nutrition Benefits
                   </a>
                 </li>
@@ -310,17 +310,17 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop7}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://www.millets.res.in/" className="subheader" onClick={closeMenuOnLinkClick}>
                     IIMR
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://www.nutrihubiimr.com//" className="subheader" onClick={closeMenuOnLinkClick}>
                     NUTRIHUB
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://icar.org.in/" className="subheader" onClick={closeMenuOnLinkClick}>
                     ICAR
                   </a>
                 </li>

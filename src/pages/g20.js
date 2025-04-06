@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/g20.css"; // Importing external CSS
+import "../styles/g20.module.css"; // Importing external CSS
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap for styling
 
 

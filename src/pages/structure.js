@@ -1,48 +1,69 @@
-import React from "react";
-import "../styles/structure.css"; // Importing external CSS
+import React from 'react';
+import styles from '../styles/structure.module.css'; // Assuming you are using CSS Modules
+import NarendraModiImage from '../assets/images/DDG412.png';
+import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
+import DrHimanshuPathakImage from '../assets/images/DG1.png';
+import DrTilakRajSharmaImage from '../assets/images/DDG.png';
+import DrCTaraSatyavathiImage from '../assets/images/director.png';
 
+// Array of person data (moved out of the component for better maintainability)
 const people = [
+  
   {
-    name: "Narendra Modi",
-    role: "Prime Minister of India",
-    image: "./images/DDG412.png",
+    id: 1,
+    name: 'Narendra Modi',
+    title: 'Prime Minister of India',
+    image: NarendraModiImage,
+    alt: 'Narendra Modi, Prime Minister of India',
   },
   {
-    name: "Shivaraj Singh Chouhan",
-    role: "Minister of Agriculture and Farmers' Welfare",
-    image: "./images/DDG32.png",
+    id: 2,
+    name: 'Shivaraj Singh Chouhan',
+    title: "Minister of Agriculture and Farmers' Welfare",
+    image: ShivarajSinghChouhanImage,
+    alt: "Shivaraj Singh Chouhan, Minister of Agriculture and Farmers' Welfare",
   },
   {
-    name: "Dr. Himanshu Pathak, Secretary (DARE)",
-    role: "Director General (ICAR)",
-    image: "./images/DG1.png",
+    id: 3,
+    name: 'Dr. Himanshu Pathak, Secretary (DARE)',
+    title: 'Director General (ICAR)',
+    image: DrHimanshuPathakImage,
+    alt: 'Dr. Himanshu Pathak, Secretary (DARE), Director General (ICAR)',
   },
   {
-    name: "Dr Tilak Raj Sharma",
-    role: "Deputy Director General (Crop Science)",
-    image: "./images/DDG.png",
+    id: 4,
+    name: 'Dr Tilak Raj Sharma',
+    title: 'Deputy Director General (Crop Science)',
+    image: DrTilakRajSharmaImage,
+    alt: 'Dr Tilak Raj Sharma, Deputy Director General (Crop Science)',
   },
   {
-    name: "Dr (Mrs) C Tara Satyavathi",
-    role: "Director of IIMR (Rajendra Nagar, Hyderabad)",
-    image: "./images/director.png",
+    id: 5,
+    name: 'Dr (Mrs) C Tara Satyavathi',
+    title: 'Director of IIMR (Rajendra nagar, Hyderabad)',
+    image: DrCTaraSatyavathiImage,
+    alt: 'Dr (Mrs) C Tara Satyavathi, Director of IIMR',
   },
 ];
 
-const PeopleList = () => {
+const Structure = () => {
   return (
-    <div className="container">
-      {people.map((person, index) => (
-        <div className="person" key={index}>
-          <img src={person.image} alt={person.name} />
-          <div className="bio-content">
-            <h3 className="heading-about">{person.name}</h3>
-            <p>{person.role}</p>
+    <div className={styles.contentWrapper}>
+    <div className={styles.structureContainer}> {/* Using CSS Module class */}
+      {people.map((person) => (
+        <div key={person.id} className={styles.person}> {/* Using CSS Module class and adding key */}
+          <img src={person.image} alt={person.alt} />
+          <div className={styles.bioContent}> {/* Using CSS Module class */}
+            <h3 className={styles.headingAbout}>{person.name}</h3> {/* Using CSS Module class */}
+            <p>{person.title}</p>
           </div>
         </div>
       ))}
     </div>
+    </div>
+
   );
+  
 };
 
-export default PeopleList;
+export default Structure; 

@@ -116,6 +116,30 @@ const Maharishi = () => {
               to achieve targeted goals.
             </p>
           </div>
+          <div className="point">
+            <h3>4. Coordination of Initiatives</h3>
+            <p>
+            It helps align various initiatives effectively. This avoids duplication and promotes synergy.
+            </p>
+          </div>
+          <h2>Scope and Financial Resources of Maharishi</h2>
+          <div className="point">
+            <p>
+            The scope of the MAHARISHI initiative spans across multiple sectors 
+            including agriculture, sustainability, food security, and health. 
+            Financial resources will be secured through various channels including 
+            government grants, partnerships, and private investments.
+            </p>
+          </div>
+          <h2>Institutions' Coordination Committee</h2>
+          <div className="point">
+            <p>
+            The Institutions' Coordination Committee is tasked with 
+            overseeing the collaboration between institutions and 
+            stakeholders involved in the MAHARISHI initiative, ensuring 
+            alignment with the core goals and objectives of the initiative.
+            </p>
+          </div>
         </section>
       </div>
     </div>

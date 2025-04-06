@@ -10,7 +10,7 @@ import Genesis from "./pages/genesis"; // genesis.js
 import G20 from "./pages/g20"; // g20.js
 import Implementation from "./pages/ImplementationOfMaharishi"; // implementation.js
 import Structure from "./pages/structure"; // structure.js
-import ExpertWorkingGroups from "./pages/ExpertWorkingGroup"; // expert_working_groups.js
+import ExpertWorkingGroup from "./pages/ExpertWorkingGroup"; // expert_working_groups.js
 import Charter from "./pages/charter"; // charter.js
 import Millets from "./pages/millets"; // millets.js
 import AncientGrains from "./pages/ancient_grains"; // ancient_grains.js
@@ -36,7 +36,7 @@ function App() {
           <Route path="/g20" element={<G20 />} />
           <Route path="/implementation" element={<Implementation/>}/>
           <Route path="/structure" element={<Structure />} />
-          <Route path="/expert_working_groups" element={<ExpertWorkingGroups />} />
+          <Route path="/expert_working_group" element={<ExpertWorkingGroup />} />
           <Route path="/charter" element={<Charter />} />
           <Route path="/millets" element={<Millets />} />
           <Route path="/ancient_grains" element={<AncientGrains />} />
