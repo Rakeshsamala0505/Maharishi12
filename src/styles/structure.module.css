@@ -5,7 +5,7 @@
     align-items: center;
     background: #f5f5f5; /* optional background */
     padding: 20px;
-    padding-top:20%;
+    padding-top:0%;
   }
   
   .structureContainer {
@@ -77,13 +77,22 @@
   }
   
   @media (max-width: 480px) {
-    .person img {
-      width: 100px;
-      height: 100px;
+    .contentWrapper {
+      padding-top: 10%; /* 👈 Changed from 5% to 10% */
+    }
+  
+    .structureContainer {
+      padding-top: 8%; /* 👈 Add this if you want different spacing inside */
     }
   
     .headingAbout {
       font-size: 1.2em;
     }
+  
+    .person img {
+      width: 100px;
+      height: 100px;
+    }
   }
+  
   

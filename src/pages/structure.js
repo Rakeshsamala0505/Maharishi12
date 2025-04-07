@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/structure.module.css'; // Assuming you are using CSS Modules
 import NarendraModiImage from '../assets/images/DDG412.png';
 import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
-import DrHimanshuPathakImage from '../assets/images/DG1.png';
+import DeveshChaturvedi from '../assets/home_images/dr_devesh.jpg';
 import DrTilakRajSharmaImage from '../assets/images/DDG.png';
 import DrCTaraSatyavathiImage from '../assets/images/director.png';
 
@@ -25,10 +25,10 @@ const people = [
   },
   {
     id: 3,
-    name: 'Dr. Himanshu Pathak, Secretary (DARE)',
-    title: 'Director General (ICAR)',
-    image: DrHimanshuPathakImage,
-    alt: 'Dr. Himanshu Pathak, Secretary (DARE), Director General (ICAR)',
+    name: 'Shri. Devesh Chaturvedi, IAS, Secretary',
+    title: 'Department of Agriculture & Farmer Welfare',
+    image: DeveshChaturvedi,
+    alt: 'Devesh Chaturvedi',
   },
   {
     id: 4,
