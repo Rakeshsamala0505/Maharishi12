@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
+import HimanshuPathakImage from '../assets/home_images/dr_devesh.jpg';
 
 
 const images = [
@@ -171,10 +172,10 @@ const Home = () => {
       </div>
 
       <div className="card">
-        <img src="images/DG.jpg" alt="Research" />
-        <div className="card-content">
-          <p className="quote-author">Dr Himanshu Pathak</p>
-          <p className="quote-position">DG, ICAR and Secretary DARE</p>
+      <img src={HimanshuPathakImage} alt="Research" />
+      <div className="card-content">
+          <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
+          <p className="quote-position">Department of Agriculture & Farmer Welfare</p>
         </div>
       </div>
     </section>

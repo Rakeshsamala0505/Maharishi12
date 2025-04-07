@@ -183,6 +183,8 @@ ul {
     position: relative;
      }
   nav .wrapper .logo {
+    z-index: 10;
+
     height: 40px; /* Adjusted height for smaller screens */
     position: absolute;
         left: 10px;

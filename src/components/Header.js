@@ -87,9 +87,7 @@ const Header = () => {
           <Link to="/"><img
             src="/icons/maharshi_log.png"
             alt="Logo"
-            className="logo"
-            
-          /></Link>
+            className="logo"/></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
             <label htmlFor="close-btn" className="btn close-btn">
               <FontAwesomeIcon icon={faTimes} />
