@@ -183,14 +183,13 @@ ul {
     position: relative;
      }
   nav .wrapper .logo {
-    z-index: 10;
-
     height: 40px; /* Adjusted height for smaller screens */
     position: absolute;
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
   }
+  
   .wrapper .btn {
     display: flex;
     justify-content: space-between;
@@ -357,6 +356,7 @@ text-align: right;
   .content .row header {
     font-size: 19px;
   }
+  
 }
 
 nav input {
