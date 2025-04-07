@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/g20.module.css"; // Importing external CSS
+import styles from "../styles/g20.module.css"; // Importing external CSS
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap for styling
 
 
@@ -42,9 +42,9 @@ const g20 = () => {
         <p className="text-content">
         The major focus is to provide nutritional and livelihood security to the resource-poor in the developing and underdeveloped countries that depend on millets, enhancing yield, and promoting sustainable and resilient agricultural production systems while considering societal demands by broadening the platform to a global level for maximizing opportunities for gaining added value internationally.
         </p>
-        <div className="image-container">
-          <img src="/images/picture1.png" alt="G20" className="responsive-image"/>
-          </div>
+        <div className={styles["image-container"]}>
+  <img src="/images/picture1.png" alt="G20" className={styles["responsive-image"]} />
+</div>
       </div>
     </div>
   );

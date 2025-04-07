@@ -12,7 +12,7 @@
 }
 
 .title {
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: #4c7c13;
     font-weight: bold;
     margin-bottom: 10px;
@@ -92,7 +92,15 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
    
-    
+    .image-container {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      .responsive-image {
+        width: 90%; /* Make it fit within smaller screens */
+        max-width: 100%;
+    }
 }
 /* Image container */
 .image-container {
