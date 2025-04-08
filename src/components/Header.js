@@ -155,7 +155,7 @@ const Header = () => {
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
                 <li>
                   <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Structure
+                    Key Persons
                   </Link>
                 </li>
                 <li>
