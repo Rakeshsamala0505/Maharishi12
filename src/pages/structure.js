@@ -27,7 +27,7 @@ const people = [
     id: 3,
     name: 'Shri. Devesh Chaturvedi, IAS, Secretary',
     title: 'Department of Agriculture & Farmer Welfare',
-    image: Drdevenderkumar,
+    image: DeveshChaturvedi,
     alt: 'Devesh Chaturvedi',
   },
   {
