@@ -3,7 +3,7 @@ import styles from '../styles/structure.module.css'; // Assuming you are using C
 import NarendraModiImage from '../assets/images/DDG412.png';
 import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
 import DeveshChaturvedi from '../assets/home_images/dr_devesh.jpg';
-import DrTilakRajSharmaImage from '../assets/images/DDG.png';
+import Drdevenderkumar from '../assets/images/devender.jpg';
 import DrCTaraSatyavathiImage from '../assets/images/director.png';
 
 // Array of person data (moved out of the component for better maintainability)
@@ -27,14 +27,14 @@ const people = [
     id: 3,
     name: 'Shri. Devesh Chaturvedi, IAS, Secretary',
     title: 'Department of Agriculture & Farmer Welfare',
-    image: DeveshChaturvedi,
+    image: Drdevenderkumar,
     alt: 'Devesh Chaturvedi',
   },
   {
     id: 4,
-    name: 'Dr Tilak Raj Sharma',
-    title: 'Deputy Director General (Crop Science)',
-    image: DrTilakRajSharmaImage,
+    name: 'Dr Devendra Kumar',
+    title: 'national academy of agricultural sciences',
+    image: Drdevenderkumar,
     alt: 'Dr Tilak Raj Sharma, Deputy Director General (Crop Science)',
   },
   {
