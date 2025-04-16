@@ -3,6 +3,14 @@
   .image-slider img {
     width: 100%;
     height: auto;
+    clip-path: polygon(
+      0% 0,
+      108% 0,
+      100% 85%,
+      30% 100%,
+      8% 90%,
+      0% 87%
+    )
   }
 }
 
@@ -26,6 +34,16 @@
     height: 80vh;  /* 25% of viewport height */
     overflow: hidden;
     position: relative;
+    border-bottom: 10px solid white;
+    clip-path: polygon(
+      0% 0,
+      108% 0,
+      100% 85%,
+      30% 100%,
+      8% 90%,
+      0% 87%
+    )
+ 
   }
   
   /* Image Styling */
@@ -52,6 +70,14 @@
     }
     .image-slider {
       height: 30vh;
+clip-path: polygon(
+      0% 0,
+      108% 0,
+      100% 85%,
+      30% 100%,
+      8% 90%,
+      0% 87%
+    )
     }
     .slider-image {
       width: 100%;
