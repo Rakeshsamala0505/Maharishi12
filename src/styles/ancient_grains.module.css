@@ -375,8 +375,8 @@ body {
         font-size: 22rem;
     }
     body {
-      padding-left: 8px; /* Adjust padding for very small screens */
-      padding-right: 8px;
+      padding-left: 0; /* Adjust padding for very small screens */
+      padding-right: 0;
     }
   
     .section {
