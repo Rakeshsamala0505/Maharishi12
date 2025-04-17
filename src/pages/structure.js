@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/structure.module.css'; // Assuming you are using CSS Modules
 import NarendraModiImage from '../assets/images/DDG412.png';
 import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
-import DeveshChaturvedi from '../assets/home_images/dr_devesh.jpg';
+import DeveshChaturvedi from '../assets/images/dr_devesh.jpg';
 import Drdevenderkumar from '../assets/images/devender.jpg';
 import DrCTaraSatyavathiImage from '../assets/images/director.png';
 

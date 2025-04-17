@@ -9,7 +9,7 @@ const images = [
   "/images/Foxtail_millet.avif",
   "/images/Little-home.avif",
   "/images/foxtail-home1.avif",
-  "/images/barnyard.avif"
+  "/imageS/BARNYARD1.png",
 ];
 
 const Home = () => {
@@ -58,7 +58,7 @@ const Home = () => {
 
       {/* Latest Updates Section */}
       <section id="latest-updates" className="container py-5">
-        <h2 className="text-dark fs-1 text-start">HIGHLIGHTS</h2>
+        <h2 className="text-dark fs-1 text-start">HIGH</h2>
         <div className="row">
           {/* Update 1 */}
           <div className="col-md-4 mb-4">
