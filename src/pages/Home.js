@@ -117,7 +117,7 @@ useEffect(() => {
           <div className="row gx-4 justify-content-center">
             {/* Left Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="left-text" data-aos="fade-right">
+              <p className="left-text" data-aos="fade-up">
                 The vision of MAHARISHI is to encourage and support the
                 development of an active global millet research community for
                 enhancing capabilities by sharing resources, data, knowledge,
@@ -131,7 +131,7 @@ useEffect(() => {
 
             {/* Right Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="right-text" data-aos="fade-left">
+              <p className="right-text" data-aos="fade-up">
                 The major focus is to provide nutritional and livelihood
                 security to the resource-poor in developing and underdeveloped
                 countries that depend on millets, enhancing yield, and
