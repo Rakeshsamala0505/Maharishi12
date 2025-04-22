@@ -146,7 +146,7 @@ useEffect(() => {
         </div>
       </section>
     <section className="section-container">
-      <div className="card" data-aos="fade-up">
+      <div className="card" data-aos="fade-right">
         <img src={PM} alt="PM"/>
         <div className="card-content">
           <p>
@@ -165,7 +165,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="card" data-aos="fade-up">
+      <div className="card" data-aos="fade-left">
       <img src={HimanshuPathakImage} alt="Research" />
       <div className="card-content">
           <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
