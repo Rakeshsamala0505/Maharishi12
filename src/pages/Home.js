@@ -3,7 +3,7 @@ import "./Home.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
-import HimanshuPathakImage from '../assets/home_images/dr_devesh.jpg';
+import Devesh from '../assets/home_images/dr_devesh.jpg';
 import PM from '../assets/images/PM.avif';
 
 
@@ -49,7 +49,8 @@ useEffect(() => {
       </div>
 
       {/* Latest Updates Section */}
-      <section id="latest-updates" className="container py-5">
+      <section id="latest-updates" className="container py-5"  style={{
+    backgroundImage: "url('/images/bg1.jpg')" }}>
         <h2 className="text-dark fs-1 text-start" data-aos="fade-left">HIGHLIGHTS</h2>
         <div className="row" >
           {/* Update 1 */}
@@ -144,7 +145,7 @@ useEffect(() => {
         </div>
       </section>
     <section className="section-container">
-      <div className="card" data-aos="fade-left" data-aos-delay="500">
+      <div className="card" data-aos="fade-left" data-aos-delay="300">
         <img src={PM} alt="PM" />
         <div className="card-content">
           <p>
@@ -163,8 +164,8 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="card" data-aos="fade-right" data-aos-delay="500">
-      <img src={HimanshuPathakImage} alt="Research" />
+      <div className="card" data-aos="fade-right" data-aos-delay="300">
+      <img src={Devesh} alt="Research" />
       <div className="card-content">
           <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
           <p className="quote-position">Department of Agriculture & Farmer Welfare</p>
