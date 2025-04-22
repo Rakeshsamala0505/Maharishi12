@@ -129,7 +129,7 @@ clip-path: polygon(
 }
 
 .card-img-top1 {
-  width: 50%;
+  width: 30%;
   height: auto;
   object-fit: cover;
 }
@@ -196,6 +196,8 @@ clip-path: polygon(
     width: 100% !important; /* Ensure full width images */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center the image */
   }
 
   .card-body {
@@ -227,9 +229,9 @@ clip-path: polygon(
   }
 
   #latest-updates h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem !important;
     margin-left: 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 
   .row {
@@ -252,6 +254,8 @@ clip-path: polygon(
     width: 30% !important; /* Ensure full width images */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
+    display: block;
+    margin: 0;
   }
 
   .card-body {
@@ -262,11 +266,11 @@ clip-path: polygon(
   }
 
   .card-title {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
   }
 
   .card-text {
-    font-size: 0.9rem; /* Smaller font for better fit */
+    font-size: 0.7rem; /* Smaller font for better fit */
     padding: 0px 0px; /* Less padding to prevent gaps */
     line-height: 1.5; /* Reduces extra space */
     max-width: 100%;
@@ -356,7 +360,7 @@ clip-path: polygon(
   }
 
   #latest-news p {
-    font-size: 16px;
+    font-size: 0.8rem;
     margin-top: 20px;
   }
 
@@ -400,23 +404,23 @@ clip-path: polygon(
   }
 }
 
-  .section-container {
+.section-container {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
   gap: 50px;
+  background-color: #d5d5d5; /* light background added */
 }
 
 .section-container .card {
   display: flex;
   flex-direction: row;
-  width: 500px;
-  height: 300px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  width: 550px; /* increased from 500px */
+  height: 330px; /* increased from 300px */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  border-radius: 10px;
   overflow: hidden;
   background: #ffffff;
-  margin: 0px 0;
 }
 
 .section-container .card img {
@@ -438,7 +442,7 @@ clip-path: polygon(
 }
 
 .section-container .card-content p {
-  font-size: 12px;
+  font-size: 0.9rem; /* increased from 12px */
   line-height: 1.5;
   margin: 8px 0;
 }
@@ -453,17 +457,17 @@ clip-path: polygon(
 }
 
 .quote-author {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: 15px;
 }
 
 .quote-position {
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: normal;
 }
 
-
+/* Responsive remains same */
 @media (max-width: 480px) {
   .section-container {
     flex-direction: column;
@@ -483,30 +487,31 @@ clip-path: polygon(
     width: 150px !important;
     height: auto !important;
     border-radius: 50%;
-    object-fit: contain; /* Ensures the full image is visible */
-    object-position: center; /* Centers the image properly */
+    object-fit: contain;
+    object-position: center;
     flex-shrink: 0;
     margin-left: 6rem;
     margin-top: 2rem;
   }
+
   .section-container .card-content {
     width: 100%;
     padding: 20px;
     background: #ffffff;
     color: #5b5b5b;
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }
 
   .section-container .card-content p {
-    font-size: 12px;
+    font-size: 0.9rem; /* updated to match larger screens */
   }
 
   .section-container .card-content a {
     font-size: 0.9rem;
   }
 }
+

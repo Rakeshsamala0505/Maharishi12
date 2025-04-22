@@ -145,7 +145,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
-      <section className="section-container" data-aos="fade-up">
+    <section className="section-container" data-aos="fade-up">
       <div className="card">
         <img src={PM} alt="PM"/>
         <div className="card-content">
