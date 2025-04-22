@@ -121,6 +121,7 @@ clip-path: polygon(
 .card {
   border: none;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10%;
 }
 
 .card:hover {
@@ -146,7 +147,7 @@ clip-path: polygon(
   border: none;
   border: 2px solid #008cb3;
   color: #008cb3;
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
   border-radius: 0.5rem;
   padding: 5px 15px !important; 
   font-weight: bold;
@@ -254,29 +255,31 @@ clip-path: polygon(
   }
 
   .card-body {
+    padding: 10px;
     max-width: 100%;
-    margin: 0 auto;
-    text-align: left;  }
+  margin: 0 auto;
+  text-align: left;
+  }
 
   .card-title {
     font-size: 1.3rem !important;
   }
 
   .card-text {
-    font-size: 0.8rem; /* Smaller font for better fit */
+    font-size: 0.9rem; /* Smaller font for better fit */
     padding: 0px 0px; /* Less padding to prevent gaps */
     line-height: 1.5; /* Reduces extra space */
     max-width: 100%;
-    margin: 15px auto;
+    margin: 0 auto;
     text-align: left;
   }
   .btn-primary {
+    margin-top: 1rem;
     font-size: 0.7rem !important;
-    padding: 5px 5px !important;
+    padding: 5px 10px !important;
   }
 }
 
-/*Latest news*/
 #latest-news {
   position: relative;
   height: 80vh !important; /* Adjust to fit viewport */
@@ -314,6 +317,10 @@ clip-path: polygon(
   transition: all 1.5s ease-in-out;
 }
 
+#latest-news p.right-text.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* Button styles */
 #latest-news .btn-primary {
@@ -340,7 +347,7 @@ clip-path: polygon(
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: -7rem;
+    margin-top: 0rem;
   }
 
   #latest-news .col-md-4 {
@@ -480,8 +487,7 @@ clip-path: polygon(
     object-position: center; /* Centers the image properly */
     flex-shrink: 0;
     margin-left: 6rem;
-    margin-top: 1.2rem;
-    
+    margin-top: 2rem;
   }
   .section-container .card-content {
     width: 100%;
