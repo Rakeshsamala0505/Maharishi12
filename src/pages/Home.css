@@ -121,6 +121,7 @@ clip-path: polygon(
 .card {
   border: none;
   transition: transform 0.3s ease-in-out;
+  border-radius: 5rem;
 }
 
 .card:hover {
@@ -311,29 +312,9 @@ clip-path: polygon(
 #latest-news p {
   font-size: 18px;
   margin-top: 90px;
-  opacity: 0;
   transition: all 1.5s ease-in-out;
 }
 
-/* Left side text animation */
-#latest-news p.left-text {
-  transform: translateX(-100px);
-}
-
-#latest-news p.left-text.slide-in {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Right side text animation */
-#latest-news p.right-text {
-  transform: translateX(100px);
-}
-
-#latest-news p.right-text.slide-in {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 /* Button styles */
 #latest-news .btn-primary {
@@ -426,7 +407,7 @@ clip-path: polygon(
   width: 500px;
   height: 300px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
   background: #ffffff;
   margin: 0px 0;
@@ -500,6 +481,8 @@ clip-path: polygon(
     object-position: center; /* Centers the image properly */
     flex-shrink: 0;
     margin-left: 6rem;
+    margin-top: 1.2rem;
+    
   }
   .section-container .card-content {
     width: 100%;

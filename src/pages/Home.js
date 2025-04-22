@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
 import HimanshuPathakImage from '../assets/home_images/dr_devesh.jpg';
 import PM from '../assets/images/PM.avif';
@@ -24,22 +26,12 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, []);
-  useEffect(() => {
-    const textBlocks = document.querySelectorAll("#latest-news p");
-    const animateTextOnScroll = () => {
-      textBlocks.forEach((text) => {
-        const rect = text.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+  
+  
+useEffect(() => {
+  AOS.init({ duration: 1000 }); // duration in ms
+}, []);
 
-        if (rect.top < windowHeight - 100) {
-          text.classList.add("slide-in");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", animateTextOnScroll);
-    return () => window.removeEventListener("scroll", animateTextOnScroll);
-  }, []);
 
 
   return (
@@ -58,10 +50,10 @@ const Home = () => {
 
       {/* Latest Updates Section */}
       <section id="latest-updates" className="container py-5">
-        <h2 className="text-dark fs-1 text-start">HIGHLIGHTS</h2>
-        <div className="row">
+        <h2 className="text-dark fs-1 text-start" data-aos="fade-left">HIGHLIGHTS</h2>
+        <div className="row" >
           {/* Update 1 */}
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 mb-4" data-aos="fade-up">
             <div className="card h-100">
               <img src="images/employee.png" className="card-img-top1" alt="Update 1" />
               <div className="card-body">
@@ -80,7 +72,7 @@ const Home = () => {
           </div>
           
           {/* Update 2 */}
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 mb-4" data-aos="fade-up">
             <div className="card h-100">
               <img src="images/crop_image.png" className="card-img-top1" alt="Update 2" />
               <div className="card-body">
@@ -97,7 +89,7 @@ const Home = () => {
           </div>
 
           {/* Update 3 */}
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 mb-4" data-aos="fade-up">
             <div className="card h-100">
               <img src="images/video_image.png" className="card-img-top1" alt="Update 3" />
               <div className="card-body">
@@ -123,7 +115,7 @@ const Home = () => {
           <div className="row gx-4 justify-content-center">
             {/* Left Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="left-text">
+              <p className="left-text" data-aos="fade-right">
                 The vision of MAHARISHI is to encourage and support the
                 development of an active global millet research community for
                 enhancing capabilities by sharing resources, data, knowledge,
@@ -137,7 +129,7 @@ const Home = () => {
 
             {/* Right Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="right-text">
+              <p className="right-text" data-aos="fade-left">
                 The major focus is to provide nutritional and livelihood
                 security to the resource-poor in developing and underdeveloped
                 countries that depend on millets, enhancing yield, and
@@ -151,8 +143,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="section-container">
-      <div className="card">
+    <section className="section-container">
+      <div className="card" data-aos="fade-left" data-aos-delay="500">
         <img src={PM} alt="PM" />
         <div className="card-content">
           <p>
@@ -171,7 +163,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" data-aos="fade-right" data-aos-delay="500">
       <img src={HimanshuPathakImage} alt="Research" />
       <div className="card-content">
           <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
