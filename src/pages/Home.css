@@ -254,17 +254,21 @@ clip-path: polygon(
   }
 
   .card-body {
-    padding: 10px;
-  }
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;  }
 
   .card-title {
     font-size: 1.3rem !important;
   }
 
   .card-text {
-    font-size: 0.9rem; /* Smaller font for better fit */
+    font-size: 0.8rem; /* Smaller font for better fit */
     padding: 0px 0px; /* Less padding to prevent gaps */
     line-height: 1.5; /* Reduces extra space */
+    max-width: 100%;
+    margin: 15px auto;
+    text-align: left;
   }
   .btn-primary {
     font-size: 1rem !important;
@@ -272,6 +276,7 @@ clip-path: polygon(
   }
 }
 
+/*Latest news*/
 #latest-news {
   position: relative;
   height: 80vh !important; /* Adjust to fit viewport */

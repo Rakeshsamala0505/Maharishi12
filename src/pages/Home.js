@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
 import HimanshuPathakImage from '../assets/home_images/dr_devesh.jpg';
+import PM from '../assets/images/PM.avif';
 
 
 const images = [
@@ -9,25 +10,22 @@ const images = [
   "/images/Foxtail_millet.avif",
   "/images/Little-home.avif",
   "/images/foxtail-home1.avif",
-  "/imageS/BARNYARD1.png",
+  "/imageS/BARNYARD.avif",
 ];
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         (prevIndex + 1) % images.length // Loop seamlessly
       );
-    }, 2000); // Change every 2 seconds
+    }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
   useEffect(() => {
     const textBlocks = document.querySelectorAll("#latest-news p");
-
     const animateTextOnScroll = () => {
       textBlocks.forEach((text) => {
         const rect = text.getBoundingClientRect();
@@ -42,6 +40,8 @@ const Home = () => {
     window.addEventListener("scroll", animateTextOnScroll);
     return () => window.removeEventListener("scroll", animateTextOnScroll);
   }, []);
+
+
   return (
     <div className="home-container">  
       {/* Image Slider */}
@@ -58,7 +58,7 @@ const Home = () => {
 
       {/* Latest Updates Section */}
       <section id="latest-updates" className="container py-5">
-        <h2 className="text-dark fs-1 text-start">HIGH</h2>
+        <h2 className="text-dark fs-1 text-start">HIGHLIGHTS</h2>
         <div className="row">
           {/* Update 1 */}
           <div className="col-md-4 mb-4">
@@ -153,7 +153,7 @@ const Home = () => {
       </section>
       <section className="section-container">
       <div className="card">
-        <img src="images/PM.avif" alt="Chairman" />
+        <img src={PM} alt="PM" />
         <div className="card-content">
           <p>
             The Prime Minister noted that millets are primarily cultivated in
