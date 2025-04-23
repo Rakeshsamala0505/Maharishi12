@@ -108,35 +108,44 @@ useEffect(() => {
 </section>
 
       
-      
-    <section className="section-container">
-      <div className="card" data-aos="fade-right">
-        <img src={PM} alt="PM"/>
-        <div className="card-content">
-          <p>
-            The Prime Minister noted that millets are primarily cultivated in
-            12-13 different states in the country where at-home consumption per
-            month per person was not more than 3 kilograms whereas the
-            consumption has increased to 14 kilograms per month today....
-          </p>
-          <a
-            href="https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr"
-          >
-            read more
-          </a>
-          <p className="quote-author">- Shri Narendra Modi</p>
-          <p className="quote-position">Prime Minister</p>
-        </div>
-      </div>
+      <section id="latest-news" className="no-hover-effect">
+        <video autoPlay muted loop>
+          <source src="images/millets_video2.mp4" type="video/mp4" />
+        </video>
 
-      <div className="card" data-aos="fade-left">
-      <img src={HimanshuPathakImage} alt="Research" />
-      <div className="card-content">
-          <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
-          <p className="quote-position">Department of Agriculture & Farmer Welfare</p>
+        <div className="container">
+          <div className="row gx-4 justify-content-center">
+            {/* Left Block */}
+            <div className="col-md-4 mb-4 text-center">
+              <p className="left-text" data-aos="fade-right">
+                The vision of MAHARISHI is to encourage and support the
+                development of an active global millet research community for
+                enhancing capabilities by sharing resources, data, knowledge,
+                and ideas to improve millet productivity, quality, and
+                sustainability.
+              </p>
+              <a href="#" className="btn btn-primary py-2 px-3">
+                Learn More
+              </a>
+            </div>
+
+            {/* Right Block */}
+            <div className="col-md-4 mb-4 text-center">
+              <p className="right-text" data-aos="fade-left">
+                The major focus is to provide nutritional and livelihood
+                security to the resource-poor in developing and underdeveloped
+                countries that depend on millets, enhancing yield, and
+                promoting sustainable and resilient agricultural production
+                systems.
+              </p>
+              <a href="#" className="btn btn-primary py-2 px-3">
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    
     </div>
   );
 };
