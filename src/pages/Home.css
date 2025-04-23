@@ -481,6 +481,7 @@ clip-path: polygon(
     align-items: center;
     gap: 30px;
     padding: 20px;
+    background-color: #e2e2e2;
   }
 
   .section-container .card {
