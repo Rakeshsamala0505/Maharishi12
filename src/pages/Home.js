@@ -69,7 +69,7 @@ const Home = () => {
     <h2 className="latest-title">Latest Announcements</h2>
     <div className="announcement-wrapper">
       <div className="announcement-card">
-      <span className="announcement-badge">
+<span className="announcement-badge">
   <span className="blinking-text">New</span>
 </span>
         <span className="announcement-text">
@@ -107,19 +107,19 @@ const Home = () => {
                 img: "images/employee.png",
                 title: "EXPERT WORKING GROUPS",
                 text:
-                  "Working groups bring experts together to share knowledge, research, and development objectives.",
+                  "Working groups are established by bringing together experts with a focus on a topic of relevance with broader vision and specific objectives. It provides a platform for knowledge sharing on specific research and organizational development.",
               },
               {
                 img: "images/crop_image.png",
                 title: "AHEAD",
                 text:
-                  "Coordination meetings ensure smooth progress and implementation of MAHARISHI.",
+                  "Conducting regular progress and coordination meetings to ensure the project stays on track and to address any challenges.Stakeholders meet, EWG meeting, formulation of consultative groups for implementation of MAHARISHI.",
               },
               {
                 img: "images/video_image.png",
                 title: "VIDEOS",
                 text:
-                  "Access expert presentations, webinars, and video competition content here.",
+                  "Our Expert Working Groups record presentations and webinars as well as they hold video competitions. All video recordings are available here.",
               },
             ].map((item, idx) => (
               <div className="col-md-4 mb-4" data-aos="fade-up" key={idx}>
@@ -144,7 +144,8 @@ const Home = () => {
         </video>
         <div className="container">
           <div className="row gx-4 justify-content-center">
-            {["The vision of MAHARISHI is to build a global millet research community...", "Major focus on food and livelihood security through millet promotion..."]
+            {["The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge, and ideas to improve millet productivity, quality and sustainability", 
+            "The major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets, enhancing yield and promoting sustainable and resilient agricultural production systems"]
               .map((text, idx) => (
                 <div className="col-md-4 mb-4 text-center" key={idx}>
                   <p className={idx === 0 ? "left-text" : "right-text"} data-aos="fade-up">
@@ -161,7 +162,7 @@ const Home = () => {
       <section className="section-container">
         {[{
           img: PM,
-          quote: "Millets are crucial for food security. Consumption has grown significantly...",
+          quote: "The Prime Minister noted that millets are primarily cultivated in 12-13 different states in the country where at-home consumption per month per person was not more than 3 kilograms whereas the consumption has increased to 14 kilograms per month today....",
           link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
           author: "- Shri Narendra Modi",
           position: "Prime Minister",

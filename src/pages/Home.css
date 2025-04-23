@@ -315,13 +315,13 @@ clip-path: polygon(
 #latest-news .container {
   position: relative;
   z-index: 1;
-  padding-top: 5%;
+  padding-top: 3%;
   color: #fff; /* White text for contrast */
 }
 
 /* Text animation */
 #latest-news p {
-  font-size: 18px;
+  font-size: 1rem;
   margin-top: 90px;
   transition: all 1.5s ease-in-out;
 }
@@ -367,6 +367,8 @@ clip-path: polygon(
   #latest-news p {
     font-size: 0.8rem;
     margin-top: 20px;
+    max-width: 20rem;
+    margin-left: 2rem;
   }
 
   #latest-news video {
@@ -456,7 +458,7 @@ clip-path: polygon(
   text-decoration: underline;
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.7rem;
   display: block;
   margin-top: 10px;
 }
