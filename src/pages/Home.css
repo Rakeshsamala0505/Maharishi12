@@ -456,7 +456,7 @@ clip-path: polygon(
 
 .section-container .card-content a {
   text-decoration: underline;
-  color: #fff;
+  color: #707070;
   font-weight: bold;
   font-size: 0.7rem;
   display: block;
@@ -518,7 +518,7 @@ clip-path: polygon(
   }
 
   .section-container .card-content a {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 
