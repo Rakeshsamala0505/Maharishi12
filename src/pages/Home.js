@@ -28,6 +28,10 @@ const Home = () => {
   }, []);
   
   
+useEffect(() => {
+  AOS.init({ duration: 1000 }); // duration in ms
+}, []);
+
 
   return (
     <div className="home-container">  
@@ -57,12 +61,12 @@ const Home = () => {
   }}
 >
   <div className="container">
-    <h2 className="text-dark fs-1 text-start" >
+    <h2 className="text-dark fs-1 text-start" data-aos="fade-down">
       HIGHLIGHTS
     </h2>
     <div className="row">
       {/* Update 1 */}
-      <div className="col-md-4 mb-4">
+      <div className="col-md-4 mb-4" data-aos="fade-up">
         <div className="card h-100">
           <img src="images/employee.png" className="card-img-top1" alt="Update 1" />
           <div className="card-body">
@@ -75,7 +79,7 @@ const Home = () => {
       </div>
 
       {/* Update 2 */}
-      <div className="col-md-4 mb-4" >
+      <div className="col-md-4 mb-4" data-aos="fade-up">
         <div className="card h-100">
           <img src="images/crop_image.png" className="card-img-top1" alt="Update 2" />
           <div className="card-body">
@@ -88,7 +92,7 @@ const Home = () => {
       </div>
 
       {/* Update 3 */}
-      <div className="col-md-4 mb-4" >
+      <div className="col-md-4 mb-4" data-aos="fade-up">
         <div className="card h-100">
           <img src="images/video_image.png" className="card-img-top1" alt="Update 3" />
           <div className="card-body">
@@ -113,7 +117,7 @@ const Home = () => {
           <div className="row gx-4 justify-content-center">
             {/* Left Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="left-text" >
+              <p className="left-text" data-aos="fade-up">
                 The vision of MAHARISHI is to encourage and support the
                 development of an active global millet research community for
                 enhancing capabilities by sharing resources, data, knowledge,
@@ -127,7 +131,7 @@ const Home = () => {
 
             {/* Right Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="right-text" >
+              <p className="right-text" data-aos="fade-up">
                 The major focus is to provide nutritional and livelihood
                 security to the resource-poor in developing and underdeveloped
                 countries that depend on millets, enhancing yield, and
@@ -142,7 +146,7 @@ const Home = () => {
         </div>
       </section>
     <section className="section-container">
-      <div className="card" >
+      <div className="card" data-aos="fade-down">
         <img src={PM} alt="PM"/>
         <div className="card-content">
           <p>
@@ -161,7 +165,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="card" >
+      <div className="card" data-aos="fade-down">
       <img src={HimanshuPathakImage} alt="Research" />
       <div className="card-content">
           <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
