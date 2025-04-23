@@ -16,13 +16,13 @@ import Millets from "./pages/millets"; // millets.js
 import AncientGrains from "./pages/ancient_grains"; // ancient_grains.js
 import SustainableFarming from "./pages/sustainable_farming"; // sustainable_farming.js
 import NutritionBenefits from "./pages/nutrition_benefits"; // nutrition_benefits.js
-import Projects from "./pages/projects"; // projects.js
-import Partners from "./pages/partners"; // partners.js
+import projects from "./pages/projects"; // projects.js
+import partners from "./pages/partners"; // partners.js
 import IIMRResearch from "./pages/IIMRResearch"; // IIMR_research.js
-import AnnualReports from "./pages/annual_reports"; // annual_reports.js
-import Newsletter from "./pages/NewsLetter"; // newsletter.js
-import Pressrelease from "./pages/PressReleases"; // pressrelease.js
-import Gallery from "./pages/gallery"; // gallery.js
+import annualreports from "./pages/annual_reports"; // annual_reports.js
+import newsletter from "./pages/NewsLetter"; // newsletter.js
+import pressrelease from "./pages/PressReleases"; // pressrelease.js
+import gallery from "./pages/gallery"; // gallery.js
 
 function App() {
   return (
@@ -42,13 +42,13 @@ function App() {
           <Route path="/ancient_grains" element={<AncientGrains />} />
           <Route path="/sustainable_farming" element={<SustainableFarming />} />
           <Route path="/nutrition_benefits" element={<NutritionBenefits />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/partners" element={<Partners />} />
+          <Route path="/projects" element={<projects />} />
+          <Route path="/partners" element={<partners />} />
           <Route path="/IIMR_research" element={<IIMRResearch />} />
-          <Route path="/annual_reports" element={<AnnualReports />} />
-          <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/pressrelease" element={<Pressrelease />} />  
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/annual_reports" element={<annualreports />} />
+          <Route path="/newsletter" element={<newsletter />} />
+          <Route path="/pressrelease" element={<pressrelease />} />  
+          <Route path="/gallery" element={<gallery />} />
    
         </Routes>
         <Footer />

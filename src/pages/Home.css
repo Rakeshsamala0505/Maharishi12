@@ -1,4 +1,9 @@
 
+body {
+  overflow-x: hidden;
+}
+
+
 /* Container Styling */
 @media (max-width: 768px) {
   .image-slider img {
@@ -6,7 +11,7 @@
     height: auto;
     clip-path: polygon(
       0% 0,
-      108% 0,
+      100% 0,
       100% 85%,
       30% 100%,
       8% 90%,
@@ -407,9 +412,9 @@ clip-path: polygon(
 .section-container {
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
   gap: 50px;
-  background-color: #d5d5d5; /* light background added */
+  background-color: rgb(255, 255, 255); /* light background added */
 }
 
 .section-container .card {

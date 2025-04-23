@@ -108,43 +108,7 @@ useEffect(() => {
 </section>
 
       
-      <section id="latest-news" className="no-hover-effect">
-        <video autoPlay muted loop>
-          <source src="images/millets_video2.mp4" type="video/mp4" />
-        </video>
-
-        <div className="container">
-          <div className="row gx-4 justify-content-center">
-            {/* Left Block */}
-            <div className="col-md-4 mb-4 text-center">
-              <p className="left-text" data-aos="fade-up">
-                The vision of MAHARISHI is to encourage and support the
-                development of an active global millet research community for
-                enhancing capabilities by sharing resources, data, knowledge,
-                and ideas to improve millet productivity, quality, and
-                sustainability.
-              </p>
-              <a href="#" className="btn btn-primary py-2 px-3">
-                Learn More
-              </a>
-            </div>
-
-            {/* Right Block */}
-            <div className="col-md-4 mb-4 text-center">
-              <p className="right-text" data-aos="fade-up">
-                The major focus is to provide nutritional and livelihood
-                security to the resource-poor in developing and underdeveloped
-                countries that depend on millets, enhancing yield, and
-                promoting sustainable and resilient agricultural production
-                systems.
-              </p>
-              <a href="#" className="btn btn-primary py-2 px-3">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     <section className="section-container">
       <div className="card" data-aos="fade-right">
         <img src={PM} alt="PM"/>
