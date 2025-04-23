@@ -28,10 +28,6 @@ const Home = () => {
   }, []);
   
   
-useEffect(() => {
-  AOS.init({ duration: 1000 }); // duration in ms
-}, []);
-
 
   return (
     <div className="home-container">  
@@ -61,12 +57,12 @@ useEffect(() => {
   }}
 >
   <div className="container">
-    <h2 className="text-dark fs-1 text-start" data-aos="fade-left">
+    <h2 className="text-dark fs-1 text-start" >
       HIGHLIGHTS
     </h2>
     <div className="row">
       {/* Update 1 */}
-      <div className="col-md-4 mb-4" data-aos="fade-up">
+      <div className="col-md-4 mb-4">
         <div className="card h-100">
           <img src="images/employee.png" className="card-img-top1" alt="Update 1" />
           <div className="card-body">
@@ -79,7 +75,7 @@ useEffect(() => {
       </div>
 
       {/* Update 2 */}
-      <div className="col-md-4 mb-4" data-aos="fade-up">
+      <div className="col-md-4 mb-4" >
         <div className="card h-100">
           <img src="images/crop_image.png" className="card-img-top1" alt="Update 2" />
           <div className="card-body">
@@ -92,7 +88,7 @@ useEffect(() => {
       </div>
 
       {/* Update 3 */}
-      <div className="col-md-4 mb-4" data-aos="fade-up">
+      <div className="col-md-4 mb-4" >
         <div className="card h-100">
           <img src="images/video_image.png" className="card-img-top1" alt="Update 3" />
           <div className="card-body">
@@ -117,7 +113,7 @@ useEffect(() => {
           <div className="row gx-4 justify-content-center">
             {/* Left Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="left-text" data-aos="fade-right">
+              <p className="left-text" >
                 The vision of MAHARISHI is to encourage and support the
                 development of an active global millet research community for
                 enhancing capabilities by sharing resources, data, knowledge,
@@ -131,7 +127,7 @@ useEffect(() => {
 
             {/* Right Block */}
             <div className="col-md-4 mb-4 text-center">
-              <p className="right-text" data-aos="fade-left">
+              <p className="right-text" >
                 The major focus is to provide nutritional and livelihood
                 security to the resource-poor in developing and underdeveloped
                 countries that depend on millets, enhancing yield, and
@@ -145,7 +141,34 @@ useEffect(() => {
           </div>
         </div>
       </section>
-    
+    <section className="section-container">
+      <div className="card" >
+        <img src={PM} alt="PM"/>
+        <div className="card-content">
+          <p>
+            The Prime Minister noted that millets are primarily cultivated in
+            12-13 different states in the country where at-home consumption per
+            month per person was not more than 3 kilograms whereas the
+            consumption has increased to 14 kilograms per month today....
+          </p>
+          <a
+            href="https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr"
+          >
+            read more
+          </a>
+          <p className="quote-author">- Shri Narendra Modi</p>
+          <p className="quote-position">Prime Minister</p>
+        </div>
+      </div>
+
+      <div className="card" >
+      <img src={HimanshuPathakImage} alt="Research" />
+      <div className="card-content">
+          <p className="quote-author">Shri. Devesh Chaturvedi, IAS, Secretary</p>
+          <p className="quote-position">Department of Agriculture & Farmer Welfare</p>
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
