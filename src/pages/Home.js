@@ -98,7 +98,7 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <h2 className="text-dark fs-1 text-start" data-aos="fade-up">
+          <h2 className="text-dark fs-4 text-start" data-aos="fade-up">
             HIGHLIGHTS
           </h2>
           <div className="row">
@@ -108,18 +108,21 @@ const Home = () => {
                 title: "EXPERT WORKING GROUPS",
                 text:
                   "Working groups are established by bringing together experts with a focus on a topic of relevance with broader vision and specific objectives. It provides a platform for knowledge sharing on specific research and organizational development.",
+                  // link: "/highlights/ewg",
               },
               {
                 img: "images/crop_image.png",
                 title: "AHEAD",
                 text:
                   "Conducting regular progress and coordination meetings to ensure the project stays on track and to address any challenges.Stakeholders meet, EWG meeting, formulation of consultative groups for implementation of MAHARISHI.",
+                  // link: "/highlights/ewg",
               },
               {
                 img: "images/video_image.png",
                 title: "VIDEOS",
                 text:
                   "Our Expert Working Groups record presentations and webinars as well as they hold video competitions. All video recordings are available here.",
+                  // link: "/highlights/ewg",
               },
             ].map((item, idx) => (
               <div className="col-md-4 mb-4" data-aos="fade-up" key={idx}>
