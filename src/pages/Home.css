@@ -480,7 +480,7 @@ clip-path: polygon(
   }
 
   .section-container .card-content p {
-    font-size: 0.9rem; /* updated to match larger screens */
+    font-size: 0.7rem; /* updated to match larger screens */
   }
 
   .section-container .card-content a {
