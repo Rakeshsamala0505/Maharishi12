@@ -98,7 +98,7 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <h2 className="text-dark fs-4 text-start" data-aos="fade-up">
+          <h2 className="text-dark fs-4 text-start title-shift" data-aos="fade-up">
             HIGHLIGHTS
           </h2>
           <div className="row">
@@ -125,7 +125,7 @@ const Home = () => {
                   // link: "/highlights/ewg",
               },
             ].map((item, idx) => (
-              <div className="col-md-4 mb-4" data-aos="fade-up" key={idx}>
+              <div className="col-md-4 mb-2" data-aos="fade-up" key={idx}>
                 <div className="card h-100">
                   <img src={item.img} className="card-img-top1" alt={`Update ${idx + 1}`} />
                   <div className="card-body">
