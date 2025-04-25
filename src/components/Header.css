@@ -204,6 +204,7 @@ ul {
     display: block;
     position: relative;
 text-align: right;
+padding-right: 1rem !important;
   }
   
   .wrapper .btn.menu-btn.hidden {
