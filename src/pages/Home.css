@@ -103,6 +103,12 @@ clip-path: polygon(
     .image-slider {
       height: 25vh;
     }
+    .container h2 {
+      font-size: 1.5rem;
+      margin-left: 10%;
+      text-align: start;
+    }
+  
     
   }
 
@@ -191,7 +197,7 @@ clip-path: polygon(
 
   .container h2 {
     font-size: 1.5rem;
-    margin-left: 0;
+    margin-left: 7%;
     text-align: start;
   }
 
@@ -239,8 +245,8 @@ clip-path: polygon(
   }
 
   .card-img-top1 {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-left: 1rem;
   }
 
@@ -343,6 +349,7 @@ clip-path: polygon(
     margin-top: 20px;
     max-width: 20rem;
     margin-left: 2rem;
+    text-align: center;
   }
 
   #latest-news video {
