@@ -1,186 +1,175 @@
-
 /* Reset and base layout styles */
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  line-height: 1.7; /* Improved for readability */
 }
 
-/* Get the approximate height of your header */
-/* You'll need to manually inspect your header in the browser */
-/* and replace this value with its actual height (including padding/margins) */
+/* Header height variable */
 :root {
-  --header-height: 50px; /* Example: Adjust this value */
+  --header-height: 50px;
 }
 
-/* Wrapper for the main content, to center it and add space below the header */
+/* Wrapper for the main content */
 .expertWrapper {
-  max-width: 960px; /* Adjust as needed */
-  width: 100%;
-  margin: auto; /* Centers horizontally */
+  max-width: 960px;
+  margin: auto;
   padding: 40px 20px;
-  box-sizing: border-box;
-  border-radius: 8px; /* Optional */
-
-  /* Add top padding to create space below the header */
-  padding-top: calc(40px + var(--header-height)); /* Adjust the 40px as needed for extra top spacing */
+  padding-top: calc(40px + var(--header-height));
 }
 
-/* Sanskrit Quote Section */
-.quoteSection {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.quoteSection h4 {
-  font-size: 1.6rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-.quoteSection h5 {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.3;
-  margin-top: 10px;
-}
-
-.quoteSection p {
-  font-size: 1.1rem;
-  color: #777;
-  line-height: 1.6;
-  margin-top: 20px;
-}
-
-.quoteSection span.quoteRef {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #999;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Title Section */
-.titleSection {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.titleSection h1 {
-  font-size: 3rem;
-  color: #28a745;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.titleSection .tagline {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #555;
-  margin-top: 15px;
-}
-
-.titleSection .subtext {
-  font-size: 1.1rem;
-  color: #777;
-  margin-top: 10px;
-}
-
-/* Accordion Section */
-.accordionWrapper {
-  margin-top: 30px;
-}
-
-.accordion-header button {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  width: 100%;
+/* General Section Styling */
+.section {
+  padding: 0px 0px; /* Added internal spacing */
+  margin-bottom: 0px; /* More space between sections */
+  border-radius: 8px;
+  background: #fff;
   text-align: left;
-  transition: background-color 0.2s ease;
 }
 
-.accordion-header button:not(.collapsed) {
-  background-color: #e9ecef;
+/* Headings Styling */
+.section h2 {
   color: #28a745;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 15px;
+  padding-top: 2rem;
+
 }
 
-.accordion-header button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+.section h4 {
+  color: #28a745;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 10px;
 }
 
-.accordion-body {
-  padding: 20px;
+/* Paragraph Styling */
+.section p {
   font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
-  border: 1px solid #dee2e6;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #fff;
+  color: #444;
+  line-height: 1.8;
+  margin: 15px 0; /* Proper space between paragraphs */
+  text-align: justify;
 }
 
+/* List Styling */
+.section ul {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+
+.section ul li {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Blockquote Styling */
+.section blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #28a745;
+  padding-left: 16px;
+  margin: 20px 0;
+  font-size: 1.05rem;
+}
+
+/* Link Styling */
+.section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.section a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.titleSection h1{
+  font-size: 2rem;
+        padding-top: 1rem;
+}
 /* Responsive Layout */
 @media (max-width: 768px) {
   .expertWrapper {
     padding: 30px 15px;
-    padding-top: calc(30px + var(--header-height)); /* Adjust 30px as needed */
-    margin-bottom: 40px;
   }
 
-  .quoteSection h4 {
+  .section {
+    padding: 20px 15px;
+  }
+
+  .section h2 {
     font-size: 1.4rem;
   }
 
-  .quoteSection h5 {
-    font-size: 1.1rem;
+  .section h4 {
+    font-size: 1.2rem;
   }
 
-  .titleSection h1 {
-    font-size: 2.5rem;
-  }
-
-  .titleSection .tagline {
-    font-size: 1.1rem;
-  }
-
-  .accordion-header button {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  .accordion-body {
-    padding: 15px;
+  .section p,
+  .section ul li {
     font-size: 0.95rem;
   }
 }
 
 @media (max-width: 576px) {
   .expertWrapper {
-    padding: 20px 10px;
-    padding-top: calc(50px + var(--header-height)); /* Adjust 20px as needed */
-    margin-bottom: 30px;
+    padding: 20px 12px;
   }
 
-  .quoteSection h4 {
+  .section {
+    padding: 18px 12px;
+  }
+
+  .section h2 {
     font-size: 1.3rem;
   }
 
-  .titleSection h1 {
-    font-size: 2rem;
+  .section h4 {
+    font-size: 1.1rem;
   }
 
-  .titleSection .tagline {
+  .section p,
+  .section ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertWrapper {
+    max-width: 960px;
+    margin: auto;
+    padding: 40px 20px;
+    padding-top: calc(40px + var(--header-height));
+  }
+  .titleSection h1{
+    font-size: 1.4rem;
+          padding-top: 1rem;
+  }
+
+  .section {
+    padding: 0px 0px;
+  }
+
+  .section h2 {
+    color: #28a745;
     font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 15px;
+    padding-top: 2rem;
+  
+  }
+
+  .section h4 {
+    font-size: 1rem;
+  }
+
+  .section p,
+  .section ul li {
+    font-size: 0.9rem;
   }
 }

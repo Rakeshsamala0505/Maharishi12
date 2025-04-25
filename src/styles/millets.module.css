@@ -14,7 +14,7 @@ body {
     text-align: center;
     margin-top: 2%; /* Remove default top margin from the title */
     margin-bottom: 20px; /* Add some bottom margin for spacing */
-    font-weight: bold;
+    font-weight: 500;
     color: #004f6b;
     font-size: 1.5rem;
   }
@@ -126,6 +126,9 @@ body {
     width: 50%;
     margin-left: 25%;
     box-sizing: border-box;
+  }
+  .table-container h2{
+    font-size: 1.5rem;
   }
   
   table {

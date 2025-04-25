@@ -69,7 +69,7 @@
     padding-bottom: 5px;
     margin-bottom: 20px;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .point {
@@ -79,7 +79,14 @@
 
 .point h3 {
     color: #003366;
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+.point p {
+    font-size: 0.9rem;
+    text-align: justify;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px;
 }
 
 /* Responsive Design for 480px */

@@ -48,22 +48,27 @@ const people = [
 
 const Structure = () => {
   return (
-    <div className={styles.contentWrapper}>
-    <div className={styles.structureContainer}> {/* Using CSS Module class */}
-      {people.map((person) => (
-        <div key={person.id} className={styles.person}> {/* Using CSS Module class and adding key */}
-          <img src={person.image} alt={person.alt} />
-          <div className={styles.bioContent}> {/* Using CSS Module class */}
-            <h3 className={styles.headingAbout}>{person.name}</h3> {/* Using CSS Module class */}
-            <p>{person.title}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-    </div>
+    <div className={styles.container}> {/* Using CSS Module class */}
 
+      <div className={styles.contentWrapper}>
+        
+        <div className={styles.structureContainer}>
+        <h1 className={styles.title}>Key persons of MAHARISHI</h1> {/* Using CSS Module class */}
+
+          {people.map((person) => (
+            <div key={person.id} className={styles.person}>
+              <img src={person.image} alt={person.alt} />
+              <div className={styles.bioContent}>
+                <h3 className={styles.headingAbout}>{person.name}</h3>
+                <p>{person.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div> /* ✅ Closing the outermost div */
   );
-  
 };
+
 
 export default Structure; 
