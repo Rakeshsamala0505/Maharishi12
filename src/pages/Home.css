@@ -111,7 +111,11 @@ clip-path: polygon(
   
     
   }
+.py-5{
+  padding-top: 0rem !important;
+    padding-bottom: 3rem !important;
 
+}
 
  /*Latest  Updates Section*/
 /*Latest Updates Section*/
