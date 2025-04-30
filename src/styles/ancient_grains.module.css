@@ -2,451 +2,446 @@
 
 /* Base styles */
 body {
-    margin-top: 0; /* Remove default top margin from the body */
-  }
-  
-  .section {
-    padding-bottom: 50px;
-    padding-top: 4%; /* Add some top padding to the section instead */
-  }
-  
-  .millets-title {
-    text-align: center;
-    margin-top: 2%; /* Remove default top margin from the title */
-    margin-bottom: 20px; /* Add some bottom margin for spacing */
-    color: #004f6b;
-    font-size: 1.5rem;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
-    padding: 20px;
-    gap: 20px;
-    width: 83%; /* Decrease the overall width of the container */
-    margin: 0 auto; /* Center the container itself horizontally */
-  }
-  
-  .card {
-    width: calc(25% - 20px); /* Maintain 4 cards per row for larger screens */
-    height: auto; /* Let the height adjust based on content */
-    border: 0px solid #ccc;
-    border-radius: 0px;
-    overflow: hidden; /* Clip any image parts that go outside (if needed) */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    background-color: #fff;
-    position: relative;
-    margin-bottom: 20px;
-    display: flex; /* Enable Flexbox for card content */
-    flex-direction: column; /* Stack image and text vertically */
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px; /* Set a fixed height for the image */
-    object-fit: cover;
-    display: block;
-    flex-grow: 1; /* Allow the image to take up available space */
-  }
-  
-  .card a {
-    display: flex; /* Make the link a flex container */
-    flex-direction: column; /* Stack image and heading within the link */
-    text-decoration: none;
-    color: inherit;
-    height: 100%; /* Make the link fill the card height */
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #79380a;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  .card_container {
-    width: 80%;
-    border-radius: 0px;
-    margin-left: 10%;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: justify;
-    padding: 20px;
-    box-sizing: border-box;
-    
-  }
-  
-  .card_container h2 {
-    font-weight: bold;
-    color: #004f6b;
-    font-size: 18px;
-    text-decoration: underline;
-    margin-bottom: 15px;
-  }
-  
-  .card_container p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .card:hover::after {
-    width: 100%;
-  }
-  
-  .card h3 {
-    margin-top: 10px; /* Add some space above the text */
-    margin-bottom: 15px; /* Add some space below the text */
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    padding: 0 10px; /* Add some horizontal padding for wider text */
-  }
-  
-  .table-container {
-    padding: 20px;
-    font-size: 14px;
-    width: 50%;
-    margin-left: 25%;
-    box-sizing: border-box;
-  }
-  .table-container h2{
-    font-size: 1.5rem;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-  
-  th,
-  td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  th {
-    background-color: darkblue;
-    color: white;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  #content-title {
-    color: #ddd;
-  }
-  
-  /* Header styles (assuming these are in a separate Header.module.css) */
-  /* If your header styles are in millets.module.css, adjust accordingly */
-  .header {
-    background-color: #f8f9fa; /* Example background color */
-    padding: 10px 0;
-  }
-  
-  .header__content {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .header__main {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .header__link-wrapper {
-    margin: 0 15px;
-    position: relative;
-  }
-  
-  .header__link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
-  }
-  
-  .header__link:hover {
-    color: #004f6b;
-  }
-  
-  .header__dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    z-index: 10;
-    display: none;
-    min-width: 180px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header__link-wrapper:hover .header__dropdown {
-    display: block;
-  }
-  
-  .header__dropdown a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .header__dropdown a:hover {
-    background-color: #f0f0f0;
-    color: #004f6b;
-  }
-  
-  /* Header Banner Styles */
-  .banner {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
-  .banner-bg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .banner-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .left-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .main-logo {
-    height: 80px; /* Adjust as needed */
-    margin-right: 15px;
-  }
-  
-  .banner-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #004f6b;
-    margin-bottom: 5px;
-  }
-  
-  .banner-text {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.4;
-  }
-  
-  .highlight {
-    color: #79380a;
-    font-weight: bold;
-  }
-  
-  .banner-logos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    padding-right: 20px;
-    height: 100%;
-  }
-  
-  .banner-logos img {
-    height: 60px; /* Adjust logo size */
-  }
-  
-  /* ../styles/millets.module.css */
+  margin-top: 0; /* Remove default top margin from the body */
+}
+
+.section {
+  padding-bottom: 50px;
+  padding-top: 4%; /* Add some top padding to the section instead */
+  background-color: rgb(244, 244, 244);
+}
+
+.millets-title {
+  text-align: left;
+  margin-left: 10rem;
+  margin-top: 3%; /* Remove default top margin from the title */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  font-weight: 500;
+  color: #004f6b;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  padding: 20px;
+  gap: 20px;
+  width: 83%; /* Decrease the overall width of the container */
+  margin: 0 auto; /* Center the container itself horizontally */
+}
+
+.card {
+  width: calc(25% - 20px); /* Maintain 4 cards per row for larger screens */
+  height: auto; /* Let the height adjust based on content */
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex; /* Enable Flexbox for card content */
+  flex-direction: column; /* Stack image and text vertically */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+  flex-grow: 1; /* Allow the image to take up available space */
+}
+
+.card a {
+  display: flex; /* Make the link a flex container */
+  flex-direction: column; /* Stack image and heading within the link */
+  text-decoration: none;
+  color: inherit;
+  height: 100%; /* Make the link fill the card height */
+}
+/* .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #79380a;
+  transition: width 0.4s ease-in-out;
+}
+
+.card_container {
+  width: 80%;
+  border-radius: 0px;
+  margin-left: 10%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: justify;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card_container h2 {
+  /* font-weight: bold; */
+  color: #004f6b;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.card_container p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card:hover::after {
+  width: 100%;
+}
+
+.card h3 {
+  margin-top: 10px; /* Add some space above the text */
+  margin-bottom: 15px; /* Add some space below the text */
+  font-size: 1rem;
+  color: #333;
+  padding: 0 10px; /* Add some horizontal padding for wider text */
+}
+
+.table-container {
+  padding: 20px;
+  font-size: 14px;
+  width: 50%;
+  margin-left: 25%;
+  box-sizing: border-box;
+}
+.table-container h2{
+  font-size: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#content-title {
+  color: #ddd;
+}
+
+/* Header styles (assuming these are in a separate Header.module.css) */
+/* If your header styles are in millets.module.css, adjust accordingly */
+.header {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 10px 0;
+}
+
+.header__content {
+  display: flex;
+  justify-content: center;
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+}
+
+.header__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header__link-wrapper {
+  margin: 0 15px;
+  position: relative;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+.header__link:hover {
+  color: #004f6b;
+}
+
+.header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 10;
+  display: none;
+  min-width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__link-wrapper:hover .header__dropdown {
+  display: block;
+}
+
+.header__dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header__dropdown a:hover {
+  background-color: #f0f0f0;
+  color: #004f6b;
+}
+
+/* Header Banner Styles */
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.banner-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.main-logo {
+  height: 80px; /* Adjust as needed */
+  margin-right: 15px;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #004f6b;
+  margin-bottom: 5px;
+}
+
+.banner-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #79380a;
+  font-weight: bold;
+}
+
+.banner-logos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+  height: 100%;
+}
+
+.banner-logos img {
+  height: 60px; /* Adjust logo size */
+}
+
+/* ../styles/millets.module.css */
 
 /* Base styles (as provided previously) ... */
 
 /* Mobile-specific styles (applied to screens with a maximum width of 767px) */
 @media (max-width: 767px) {
-    body {
-      padding-left: 10px; /* Add some left padding to the body */
-      padding-right: 10px; /* Add some right padding to the body */
-    }
-  
-    .section {
-      padding-bottom: 40px; /* Adjust bottom padding */
-      padding-top: 3%; /* Adjust top padding */
-    }
-  
-    .millets-title {
-      font-size: 1.2rem;
-      margin-top: 4%;
-      margin-bottom: 15px;
-    }
-  
-    .container {
-      width: 100%; /* Take full width within the body's padding */
-      padding: 10px;
-      gap: 10px;
-    }
-  
-    .card {
-      width: calc(50% - 10px);
-      margin-bottom: 15px;
-    }
-  
-    .card img {
-      height: 150px;
-    }
-  
-    .card h3 {
-      font-size: 1rem;
-      margin-top: 5px;
-      margin-bottom: 10px;
-      padding: 0 5px;
-    }
-  
-    .card_container {
-      width: 100%; /* Take full width within the body's padding */
-      margin-left: 0;
-      padding: 15px;
-    }
-  
-    .card_container h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-  
-    .card_container p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      margin-bottom: 15px;
-    }
-  
-    .table-container {
-      width: 100%; /* Take full width within the body's padding */
-      margin-left: 0;
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-  
-    th,
-    td {
-      padding: 8px;
-      font-size: 0.8rem;
-    }
-    .text-center {
-        font-size: 1rem; /* Or your desired smaller font size */
-      }
+  body {
+    padding-left: 10px; /* Add some left padding to the body */
+    padding-right: 10px; /* Add some right padding to the body */
   }
-  
-  /* Extra small screens (phones with a maximum width of 480px) */
-  @media (max-width: 480px) {
-    .text-center {
-        font-size: 1rem; /* Or your desired smaller font size */
-      }
-    #text-center{
-        font-size: 22rem;
-    }
-    body {
-      padding-left: 0; /* Adjust padding for very small screens */
-      padding-right: 0;
-    }
-  
-    .section {
-      padding-bottom: 30px; /* Adjust bottom padding */
-      padding-top: 15%; /* Adjust top padding */
-    }
-  
-    .millets-title {
-      font-size: 1rem;
-      margin-top: 6%;
-      margin-bottom: 10px;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 8px;
-      gap: 6px;
-    }
-  
-    .card {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .card img {
-      height: auto;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-  
-    .card h3 {
-      font-size: 0.9rem;
-      margin-top: 3px;
-      margin-bottom: 8px;
-      padding: 0 8px;
-    }
-  
-    .card_container {
-      width: 100%;
-      margin-left: 0;
-      padding: 10px;
-    }
-  
-    .card_container h2 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-  
-    .card_container p {
-      font-size: 0.8rem;
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-  
-    .table-container {
-      width: 100%;
-      margin-left: 0;
-      padding: 8px;
-      font-size: 0.5rem !important;
-    }
-   
-  
-    th,
-    td {
-      padding: 6px;
-      font-size: 0.7rem;
-    }
+
+  .section {
+    padding-bottom: 40px; /* Adjust bottom padding */
+    padding-top: 3%; /* Adjust top padding */
   }
+
+  .millets-title {
+    font-size: 1.2rem;
+    margin-top: 4%;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    width: 100%; /* Take full width within the body's padding */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+    margin-bottom: 15px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+  }
+
+  .card_container {
+    width: 100%; /* Take full width within the body's padding */
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .card_container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .card_container p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .table-container {
+    width: 100%; /* Take full width within the body's padding */
+    margin-left: 0;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+  .text-center {
+      font-size: 1rem; /* Or your desired smaller font size */
+    }
+}
+
+/* Extra small screens (phones with a maximum width of 480px) */
+@media (max-width: 480px) {
+  .text-center {
+      font-size: 1rem; /* Or your desired smaller font size */
+    }
+  body {
+    padding-left: 8px; /* Adjust padding for very small screens */
+    padding-right: 8px;
+  }
+
+  .section {
+    padding-bottom: 30px; /* Adjust bottom padding */
+    padding-top: 15%; /* Adjust top padding */
+  }
+
+  .millets-title {
+    font-size: 1rem;
+    margin-top: 6%;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card h3 {
+    font-size: 0.9rem;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+
+  .card_container {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .card_container h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .card_container p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .table-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+
+  th,
+  td {
+    padding: 6px;
+    font-size: 0.7rem;
+  }
+}

@@ -308,6 +308,7 @@ clip-path: polygon(
   font-size: 1rem;
   margin-top: 90px;
   transition: all 1.5s ease-in-out;
+  text-align:center;
 }
 
 #latest-news p.right-text.slide-in {
