@@ -201,7 +201,7 @@ const MilletsPage = () => {
       Eurasia. This crop is known for its high-quality protein and starch content. Additionally, it is
       rich in fiber, minerals, vitamins, and flavonoids, which offer various health benefits. In India,
       buckwheat is called &quot;kuttu ka atta&quot; and is commonly consumed during Navratri. It is a gluten-
-      free flour used to make dishes like parathas and pakodas.ct panicle that bends at the top,
+      free flour used to make dishes like parathas and pakodas. panicle that bends at the top,
         resembling an old broom, which inspired its alternative name.
             </p>
           </div>
