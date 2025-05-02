@@ -168,7 +168,6 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            {/* ... (rest of the menu items) ... */}
             <li>
               <a href="#" className="desktop-item">
                 Millets
@@ -221,7 +220,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
                     Nutrition Benefits
                   </a>
                 </li>
