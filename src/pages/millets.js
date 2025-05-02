@@ -24,7 +24,7 @@ const MilletsPage = () => {
   return (
     <div>
       <div className={styles.section}>
-        <h1 className={styles['millets-title']}>MILLETS :</h1>
+        <h1 className={styles['millets-title']}>MILLETS</h1>
         <div className={styles.container}>
           <div className={styles.card}>
             <a href="#section1">

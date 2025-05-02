@@ -32,7 +32,7 @@ html, body {
 /* Headings Styling */
 .section h2 {
   color: #28a745;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin: 0 0 15px;
   padding-top: 2rem;
@@ -41,14 +41,14 @@ html, body {
 
 .section h4 {
   color: #28a745;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 20px 0 10px;
 }
 
 /* Paragraph Styling */
 .section p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #444;
   line-height: 1.8;
   margin: 15px 0; /* Proper space between paragraphs */
@@ -62,7 +62,7 @@ html, body {
 }
 
 .section ul li {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #444;
   line-height: 1.6;
   margin-bottom: 8px;
@@ -147,8 +147,8 @@ html, body {
     padding-top: calc(40px + var(--header-height));
   }
   .titleSection h1{
-    font-size: 1rem;
-    padding-top: 1rem;
+    font-size: 1.4rem;
+          padding-top: 1rem;
   }
 
   .section {
@@ -157,7 +157,7 @@ html, body {
 
   .section h2 {
     color: #28a745;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0 0 15px;
     padding-top: 2rem;
@@ -165,11 +165,11 @@ html, body {
   }
 
   .section h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .section p,
   .section ul li {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
