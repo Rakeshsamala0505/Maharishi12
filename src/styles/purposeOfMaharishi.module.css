@@ -3,12 +3,12 @@
     padding: 2rem 1rem;
     max-width: 1140px;
     margin: auto;
-    padding-top: 4rem !important;
+    padding-top: 5rem !important;
   }
   
   /* Inner content section */
   .text_content {
-    padding: 1rem;
+    padding: 0rem;
   }
   
   /* Section Titles: Mission, Vision */
@@ -47,15 +47,18 @@
   @media (max-width: 480px) {
     .container {
       padding: 1rem;
+      padding-top: 3rem !important;
+
     }
   
     .title {
-      font-size: 1.5rem;
+      font-size: 1rem !important;
     }
   
     .text-content {
-      font-size: 0.95rem;
+      font-size: 0.7rem;
       line-height: 1.6;
+      text-align: justify;
     }
   }
   

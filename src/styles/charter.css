@@ -104,7 +104,7 @@
     }
 
     .sidebar h3 {
-        font-size: 16px;
+        font-size: 1rem !important;
         text-align: center;
     }
 
@@ -115,18 +115,18 @@
 
     .content {
         width: 100%;
-        padding: 30px;
+        padding: 0px;
     }
 
     .content h2 {
-        font-size: 18px;
+        font-size: 0.89rem;
     }
 
     .point h3 {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     .point p {
-        font-size: 14px;
+        font-size: 0.7rem;
     }
 }

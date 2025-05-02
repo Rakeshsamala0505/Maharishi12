@@ -55,7 +55,7 @@
         flex: 1;
         max-width: 1200px;
         margin: auto;
-        padding: 30px;
+        padding: 1rem;
         padding-top: 20% !important; /* Adjust this based on your header height */
     }
     
@@ -71,7 +71,7 @@
     }
 
     .title {
-        font-size: 0.7rem !important;
+        font-size: 0.9rem !important;
         color: #4c7c13;
         font-weight: bold;
         margin-bottom: 10px;

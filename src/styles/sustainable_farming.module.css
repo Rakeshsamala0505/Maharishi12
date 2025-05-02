@@ -197,23 +197,27 @@
   /* Extra small screens (phones with a maximum width of 480px) */
   @media (max-width: 480px) {
     .container {
-      padding: 15px;
+      padding: 0px;
       padding-top: 20%;
     }
   
     .content h2 {
-      font-size: 1.1rem;
-    }
-  
-    .content h3 {
       font-size: 1rem;
     }
   
-    .content h4 {
+    .content h3 {
       font-size: 0.9rem;
     }
   
+    .content h4 {
+      font-size: 0.8rem;
+    }
+  
     .content p {
-      font-size: 0.85rem;
+      font-size: 0.7rem;
+    }
+    .sidebar ul li {
+      padding: 8px 0;
+      font-size: 0.7rem;
     }
   }

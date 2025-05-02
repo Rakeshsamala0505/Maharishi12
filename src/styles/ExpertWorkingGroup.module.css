@@ -146,9 +146,18 @@ html, body {
     padding: 40px 20px;
     padding-top: calc(40px + var(--header-height));
   }
+  /* Blockquote Styling */
+.section blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #28a745;
+  padding-left: 16px;
+  margin: 20px 0;
+  font-size: 0.8rem;
+}
   .titleSection h1{
-    font-size: 1.4rem;
-          padding-top: 1rem;
+    font-size: 0.9rem;
+    padding-top: 1rem;
   }
 
   .section {
@@ -157,19 +166,19 @@ html, body {
 
   .section h2 {
     color: #28a745;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin: 0 0 15px;
     padding-top: 2rem;
   
   }
 
-  .section h4 {
+  h4, h5 {
     font-size: 1rem;
   }
 
   .section p,
   .section ul li {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
