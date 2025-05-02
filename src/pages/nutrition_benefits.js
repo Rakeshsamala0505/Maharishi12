@@ -12,7 +12,7 @@ const benefitData = [
   // Add more benefits as needed
 ];
 
-const NutritionBenefits = () => {
+const NutritionBenefitsStructured = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
@@ -122,12 +122,14 @@ const NutritionBenefits = () => {
                 the risk of cardiovascular diseases.
               </p>
             </div>
+            {/* ... other toggle content ... */}
           </div>
         </div>
       </section>
 
+      {/* ... rest of your content (Health and Nutrient Benefits of Ancient Grains) ... */}
     </div>
   );
 };
 
-export default NutritionBenefits;
+export default NutritionBenefitsStructured;

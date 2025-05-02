@@ -1,305 +1,210 @@
+/* styles.css */
+
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-}
-
-.nutrition-benefits-container {
-  padding: 20px;
-}
-
-/* Title Styling */
-.visual-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #494949;
-  text-decoration: underline;
-}
-
-/* Nutri Facts Section */
-.nutri-facts-section {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.nutri-facts-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.nutri-facts-text h2 {
-  font-size: 1.5rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.nutri-facts-text h3 {
-  font-size: 1.2rem;
-  color: #2c3e50;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-.nutri-facts-text p {
-  line-height: 1.6;
-}
-
-.millet-visual-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-  min-width: 200px;
-}
-
-.millet-visual {
-  max-width: 200px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.benefits-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-.benefits-list li img {
-  max-width: 30px;
-  height: auto;
-}
-
-/* Health Benefits Section */
-.health-benefits-section {
-  margin-bottom: 30px;
-}
-
-.health-benefits-section h2 {
-  font-size: 1.5rem;
-  color: #2c3e50;
-  border-bottom: 3px solid #27ae60;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-
-.main-section {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.main-content {
-  flex: 2;
-  min-width: 300px;
-}
-
-.side-bar {
-  flex: 1;
-  min-width: 200px;
-}
-
-.content-box {
-  margin-top: 15px;
-  border-left: 5px solid #f39c12;
-  padding-left: 15px;
-}
-
-.toggle-heading {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #34495e;
-  cursor: pointer;
-  margin-bottom: 5px;
-}
-
-.toggle-content {
-  display: none;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* ----------- Tablet (≤768px) ----------- */
-@media (max-width: 768px) {
-  .visual-title {
-    font-size: 1.75rem;
-    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
   }
-
+  
+  .nutrition-benefits-container {
+    padding: 20px;
+  }
+  
+  /* Title Styling */
+  .visual-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #494949;
+    text-decoration: underline;
+  }
+  
+  /* Nutri Facts Section */
   .nutri-facts-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .nutri-facts-section .nutri-facts-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .nutri-facts-section .nutri-facts-text h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .nutri-facts-section .nutri-facts-text h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .nutri-facts-section .nutri-facts-text p {
+    line-height: 1.6;
+  }
+  
+  .nutri-facts-section .millet-visual-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 20px;
+    text-align: center;
+    min-width: 200px; /* Ensure container has some width */
   }
-
-  .millet-visual-container {
-    order: -1;
+  
+  .nutri-facts-section .millet-visual {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between image and benefits */
   }
-
-  .millet-visual {
-    max-width: 150px;
+  
+  .nutri-facts-section .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-
-  .benefits-list {
-    text-align: left;
-  }
-
-  .nutri-facts-text h2 {
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .health-benefits-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-  }
-
-  .main-section {
-    flex-direction: column;
-  }
-
-  .main-content {
-    margin-bottom: 20px;
-  }
-
-  .toggle-heading {
-    font-size: 1rem;
-  }
-}
-
-/* ----------- Mobile (≤480px) ----------- */
-@media (max-width: 480px) {
-  .nutrition-benefits-container {
-    padding: 15px;
-  }
-
-  .visual-title {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  .nutri-facts-section {
+  
+  .nutri-facts-section .benefits-list li {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    text-align: center;
+    margin-bottom: 8px;
   }
-
-  .nutri-facts-text h2,
-  .nutri-facts-text h3 {
-    font-size: 1.1rem;
-    text-align: center;
+  
+  .nutri-facts-section .benefits-list li img {
+    max-width: 30px;
+    height: auto;
   }
-
-  .nutri-facts-text p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .millet-visual {
-    max-width: 100px;
-  }
-
-  .benefits-list li {
-    gap: 8px;
-    font-size: 0.9rem;
-  }
-
-  .benefits-list li img {
-    max-width: 24px;
-  }
-
-  .health-benefits-section h2 {
-    font-size: 1.1rem;
-  }
-
-  .toggle-heading {
-    font-size: 1rem;
-  }
-
-  .toggle-content {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
-/* ----------- Laptop/Desktop (≥1024px) ----------- */
-@media (min-width: 1024px) {
-  .nutrition-benefits-container {
-    padding: 40px 60px;
-  }
-
-  .visual-title {
-    font-size: 2.2rem;
+  
+  /* Health Benefits Section */
+  .health-benefits-section {
     margin-bottom: 30px;
   }
-
-  .nutri-facts-section {
-    gap: 40px;
-    align-items: flex-start;
-  }
-
-  .nutri-facts-text h2 {
-    font-size: 1.8rem;
+  
+  .health-benefits-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
     margin-bottom: 15px;
   }
-
-  .nutri-facts-text h3 {
-    font-size: 1.4rem;
-    margin-top: 20px;
+  
+  .health-benefits-section .main-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
   }
-
-  .nutri-facts-text p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+  
+  .health-benefits-section .main-content {
+    flex: 2;
+    min-width: 300px;
   }
-
-  .millet-visual {
-    max-width: 250px;
+  
+  .health-benefits-section .side-bar {
+    flex: 1;
+    min-width: 200px;
   }
-
-  .benefits-list li {
-    font-size: 1rem;
-    gap: 12px;
+  
+  .health-benefits-section .content-box {
+    margin-top: 15px;
+    border-left: 5px solid #f39c12; /* Example sidebar box styling */
+    padding-left: 15px;
   }
-
-  .benefits-list li img {
-    max-width: 35px;
+  
+  .health-benefits-section .toggle-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #34495e;
+    cursor: pointer;
+    margin-bottom: 5px;
   }
-
-  .health-benefits-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+  
+  .health-benefits-section .toggle-content {
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
-
-  .main-content p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .visual-title {
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+    }
+  
+    .nutri-facts-section {
+      flex-direction: column; /* Stack text and image/benefits */
+      align-items: center; /* Center items */
+      text-align: center; /* Center text */
+      gap: 20px;
+    }
+  
+    .nutri-facts-section .millet-visual-container {
+      order: -1; /* Move image/benefits above text */
+    }
+  
+    .nutri-facts-section .millet-visual {
+      max-width: 150px;
+    }
+  
+    .nutri-facts-section .benefits-list {
+      text-align: left; /* Reset text alignment for benefits */
+    }
+  
+    .nutri-facts-section .nutri-facts-text h2 {
+      font-size: 1.3rem;
+      text-align: left; /* Reset text alignment */
+    }
+  
+    .health-benefits-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+    }
+  
+    .health-benefits-section .main-section {
+      flex-direction: column;
+    }
+  
+    .health-benefits-section .main-content {
+      margin-bottom: 20px;
+    }
+  
+    .health-benefits-section .toggle-heading {
+      font-size: 1rem;
+    }
   }
-
-  .toggle-heading {
-    font-size: 1.2rem;
+  
+  @media (max-width: 576px) {
+    .visual-title {
+      font-size: 1.5rem;
+    }
+  
+    .nutri-facts-section {
+      gap: 15px;
+    }
+  
+    .nutri-facts-section .millet-visual {
+      max-width: 120px;
+    }
+  
+    .nutri-facts-section .nutri-facts-text h2 {
+      font-size: 1.2rem;
+    }
+  
+    .health-benefits-section h2 {
+      font-size: 1.2rem;
+    }
   }
-
-  .toggle-content {
-    font-size: 1rem;
-    padding: 12px;
-  }
-}
