@@ -28,50 +28,50 @@ const MilletsPage = () => {
         <div className={styles.container}>
           <div className={styles.card}>
             <a href="#section1">
-              <img src={sorghumImage} alt="Sorghum" />
-              <h3>Sorghum</h3>
+              <img src={sorghumImage} alt="Oats" />
+              <h3>Oats</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section2">
-              <img src={pearlMilletImage} alt="Pearl Millet" />
-              <h3>Pearl millet</h3>
+              <img src={pearlMilletImage} alt="Quinoa" />
+              <h3>Quinoa</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section3">
-              <img src={fingerMilletImage} alt="Finger Millet" />
-              <h3>Finger millet</h3>
+              <img src={fingerMilletImage} alt="Ancient wheat" />
+              <h3>Ancient wheat</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section4">
-              <img src={foxtailMilletImage} alt="Foxtail Millet" />
-              <h3>Foxtail millet</h3>
+              <img src={foxtailMilletImage} alt="Fonio" />
+              <h3>Fonio</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section5">
-              <img src={barnyardMilletImage} alt="Barnyard Millet" />
-              <h3>Barnyard millet</h3>
+              <img src={barnyardMilletImage} alt="Job's tears" />
+              <h3>Job's tears</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section6">
-              <img src={kodoMilletImage} alt="Kodo Millet" />
-              <h3>Kodo millet</h3>
+              <img src={kodoMilletImage} alt="Teff" />
+              <h3>Teff</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section7">
-              <img src={littleMilletImage} alt="Little Millet" />
-              <h3>Little millet</h3>
+              <img src={littleMilletImage} alt="Chia" />
+              <h3>Chia</h3>
             </a>
           </div>
           <div className={styles.card}>
             <a href="#section8">
-              <img src={prosoMilletImage} alt="Proso Millet" />
-              <h3>Proso Millet</h3>
+              <img src={prosoMilletImage} alt="Buckwheat" />
+              <h3>Buckwheat</h3>
             </a>
           </div>
         </div>
