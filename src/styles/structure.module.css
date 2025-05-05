@@ -103,7 +103,7 @@
       width: 100px;
       height: 100px;
     }
-    p{
+    .bioContent p{
       font-size: 0.7rem;
       text-align:center;
     }

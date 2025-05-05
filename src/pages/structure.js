@@ -5,6 +5,7 @@ import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
 import DeveshChaturvedi from '../assets/images/dr_devesh.jpg';
 import Drdevenderkumar from '../assets/images/devender.jpg';
 import DrCTaraSatyavathiImage from '../assets/images/director.png';
+import DrMangilal from '../assets/images/dr_mangi_lal1.png';
 
 // Array of person data (moved out of the component for better maintainability)
 const people = [
@@ -39,11 +40,19 @@ const people = [
   },
   {
     id: 5,
+    name: 'Dr. Mangi Lal Jat',
+    title: 'Department of Agricultural Research and Education (DARE) and Director General (DG) of ICAR',
+    image: DrMangilal,
+    alt: 'A well-recognized Systems Agronomist',
+  },
+  {
+    id: 6,
     name: 'Dr (Mrs) C Tara Satyavathi',
     title: 'Director of IIMR (Rajendra nagar, Hyderabad)',
     image: DrCTaraSatyavathiImage,
     alt: 'Dr (Mrs) C Tara Satyavathi, Director of IIMR',
   },
+  
 ];
 
 const Structure = () => {
