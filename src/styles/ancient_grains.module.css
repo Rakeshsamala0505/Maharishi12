@@ -368,11 +368,9 @@ body {
   /* Extra small screens (phones with a maximum width of 480px) */
   @media (max-width: 480px) {
     .text-center {
-        font-size: 1rem; /* Or your desired smaller font size */
+        font-size: 1rem !important; /* Or your desired smaller font size */
       }
-    #text-center{
-        font-size: 22rem;
-    }
+    
     body {
       padding-left: 0; /* Adjust padding for very small screens */
       padding-right: 0;

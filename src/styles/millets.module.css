@@ -364,7 +364,7 @@ body {
       font-size: 0.8rem;
     }
     .text-center {
-        font-size: 1rem; /* Or your desired smaller font size */
+        font-size: 1rem !important; /* Or your desired smaller font size */
       }
   }
   

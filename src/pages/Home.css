@@ -307,6 +307,7 @@ clip-path: polygon(
 #latest-news p {
   font-size: 1rem;
   margin-top: 90px;
+  text-align: center;
   transition: all 1.5s ease-in-out;
 }
 
