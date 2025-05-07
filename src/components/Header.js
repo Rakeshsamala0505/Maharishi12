@@ -85,7 +85,7 @@ const Header = () => {
       <div className="wrapper d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center">
           <Link to="/"><img
-            src="/icons/maharshi_log.png"
+            src="/icons/mylogo1.png"
             alt="Logo"
             className="logo"/></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
@@ -160,7 +160,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="/expert_working_group" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Expert Working Groups
+                    Committees
                   </Link>
                 </li>
                 <li>

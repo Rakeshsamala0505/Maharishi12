@@ -9,8 +9,8 @@
   }
   
   .structureContainer {
-    width: 70%;
-    padding: 40px;
+    width: 80%;
+    padding: 0px;
     border-radius: 12px;
     padding-top: 5%;
   }
@@ -35,17 +35,20 @@
   .bioContent {
     text-align: left;
   }
+
   
   .headingAbout {
     margin-top: 0;
     color: #003366;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
   }
   
   .bioContent p {
     margin: 5px 0;
     color: #555;
+    font-size:0.9rem;
+    text-align: left;
   }
   .title {
     font-size: 1.5rem;
@@ -55,6 +58,27 @@
     padding-left: 1rem;
     margin-bottom: 2rem;
   }
+  .personRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+
+  }
+  
+  .personRow .person {
+    flex: 1;
+    border-bottom: none; /* remove divider between side-by-side cards */
+  }
+  .mangiFix img {
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    
+  }
   
   
   /* Responsive styles */
@@ -62,6 +86,9 @@
     .structureContainer {
       width: 95%;
       padding: 20px;
+    }
+    .personRow {
+      flex-direction: column;
     }
   
     .person {
@@ -115,6 +142,15 @@
       padding-left: 1rem;
       margin-bottom: 2rem;
     }
+    .personRow {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+  
+    }
+    
   }
   
   
