@@ -187,6 +187,7 @@ ul {
      }
   nav .wrapper .logo {
     height: auto; /* Adjusted height for smaller screens */
+    width: 13rem;
     position: absolute;
         left: 10px;
         top: 50%;
