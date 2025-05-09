@@ -6,14 +6,28 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-/* In your global CSS file (like index.css or App.css) */
-
 
 nav {
   position: fixed;
   z-index: 99;
   width: 100%;
   background: #ffffff;
+}
+
+.subheader {
+  padding: 0px 0px;
+  display: block;
+  cursor: pointer;
+  color: #000;
+}
+
+.subheader:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+.desktop-subheader {
+  padding: 0.5rem 1rem;
+  text-align: left;
 }
 
 nav .wrapper {
@@ -25,30 +39,23 @@ nav .wrapper {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center !important; /* Changed from center !important to space-between */
+  justify-content: space-between;
 }
+
 nav .wrapper .logo {
-  color: #fff;
-  font-size: 300px; /* Removed from here */
-  font-weight: bold;
-  letter-spacing: -2px;
-  margin-right: auto;
-  height: auto; /* Default height (small screen) */
-width: 15rem;
-}
-.wrapper .logo a {
-  color: #f2f2f2;
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
+  height: auto;
+  width: 15rem;
 }
 
 .wrapper .nav-links {
   display: inline-flex;
+  gap: 0.5rem;
 }
 
 .nav-links li {
   list-style: none;
+  position: relative;
+  
 }
 
 .nav-links li a {
@@ -61,9 +68,8 @@ width: 15rem;
   transition: all 0.3s ease;
   text-align: left;
 }
-dl,
-ol,
-ul {
+
+dl, ol, ul {
   margin-bottom: 0rem;
 }
 
@@ -76,90 +82,122 @@ ul {
   display: none;
 }
 
+/* Smooth dropdown with nested support */
 .nav-links .drop-menu {
-  background-color: white;
   position: absolute;
-  width: 100%;
-  line-height: 4px;
-  top: 72px;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  max-height: 0;
+  top: 100%;
+  left: 0;
+  background: #fff;
   z-index: 1000;
-  padding: 0px;
-  width: 200px;
-  transition: max-height 0.7s ease-in-out, opacity 0s ease-in-out;
+  min-width: 230px;
+  padding: 0; /* Ensure no padding here */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-links li:hover > .drop-menu {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.nav-links li:hover .drop-menu,
-.nav-links li:hover .mega-box {
+/* Show drop-menu on hover */
+.nav-links li:hover > .drop-menu,
+.nav-links .drop-menu:hover {
   opacity: 1;
   visibility: visible;
-  max-height: 300px;
-  padding: 0px;
-  line-height: 2.5rem;
-  width: 15rem;
 }
 
+
+.drop-menu li {
+  position: relative;
+  margin: 0;
+  line-height: 2;
+}
+
+/* Items inside dropdown */
 .drop-menu li a {
-  width: 100%;
+  padding: 6px 12px; /* Adjust to fit the text properly */
+  color: #000;
+  text-align: left;
+  border-radius: 3px;
+  display: block; /* Make sure the entire area of the link is clickable */
+  transition: background-color 0.3s ease;
+  font-weight: normal;
+}
+.drop-menu li a:hover {
+  background-color: #3A3B3C;
+  color: white;
+}
+.nested-menu {
+  list-style: none;
+
+  position: relative;
+}
+
+/* Nested dropdown (for "Committees" submenu) */
+/* Desktop nested dropdown: default hover behavior */
+.drop-menu .nested-drop-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #ffffff;
+  z-index: 1001;
+  min-width: 180px;
+  padding: 0; /* Removed padding to remove extra space */
+  margin: 0; /* Ensure no extra margin */
+  border-radius: 0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Show nested dropdown on hover */
+.drop-menu .nested-menu:hover > .nested-drop-menu,
+.nested-drop-menu:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nested-drop-menu:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nested-drop-menu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.subheader .svg-inline--fa  {
+  margin-left: 2rem;
+  font-size: 12px;
+}
+
+
+
+/* Nested items */
+.nested-drop-menu li a {
   display: block;
-  padding: 0 0 0 15px;
-  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  color: #000;
+  text-align: left;
   border-radius: 0px;
 }
 
-.mega-box {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 0 30px;
-  top: 85px;
-  opacity: 0;
-  visibility: hidden;
+.nested-drop-menu li a:hover {
+  background-color: #3A3B3C;
+  color: #fff;
 }
-
-.mega-box .content {
-  background: #242526;
-  padding: 25px 20px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.nested-drop-menu.visible {
+  opacity: 1;
+  visibility: visible;
 }
-
-.mega-box .content .row {
-  width: calc(25% - 30px);
-  line-height: 45px;
-}
-
-.content .row header {
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.content .row .mega-links {
-  margin-left: -40px;
-  border-left: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-.row .mega-links li {
-  padding: 0 20px;
-}
-
-.row .mega-links li a {
-  padding: 0px;
-  padding: 0 20px;
-  color: #d9d9d9;
-  font-size: 17px;
-  display: block;
-}
-
-.row .mega-links li a:hover {
-  color: #f2f2f2;
+.nav-links .drop-menu li a,
+.nested-drop-menu li a {
+  white-space: nowrap;
 }
 
 .wrapper .btn {
@@ -167,53 +205,45 @@ ul {
   font-size: 20px;
   cursor: pointer;
   display: none;
-  border: none; /* Remove the default button border */
-  outline: none; /* Remove the outline on focus/click */
-  background: transparent; /* Ensure the button has no background */
-  padding: 0; /* Reset padding to ensure consistent styling */
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
 }
 
 .wrapper .btn.close-btn {
   color: white;
   position: absolute;
-  left: -10%;
+  left: 0%;
   top: 10px;
-  padding-left: 15rem;
+  padding-left: 15rem !important;
 }
 
 @media screen and (max-width: 970px) {
-  nav .wrapper  {
+  nav .wrapper {
     position: relative;
-     }
+  }
+
   nav .wrapper .logo {
-    height: auto; /* Adjusted height for smaller screens */
+    height: auto;
     width: 13rem;
     position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-  }
-  
-  .wrapper .btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 0px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .wrapper .btn {
     display: block;
     position: relative;
-text-align: right;
-padding-right: 1rem !important;
+    text-align: right;
+    padding-left: 20rem !important;
   }
-  
+
   .wrapper .btn.menu-btn.hidden {
     display: none;
   }
 
-  
   .wrapper .nav-links {
     position: fixed;
     height: 100%;
@@ -285,14 +315,16 @@ padding-right: 1rem !important;
   }
 
   #showDrop1:checked ~ .drop-menu,
-  #showMega:checked ~ .mega-box,
   #showDrop2:checked ~ .drop-menu,
   #showDrop3:checked ~ .drop-menu,
   #showDrop4:checked ~ .drop-menu,
   #showDrop5:checked ~ .drop-menu,
   #showDrop6:checked ~ .drop-menu,
-  #showDrop7:checked ~ .drop-menu {
+  #showDrop7:checked ~ .drop-menu,
+  #showSubDrop1:checked ~ .nested-drop-menu {
     max-height: 100%;
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-links .desktop-item {
@@ -326,58 +358,89 @@ padding-right: 1rem !important;
     color: #7bb036;
   }
 
-  .mega-box {
+  .nested-drop-menu {
     position: static;
-    top: 65px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition-delay: 0.1s;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding-left: 20px;
     opacity: 1;
     visibility: visible;
-    padding: 0 20px;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: max-height 0.3s ease;
   }
 
-  .mega-box .content {
+  .nested-drop-menu.visible {
+    max-height: 100%;
+  }
+
+  .nested-drop-menu li a {
+    font-size: 12px;
+    color: #7bb036;
+  }
+
+  .desktop-subheader {
+    display: none;
+  }
+
+  .mobile-subheader {
+    display: block;
+  }
+  .subheader {
+    font-size: 12px;
+  }
+
+  .subheader .fa {
+    font-size: 10px;
+  }
+
+  .mobile-subheader {
+    font-size: 12px;
+  }
+
+  .mobile-subheader .fa {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 971px) {
+  .desktop-subheader {
+    display: block;
+    text-align: left;
+    padding-left: 0.7rem;
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+  .mobile-subheader {
+    display: none;
+  }
+}
+@media screen and (max-width: 970px) {
+  /* Override desktop nested dropdown for mobile */
+  .drop-menu .nested-drop-menu {
+    position: static;
+    background: transparent;
+    padding-left: 20px;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     box-shadow: none;
-    flex-direction: column;
-    padding: 20px 20px 0 20px;
   }
 
-  .mega-box .content .row {
-    width: 100%;
-    margin-bottom: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  .nested-drop-menu.visible {
+    max-height: 500px; /* enough height to show content */
   }
 
-  .mega-box .content .row:nth-child(1),
-  .mega-box .content .row:nth-child(2) {
-    border-top: 0px;
+  /* Disable desktop hover trigger in mobile */
+  .drop-menu li:hover > .nested-drop-menu {
+    opacity: 1;
+    visibility: visible;
   }
-
-  .row .mega-links li {
-    margin: 0;
-  }
-
-  .content .row header {
-    font-size: 19px;
-  }
-  
 }
 
-nav input {
-  display: none;
-}
-
-.body-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  text-align: center;
-  padding: 0 30px;
-}
-
-.body-text div {
-  font-size: 45px;
-  font-weight: 600;
-}

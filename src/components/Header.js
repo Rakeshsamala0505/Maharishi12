@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdowns, setDropdowns] = useState({
@@ -15,6 +14,7 @@ const Header = () => {
     showDrop5: false,
     showDrop6: false,
     showDrop7: false,
+    showSubDrop1: false,
   });
 
   const sidebarRef = useRef(null);
@@ -26,6 +26,7 @@ const Header = () => {
     showDrop5: useRef(null),
     showDrop6: useRef(null),
     showDrop7: useRef(null),
+    showSubDrop1: useRef(null),
   };
 
   useEffect(() => {
@@ -36,18 +37,13 @@ const Header = () => {
         event.target.id !== 'menu-btn'
       ) {
         setMenuOpen(false);
+        setDropdowns((prevDropdowns) =>
+          Object.keys(prevDropdowns).reduce((acc, key) => {
+            acc[key] = false;
+            return acc;
+          }, {})
+        );
       }
-
-      Object.values(dropdownRefs).forEach((ref) => {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setDropdowns((prevDropdowns) =>
-            Object.keys(prevDropdowns).reduce((acc, key) => {
-              acc[key] = false;
-              return acc;
-            }, {})
-          );
-        }
-      });
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -60,10 +56,19 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleDropdown = (dropdownKey) => {
+  const toggleDropdown = (dropdownKey, isNested = false) => {
     setDropdowns((prevDropdowns) => {
+      // For nested dropdown, only toggle the specified key without resetting others
+      if (isNested) {
+        return { ...prevDropdowns, [dropdownKey]: !prevDropdowns[dropdownKey] };
+      }
+      // For top-level dropdowns, reset all except the nested dropdown
       const updatedDropdowns = Object.keys(prevDropdowns).reduce((acc, key) => {
-        acc[key] = false;
+        if (key === 'showSubDrop1') {
+          acc[key] = prevDropdowns[key]; // Preserve nested dropdown state
+        } else {
+          acc[key] = false;
+        }
         return acc;
       }, {});
       return { ...updatedDropdowns, [dropdownKey]: !prevDropdowns[dropdownKey] };
@@ -82,7 +87,7 @@ const Header = () => {
 
   return (
     <nav>
-      <div className="wrapper d-flex align-items-center justify-content-between">
+      <div className="wrapper d-flex align-items-center justify-content-center">
         <div className="d-flex align-items-center">
           <Link to="/"><img
             src="/icons/mylogo1.png"
@@ -110,7 +115,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop1" className="mobile-item">
-                Maharishi &nbsp;
+                Maharishi  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
@@ -149,7 +154,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop2" className="mobile-item">
-                About &nbsp;
+                About  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
@@ -158,17 +163,40 @@ const Header = () => {
                     Key Persons
                   </Link>
                 </li>
-                <li>
-                  <Link to="/expert_working_group" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Committees
-                  </Link>
+                <li className="nested-menu">
+                  <span className="subheader desktop-subheader">
+                    Steering Committees  <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                  <input
+                    type="checkbox"
+                    id="showSubDrop1"
+                    className="dropdown-toggle"
+                    checked={dropdowns.showSubDrop1}
+                    onChange={() => toggleDropdown('showSubDrop1', true)}
+                    style={{ display: 'none' }}
+                  />
+                  <label htmlFor="showSubDrop1" className="mobile-item mobile-subheader" style={{ fontSize: '14px' }}>
+                   Steering Committees  
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </label>
+                  <ul
+                    className={`nested-drop-menu ${dropdowns.showSubDrop1 ? 'visible' : ''}`}
+                    ref={dropdownRefs.showSubDrop1}
+                  >
+                    <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li>
+                    <li><Link to="/coordination_committee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
+                    <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
+                    <li><Link to="/tech_committee" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
+                    <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
+                    
+
+                  </ul>
                 </li>
                 <li>
-                <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Charter</Link>
+                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Charter</Link>
                 </li>
               </ul>
             </li>
-            {/* ... (rest of the menu items) ... */}
             <li>
               <a href="#" className="desktop-item">
                 Millets
@@ -182,7 +210,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop3" className="mobile-item">
-                Millets &nbsp;
+                Millets  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop3}>
@@ -211,7 +239,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop4" className="mobile-item">
-                Millet Initiative &nbsp;
+                Millet Initiative  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop4}>
@@ -240,7 +268,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop5" className="mobile-item">
-                Publications &nbsp;
+                Publications  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
@@ -269,7 +297,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop6" className="mobile-item">
-                Media &nbsp;
+                Media  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
@@ -303,7 +331,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop7" className="mobile-item">
-                External Links &nbsp;
+                External Links  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop7}>
