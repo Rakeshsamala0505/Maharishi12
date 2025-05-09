@@ -237,7 +237,7 @@ dl, ol, ul {
     display: block;
     position: relative;
     text-align: right;
-    padding-left: 20rem !important;
+    padding-left: 18rem !important;
   }
 
   .wrapper .btn.menu-btn.hidden {
