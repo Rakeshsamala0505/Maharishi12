@@ -181,15 +181,12 @@ const Header = () => {
                   </label>
                   <ul
                     className={`nested-drop-menu ${dropdowns.showSubDrop1 ? 'visible' : ''}`}
-                    ref={dropdownRefs.showSubDrop1}
-                  >
-                    <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li>
+                    ref={dropdownRefs.showSubDrop1}>
+                    <li><Link to="/coordination_commitee" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li>
                     <li><Link to="/coordination_committee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
                     <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
                     <li><Link to="/tech_committee" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
                     <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
-                    
-
                   </ul>
                 </li>
                 <li>

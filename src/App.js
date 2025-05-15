@@ -23,6 +23,8 @@ import annualreports from "./pages/annual_reports"; // annual_reports.js
 import newsletter from "./pages/NewsLetter"; // newsletter.js
 import pressrelease from "./pages/PressReleases"; // pressrelease.js
 import gallery from "./pages/gallery"; // gallery.js
+import CommitteePage from "./pages/coordination_commitee"; // coordination_commitee.js
+
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
           <Route path="/newsletter" element={<newsletter />} />
           <Route path="/pressrelease" element={<pressrelease />} />  
           <Route path="/gallery" element={<gallery />} />
+          <Route path="/coordination_commitee" element={<CommitteePage />} />
+          {/* Add more routes as needed */}
    
         </Routes>
         <Footer />
