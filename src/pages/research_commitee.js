@@ -14,12 +14,19 @@ const ResearchCommitee = () => {
         <div className="banner-title">Research Commitee</div>
       </div>
 
-      <div className="content-section">
-        <h2>Welcome to the Research Committee</h2>
+      <div className="content-section px-3 px-md-5">
+        {/* <h2>Welcome to the Research Committee</h2> */}
         <p>
-          This is a sample paragraph of text that appears below the banner image. You can add more sections, descriptions, or components here as needed. The banner remains at the top of the page.
+          The Research Committee is responsible for the development of the vision and strategy of MAHARISHI and for the monitoring of implementation.
+        </p>
+        <p>
+          The Research Committee of MAHARISHI (Millet And OtHer Ancient GRains International ReSearcH Initiative) is inspired by this ancient wisdom, embracing a global, inclusive, and collaborative approach to food and nutritional security. We believe that through collective knowledge and coordinated action, the underutilized potential of millets and other ancient grains can be unlocked for the benefit of humanity and the planet.        
+        </p>
+         <p>
+            The Research Committee serves as the backbone of the MAHARISHI initiative, fostering global collaboration to revive, promote, and advance scientific understanding and innovation in millets and other ancient grains. These grains, often overlooked in modern agriculture, offer climate resilience, nutritional richness, and a path to sustainable farming.        
         </p>
       </div>
+
     </div>
   );
 };

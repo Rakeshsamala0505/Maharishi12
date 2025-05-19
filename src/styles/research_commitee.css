@@ -45,6 +45,8 @@
   padding: 20px;
   font-size: 1.1rem;
   line-height: 1.6;
+  max-width: 85rem;        /* Adjust width as needed */
+  margin: 0 auto;           /* Center horizontally */
 }
 
 /* Responsive styles */

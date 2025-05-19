@@ -15,9 +15,12 @@ const ExpertWorkingGroup = () => {
       </div>
 
       <div className="content-section">
-        <h2>Welcome to the Expert Working Group</h2>
+        {/* <h2>Welcome to the Expert Working Group</h2> */}
         <p>
-          This is a sample paragraph of text that appears below the banner image. You can add more sections, descriptions, or components here as needed. The banner remains at the top of the page.
+          Expert Working Groups deliver state of the art, gap analysis and recommendtaions addressing the specific research or organisational areas for which they were created
+        </p>
+        <p>
+          <strong>Expert Working Group</strong> is a group of experts in the field of millets and other ancient grains, who are responsible for the development of the vision and strategy of MAHARISHI and for the monitoring of implementation. The Expert Working Group is responsible for the development of the vision and strategy of MAHARISHI and for the monitoring of implementation.
         </p>
       </div>
     </div>
