@@ -58,7 +58,7 @@
 
 @media (max-width: 480px) {
   .banner-container {
-    padding-top: 5rem !important; /* Reduce top padding for smaller screens */
+    padding-top: 4.5rem !important; /* Reduce top padding for smaller screens */
   }
 
   .banner-title {
