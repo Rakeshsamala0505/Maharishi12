@@ -63,7 +63,7 @@
   }
 
   .banner-title {
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
     top: 55%; /* Slightly higher on smaller screens */
     padding: 4px 10px;
     line-height: 1.3;
