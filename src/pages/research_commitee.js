@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/ExpertWorkingGroup.css';
-import bannerImg from '../assets/images/banner2_expert.jpg';
+import '../styles/research_commitee.css';
+import bannerImg from '../assets/images/banner1_research.jpg';
 
-const ExpertWorkingGroup = () => {
+const ResearchCommitee = () => {
   return (
     <div>
       <div className="banner-container">
@@ -11,11 +11,11 @@ const ExpertWorkingGroup = () => {
           alt="Banner"
           className="banner-image"
         />
-        <div className="banner-title">Expert Working Group</div>
+        <div className="banner-title">Research Commitee</div>
       </div>
 
       <div className="content-section">
-        <h2>Welcome to the Expert Working Group</h2>
+        <h2>Welcome to the Research Committee</h2>
         <p>
           This is a sample paragraph of text that appears below the banner image. You can add more sections, descriptions, or components here as needed. The banner remains at the top of the page.
         </p>
@@ -24,4 +24,4 @@ const ExpertWorkingGroup = () => {
   );
 };
 
-export default ExpertWorkingGroup;
+export default ResearchCommitee;

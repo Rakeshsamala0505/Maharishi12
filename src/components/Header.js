@@ -17,6 +17,8 @@ const Header = () => {
     showSubDrop1: false,
   });
 
+  
+
   const sidebarRef = useRef(null);
   const dropdownRefs = {
     showDrop1: useRef(null),
@@ -28,6 +30,7 @@ const Header = () => {
     showDrop7: useRef(null),
     showSubDrop1: useRef(null),
   };
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -183,9 +186,9 @@ const Header = () => {
                     className={`nested-drop-menu ${dropdowns.showSubDrop1 ? 'visible' : ''}`}
                     ref={dropdownRefs.showSubDrop1}>
                     <li><Link to="/coordination_commitee" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li>
-                    <li><Link to="/coordination_committee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
-                    <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
-                    <li><Link to="/tech_committee" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
+                    <li><Link to="/research_commitee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
+                    <li><Link to="/scientific_commitee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
+                    <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
                     <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
                   </ul>
                 </li>

@@ -24,6 +24,8 @@ import newsletter from "./pages/NewsLetter"; // newsletter.js
 import pressrelease from "./pages/PressReleases"; // pressrelease.js
 import gallery from "./pages/gallery"; // gallery.js
 import CommitteePage from "./pages/coordination_commitee"; // coordination_commitee.js
+import ResearchCommitee from "./pages/research_commitee";
+import ScientificCommitee from "./pages/scientific_commitee";
 
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
           <Route path="/pressrelease" element={<pressrelease />} />  
           <Route path="/gallery" element={<gallery />} />
           <Route path="/coordination_commitee" element={<CommitteePage />} />
+          <Route path="/research_commitee" element={<ResearchCommitee />} />
+          <Route path="/scientific_commitee" element={<ScientificCommitee />} />
           {/* Add more routes as needed */}
    
         </Routes>
