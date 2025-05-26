@@ -209,7 +209,7 @@ const MilletsPage = () => {
 
         <div className={styles['table-container']}>
         <h2 className={styles['text-center']}>
-             Sample Millet-Based Food Diet
+             Sample Ancient Grain-Based Food Diet
          </h2>
           <table>
             <thead>

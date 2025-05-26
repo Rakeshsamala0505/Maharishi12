@@ -189,7 +189,7 @@ const Header = () => {
                     <li><Link to="/research_commitee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
                     <li><Link to="/scientific_commitee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
                     <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
-                    <li><Link to="/policy_committee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
+                    <li><Link to="/secretariat_commitee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
                   </ul>
                 </li>
                 <li>
@@ -249,7 +249,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
                     Nutrition Benefits
                   </a>
                 </li>
@@ -273,7 +273,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
                 <li>
-                  <a href="IIMRResearch" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/IIMRResearch" className="subheader" onClick={closeMenuOnLinkClick}>
                     IIMR Research reports
                   </a>
                 </li>

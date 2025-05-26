@@ -171,8 +171,8 @@ const Home = () => {
           position: "Prime Minister",
         }, {
           img: HimanshuPathakImage,
-          author: "Shri. Devesh Chaturvedi, IAS",
-          position: "Department of Agriculture & Farmer Welfare",
+          author: "Shri. Devesh Chaturvedi",
+          position: "Secretary, Department of Agriculture & Farmer Welfare, Govt of India",
         }].map((item, idx) => (
           <div className="card" data-aos="fade-up" key={idx}>
             <img src={item.img} alt={item.author} />

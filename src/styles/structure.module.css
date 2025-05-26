@@ -72,7 +72,7 @@
     border-bottom: none; /* remove divider between side-by-side cards */
   }
   .mangiFix img {
-    width: 280px;
+    width: 450px;
     height: 170px;
     object-fit: cover;
     border-radius: 50%;

@@ -26,6 +26,7 @@ import gallery from "./pages/gallery"; // gallery.js
 import CommitteePage from "./pages/coordination_commitee"; // coordination_commitee.js
 import ResearchCommitee from "./pages/research_commitee";
 import ScientificCommitee from "./pages/scientific_commitee";
+import SecretariatCommitee from "./pages/secretariat"; // secretariat_commitee.js
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/coordination_commitee" element={<CommitteePage />} />
           <Route path="/research_commitee" element={<ResearchCommitee />} />
           <Route path="/scientific_commitee" element={<ScientificCommitee />} />
+          <Route path="/secretariat_commitee" element={<SecretariatCommitee />} />
           {/* Add more routes as needed */}
    
         </Routes>

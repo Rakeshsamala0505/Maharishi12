@@ -22,7 +22,7 @@ const ImplementationOfMaharishi = () => {
         </p>
       </section>
 
-      <section className="vision-mission">
+      {/* <section className="vision-mission">
         <h3>Vision</h3>
         <p>
           To foster and support a dynamic global millet research community, enhancing capabilities through the sharing of resources, data, knowledge, and ideas to improve millet productivity, quality, and sustainability.
@@ -31,7 +31,7 @@ const ImplementationOfMaharishi = () => {
         <p>
           To prioritize nutritional and livelihood security for resource-poor populations in developing and underdeveloped countries reliant on millets, by increasing yields and promoting sustainable and resilient agricultural production systems. This mission extends to a global platform to maximize international value-added opportunities.
         </p>
-      </section>
+      </section> */}
 
       <section className="objectives">
         <h3>Key Objectives for Implementation</h3>
