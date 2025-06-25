@@ -15,7 +15,7 @@ const images = [
 ];
 
 const announcements = [
-  "The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge,",
+  "The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge",
   "the major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets",
 ];
 
@@ -64,36 +64,26 @@ const Home = () => {
 
       {/* Latest Announcements */}
       <section className="latest-announcements">
-  <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
-    <h2 className="latest-title">Latest Announcements</h2>
-    <div className="announcement-wrapper">
-      <div className="announcement-card">
-{/* <span className="announcement-badge">
-  <span className="blinking-text">New</span>
-</span> */}
-        <span className="announcement-text">
-  {announcements.map((text, index) => (
-   <a
-  key={index}
-  href="#"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}
->
-  {text} {index !== announcements.length - 1 && <strong style={{ fontWeight: 'bold', margin: '0 0.5rem' }}>|</strong>}
-</a>
-
-  ))}
-</span>
-
-      </div>
-      {/* <div className="announcement-controls">
-        <button className="nav-btn" onClick={prevAnnouncement}>&lt;</button>
-        <button className="nav-btn" onClick={nextAnnouncement}>&gt;</button>
-      </div> */}
-    </div>
-  </div>
-</section>
+             <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
+               <h2 className="latest-title">Latest Announcements</h2>
+               <div className="announcement-wrapper">
+                 <div className="announcement-card">
+                   <span className="announcement-text">
+                           {announcements.map((text, index) => (
+                            <a
+                               key={index}
+                               href="#"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}>
+                               {text} {index !== announcements.length - 1 && <strong style={{ fontWeight: 'bold', margin: '0 0.5rem' }}>|</strong>}
+                            </a>
+                          ))}
+                    </span>
+                 </div>
+               </div>
+             </div>
+      </section>
 
 
       {/* Highlights Section */}
