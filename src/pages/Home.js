@@ -15,9 +15,8 @@ const images = [
 ];
 
 const announcements = [
-  "Announcement 1",
-  "Announcement 2",
-  "Announcement 3",
+  "The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge,",
+  "the major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets",
 ];
 
 const Home = () => {
@@ -69,17 +68,29 @@ const Home = () => {
     <h2 className="latest-title">Latest Announcements</h2>
     <div className="announcement-wrapper">
       <div className="announcement-card">
-<span className="announcement-badge">
+{/* <span className="announcement-badge">
   <span className="blinking-text">New</span>
-</span>
+</span> */}
         <span className="announcement-text">
-          {announcements[currentAnnouncementIndex]}
-        </span>
+  {announcements.map((text, index) => (
+   <a
+  key={index}
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}
+>
+  {text} {index !== announcements.length - 1 && <strong style={{ fontWeight: 'bold', margin: '0 0.5rem' }}>|</strong>}
+</a>
+
+  ))}
+</span>
+
       </div>
-      <div className="announcement-controls">
+      {/* <div className="announcement-controls">
         <button className="nav-btn" onClick={prevAnnouncement}>&lt;</button>
         <button className="nav-btn" onClick={nextAnnouncement}>&gt;</button>
-      </div>
+      </div> */}
     </div>
   </div>
 </section>
