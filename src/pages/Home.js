@@ -66,7 +66,7 @@ const Home = () => {
       {/* Latest Announcements */}
       <section className="latest-announcements">
   <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
-    <h2 className="latest-title">Latest Announcements</h2>
+    <h2 className="latest-title">atest Announcements</h2>
     <div className="announcement-wrapper">
       <div className="announcement-card">
 <span className="announcement-badge">
