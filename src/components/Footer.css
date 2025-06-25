@@ -20,16 +20,18 @@ footer {
 /* Footer container styling */
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 10px;
   flex-wrap: wrap;
   font-size: 9px;
+  gap:2rem;
 }
+
 /* Footer sections */
 .footer-section {
   margin: 0rem;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 1.5rem;
   min-width: 150px; /* added to ensure each section has a minimum width */
 }
 .footer-section h4 {
@@ -37,12 +39,12 @@ footer {
   font-size: 1.8em; /* Reduced font size */
   font-weight: bold;
 }
-.footer-section a {
+.footer-section a, .footer-section p{
   color: white;
   text-decoration: none;
   display: block;
   margin: 5px 0;
-  font-size: 16px; /* Reduced font size */
+  font-size: 14px; /* Reduced font size */
 }
 .footer-section a:hover {
   text-decoration: underline;
@@ -64,7 +66,7 @@ footer {
 }
 /* Text styles */
 p {
-  font-size: 16px; /* Reduced font size */
+  font-size: 14px; /* Reduced font size */
 }
 @media screen and (max-width: 700px) {
   /* Ensure the footer sticks to the bottom */
@@ -106,8 +108,8 @@ p {
     font-size: 1.8em; /* Decreased font size */
   }
 
-  .footer-section a {
-    font-size: 14px; /* Reduced font size */
+  .footer-section a,.footer-section p {
+    font-size: 12px !important; /* Reduced font size */
   }
 
   /* Social Icons */
@@ -115,7 +117,7 @@ p {
     justify-content: flex-start; /* Aligns icons to the left */
   }
   .social-icons a {
-    font-size: 3em; /* Decreased icon size */
+    font-size: 4em !important; /* Decreased icon size */
   }
 
   /* Text styles */

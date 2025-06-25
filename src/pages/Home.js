@@ -66,7 +66,7 @@ const Home = () => {
       {/* Latest Announcements */}
       <section className="latest-announcements">
   <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
-    <h2 className="latest-title">atest Announcements</h2>
+    <h2 className="latest-title">Latest Announcements</h2>
     <div className="announcement-wrapper">
       <div className="announcement-card">
 <span className="announcement-badge">
@@ -131,7 +131,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title fs-5 fw-bold custom-color">{item.title}</h5>
                     <p className="card-text">{item.text}</p>
-                    <a href="#" className="btn btn-primary py-2 px-4 fs-5">Learn More</a>
+                    {/* <a href="#" className="btn btn-primary py-2 px-4 fs-5">Learn More</a> */}
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@ const Home = () => {
                   <p className={idx === 0 ? "left-text" : "right-text"} data-aos="fade-up">
                     {text}
                   </p>
-                  <a href="#" className="btn btn-primary py-2 px-3">Learn More</a>
+                  {/* <a href="#" className="btn btn-primary py-2 px-3">Learn More</a> */}
                 </div>
               ))}
           </div>
@@ -166,7 +166,7 @@ const Home = () => {
         {[{
           img: PM,
           quote: "The Prime Minister noted that millets are primarily cultivated in 12-13 different states in the country where at-home consumption per month per person was not more than 3 kilograms whereas the consumption has increased to 14 kilograms per month today....",
-          link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
+          // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
           author: "- Shri Narendra Modi",
           position: "Prime Minister",
         }, {
