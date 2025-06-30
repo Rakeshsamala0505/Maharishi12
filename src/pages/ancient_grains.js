@@ -76,7 +76,7 @@ const MilletsPage = () => {
           </div>
         </div>
 
-        <section className={styles.card_container} style={{ paddingTop: '80px' }}>
+        <section className={styles.card_container} style={{ paddingTop: '0px' }}>
           <div id="section1">
             <h2>
               <span>Oats</span>

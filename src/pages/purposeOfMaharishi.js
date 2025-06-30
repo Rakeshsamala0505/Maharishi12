@@ -1,54 +1,127 @@
-import React from "react";
-import styles from "../styles/purposeOfMaharishi.module.css"; // ✅ Importing as CSS Module
-import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap for utility classes
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from '../styles/purposeOfMaharishi.module.css';
 
 const PurposeOfMaharishi = () => {
   return (
-    <div className={`container ${styles.container}`}>
-      <div className={styles.text_content}>
-        <div className={styles.container__content}></div>
-        <h1 className={`fs-3 fs-md-1 text-start ms-1 ms-md-1 ${styles.title}`}>
-          Purpose of Maharishi
-        </h1>
-        <p className={styles["text-content"]}>
-          MAHARISHI (Millets And Other Ancient Grains International Research Initiative), launched during the MACS G20, aims to strengthen international research collaboration on climate-resilient and nutritious grains, including millets and other underutilized ancient grains. It seeks to:
-Enhance knowledge sharing among researchers and institutions; Through MAHARISHI, we avoid duplication of efforts and aspires to advance sustainable food systems and nutritional security globally. Identify research gaps and priorities;
-Promote open-access publication of research findings;</p>
-        <p className={styles["text-content"]}>
-          Support voluntary knowledge transfer, capacity-building activities, and global research events;
-Encourage scientific engagement through innovation awards and recognition.
-        </p>
-        
-        <h1 className={`fs-3 fs-md-2 text-start ${styles.title}`}>Background</h1>
-        <p className={styles["text-content"]}>
-           Millets are small seeded, hardy grass species which include sorghum, pearl millet, finger millet, foxtail millet, proso millet, kodo millet, little millet, barnyard millet, and brown-top millet. Apart from these there are other ancient grains that are consumed as food which include teff, fonio, sekia, job’s tears, buckwheat, amaranth, quinoa etc. Since, beginning from early settlers to the thriving civilisations, human was dependent on millets and ancient crops for food and nutrition. Till green revolution, globally major part of the food demand was met by cultivating millets and other ancient crops viz. pearl millet, sorghum, finger millet, foxtail millet, proso millet, barnyard millet, kodo millet, brown-top millet, jobs tears, teff, fonio, sekia, amaranth etc. These crops have the potential to address the challenges of climate change, depleting natural resources and increasing life-style disorders. MAHARISHI is intended to revive these crops keeping the interest of small and resource poor farmers and other stake-holders worldwide. Its inception marks a global platform for innovation and collaboration in millets and other ancient crops.
-This initiative was proposed in G20 MACS meeting in April 2023 in India and endorsed by G20 MACS participants to contribute to improving world food and nutritional security through bringing millets in global consumer’s diet.
-        </p>
-        <h1 className={`fs-3 fs-md-2 text-start ${styles.title}`}>Why Millets?</h1>
-        <p className={styles["text-content"]}>
-         Millets are the most versatile crops which can be grown in diverse agroclimatic condition. 
-          These crops have wide adaptation and most suited for the current agrarian vulnerabilities viz. 
-          climate change, drought, depleting natural resources, rise in CO2 and temperature etc. 
-          Paleo-botanical studies revealed that millets and other ancient crops were the first choice of the early human settlers worldwide. 
-          Most of the millets and the ancient grain crops are C4, which means they have better water, nutrient and radiation use efficiency. 
-          They are also resilient to abiotic stress and resistance to pest and diseases. 
-          These crops are mainly grown in arid and semi-arid regions of the world. Most of the resource poor farmers or tribes grow minor millets for food and livelihood security.
-          Millets in general are crucial to the world food economy, they contribute to food security in many of the world's poorest, most food-insecure regions. As per the UN Food 
-          and Agriculture Organization’s data millets can be a sustainable alternative to rice and wheat, as a staple food.
-           It can also help in providing food security to large population in the coming years. 
-           In Africa and Asia, more than 70% of the sorghum and cumulatively, 95% of the millets are consumed as food. 
-           A large proportion of farm households aim simply to produce enough grain to meet household requirements - and many often fail to meet even this limited goal. 
-           Only a small proportion of the harvest is traded, mostly on local food markets.Since, the beginning of systematic research in these crops, 
-           considerable progress is made in enhancing yield and other agronomic traits in sorghum and pearl millet. However, 
-           these efforts are sporadic and unmatched to the progress made globally in the major cereals viz. wheat, rice, and maize. 
-           Millets and ancient crops remained unexplored and neglected.Since, the beginning of systematic research in these crops,
-            considerable progress is made in enhancing yield and other agronomic traits in sorghum and pearl millet. However, 
-            these efforts are sporadic and unmatched to the progress made globally in the major cereals viz. wheat, rice, and maize. 
-            Millets and ancient crops remained unexplored and neglected. Millet cultivation and consumption has many advantages 
-            which can be summarized as ‘good for people, good farmer and good for earth’. 
-        </p>
-      </div>
-    </div>
+    <>
+      {/* Section 1: Purpose of Maharishi */}
+      <section className={`py-5 ${styles.sectionBackground}`}>
+        <div className={styles.purposeContainer}>
+          {/* Block 1 */}
+          <div className="row">
+            <div className="col-md-4">
+              <h2 className={styles.sectionHeading}>Purpose of Maharishi</h2>
+            </div>
+            <div className="col-md-8">
+              <p>
+                <h1 className={styles.HeadingTitle}>Behind MAHARISHI - Lies a Shared Global Vision</h1>
+                Global food security faces mounting threats from COVID-19, conflicts, and climate change. Millets and other ancient grains offer a sustainable solution whether it is climate-resilient, nutrient-rich, and resource-efficient, they can strengthen food systems, support smallholder farmers, and promote health and environmental sustainability.
+              </p>
+              <p>
+                The MAHARISHI initiative, launched under India's G20 Presidency as part of the G20 MACS Global Research Collaboration Priority, promotes international research on these underutilized grains. Building on the momentum of the International Year of Millets 2023, it unites fragmented efforts under a shared framework to advance global food and nutrition security.
+              </p>
+            </div>
+          </div>
+
+          {/* Block 2 */}
+          <div className="row">
+            <div className="col-md-4">
+              <h2 className={styles.sectionHeading}>WHAT WE AIM FOR</h2>
+            </div>
+            <div className="col-md-8">
+              <p>
+                MAHARISHI aims to coordinate international research on millets and ancient grains to strengthen global food and nutrition security. By optimizing and pooling resources, the initiative seeks to enhance economic efficiency and add value to ongoing national and international efforts both public and private. We foster cross-country linkages to accelerate advancements in research and development, ensuring these climate-resilient crops contribute to sustainable agriculture. Our focus is on building scientific competence to meet evolving environmental challenges while responding to the growing demand for nutritious, safe, and resilient food systems.
+              </p>
+            </div>
+          </div>
+
+          {/* Block 3 */}
+          <div className="row">
+            <div className="col-md-4">
+              <h2 className={styles.sectionHeading}>WHY MILLETS AND ANCIENT GRAINS</h2>
+            </div>
+            <div className="col-md-8">
+              <p>
+                With global food security threatened by climate change, resource depletion, conflict, and rising population pressures, millets and other ancient grains offer a powerful solution grounded in sustainability, nutrition, and adaptability. Despite their immense potential, these crops have long been under-researched and underutilized, necessitating renewed scientific focus. These crops offer integrated solutions to climate, health, and food system challenges. Unlocking their full potential through coordinated international research can help deliver on global commitments to end hunger, improve nutrition, and promote sustainable agriculture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.statsSection}>
+        <div className={styles.statsContainer}>
+          {/* Top Stats Row */}
+          <div className={styles.topStatsRow}>
+            <div className={styles.statCard}>
+              <h2 className={styles.statValue}>30%</h2>
+              <p className={styles.statSubtitle}>Cuts in Crop Yields<br />due to Climate Change</p>
+              <p className={styles.statSource}>IPCC 2023</p>
+            </div>
+
+            <div className={styles.statCard}>
+              <h2 className={styles.statValue}>735</h2>
+              <p className={styles.statSubtitle}>Million People<br />CHRONIC HUNGER</p>
+              <p className={styles.statSource}>FAO SOFI REPORT 2023</p>
+            </div>
+          </div>
+
+          {/* Bottom Two Cards */}
+          <div className={styles.bottomInfoRow}>
+            <div className={styles.infoCard}>
+              <h3>Climate Resilience:</h3>
+              <p>
+                Millets and ancient grains are climate-smart crops, especially vital in the face of intensifying climate change. As C4 plants, they exhibit exceptional water, nutrient, and radiation use efficiency, allowing them to thrive in arid and semi-arid conditions where other crops fail. Their resilience to heat, drought, and poor soils makes them indispensable for farmers in vulnerable regions grappling with erratic weather patterns and declining natural resources.
+              </p>
+            </div>
+
+            <div className={styles.infoCard}>
+              <h3>Food Security:</h3>
+              <p>
+                In Asia and Africa, over 70% of sorghum and 95% of millets are consumed directly as food. Yet, many farm households still struggle to meet their own subsistence needs. These grains are vital for rural food and livelihood security, especially among resource-poor farmers and indigenous communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.statsSection}>
+        <div className={styles.statsContainer}>
+          {/* Top Stats Row */}
+          <div className={styles.topStatsRow}>
+            <div className={styles.statCard}>
+              <h2 className={styles.statValue}>45</h2>
+              <p className={styles.statSubtitle}>Million Children under 5<br />WASTING</p>
+              <p className={styles.statSource}>UNICEF,  WHO,  WORLD BANK JOINT  ESTIMATES,  2023</p>
+            </div>
+
+            <div className={styles.statCard}>
+              <h2 className={styles.statValue}>200%</h2>
+              <p className={styles.statSubtitle}>Increase in<br />FERTILIZER PRICES</p>
+              <p className={styles.statSource}>WORLD BANK, FAO</p>
+            </div>
+          </div>
+
+          {/* Bottom Two Cards */}
+          <div className={styles.bottomInfoRow}>
+            <div className={styles.infoCard}>
+              <h3>Nutrition: </h3>
+              <p>
+                Millets and Ancient  grains are rich in essential nutrients, fiber, and bioactive compounds. They help manage lifestyle diseases such as diabetes and cardiovascular conditions-issues increasingly prevalent worldwide. Their role in combating malnutrition, especially in low-income and food-insecure populations, aligns directly with global health and nutrition targets under the UN Sustainable Development Goals (SDGs).
+              </p>
+            </div>
+
+            <div className={styles.infoCard}>
+              <h3>Sustainability and Soil Health: </h3>
+              <p>
+               Millets and ancient grains support low-input, eco-friendly agriculture. Their deep, fibrous roots improve soil structure and enhance nutrient cycling, making them ideal for organic farming and intercropping. Their cultivation reduces dependence on synthetic fertilizers and irrigation, lowering agriculture’s environmental footprint
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

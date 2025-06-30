@@ -3,6 +3,8 @@ import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WorldMapSection from "../pages/WorldMapSection";
+
 import HimanshuPathakImage from "../assets/home_images/dr_devesh.jpg";
 import PM from "../assets/images/PM.avif";
 
@@ -60,6 +62,11 @@ const Home = () => {
             className={`slider-image ${index === currentSlideIndex ? "active" : ""}`}
           />
         ))}
+          <h2 className="slider-title">
+  <span className="main-title">MAHARISHI</span><br />
+  <span className="sub-title">Sowing Heritage, Harvesting Innovations</span><br />
+  <span className="sub-title">For People and Planet</span>
+</h2>
       </div>
 
       {/* Latest Announcements */}
@@ -85,7 +92,8 @@ const Home = () => {
              </div>
       </section>
 
-
+{/* World Map Section */}
+      <WorldMapSection />
       {/* Highlights Section */}
       <section
         id="latest-updates"
@@ -166,10 +174,10 @@ const Home = () => {
       <section className="section-container">
         {[{
           img: PM,
-          quote: "The Prime Minister noted that millets are primarily cultivated in 12-13 different states in the country where at-home consumption per month per person was not more than 3 kilograms whereas the consumption has increased to 14 kilograms per month today....",
+          quote: "'Shree Anna' has been a part of the lifestyle in India for centuries. In different regions of the country, many types of coarse grains like Jowar, Bajra, Ragi, Sama, Kangni, Cheena, Kodon, Kutki, Kuttu are prevalent. We want to share our agricultural practices and experiences related to 'Shree Anna' with the world. We also want to learn anything new and special that the world and other countries have to offer. We also intend to learn.",
           // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
           author: "- Shri Narendra Modi",
-          position: "Prime Minister",
+          position: "Prime Minister, Government of India",
         }, {
           img: HimanshuPathakImage,
           author: "Shri. Devesh Chaturvedi",

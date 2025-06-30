@@ -27,6 +27,7 @@ import CommitteePage from "./pages/coordination_commitee"; // coordination_commi
 import ResearchCommitee from "./pages/research_commitee";
 import ScientificCommitee from "./pages/scientific_commitee";
 import SecretariatCommitee from "./pages/secretariat"; // secretariat_commitee.js
+import WorldMapSection from "./pages/WorldMapSection"; // WorldMapSection.js 
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/research_commitee" element={<ResearchCommitee />} />
           <Route path="/scientific_commitee" element={<ScientificCommitee />} />
           <Route path="/secretariat_commitee" element={<SecretariatCommitee />} />
+          <Route path="/world_map" element={<WorldMapSection />} /> {/* World Map Section */}
           {/* Add more routes as needed */}
    
         </Routes>

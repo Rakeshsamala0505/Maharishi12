@@ -96,12 +96,13 @@ body {
     font-size: 18px;
     text-decoration: underline;
     margin-bottom: 15px;
+    padding-top: 2rem;
   }
   
   .card_container p {
     font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   
   .card:hover::after {

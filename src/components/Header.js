@@ -107,7 +107,7 @@ const Header = () => {
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Maharishi
+                About
               </a>
               <input
                 type="checkbox"
@@ -118,7 +118,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop1" className="mobile-item">
-                Maharishi  
+                About  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
@@ -134,19 +134,19 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="g20" className="subheader" onClick={closeMenuOnLinkClick}>
-                    G20 and MAHARISHI
+                    Organisational Chart
                   </Link>
                 </li>
                 <li>
                   <Link to="Implementation" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Implementation of MAHARISHI
+                    Charter
                   </Link>
                 </li>
               </ul>
             </li>
             <li>
               <a href="#" className="desktop-item">
-                About
+                Our Work
               </a>
               <input
                 type="checkbox"
@@ -157,18 +157,18 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop2" className="mobile-item">
-                About  
+                Our Work  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
                 <li>
                   <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Key Persons
+                    Expert Working Groups
                   </Link>
                 </li>
                 <li className="nested-menu">
                   <span className="subheader desktop-subheader">
-                    Steering Committees  <FontAwesomeIcon icon={faCaretDown} />
+                    Associated  Programs <FontAwesomeIcon icon={faCaretDown} />
                   </span>
                   <input
                     type="checkbox"
@@ -179,7 +179,7 @@ const Header = () => {
                     style={{ display: 'none' }}
                   />
                   <label htmlFor="showSubDrop1" className="mobile-item mobile-subheader" style={{ fontSize: '14px' }}>
-                   Steering Committees  
+                  Associated Programs  
                     <FontAwesomeIcon icon={faCaretDown} />
                   </label>
                   <ul
@@ -193,7 +193,10 @@ const Header = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Charter</Link>
+                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Opportunities</Link>
+                </li>
+                <li>
+                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Early Career Researchers</Link>
                 </li>
               </ul>
             </li>
@@ -250,7 +253,12 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Nutrition Benefits
+                    IMAGC
+                  </a>
+                </li>
+                <li>
+                  <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Events
                   </a>
                 </li>
               </ul>
@@ -274,12 +282,17 @@ const Header = () => {
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
                 <li>
                   <a href="/IIMRResearch" className="subheader" onClick={closeMenuOnLinkClick}>
-                    IIMR Research reports
+                    Research reports
                   </a>
                 </li>
                 <li>
                   <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Annual Reports
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    MAHARISHI Library
                   </a>
                 </li>
               </ul>
@@ -314,6 +327,11 @@ const Header = () => {
                 <li>
                   <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Gallery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Blog
                   </a>
                 </li>
               </ul>
