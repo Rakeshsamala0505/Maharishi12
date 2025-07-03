@@ -11,10 +11,10 @@
     padding-top:6rem;
 }
 .title{
-  font-size:40px;
+  font-size:25px;
 }
 .card {
-  width: calc(35% - 20px);
+  width: calc(25% - 20px);
   cursor: pointer;
   position: relative;
   background: #fff;
