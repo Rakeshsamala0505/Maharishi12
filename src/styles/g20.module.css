@@ -1,139 +1,145 @@
-/* Base chart wrapper */
-.chartWrapper {
+/* ───────────  colour palette  ─────────── */
+:root {
+  --clr-rail:       #b40000;
+  --clr-box1:       #8b0020;
+  --clr-box2:       #5c3a00;
+  --clr-box3:       #9a5700;
+  --clr-box4:       #d86c00;
+  --bar-thick:      14px;
+  --bar-radius:     18px;
+}
+
+/* ───────────  layout wrapper  ─────────── */
+.chart {
+  padding: 40px 0;
   position: relative;
-  width: 100%;
-  max-width: 750px;
-  margin: 40px auto;
-  height: 700px;
+  font-family: "Segoe UI", sans-serif;
+  padding-top: 10rem;
 }
 
-/* Box styles */
-.box {
+/* red vertical rail (arrow spine) */
+.rail {
   position: absolute;
-  border-radius: 12px;
-  padding: 10px;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-
-.box:hover {
-  transform: scale(1.04);
-}
-
-.box span {
-  line-height: 1.4;
-  font-size: 15px;
-}
-
-/* Arrows (SVG) */
-.connectors {
-  position: absolute;
+  left: 60px;
   top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 0;
+  bottom: calc(100% - 100px);          /* stop before last box */
+  width: 2px;
+  background: var(--clr-rail);
 }
 
-.arrowPath {
-  fill: none;
-  stroke: #c40016;
-  stroke-width: 2.5;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: drawArrow 1.2s ease forwards;
-}
-
-@keyframes drawArrow {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* Modal overlay */
-.modalOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 50;
-}
-
-/* White popup card */
-.modalCard {
-  background: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: 10px;
-  max-width: 480px;
-  width: 90%;
-  max-height: 85vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.modalCard h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-/* Close button */
-.closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 14px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Team list */
-.peopleList {
+/* ───────────  container  ─────────── */
+.chartContainer {
+  margin-left: 120px;                  /* keeps arrow gap on the left */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 32px;
+  position: relative;
 }
 
-.personRow {
+/* ───────────  each half‑rounded box  ─────────── */
+.chartSection {
+  --border-col: var(--clr-box1);       /* default for first box */
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 20px;
+  min-width: 260px;
+  padding: 22px 24px 22px 84px;        /* extra left padding for icon */
+  background: #fff;
+  border: 2px solid var(--border-col);
+  border-left: none;                   /* open on right side */
+  border-radius: var(--bar-radius);
+  color: #002b45;
+  font-weight: 600;
+  line-height: 1.25;
+  box-sizing: border-box;
 }
 
-.personRow img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+/* thick left vertical bar */
+.chartSection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--bar-thick);
+  background: var(--border-col);
+  border-top-left-radius: var(--bar-radius);
+  border-bottom-left-radius: var(--bar-radius);
 }
 
-.personName {
-  font-weight: bold;
+/* thick top bar */
+.chartSection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: var(--bar-thick);
+  width: 70px;
+  background: var(--border-col);
+  border-top-left-radius: var(--bar-radius);
 }
 
-.personRole {
-  font-size: 0.9rem;
-  color: #666;
+/* thick bottom bar via extra element */
+.chartSection > p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--bar-thick);
+  width: 70px;
+  background: var(--border-col);
+  border-bottom-left-radius: var(--bar-radius);
 }
 
-/* Responsive layout */
-@media (max-width: 640px) {
-  .chartWrapper {
-    transform: scale(0.85);
-    transform-origin: top left;
-  }
+/* horizontal red arrow from rail to box */
+.chartSection::marker,
+.chartSection::selection {}
 
-  .modalCard {
-    padding: 1.5rem;
-  }
+/* horizontal arrow shaft */
+.chartSection:not(:first-child)::marker {}
+
+/* small red arrow (triangle) */
+.chartSection::selection {}
+
+/* ----- colour per box (nth‑child) ----- */
+.chartSection:nth-child(1) { --border-col: var(--clr-box1); }
+.chartSection:nth-child(2) { --border-col: var(--clr-box2); }
+.chartSection:nth-child(3) { --border-col: var(--clr-box3); }
+.chartSection:nth-child(4) { --border-col: var(--clr-box4); }
+
+/* icons */
+.chartSection img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* ───────────  red arrow connectors  ─────────── */
+
+/* horizontal red line from rail to each box */
+.chartSection::before,
+.chartSection::after,
+.chartSection > p::after { z-index: 1; }
+
+.chartSection::marker,
+.chartSection::selection {}
+
+.chartSection::before {}
+
+/* actual arrow shaft */
+.chartSection::after {}
+
+/* arrow head */
+.chartSection > p::after {}
+
+/* ───────────  responsiveness  ─────────── */
+@media (max-width: 540px) {
+  .chartContainer { margin-left: 90px; }
+  .chartSection   { padding-left: 70px; }
+}
+
+@media (max-width: 400px) {
+  .chartContainer { margin-left: 70px; }
+  .chartSection   { padding-left: 60px; font-size: 0.9rem; }
 }

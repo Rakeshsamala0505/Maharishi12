@@ -45,6 +45,7 @@ const countryData = {
   BW: { name: 'Botswana', millets: 'Pearl Millet,Finger Millet,Foxtail Millet Sorghum', institutions: ['National Agricultural Research and Development Institute'] },
   CH: { name: 'Switzerland', millets: 'Nill', institutions: ['University of Bern – Institute of Plant Sciences','Agroscope','SWISSAID'] },
   BT: { name: 'Bhutan', millets: 'Finger Millet, Foxtail Millet, Common Millet', institutions: [' Agriculture Research Development Centre (ARDC) Bajo',' College of Natural Resources'] },
+  IN: { name: 'India', millets: 'Sorghum, Pearl Millet, Finger Millet, Foxtail Millet, Kodo Millet, Little Millet, Barnyard Millet,  Proso Millet, Browntop Millet', institutions: ['ICAR- Indian Institute of Millet  Research','ICRISAT'] },
 };
 
 const highlightedCountries = Object.keys(countryData);

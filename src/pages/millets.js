@@ -1,78 +1,285 @@
+// src/pages/MilletsPage.jsx
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/millets.module.css';
 
-// Images
-import sorghumImage from '../assets/images/sorghum.avif';
-import pearlMilletImage from '../assets/images/Pearl_millet.avif';
-import fingerMilletImage from '../assets/images/finger millet.jpg';
+/* ——— images ——— */
+import sorghumImage       from '../assets/images/sorghum.avif';
+import pearlMilletImage   from '../assets/images/Pearl_millet.avif';
+import fingerMilletImage  from '../assets/images/finger millet.jpg';
 import foxtailMilletImage from '../assets/images/Foxtail_millet.avif';
 import barnyardMilletImage from '../assets/images/BARNYARD.avif';
-import kodoMilletImage from '../assets/images/KODOMILLET.avif';
-import littleMilletImage from '../assets/images/little_millet.avif';
-import prosoMilletImage from '../assets/images/proso.avif';
+import kodoMilletImage    from '../assets/images/KODOMILLET.avif';
+import littleMilletImage  from '../assets/images/little_millet.avif';
+import prosoMilletImage   from '../assets/images/proso.avif';
 
+/* ——— data ——— */
 const milletData = [
-  { image: sorghumImage, title: 'Sorghum', overlay: 'Grain for a Sustainable Future', description: 'Sorghum is rich in nutrients and climate resilient.Sorghum is rich in nutrients and climate resilientSorghum is rich in nutrients and climate resilientSorghum is rich in nutrients and climate resilientSorghum is rich in nutrients and climate resilientSorghum is rich in nutrients and climate resilient' },
-  { image: pearlMilletImage, title: 'Pearl Millet', overlay: 'An Iron Rich Grain for Nutrition and Climate Action', description: 'Pearl millet contains high iron and grows in drought.' },
-  { image: fingerMilletImage, title: 'Finger Millet', overlay: 'The Calcium Champion for Stronger Lives', description: 'Finger millet is packed with calcium for bone health.' },
-  { image: foxtailMilletImage, title: 'Foxtail Millet', overlay: 'The Balanced Grain for Modern Wellness', description: 'Foxtail millet supports weight management and diabetes control.' },
-  { image: barnyardMilletImage, title: 'Barnyard Millet', overlay: 'The Quick-Growing Climate Ally', description: 'Barnyard millet grows quickly and is rich in fiber.' },
-  { image: kodoMilletImage, title: 'Kodo Millet', overlay: 'The Gut and Heart Friendly Grain', description: 'Kodo millet helps with digestion and heart health.' },
-  { image: littleMilletImage, title: 'Little Millet', overlay: 'The Tiny Grain with Big Nutritional Value', description: 'Little millet is small but nutrient dense.' },
-  { image: prosoMilletImage, title: 'Proso Millet', overlay: 'The Fast Food of Ancient Grains', description: 'Proso millet cooks quickly and provides instant energy.' },
-];
+  {
+    image: sorghumImage,
+    title: 'Sorghum',
+    overlay: 'Grain for a Sustainable Future',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    description:
+      'Sorghum is a resilient, climate-smart grain that has been cultivated for thousands of years. Grown mostly in dry and arid regions, it thrives with minimal water and inputs, making it a powerful ally in the face of climate change.',
+    climate:
+      'Its deep roots improve soil health and reduce erosion. Sorghum requires less fertilizer and water, reducing the environmental footprint of farming.',
+    nutrition: [
+      ['Energy (Kcal)', '334'],
+      ['Protein (g)', '9.9'],
+      ['Fat (g)', '1.73'],
+      ['Carbohydrate(g)', '67.7'],
+      ['Ca (mg)', '27.6'],
+      ['Fe (mg)', '3.9'],
+    ],
+  },
+  {
+    image: pearlMilletImage,
+    title: 'Pearl Millet',
+    overlay: 'A Smart Grain for a Healthier, Resilient World',
+    scientific: 'Cenchrus americanus',
+    commonNames: 'Pearl Millet',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+  {
+    image: fingerMilletImage,
+    title: 'Finger Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+  {
+    image: foxtailMilletImage,
+    title: 'Foxtail Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+  {
+    image: barnyardMilletImage,
+    title: 'Barnyard Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+  {
+    image: kodoMilletImage,
+    title: 'Kodo Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+
+  {
+    image: littleMilletImage,
+    title: 'Little Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },
+{
+    image: prosoMilletImage,
+    title: 'Proso Millet',
+    overlay: 'Grain for a Sustainable Future',
+    description:
+      'Sorghum is rich in nutrients and highly climate‑resilient. It thrives in semi‑arid regions, making it a dependable crop under harsh conditions.',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    climate:
+      'Tolerates drought, heat, and soil salinity better than most cereals, requiring minimal irrigation.',
+    nutrition: [
+      ['Energy (Kcal)', '329'],
+      ['Protein (g)', '10.6'],
+      ['Fat (g)', '3.5'],
+      ['Carbohydrate(g)', '72.1'],
+      ['Ca (mg)', '25'],
+      ['Fe (mg)', '4.1'],
+    ],
+  },];
 
 const MilletsPage = () => {
   const [footerContent, setFooterContent] = useState('');
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedMillet, setSelectedMillet] = useState(null);
 
+  /* fetch footer once */
   useEffect(() => {
     fetch('/footer.html')
-      .then((response) => response.text())
-      .then((data) => setFooterContent(data));
+      .then((res) => res.text())
+      .then(setFooterContent);
   }, []);
 
-  const openFullImage = (millet) => {
-    setSelectedImage(millet);
-  };
-
-  const closeFullImage = () => {
-    setSelectedImage(null);
-  };
+  const openModal  = (millet) => setSelectedMillet(millet);
+  const closeModal = () => setSelectedMillet(null);
 
   return (
     <div>
-      <div className={styles.section}>
+      {/* ── GRID ─────────────────────────────────────────── */}
+      <section className={styles.section}>
         <h1 className={styles.title}>MILLETS</h1>
+
         <div className={styles.container}>
-          {milletData.map((millet, index) => (
-            <div key={index} className={styles.card} onClick={() => openFullImage(millet)}>
+          {milletData.map((millet, idx) => (
+            <div
+              key={idx}
+              className={styles.card}
+              onClick={() => openModal(millet)}
+            >
               <div className={styles.imageWrapper}>
                 <img src={millet.image} alt={millet.title} />
+
+                {/* overlay text now has its own class */}
                 <div className={styles.overlay}>
-                  <span>{millet.overlay}</span>
+                  <span className={styles.overlayText}>{millet.overlay}</span>
                 </div>
               </div>
-              <h3>{millet.title}</h3>
+
+              {/* card title now has its own class */}
+              <h3 className={styles.cardTitle}>{millet.title}</h3>
+
               <div className={styles.hoverLine}></div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {selectedImage && (
-        <div className={styles.fullscreenOverlay} onClick={closeFullImage}>
-          <div className={styles.fullscreenContent} onClick={(e) => e.stopPropagation()}>
-            <img src={selectedImage.image} alt={selectedImage.title} />
-            <h2>{selectedImage.title}</h2>
-            <p>{selectedImage.description}</p>
-            <button onClick={closeFullImage}>Close</button>
+      {/* ── MODAL ────────────────────────────────────────── */}
+      {selectedMillet && (
+        <div className={styles.fullscreenOverlay} onClick={closeModal}>
+          <div
+            className={styles.fullscreenContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>
+<span className={styles.modalName}>{selectedMillet.title}</span>
+  <span className={styles.modalTagline}>{selectedMillet.overlay}</span>            
+  </h2>
+
+            <div className={styles.modalBody}>
+              {/* LEFT – details */}
+              <div className={styles.details}>
+                <p>
+                  <strong>Scientific Name:</strong>{' '}
+                  <em>{selectedMillet.scientific}</em>
+                </p>
+                <p>
+                  <strong>Common Name:</strong> {selectedMillet.commonNames}
+                </p>
+                <p>{selectedMillet.description}</p>
+                <p>
+                  <strong>🌍Climate Resilience</strong> {selectedMillet.climate}
+                </p>
+              </div>
+
+              {/* RIGHT – nutrition facts */}
+              <div className={styles.nutritionCard}>
+                <h3>Nutrition Facts</h3>
+                <small>
+                  High dietary fibre &amp; antioxidant activity with high iron
+                  content
+                </small>
+
+                <table className={styles.nutritionTable}>
+  <thead>
+    <tr>
+      <th>Nutrients</th>
+      <th>Value per 100 grams</th>
+    </tr>
+  </thead>
+  <tbody>
+    {selectedMillet.nutrition.map(([n, v]) => (
+      <tr key={n}>
+        <td>{n}</td>
+        <td>{v}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+              </div>
+            </div>
+
+            <button onClick={closeModal}>Close</button>
           </div>
         </div>
       )}
 
-      <div id="footer" dangerouslySetInnerHTML={{ __html: footerContent }} />
+      {/* ── FOOTER ───────────────────────────────────────── */}
+      <div
+        id="footer"
+        dangerouslySetInnerHTML={{ __html: footerContent }}
+      />
     </div>
   );
 };
