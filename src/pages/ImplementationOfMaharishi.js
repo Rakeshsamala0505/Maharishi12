@@ -80,8 +80,7 @@ const ImplementationOfMaharishi = () => {
         </div>
       </section>
 
-      {/* You could add a section about the structure and organization if needed,
-         though the text mentions the 'Charter' for explicit details. */}
+      
     </div>
   );
 };

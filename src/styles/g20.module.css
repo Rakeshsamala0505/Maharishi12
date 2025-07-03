@@ -1,145 +1,117 @@
-/* ───────────  colour palette  ─────────── */
-:root {
-  --clr-rail:       #b40000;
-  --clr-box1:       #8b0020;
-  --clr-box2:       #5c3a00;
-  --clr-box3:       #9a5700;
-  --clr-box4:       #d86c00;
-  --bar-thick:      14px;
-  --bar-radius:     18px;
-}
-
-/* ───────────  layout wrapper  ─────────── */
-.chart {
-  padding: 40px 0;
-  position: relative;
-  font-family: "Segoe UI", sans-serif;
-  padding-top: 10rem;
-}
-
-/* red vertical rail (arrow spine) */
-.rail {
-  position: absolute;
-  left: 60px;
-  top: 0;
-  bottom: calc(100% - 100px);          /* stop before last box */
-  width: 2px;
-  background: var(--clr-rail);
-}
-
-/* ───────────  container  ─────────── */
-.chartContainer {
-  margin-left: 120px;                  /* keeps arrow gap on the left */
+.wrapper {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  position: relative;
-}
-
-/* ───────────  each half‑rounded box  ─────────── */
-.chartSection {
-  --border-col: var(--clr-box1);       /* default for first box */
-  position: relative;
-  display: flex;
   align-items: center;
-  gap: 20px;
-  min-width: 260px;
-  padding: 22px 24px 22px 84px;        /* extra left padding for icon */
-  background: #fff;
-  border: 2px solid var(--border-col);
-  border-left: none;                   /* open on right side */
-  border-radius: var(--bar-radius);
-  color: #002b45;
-  font-weight: 600;
-  line-height: 1.25;
+  height: 100vh;
+  background: #f9f9f9;
+  padding: 2rem;
   box-sizing: border-box;
 }
 
-/* thick left vertical bar */
-.chartSection::before {
-  content: "";
+/* Top section: horizontal row */
+.wrapper > div:first-child,
+.wrapper > div:nth-child(2) {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.leftBox {
   position: absolute;
-  left: 0;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Right stack */
+.rightStack {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-end; /* align all child boxes to the left */
+  padding: 1rem;
+  text-align: start;
+}
+
+
+/* Bottom full-width box */
+.bottomBox {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+/* Half-border box styling */
+.halfBorderBox {
+  position: relative;
+  padding: 20px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family:  sans-serif;;
+  border-radius: 40px;
+  color: #333333;
+  z-index: 0;
+  width: 300px;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* LEFT half border - BROWN */
+.halfBorderBox::before {
+  content: '';
+  position: absolute;
   top: 0;
-  bottom: 0;
-  width: var(--bar-thick);
-  background: var(--border-col);
-  border-top-left-radius: var(--bar-radius);
-  border-bottom-left-radius: var(--bar-radius);
+  left: 0;
+  height: 100%;
+  width: 30%;
+  border-top: 13px solid brown;
+  border-left: 13px solid brown;
+  border-bottom: 13px solid brown;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: -1;
 }
 
-/* thick top bar */
-.chartSection::after {
-  content: "";
+/* RIGHT half border - DARK RED */
+.halfBorderBox::after {
+  content: '';
   position: absolute;
-  left: 0;
   top: 0;
-  height: var(--bar-thick);
-  width: 70px;
-  background: var(--border-col);
-  border-top-left-radius: var(--bar-radius);
+  right: 0;
+  height: 100%;
+  width: 68%;
+  border-top: 3px solid darkred;
+  border-right: 3px solid darkred;
+  border-bottom: 3px solid darkred;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: -1;
 }
 
-/* thick bottom bar via extra element */
-.chartSection > p::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: var(--bar-thick);
-  width: 70px;
-  background: var(--border-col);
-  border-bottom-left-radius: var(--bar-radius);
-}
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  .wrapper > div:first-child,
+  .wrapper > div:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* horizontal red arrow from rail to box */
-.chartSection::marker,
-.chartSection::selection {}
+  .rightStack {
+    align-items: center;
+  }
 
-/* horizontal arrow shaft */
-.chartSection:not(:first-child)::marker {}
-
-/* small red arrow (triangle) */
-.chartSection::selection {}
-
-/* ----- colour per box (nth‑child) ----- */
-.chartSection:nth-child(1) { --border-col: var(--clr-box1); }
-.chartSection:nth-child(2) { --border-col: var(--clr-box2); }
-.chartSection:nth-child(3) { --border-col: var(--clr-box3); }
-.chartSection:nth-child(4) { --border-col: var(--clr-box4); }
-
-/* icons */
-.chartSection img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-/* ───────────  red arrow connectors  ─────────── */
-
-/* horizontal red line from rail to each box */
-.chartSection::before,
-.chartSection::after,
-.chartSection > p::after { z-index: 1; }
-
-.chartSection::marker,
-.chartSection::selection {}
-
-.chartSection::before {}
-
-/* actual arrow shaft */
-.chartSection::after {}
-
-/* arrow head */
-.chartSection > p::after {}
-
-/* ───────────  responsiveness  ─────────── */
-@media (max-width: 540px) {
-  .chartContainer { margin-left: 90px; }
-  .chartSection   { padding-left: 70px; }
-}
-
-@media (max-width: 400px) {
-  .chartContainer { margin-left: 70px; }
-  .chartSection   { padding-left: 60px; font-size: 0.9rem; }
+  .halfBorderBox {
+    font-size: 1rem;
+    max-width: 90%;
+  }
 }
