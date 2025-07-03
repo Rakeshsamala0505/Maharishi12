@@ -1,124 +1,139 @@
-/* Fix for content hiding under the header */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
-    padding-top: 7%; /* Adjust this based on your header height */
+/* Base chart wrapper */
+.chartWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
+  height: 700px;
 }
 
-.text_content {
-    padding: 20px;
+/* Box styles */
+.box {
+  position: absolute;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
 }
 
-.title {
-    font-size: 1rem !important;
-    color: #4c7c13;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
+.box:hover {
+  transform: scale(1.04);
 }
 
-/* Fixed header (assuming you have one) */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* Adjust as per your header size */
-    background: #fff; /* Or any color */
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.box span {
+  line-height: 1.4;
+  font-size: 15px;
 }
 
-
-.text-content {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.8;
-    text-align: justify;
+/* Arrows (SVG) */
+.connectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Header underline */
-.title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #4c7c13;
-    margin-top: 5px;
+.arrowPath {
+  fill: none;
+  stroke: #c40016;
+  stroke-width: 2.5;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawArrow 1.2s ease forwards;
 }
 
-
-/* Responsive adjustments */
-@media screen and (max-width: 480px) {
-    .container {
-        flex: 1;
-        max-width: 1200px;
-        margin: auto;
-        padding: 1rem;
-        padding-top: 20% !important; /* Adjust this based on your header height */
-    }
-    
-    .text_content {
-        padding: 0px;
-        line-height: 1.6;
-    }
-    .text-content {
-        font-size: 0.7rem;
-        color: #333;
-        line-height: 1.8;
-        text-align: justify;
-    }
-
-    .title {
-        font-size: 0.9rem !important;
-        color: #4c7c13;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-align: left!important;
-    }
-    
-    /* Fixed header (assuming you have one) */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px; /* Adjust as per your header size */
-        background: #fff; /* Or any color */
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-   
-    .image-container {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-      }
-      .responsive-image {
-        width: 90%; /* Make it fit within smaller screens */
-        max-width: 100%;
-    }
-    .responsive-image {
-        width: 90%; /* Make it fit within smaller screens */
-        max-width: 100%;
-    }
-}
-/* Image container */
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+@keyframes drawArrow {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-/* Image styling */
-.responsive-image {
-    width: 100%;
-    max-width: 600px; /* Limit max width */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+/* Modal overlay */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
 }
 
+/* White popup card */
+.modalCard {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  max-width: 480px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
 
+.modalCard h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Close button */
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Team list */
+.peopleList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.personRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.personRow img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.personName {
+  font-weight: bold;
+}
+
+.personRole {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive layout */
+@media (max-width: 640px) {
+  .chartWrapper {
+    transform: scale(0.85);
+    transform-origin: top left;
+  }
+
+  .modalCard {
+    padding: 1.5rem;
+  }
+}

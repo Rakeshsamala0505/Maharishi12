@@ -13,6 +13,7 @@
   padding: 0 20px;
 }
 
+
 .sectionHeading {
   color: #996600;
   font-weight: bold;
@@ -20,7 +21,7 @@
   font-size: 2  rem;
   margin-bottom: 2rem;
   line-height: 1.4;
-  font-family: 'Georgia', 'Times New Roman', serif;
+text-decoration: underline;
 
 }
 .HeadingTitle{

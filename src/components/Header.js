@@ -133,7 +133,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="g20" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="organisationalchart" className="subheader" onClick={closeMenuOnLinkClick}>
                     Organisational Chart
                   </Link>
                 </li>
