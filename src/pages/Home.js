@@ -17,8 +17,7 @@ const images = [
 ];
 
 const announcements = [
-  "The vision of MAHARISHI is to encourage and support the development of an active global millet research community for enhancing capabilities by sharing resources, data, knowledge",
-  "the major focus is to provide nutritional and livelihood security to the resource poors in the developing and underdeveloped countries that are dependent on millets",
+  "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote international research collaboration on climate-resilient and nutritious crops, including millets and other underutilized ancient grains",
 ];
 
 const Home = () => {

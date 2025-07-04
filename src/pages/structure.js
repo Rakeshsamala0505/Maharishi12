@@ -1,106 +1,85 @@
 import React from 'react';
-import styles from '../styles/structure.module.css';
-import NarendraModiImage from '../assets/images/DDG412.png';
-import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
-import DeveshChaturvedi from '../assets/images/dr_devesh.jpg';
-import Drdevenderkumar from '../assets/images/devender.jpg';
-import DrCTaraSatyavathiImage from '../assets/images/director.png';
-import DrMangilal from '../assets/images/mangilall.jpg';
+import '../styles/structure.module.css';
+import Prime from '../assets/images/prime Minister.png';
+import Shivaraj from '../assets/images/DDG32.png';
+import devesh from '../assets/images/dr_devesh.jpg';
+import mangilal from '../assets/images/ml.jat_cc1.png';
+import devender from '../assets/images/devender.jpg';
+import Director from '../assets/images/DIRECTOR.jpg';
 
-const people = [
+
+const committeeMembers = [
   {
-    id: 1,
-    name: ' Shri Narendra Damodardas Modi',
-    title: ' Honerable Prime Minister of India',
-    image: NarendraModiImage,
-    alt: 'Narendra Modi, Prime Minister of India',
+    name: 'Shri Narendra Damodardas Modi',
+    description:
+      'Hon’ble Prime Minister of India',
+    image: Prime,
   },
   {
-    id: 2,
-    name: ' Shri Shivaraj Singh Chouhan',
-    title: " Union Agriculture and Farmers Welfare Minister,Govt of India",
-    image: ShivarajSinghChouhanImage,
-    alt: "Shivaraj Singh Chouhan, Minister of Agriculture and Farmers' Welfare",
+    name: 'Shri Shivaraj Singh Chouhan',
+    description:
+      'Union Agriculture and Farmers Welfare Minister,Govt of India',
+    image: Shivaraj,
   },
   {
-    id: 3,
     name: 'Shri. Devesh Chaturvedi',
-    title: 'Secretary, Department of Agriculture & Farmers Welfare (DA&FW), Govt of India',
-    image: DeveshChaturvedi,
-    alt: 'Devesh Chaturvedi',
+    description: 'Secretary, Department of Agriculture & Farmers Welfare (DA&FW), Govt of India',
+    image: devesh,
   },
   {
-    id: 4,
     name: 'Dr. Mangi Lal Jat',
-    title: 'Director General, Indian Council of Agricultural Research and Secretary, Department of Agricultural Research and Education, Govt of India',
-    image: DrMangilal,
-    alt: 'A well-recognized Systems Agronomist',
-    specialClass: 'mangiFix',
+    description:
+      'Director General, Indian Council of Agricultural Research and Secretary, Department of Agricultural Research and Education, Govt of India',
+    image: mangilal,
   },
   {
-    id: 5,
     name: 'Dr Devendra Kumar Yadava',
-    title: 'Deputy Director General (Crop Science) of Indian Council of Agricultural Research',
-    image: Drdevenderkumar,
-    alt: 'Dr Devendra Kumar',
+    description:
+      'Deputy Director General (Crop Science) of Indian Council of Agricultural Research',
+    image: devender,
   },
   {
-    id: 6,
     name: 'Dr (Mrs) C Tara Satyavathi',
-    title: 'Director, ICAR-Indian Institute of Millet Research',
-    image: DrCTaraSatyavathiImage,
-    alt: 'Dr (Mrs) C Tara Satyavathi, Director of IIMR',
+    description:
+      'Director, ICAR-Indian Institute of Millet Research',
+    image: Director,
   },
 ];
 
-const Structure = () => {
+const CoordinationCommittee = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.contentWrapper}>
-        <div className={styles.structureContainer}>
-          <h1 className={styles.title}>Steering Committee</h1>
-
-          {/* Render first 2 normally */}
-          {people.slice(0, 2).map((person) => (
-            <div key={person.id} className={styles.person}>
-              <img src={person.image} alt={person.alt} />
-              <div className={styles.bioContent}>
-                <h3 className={styles.headingAbout}>{person.name}</h3>
-                <p>{person.title}</p>
-              </div>
+    <div className="committee-section">
+      <h2 className="section-title">
+        <span className="highlight">Steering</span> Committee
+      </h2>
+      <p className="section-subtitle">
+        A Forum of all MAHARISHI members constituted to advise, review and approve annual or multi-annual Initiative
+      </p>
+      <div className="committee-grid">
+        {committeeMembers.map((member, index) => (
+          <a
+            href={member.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="committee-card"
+            key={index}
+          >
+            <img
+              src={member.image}
+              alt={member.name}
+              className="committee-image"
+            />
+            <div className="committee-info">
+              <h3>{member.name}</h3>
+              <h4>{member.role}</h4>
+              <div className="underline" />
+              <p>{member.description}</p>
             </div>
-          ))}
-
-          {/* Render 3rd & 4th side-by-side */}
-          <div className={styles.personRow}>
-            {people.slice(2, 4).map((person) => (
-              <div
-                key={person.id}
-                className={`${styles.person} ${person.specialClass ? styles[person.specialClass] : ''}`}
-              >
-                <img src={person.image} alt={person.alt} />
-                <div className={styles.bioContent}>
-                  <h3 className={styles.headingAbout}>{person.name}</h3>
-                  <p>{person.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Render last two normally */}
-          {people.slice(4).map((person) => (
-            <div key={person.id} className={styles.person}>
-              <img src={person.image} alt={person.alt} />
-              <div className={styles.bioContent}>
-                <h3 className={styles.headingAbout}>{person.name}</h3>
-                <p>{person.title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          </a>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Structure;
+export default CoordinationCommittee;
