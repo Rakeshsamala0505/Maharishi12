@@ -1,202 +1,132 @@
-/* General Styles */
-.maharishi-implementation-page {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Ensures content starts from top */
-  padding: 0 20px; /* Added side padding for content */
-  max-width: 100%;
-  padding-top: 7%; /* Add top padding to ensure content doesn't feel cramped */
-  padding-bottom: 40px; /* Add bottom padding to ensure content doesn't feel cramped */
+/* General Layout */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding-top: 7%;
 }
 
-.hero {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 20px;
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.hero h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  text-align: left; /* Aligning title to the left */
+.sidebar h3 {
+    color: #003366;
+    font-size: 18px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-
-
-.initiative-overview,
-.vision-mission,
-.objectives,
-.research-priorities,
-.challenges,
-.technology-partnerships {
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto; /* Auto margin for center alignment */
-  padding: 0 15px; /* Padding for equal sides */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-h3 {
-  color: #4CAF50;
-  margin-top: 20px;
-  font-size: 1.3rem;
-  text-align: left; /* Aligning titles to the left */
+.sidebar ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  text-align: justify;
-  line-height: 1.6;
+.sidebar ul li:last-child {
+    border-bottom: none;
 }
 
-.no-bullets {
-  padding: 0;
-  margin: 0;
-  text-align: left;
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
 }
 
-.no-bullets li {
-  margin: 10px 0;
-  text-align: justify;
+.sidebar ul li a svg {
+    margin-right: 8px;
 }
 
-/* Extra margin for the last section to give space before footer */
-.initiative-overview:last-of-type,
-.vision-mission:last-of-type,
-.objectives:last-of-type,
-.research-priorities:last-of-type,
-.challenges:last-of-type,
-.technology-partnerships:last-of-type {
-  margin-bottom: 60px; /* Added space between last content section and footer */
+/* Content */
+.content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Styling */
-@media (max-width: 1200px) {
-  .hero {
-    padding: 15px;
-  }
-
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-
-  .full-form {
-    font-size: 1rem;
-  }
-
-  .initiative-overview,
-  .vision-mission,
-  .objectives,
-  .research-priorities,
-  .challenges,
-  .technology-partnerships {
-    margin: 15px auto;
-    padding: 0 15px;
-  }
-
-  h3 {
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .no-bullets li {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 10px;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .full-form {
-    font-size: 0.9rem;
-  }
-
-  .initiative-overview,
-  .vision-mission,
-  .objectives,
-  .research-priorities,
-  .challenges,
-  .technology-partnerships {
-    margin: 10px auto;
-    padding: 0 15px;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .no-bullets li {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .maharishi-implementation-page {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Ensures content starts from top */
-  padding: 0 20px; /* Added side padding for content */
-  max-width: 100%;
-  padding-top: 20%; /* Add top padding to ensure content doesn't feel cramped */
-  padding-bottom: 40px; /* Add bottom padding to ensure content doesn't feel cramped */
-}
-  .hero {
-    padding: 8px;
-  }
-
-  .hero h2 {
-    font-size: 1.2rem;
-  }
-
-  .full-form {
-    font-size: 0.7rem;
-  }
-
-  .initiative-overview,
-  .vision-mission,
-  .objectives,
-  .research-priorities,
-  .challenges,
-  .technology-partnerships {
-    margin: 0px auto;
-    padding: 0 0px;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  p {
-    font-size: 0.7rem;
-  }
-
-  .no-bullets li {
-    font-size: 0.7rem;
+.content h2 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
     text-align: left;
-  }
+    font-size: 1.3rem;
+}
+
+.point {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.point h3 {
+    color: #003366;
+    font-size: 1rem;
+}
+.point p {
+    font-size: 0.9rem;
+    text-align: justify;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px;
+}
+
+/* Responsive Design for 480px */
+@media screen and (max-width: 480px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 17%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .sidebar h3 {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .content h2 {
+        font-size: 0.89rem;
+    }
+
+    .point h3 {
+        font-size: 0.9rem;
+    }
+
+    .point p {
+        font-size: 0.7rem;
+    }
 }

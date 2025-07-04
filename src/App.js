@@ -61,6 +61,7 @@ function App() {
           <Route path="/secretariat_commitee" element={<SecretariatCommitee />} />
           <Route path="/world_map" element={<WorldMapSection />} /> {/* World Map Section */}
           {/* Add more routes as needed */}
+
    
         </Routes>
         <Footer />

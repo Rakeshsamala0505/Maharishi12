@@ -1,88 +1,149 @@
-import React from 'react';
-import '../styles/ImplementationOfMaharishi.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/ImplementationOfMaharishi.css"; // Importing external CSS
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGavel,
+  faWallet,
+  faBuilding,
+  faFlask,
+  faUsers,
+  faCogs,
+  faUserSecret,
+  faCalendarCheck,
+  faShieldAlt,
+  faBook,
+  faExchangeAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-const ImplementationOfMaharishi = () => {
+const Maharishi = () => {
   return (
-    <div className="maharishi-implementation-page">
-      <section className="hero">
-        <h2>Implementation of MAHARISHI</h2>
-        <p className="full-form">
-          <strong>MAHARISHI</strong> - Millet And OtHer Ancient GRains International ReSearcH Initiative
-        </p>
-        <p>A Global Initiative</p>
-      </section>
+    <div className="container-fluid main-container">
+      {/* Sidebar */}
+      <div className="sidebar">
+        <h3>Charter</h3>
+        <ul>
+          <li>
+            <a href="#purpose-of-charter">
+              <FontAwesomeIcon icon={faGavel} /> Purpose of the Charter
+            </a>
+          </li>
+          <li>
+            <a href="#scope-financial-resources">
+              <FontAwesomeIcon icon={faWallet} /> Scope and Financial Resources
+            </a>
+          </li>
+          <li>
+            <a href="#institutions-coordination">
+              <FontAwesomeIcon icon={faBuilding} /> Institutions' Coordination
+            </a>
+          </li>
+          <li>
+            <a href="#research-committee">
+              <FontAwesomeIcon icon={faFlask} /> Research Committee
+            </a>
+          </li>
+          <li>
+            <a href="#scientific-board">
+              <FontAwesomeIcon icon={faFlask} /> Scientific Board
+            </a>
+          </li>
+          <li>
+            <a href="#expert-working-groups">
+              <FontAwesomeIcon icon={faUsers} /> Expert Working Groups
+            </a>
+          </li>
+          <li>
+            <a href="#maharishi-initiative-manager">
+              <FontAwesomeIcon icon={faCogs} /> Maharishi Initiative Manager
+            </a>
+          </li>
+          <li>
+            <a href="#secretariat">
+              <FontAwesomeIcon icon={faUserSecret} /> Secretariat
+            </a>
+          </li>
+          <li>
+            <a href="#committees-meetings">
+              <FontAwesomeIcon icon={faCalendarCheck} /> Committees' Meetings
+            </a>
+          </li>
+          <li>
+            <a href="#confidentiality">
+              <FontAwesomeIcon icon={faShieldAlt} /> Confidentiality
+            </a>
+          </li>
+          <li>
+            <a href="#publication">
+              <FontAwesomeIcon icon={faBook} /> Publication
+            </a>
+          </li>
+          <li>
+            <a href="#intellectual-property">
+              <FontAwesomeIcon icon={faCogs} /> Intellectual Property
+            </a>
+          </li>
+          <li>
+            <a href="#commencement-modification">
+              <FontAwesomeIcon icon={faExchangeAlt} /> Commencement & Withdrawal
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <section className="initiative-overview">
-        <h3>About the Initiative</h3>
-        <p>
-          The MAHARISHI (Millet And OtHer Ancient GRains International ReSearcH Initiative) was proposed at the G20 MACS meeting in April 2023 in India and received endorsement to enhance global food and nutritional security by integrating millets into global diets.
-        </p>
-        <p>
-          This initiative establishes a framework for defining strategic research and organizational priorities for millet research across developed and developing nations. MAHARISHI aims to improve communication among researchers, funding bodies, and policymakers, facilitating efficient and long-term investments in millet research and development. It also supports activities to improve global research partnerships and broaden access to information, resources, and technologies related to millets.
-        </p>
-      </section>
-
-      {/* <section className="vision-mission">
-        <h3>Vision</h3>
-        <p>
-          To foster and support a dynamic global millet research community, enhancing capabilities through the sharing of resources, data, knowledge, and ideas to improve millet productivity, quality, and sustainability.
-        </p>
-        <h3>Mission</h3>
-        <p>
-          To prioritize nutritional and livelihood security for resource-poor populations in developing and underdeveloped countries reliant on millets, by increasing yields and promoting sustainable and resilient agricultural production systems. This mission extends to a global platform to maximize international value-added opportunities.
-        </p>
-      </section> */}
-
-      <section className="objectives">
-        <h3>Key Objectives for Implementation</h3>
-        <div className="no-bullets">
-          <li>Establish networks connecting researchers and institutions focused on identified crops to improve the dissemination of research findings, information, and to identify research gaps.</li>
-          <li>Develop web platforms to connect researchers, regularly share information, communication materials, and thematic briefs to encourage research and raise awareness.</li>
-          <li>Organize knowledge transfer and capacity-building activities, as well as international research workshops and conferences, based on voluntary and mutually agreed terms.</li>
-          <li>Provide research and innovation prizes or awards to support young scientists' research interests and promote open access publication of research outcomes.</li>
-        </div>
-      </section>
-
-      <section className="research-priorities">
-        <h3>Research Priorities for Implementation</h3>
-        <div className="no-bullets">
-          <li>Strengthening existing research activities related to millets and ancient grains.</li>
-          <li>Advancing breeding methodologies, biotechnology, and genomics in millet research.</li>
-          <li>Enhancing agronomic practices in their broadest sense, encompassing crop production and soil management.</li>
-          <li>Broadening the genetic base of millets by utilizing global genetic resources.</li>
-          <li>Focusing on value addition and establishing international standards for the global millet market.</li>
-        </div>
-      </section>
-
-      <section className="challenges">
-        <h3>Addressing Key Challenges</h3>
-        <p>
-          The implementation of MAHARISHI will need to address critical issues such as the decline in millet cultivation areas, the need for enhanced yields, and the development of robust seed supply chains. Specific challenges include:
-        </p>
-        <div className="no-bullets">
-          <li>Integrating local and landraces into breeding programs and initiating pre-breeding efforts.</li>
-          <li>Focusing global programs on the introgression of novel genes to improve stress tolerance, nutritional quality, and yield.</li>
-          <li>Advancing omics studies and their application in marker-assisted selection (MAS).</li>
-          <li>Improving genetic gains through genomic selection and the use of gene editing technologies.</li>
-          <li>Conducting nutritional profiling and validating traditional knowledge of millets and ancient grains.</li>
-          <li>Developing policies that encourage farmers to grow millets and support sustainability goals.</li>
-        </div>
-      </section>
-
-      <section className="technology-partnerships">
-        <h3>Leveraging Technology and Partnerships</h3>
-        <p>
-          Successful implementation will depend on access to modern technologies and fostering collaborations:
-        </p>
-        <div className="no-bullets">
-          <li>Training researchers in advanced plant breeding techniques and tools (sequencing, genomics, etc.).</li>
-          <li>Supporting multinational research initiatives and public-private partnerships to leverage diverse expertise and resources.</li>
-        </div>
-      </section>
-
-      
+      {/* Content Area */}
+      <div className="content">
+        <section id="purpose-of-charter">
+          <h2>MAHARISHI Charter</h2>
+          <div className="point">
+            <h3>1. Governance Framework</h3>
+            <p>
+              The charter establishes clear governance policies. This ensures
+              smooth decision-making and accountability.
+            </p>
+          </div>
+          <div className="point">
+            <h3>2. Operational Guidelines</h3>
+            <p>
+              It provides structured guidelines for operations, ensuring
+              consistency across initiatives.
+            </p>
+          </div>
+          <div className="point">
+            <h3>3. Effective Implementation</h3>
+            <p>
+              The charter ensures successful project execution, outlining steps
+              to achieve targeted goals.
+            </p>
+          </div>
+          <div className="point">
+            <h3>4. Coordination of Initiatives</h3>
+            <p>
+            It helps align various initiatives effectively. This avoids duplication and promotes synergy.
+            </p>
+          </div>
+          <h2>Scope and Financial Resources of Maharishi</h2>
+          <div className="point">
+            <p>
+            The scope of the MAHARISHI initiative spans across multiple sectors 
+            including agriculture, sustainability, food security, and health. 
+            Financial resources will be secured through various channels including 
+            government grants, partnerships, and private investments.
+            </p>
+          </div>
+          <h2>Institutions' Coordination Committee</h2>
+          <div className="point">
+            <p>
+            The Institutions' Coordination Committee is tasked with 
+            overseeing the collaboration between institutions and 
+            stakeholders involved in the MAHARISHI initiative, ensuring 
+            alignment with the core goals and objectives of the initiative.
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
 
-export default ImplementationOfMaharishi;
+export default Maharishi;

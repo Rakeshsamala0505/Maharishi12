@@ -5,7 +5,7 @@ import './WorldMapSection.css';
 const countryData = {
   AR: { name: 'Argentina', millets: 'Proso or Common millet, Sorghum', institutions: ['National Agricultural Technology Institute (INTA)','National University of Cordoba'] },
   AU: { name: 'Australia', millets: 'Native millet (Panicum decompositum),Channel millet (Echinochloa turneriana), Shirohie or Japanese millet', institutions: ['Australian Research for International Agricultural Research','Grain Research and Development Corporation','University Of Queensland','University of Sydney'] },
-  CN: { name: 'China', millets: 'Foxtail millet, Common Millet, Sorghum, Coix, Quinoa ', institutions: ['     Hebei Academy of Agriculture and Forestry Sciences (Research Institute of Millet)','     Chinese Academy of Agricultural Sciences (CAAS)']},
+  CN: { name: 'China', millets: 'Foxtail millet, Common Millet, Sorghum, Coix, Quinoa ', institutions: ['Hebei Academy of Agriculture and Forestry Sciences (Research Institute of Millet)','Chinese Academy of Agricultural Sciences (CAAS)']},
   JP: { name: 'Japan', millets: 'Barnyard Millet, Barley, Amaranth, Fox tail, Black Rice, Red Rice, Ragi, Soba, Sorghum,', institutions: ['Japan Millet Association','JIRCAS'] },
   KR: { name: 'Republic of Korea', millets: 'foxtail and broomcorn varieties', institutions: ['NILL'] },
   MX: { name: 'Mexico', millets: 'Proso Millet, Foxtail Millet, Kodo millet', institutions: ['National Institute for Forestry, Agriculture and Livestock Research (INIFAP)','USA','Minister of Economy of the State of Tamaulipas']  },

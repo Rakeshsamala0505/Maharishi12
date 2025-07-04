@@ -124,7 +124,7 @@ const Header = () => {
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
                 <li>
                   <Link to="Purpose" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Purpose of Maharishi
+                    About Maharishi
                   </Link>
                 </li>
                 <li>
@@ -163,7 +163,7 @@ const Header = () => {
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
                 <li>
                   <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Expert Working Groups
+                    Steering Committee
                   </Link>
                 </li>
                 <li className="nested-menu">
@@ -315,7 +315,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="newsletter" className="subheader" onClick={closeMenuOnLinkClick}>
                     Newsletter
                   </a>
                 </li>

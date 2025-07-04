@@ -11,7 +11,7 @@ const PurposeOfMaharishi = () => {
           {/* Block 1 */}
           <div className="row">
             <div className="col-md-4">
-              <h2 className={styles.sectionHeading}>Purpose of Maharishi</h2>
+              <h2 className={styles.sectionHeading}>About Maharishi</h2>
             </div>
             <div className="col-md-8">
               <p>
@@ -21,10 +21,22 @@ const PurposeOfMaharishi = () => {
               <p>
                 The MAHARISHI initiative, launched under India's G20 Presidency as part of the G20 MACS Global Research Collaboration Priority, promotes international research on these underutilized grains. Building on the momentum of the International Year of Millets 2023, it unites fragmented efforts under a shared framework to advance global food and nutrition security.
               </p>
+              
+            </div>
+          </div>
+           {/* Block 2 */}
+          <div className="row">
+            <div className="col-md-4">
+              <h2 className={styles.sectionHeading}>Vision</h2>
+            </div>
+            <div className="col-md-8">
+              <p>
+                To cultivate a globally connected and forward-looking research ecosystem that unlocks the full potential of millets and ancient grains through collaborative knowledge exchange, innovation, and inclusive partnerships - ensuring sustainable agriculture, resilient food systems, and healthier communities for generations to come.
+              </p>
             </div>
           </div>
 
-          {/* Block 2 */}
+          {/* Block 3 */}
           <div className="row">
             <div className="col-md-4">
               <h2 className={styles.sectionHeading}>WHAT WE AIM FOR</h2>
@@ -33,10 +45,23 @@ const PurposeOfMaharishi = () => {
               <p>
                 MAHARISHI aims to coordinate international research on millets and ancient grains to strengthen global food and nutrition security. By optimizing and pooling resources, the initiative seeks to enhance economic efficiency and add value to ongoing national and international efforts both public and private. We foster cross-country linkages to accelerate advancements in research and development, ensuring these climate-resilient crops contribute to sustainable agriculture. Our focus is on building scientific competence to meet evolving environmental challenges while responding to the growing demand for nutritious, safe, and resilient food systems.
               </p>
+             
+            </div>
+          </div>
+          {/* Block 4*/}
+
+          <div className="row">
+            <div className="col-md-4">
+              <h2 className={styles.sectionHeading}>Mission Statements</h2>
+            </div>
+            <div className="col-md-8">
+               <p>
+                To cultivate a globally connected and forward-looking research ecosystem that unlocks the full potential of millets and ancient grains through collaborative knowledge exchange, innovation, and inclusive partnerships - ensuring sustainable agriculture, resilient food systems, and healthier communities for generations to come.
+              </p>
             </div>
           </div>
 
-          {/* Block 3 */}
+          {/* Block 5 */}
           <div className="row">
             <div className="col-md-4">
               <h2 className={styles.sectionHeading}>WHY MILLETS AND ANCIENT GRAINS</h2>

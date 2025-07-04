@@ -257,7 +257,7 @@ body {
   color: #008cb3;
   font-size: 0.7rem !important;
   border-radius: 0.5rem;
-  padding: 4px 8px !important;
+  padding: 0.5rem 1.5rem !important;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -332,9 +332,11 @@ body {
 
 #latest-news {
   position: relative;
-  height: 70vh !important;
   overflow: hidden;
-  background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
+  color: white;
+  height:60vh;
+ background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
+
 }
 
 .gx-4 {
@@ -354,21 +356,48 @@ body {
 
 #latest-news .container {
   position: relative;
-  z-index: 1;
-  padding-top: 3%;
-  color: #fff;
+  z-index: 2;
+  
 }
+.section-title {
+  font-size: 3rem !important;
+  font-weight: 700;
+}
+.section-description p {
+  font-size: 0.5rem;
+  margin: 1rem 0;
+}
+
 
 #latest-news p {
   font-size: 1rem;
-  margin-top: 90px;
   text-align: center;
   transition: all 1.5s ease-in-out;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 #latest-news p.right-text.slide-in {
   opacity: 1;
   transform: translateX(0);
+}
+.text-white{
+  padding-top:5rem;
+}
+.gap-md-custom{
+  gap: 15rem;  
+}
+.gap-md-custom h2{
+  font-family: math;
+  font-size: 2.5rem !important;
+  color:#FFF0E1 !important;
 }
 
 #latest-news .btn-primary {
@@ -449,8 +478,8 @@ body {
 .section-container .card-content {
   width: 50%;
   padding: 20px;
-  background: #a13b08;
-  color: #fff;
+  background: #D2B48C;
+  color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: center;

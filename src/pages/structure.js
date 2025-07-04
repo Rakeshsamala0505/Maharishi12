@@ -5,7 +5,7 @@ import ShivarajSinghChouhanImage from '../assets/images/DDG32.png';
 import DeveshChaturvedi from '../assets/images/dr_devesh.jpg';
 import Drdevenderkumar from '../assets/images/devender.jpg';
 import DrCTaraSatyavathiImage from '../assets/images/director.png';
-import DrMangilal from '../assets/images/dr_mangi_lal1.png';
+import DrMangilal from '../assets/images/mangilall.jpg';
 
 const people = [
   {
@@ -58,7 +58,7 @@ const Structure = () => {
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
         <div className={styles.structureContainer}>
-          <h1 className={styles.title}>Key persons of MAHARISHI</h1>
+          <h1 className={styles.title}>Steering Committee</h1>
 
           {/* Render first 2 normally */}
           {people.slice(0, 2).map((person) => (
