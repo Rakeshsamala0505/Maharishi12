@@ -98,17 +98,13 @@ dl, ol, ul {
   opacity: 0;
   pointer-events: none;
 }
-.nav-links li:hover > .drop-menu {
+/* .nav-links li:hover > .drop-menu {
   opacity: 1;
   pointer-events: auto;
-}
+} */
 
 /* Show drop-menu on hover */
-.nav-links li:hover > .drop-menu,
-.nav-links .drop-menu:hover {
-  opacity: 1;
-  visibility: visible;
-}
+
 
 
 .drop-menu li {
@@ -153,6 +149,8 @@ dl, ol, ul {
   margin: 0; /* Ensure no extra margin */
   border-radius: 0;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 /* Show nested dropdown on hover */
 .drop-menu .nested-menu:hover > .nested-drop-menu,
@@ -169,6 +167,7 @@ dl, ol, ul {
 .nested-drop-menu.visible {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 
@@ -447,11 +446,22 @@ dl, ol, ul {
     max-height: 500px; /* enough height to show content */
   }
 
-  /* Disable desktop hover trigger in mobile */
+  /* Disable desktop hover trigger in mobile  */
   .drop-menu li:hover > .nested-drop-menu {
     opacity: 1;
     visibility: visible;
   }
 }
 
+.drop-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
 
+.drop-menu.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

@@ -76,12 +76,7 @@ const Home = () => {
                  <div className="announcement-card">
                    <span className="announcement-text">
                            {announcements.map((text, index) => (
-                            <a
-                               key={index}
-                               href="#"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}>
+                            <a key={index} href="#" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}>
                                {text} {index !== announcements.length - 1 && <strong style={{ fontWeight: 'bold', margin: '0 0.5rem' }}>|</strong>}
                             </a>
                           ))}
@@ -170,7 +165,7 @@ const Home = () => {
       {/* Right Column */}
       <div className="col-md-4 text-white">
         <div className="content-block">
-          <h2 className="section-title">IMAGC</h2>
+          <h2 className="section-title">LAUNCH EVENT</h2>
           <p className="section-description">
             Explore, Engage, and Discover Scientific Perspectives on Millets and Ancient Grains . Click below to join
           </p>
