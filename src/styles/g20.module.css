@@ -6,7 +6,16 @@
   background: #f9f9f9;
   padding: 2rem;
   box-sizing: border-box;
+  transform: scale(0.8); 
+  transform-origin: top center; /* optional: scale from top */
+
 }
+
+.orgWrapper {
+  padding-top: 5rem; 
+}
+
+
 
 /* Top section: horizontal row */
 .wrapper > div:first-child,
@@ -62,6 +71,7 @@
   z-index: 0;
   width: 260px;
   max-width: 80%;
+  height: 6rem;
   text-align: center;
   display: flex;
   align-items: center;

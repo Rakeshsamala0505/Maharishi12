@@ -1,19 +1,19 @@
 // src/components/WorldMapSection.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { ReactComponent as WorldSVG } from '../assets/final_outputt.svg';
+import { ReactComponent as WorldSVG } from '../assets/map_with_ids.svg';
 import './WorldMapSection.css';
 
 const countryData = {
-AR: { name: 'Argentina', millets: 'Proso or Common millet, Sorghum', institutions: ['National Agricultural Technology Institute (INTA)','National University of Cordoba'] },
+AR_0: { name: 'Argentina', millets: 'Proso or Common millet, Sorghum', institutions: ['National Agricultural Technology Institute (INTA)','National University of Cordoba'] },
   AU_3: { name: 'Australia', millets: 'Native millet (Panicum decompositum),Channel millet (Echinochloa turneriana), Shirohie or Japanese millet', institutions: ['Australian Research for International Agricultural Research','Grain Research and Development Corporation','University Of Queensland','University of Sydney'] },
   CN_2: { name: 'China', millets: 'Foxtail millet, Common Millet, Sorghum, Coix, Quinoa ', institutions: ['Hebei Academy of Agriculture and Forestry Sciences (Research Institute of Millet)','Chinese Academy of Agricultural Sciences (CAAS)']},
   JP_2: { name: 'Japan', millets: 'Barnyard Millet, Barley, Amaranth, Fox tail, Black Rice, Red Rice, Ragi, Soba, Sorghum,', institutions: ['Japan Millet Association','JIRCAS'] },
   KR: { name: 'Republic of Korea', millets: 'foxtail and broomcorn varieties', institutions: ['NILL'] },
   MX: { name: 'Mexico', millets: 'Proso Millet, Foxtail Millet, Kodo millet', institutions: ['National Institute for Forestry, Agriculture and Livestock Research (INIFAP)','USA','Minister of Economy of the State of Tamaulipas']  },
-  RU: { name: 'Russian Federation', millets: 'Major millets, Teff, Job’s Tears and Buckwheat ', institutions: ['Federal Scientific Center of Legumes and Groat Crops'] },
+  RU_6: { name: 'Russian Federation', millets: 'Major millets, Teff, Job’s Tears and Buckwheat ', institutions: ['Federal Scientific Center of Legumes and Groat Crops'] },
   SA: { name: 'Saudi Arabia', millets: 'Pearl Millet, Foxtail millet, Proso Millet, Little millet', institutions: ['NILL'] },
   ZA: { name: 'South Africa', millets: 'Sorghum, Finger millet, Pearl Millet', institutions: ['African Centre for Crop Improvement (ACCI)','University of KwaZulu-Natal'] },
-  TR: { name: 'Turkiye', millets: 'Local Varieties of Sorghum (Vulgare, Sand, Djin)', institutions: ['NILL'] },
+  TR_0: { name: 'Turkey', millets: 'Local Varieties of Sorghum (Vulgare, Sand, Djin)', institutions: ['NILL'] },
   US_7: { name: 'USA', millets: 'Sorghum, Kodo Millet, Amarnath, Farro, Teff, Buckwheat, Spelt', institutions: ['Sorghum United','North American Millets Alliance (NAMA)'] },
   NE: { name: 'Niger', millets: 'Pearl Millet, Finger Millet', institutions: ['ICRISAT Sahelian Centre',' Forum for Agricultural Research in Africa (FARA)',' Council for Agricultural Research and Development (CORAF)',' Food, Agriculture and Natural Resources Policy Analysis Network (FANRPAN)',' Asia-Pacific Association of Agricultural Research Institutions (APAARI)'] },
   NG: { name: 'Nigeria', millets: 'Pearl Millet,Finger Millet,Kodo Millet', institutions: [' Food and Agriculture Organization of the United Nations (FAO)',' Federal Ministry of Agriculture and Rural Development (FMARD)',' Lake Chad Research Institute (LCRI)',' Lake Chad Research Institute',' Harvest Plus'] },
