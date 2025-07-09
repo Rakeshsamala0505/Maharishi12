@@ -10,8 +10,9 @@ const OrganisationChart = () => {
     <div className={styles.wrapper}>
       
       {/* SVG Arrows */}
-     <svg className={styles.svgArrows}>
+    <svg className={styles.svgArrows}>
   <defs>
+    {/* Normal arrowhead for the end */}
     <marker
       id="arrowhead"
       markerWidth="14"
@@ -22,20 +23,25 @@ const OrganisationChart = () => {
     >
       <polygon points="0 0, 14 5, 0 10" fill="darkred" />
     </marker>
-  </defs>
 
-  {/* Arrow to Governance Board */}
-  <path d="M 200 280 H 360 V 160 H 460" stroke="darkred" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+    {/* Reversed arrowhead for the start */}
+    <marker
+      id="arrowhead-start"
+      markerWidth="14"
+      markerHeight="10"
+      refX="4"  // Adjusted for better alignment
+      refY="5"
+      orient="180"
+    >
+      <polygon points="0 0, 14 5, 0 10" fill="darkred" />
+    </marker>
+  </defs> {/* Line with double arrows */} 
+  <path d="M 560 280 H 600 H 980" stroke="darkred" strokeWidth="2" fill="none" markerStart="url(#arrowhead-start)" markerEnd="url(#arrowhead)" />
 
-  {/* Arrow to Research Advisory Group */}
-  <path d="M 200 280 H 360 H 460" stroke="darkred" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
 
-  {/* Arrow to Scientific Panel */}
-  <path d="M 200 280 H 360 V 400 H 460" stroke="darkred" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
-
-  {/* NEW: Arrow to Expert Working Group */}
-  <path d="M 200 280 H 200 V 580 H 640" stroke="darkred" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
 </svg>
+
+
 
 
 

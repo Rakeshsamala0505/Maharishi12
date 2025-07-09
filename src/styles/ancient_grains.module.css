@@ -1,449 +1,404 @@
-/* ../styles/millets.module.css */
-
-/* Base styles */
-body {
-    margin-top: 0; /* Remove default top margin from the body */
-  }
-  
-  .section {
-    padding-bottom: 50px;
-    padding-top: 4%; /* Add some top padding to the section instead */
-  }
-  
-  .millets-title {
-    text-align: center;
-    margin-top: 2%; /* Remove default top margin from the title */
-    margin-bottom: 20px; /* Add some bottom margin for spacing */
-    color: #004f6b;
-    font-size: 1.5rem;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
-    padding: 20px;
-    gap: 20px;
-    width: 83%; /* Decrease the overall width of the container */
-    margin: 0 auto; /* Center the container itself horizontally */
-  }
-  
-  .card {
-    width: calc(25% - 20px); /* Maintain 4 cards per row for larger screens */
-    height: auto; /* Let the height adjust based on content */
-    border: 0px solid #ccc;
-    border-radius: 0px;
-    overflow: hidden; /* Clip any image parts that go outside (if needed) */
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    background-color: #fff;
-    position: relative;
-    margin-bottom: 20px;
-    display: flex; /* Enable Flexbox for card content */
-    flex-direction: column; /* Stack image and text vertically */
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px; /* Set a fixed height for the image */
-    object-fit: cover;
-    display: block;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.section{
+    padding-top:6rem;
+}
+.title{
+  font-size:25px;
+}
+.card {
+  width: calc(25% - 20px);
+  cursor: pointer;
+  position: relative;
+  background: #fff;
   border-radius: 1rem;
-    flex-grow: 1; /* Allow the image to take up available space */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Hover bottom line animation */
+.hoverLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #088b03;
+  width: 0%;
+  transition: width 0.4s ease-in-out;
+}
+
+.card:hover .hoverLine {
+  width: 100%;
+}
+
+.card h3 {
+  margin: 10px 0 15px;
+  font-size: 20px;
+  color: #333;
+  padding: 0 10px;
+}
+
+/* Fullscreen Image Modal */
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.fullscreenContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 1rem;
+  max-width: 80%;
+  max-height: 90%;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.fullscreenContent img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 1rem;
+}
+
+.fullscreenContent h2 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.fullscreenContent p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.fullscreenContent button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #004f6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fullscreenContent button:hover {
+  background: #026b91;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .card {
+    width: calc(50% - 10px);
   }
-  
-  .card a {
-    display: flex; /* Make the link a flex container */
-    flex-direction: column; /* Stack image and heading within the link */
-    text-decoration: none;
-    color: inherit;
-    height: 100%; /* Make the link fill the card height */
+
+  .fullscreenContent img {
+    max-height: 40vh;
   }
-  
-  
-  .card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #79380a;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  .card_container {
-    width: 80%;
-    border-radius: 0px;
-    margin-left: 10%;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: justify;
-    padding: 20px;
-    box-sizing: border-box;
-    
-  }
-  
-  .card_container h2 {
-    font-weight: bold;
-    color: #004f6b;
-    font-size: 18px;
-    text-decoration: underline;
-    margin-bottom: 15px;
-    padding-top: 2rem;
-  }
-  
-  .card_container p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 0px;
-  }
-  
-  .card:hover::after {
+}
+
+@media (max-width: 480px) {
+  .card {
     width: 100%;
   }
-  
-  .card h3 {
-    margin-top: 10px; /* Add some space above the text */
-    margin-bottom: 15px; /* Add some space below the text */
-    font-size: 18px;
-    color: #333;
-    padding: 0 10px; /* Add some horizontal padding for wider text */
+
+  .fullscreenContent {
+    padding: 10px;
   }
-  
-  .table-container {
-    padding: 20px;
-    font-size: 14px;
-    width: 50%;
-    margin-left: 25%;
-    box-sizing: border-box;
-  }
-  .table-container h2{
+  .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+}
+
+.fullscreenContent {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.fullscreenContent h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.fullscreenContent p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.fullscreenContent button {
+  margin-top: 25px;
+  background-color: #088b03;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fullscreenContent button:hover {
+  background-color: #066f02;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .fullscreenContent h2 {
     font-size: 1.5rem;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+
+  .fullscreenContent p {
+    font-size: 1rem;
+    padding: 8px 15px;
   }
-  
-  th,
-  td {
-    padding: 10px;
-    border: 1px solid #ddd;
+
+  .fullscreenContent button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+/* ===== 3️⃣  append to millets.module.css ===== */
+.modalBody{
+  display:flex;
+  gap:0rem;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+
+.details{
+  flex:1 1 280px;
+  min-width:260px;
+}
+
+.nutritionCard{
+  background:#ffd58a;
+  border:2px solid #000;
+  padding:1rem 1.25rem;
+  width:380px;
+  min-width:220px;
+}
+
+.nutritionCard h3{
+  font-weight:700;
+  margin:0 0 .25rem;
+  color:rgb(109, 39, 39);
+}
+
+.nutritionCard small{
+  display:block;
+  font-size:.75rem;
+  margin-bottom:1rem;
+  color:#996600;
+}
+
+.nutritionCard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.nutritionCard th,
+.nutritionCard td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid #00000044;
+  color:rgb(159, 84, 84);
+}
+
+.nutritionCard th {
+  background-color: #ffe4a1;
+  color: #333;
+  font-weight: 600;
+}
+
+/* ========== 📱 Responsive Styles ========== */
+
+@media (max-width: 768px) {
+  .modalBody {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nutritionCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .fullscreenContent {
+    max-height: 95vh;
+    padding: 1rem;
+  }
+
+  .fullscreenContent h2 {
+    font-size: 1.5rem;
     text-align: center;
   }
-  
-  th {
-    background-color: darkblue;
-    color: white;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  #content-title {
-    color: #ddd;
-  }
-  
-  /* Header styles (assuming these are in a separate Header.module.css) */
-  /* If your header styles are in millets.module.css, adjust accordingly */
-  .header {
-    background-color: #f8f9fa; /* Example background color */
-    padding: 10px 0;
-  }
-  
-  .header__content {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .header__main {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .header__link-wrapper {
-    margin: 0 15px;
-    position: relative;
-  }
-  
-  .header__link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
-  }
-  
-  .header__link:hover {
-    color: #004f6b;
-  }
-  
-  .header__dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    z-index: 10;
-    display: none;
-    min-width: 180px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header__link-wrapper:hover .header__dropdown {
-    display: block;
-  }
-  
-  .header__dropdown a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .header__dropdown a:hover {
-    background-color: #f0f0f0;
-    color: #004f6b;
-  }
-  
-  /* Header Banner Styles */
-  .banner {
-    position: relative;
+
+  .fullscreenContent button {
     width: 100%;
-    height: auto;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 20px;
   }
-  
-  .banner-bg {
-    width: 100%;
-    height: auto;
-    display: block;
+}
+
+@media (max-width: 480px) {
+  .fullscreenContent {
+    padding: 0.5rem;
   }
-  
-  .banner-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+
+  .fullscreenContent h2 {
+    font-size: 1.2rem;
   }
-  
-  .left-section {
-    display: flex;
-    align-items: center;
+
+  .fullscreenContent p,
+  .nutritionCard td {
+    font-size: 0.9rem;
   }
-  
-  .main-logo {
-    height: 80px; /* Adjust as needed */
-    margin-right: 15px;
-  }
-  
-  .banner-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #004f6b;
-    margin-bottom: 5px;
-  }
-  
-  .banner-text {
+
+  .nutritionCard h3 {
     font-size: 1.1rem;
-    color: #333;
-    line-height: 1.4;
   }
-  
-  .highlight {
-    color: #79380a;
-    font-weight: bold;
-  }
-  
-  .banner-logos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    padding-right: 20px;
-    height: 100%;
-  }
-  
-  .banner-logos img {
-    height: 60px; /* Adjust logo size */
-  }
-  
-  /* ../styles/millets.module.css */
 
-/* Base styles (as provided previously) ... */
+  .nutritionCard small {
+    font-size: 0.75rem;
+  }
 
-/* Mobile-specific styles (applied to screens with a maximum width of 767px) */
-@media (max-width: 767px) {
-    body {
-      padding-left: 10px; /* Add some left padding to the body */
-      padding-right: 10px; /* Add some right padding to the body */
-    }
-  
-    .section {
-      padding-bottom: 40px; /* Adjust bottom padding */
-      padding-top: 3%; /* Adjust top padding */
-    }
-  
-    .millets-title {
-      font-size: 1.2rem;
-      margin-top: 4%;
-      margin-bottom: 15px;
-    }
-  
-    .container {
-      width: 100%; /* Take full width within the body's padding */
-      padding: 10px;
-      gap: 10px;
-    }
-  
-    .card {
-      width: calc(50% - 10px);
-      margin-bottom: 15px;
-    }
-  
-    .card img {
-      height: 150px;
-    }
-  
-    .card h3 {
-      font-size: 1rem;
-      margin-top: 5px;
-      margin-bottom: 10px;
-      padding: 0 5px;
-    }
-  
-    .card_container {
-      width: 100%; /* Take full width within the body's padding */
-      margin-left: 0;
-      padding: 15px;
-    }
-  
-    .card_container h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-  
-    .card_container p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      margin-bottom: 15px;
-    }
-  
-    .table-container {
-      width: 100%; /* Take full width within the body's padding */
-      margin-left: 0;
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-  
-    th,
-    td {
-      padding: 8px;
-      font-size: 0.8rem;
-    }
-    .text-center {
-        font-size: 1rem; /* Or your desired smaller font size */
-      }
+  .fullscreenContent button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
-  
-  /* Extra small screens (phones with a maximum width of 480px) */
-  @media (max-width: 480px) {
-    .text-center {
-        font-size: 1rem !important; /* Or your desired smaller font size */
-      }
-    
-    body {
-      padding-left: 0; /* Adjust padding for very small screens */
-      padding-right: 0;
-    }
-  
-    .section {
-      padding-bottom: 30px; /* Adjust bottom padding */
-      padding-top: 15%; /* Adjust top padding */
-    }
-  
-    .millets-title {
-      font-size: 1rem;
-      margin-top: 6%;
-      margin-bottom: 10px;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 8px;
-      gap: 6px;
-    }
-  
-    .card {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .card img {
-      height: auto;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-  
-    .card h3 {
-      font-size: 0.7rem;
-      margin-top: 1rem;
-      margin-bottom: 8px;
-      padding: 0 8px;
-    }
-  
-    .card_container {
-      width: 100%;
-      margin-left: 0;
-      padding: 10px;
-    }
-  
-    .card_container h2 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-  
-    .card_container p {
-      font-size: 0.7rem;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      padding: 0.5rem;
-      text-align: justify;
-    }
-  
-    .table-container {
-      width: 100%;
-      margin-left: 0;
-      padding: 8px;
-      font-size: 0.5rem !important;
-    }
-   
-  
-    th,
-    td {
-      padding: 6px;
-      font-size: 0.7rem;
-    }
+}
+/* ───── Modal Title ───── */
+.modalTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+/* Title text (e.g., Sorghum) */
+.modalName {
+  font-weight: 700;
+  color: #0a572d;
+}
+
+/* Overlay/tagline (e.g., "Grain for a Sustainable Future") */
+.modalTagline {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #444;
+  text-transform: none;
+  font-style: italic;
+}
+
+/* ───── Responsive ───── */
+@media (max-width: 768px) {
+  .modalTitle {
+    font-size: 1.6rem;
   }
+
+  .modalTagline {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .modalTagline {
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+  }
+}

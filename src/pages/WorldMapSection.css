@@ -29,16 +29,17 @@
   cursor: default;
 }
 
-/* Highlighted countries (Your selected ones) */
+/* Highlighted countries */
 .world-map path.highlighted-country {
-  fill: #D2B48C; /* Light brown */
+  fill: #D2B48C;
   cursor: pointer;
 }
 
-/* Hover effect: Only on highlighted countries */
+/* Hover effect */
 .world-map path.highlighted-country:hover {
-  fill: #8B4513; /* Dark brown on hover */
+  fill: #8B4513;
 }
+
 .map-title {
   text-align: center;
   font-size: 25px;
@@ -46,27 +47,9 @@
   color: #8B4513;
   margin: 20px 0;
   width: 100%;
-  font-family:emoji;
+  font-family: emoji;
 }
 
-/* Responsive for tablet */
-@media (max-width: 768px) {
-  .map-title {
-    font-size: 24px;
-    margin: 15px 0;
-  }
-}
-
-/* Responsive for mobile */
-@media (max-width: 480px) {
-  .map-title {
-    font-size: 20px;
-    margin: 10px 0;
-  }
-}
-
-
-/* Info Box styling */
 .info-box {
   position: absolute;
   top: 70px;
@@ -79,6 +62,7 @@
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-family: 'Arial', sans-serif;
+  z-index: 99;
 }
 
 .info-box h2 {
@@ -132,18 +116,20 @@
   color: #555;
 }
 
-/* Scrollbar for overflow */
 .info-box::-webkit-scrollbar {
   width: 6px;
 }
-
 .info-box::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 3px;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
+  .map-title {
+    font-size: 24px;
+    margin: 15px 0;
+  }
   .info-box {
     width: 90%;
     left: 5%;
@@ -153,10 +139,28 @@
 }
 
 @media (max-width: 480px) {
+  .map-title {
+    font-size: 20px;
+    margin: 10px 0;
+  }
   .info-box {
     width: 95%;
     left: 2.5%;
     top: 8px;
     padding: 12px;
   }
+}
+.world-map path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 0.5;
+  transition: fill 0.3s ease;
+}
+
+.highlighted-country {
+  fill: #D2B48C !important; /* light brown */
+}
+
+.highlighted-country:hover {
+  fill: #8B4513 !important; /* dark brown */
 }

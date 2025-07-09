@@ -140,7 +140,7 @@
 .svgArrows {
   position: absolute;
   top: 4rem;
-  left: 30rem;
+  left: 0rem;
   width: 100%;
   height: 100%;
   z-index: 1;
