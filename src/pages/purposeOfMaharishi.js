@@ -60,8 +60,44 @@ const PurposeOfMaharishi = () => {
              
             </div>
           </div>
-  
-          {/* Block 3 */}
+        </div>
+      </section>
+      <section
+          className={`${styles.animatedCardsSection} ${cardsInView ? styles.reveal : ''}`}
+          ref={animationRef}
+        >
+          <div className={`${styles.animatedCard} ${styles.card1}`}>
+            <div className={`${styles.overlay} ${styles.leftOverlay}`}></div>
+            <div className={styles.cardContent}>
+              <h2>Vision</h2>
+              <p>
+                 To cultivate a globally connected and forward-looking research ecosystem that 
+                 unlocks the full potential of millets and ancient grains through collaborative 
+                 knowledge exchange, innovation, and inclusive partnerships ensuring sustainable
+                 agriculture, resilient food systems, and healthier communities for generations to come.
+
+        </p>
+            </div>
+          </div>
+
+          <div className={`${styles.animatedCard} ${styles.card2}`}>
+            <div className={`${styles.overlay} ${styles.rightOverlay}`}></div>
+            <div className={styles.cardContent}>
+              <h2>Mission</h2>
+              <p>To establish robust mechanisms for connecting global researchers and institutions 
+                working on millets and ancient grains, enabling effective knowledge exchange, 
+                identification of research gaps, and dissemination of innovations. Through digital 
+                platforms, collaborative workshops, open-access publications, and recognition of young scientists, 
+                the initiative aims to accelerate research, build capacity, and raise awareness of the nutritional, 
+                cultural, and climate-resilient value of these crops empowering smallholder farmers and advancing 
+                sustainable food systems.</p>
+            </div>
+          </div>
+      </section>
+
+      <section className={`py-5 ${styles.section_2background}`}>
+        <div className={styles.purposeContainer}>
+          {/* Block 1 */}
           <div className="row">
             <div className="col-md-4">
               <h2 className={styles.sectionHeading}>WHY MILLETS AND ANCIENT GRAINS</h2>
@@ -110,38 +146,7 @@ const PurposeOfMaharishi = () => {
           </div>
         </div>
       </section>
-      <section
-          className={`${styles.animatedCardsSection} ${cardsInView ? styles.reveal : ''}`}
-          ref={animationRef}
-        >
-          <div className={`${styles.animatedCard} ${styles.card1}`}>
-            <div className={`${styles.overlay} ${styles.leftOverlay}`}></div>
-            <div className={styles.cardContent}>
-              <h2>Vision</h2>
-              <p>
-                 To cultivate a globally connected and forward-looking research ecosystem that 
-                 unlocks the full potential of millets and ancient grains through collaborative 
-                 knowledge exchange, innovation, and inclusive partnerships ensuring sustainable
-                 agriculture, resilient food systems, and healthier communities for generations to come.
-
-        </p>
-            </div>
-          </div>
-
-          <div className={`${styles.animatedCard} ${styles.card2}`}>
-            <div className={`${styles.overlay} ${styles.rightOverlay}`}></div>
-            <div className={styles.cardContent}>
-              <h2>Mission</h2>
-              <p>To establish robust mechanisms for connecting global researchers and institutions 
-                working on millets and ancient grains, enabling effective knowledge exchange, 
-                identification of research gaps, and dissemination of innovations. Through digital 
-                platforms, collaborative workshops, open-access publications, and recognition of young scientists, 
-                the initiative aims to accelerate research, build capacity, and raise awareness of the nutritional, 
-                cultural, and climate-resilient value of these crops empowering smallholder farmers and advancing 
-                sustainable food systems.</p>
-            </div>
-          </div>
-      </section>
+      
       <section className={styles.statsSection}>
         <div className={styles.statsContainer}>
           {/* Top Stats Row */}
