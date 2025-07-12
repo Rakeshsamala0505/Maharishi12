@@ -41,13 +41,7 @@ const Home = () => {
     };
   }, []);
 
-  const nextAnnouncement = () => {
-    setCurrentAnnouncementIndex((prev) => (prev + 1) % announcements.length);
-  };
-
-  const prevAnnouncement = () => {
-    setCurrentAnnouncementIndex((prev) => (prev - 1 + announcements.length) % announcements.length);
-  };
+  
 
   return (
     <div className="home-container">
@@ -62,10 +56,10 @@ const Home = () => {
           />
         ))}
           <h2 className="slider-title">
-  <span className="main-title">MAHARISHI</span><br />
-  <span className="sub-title">Sowing Heritage, Harvesting Innovations</span><br />
-  <span className="sub-title">For People and Planet</span>
-</h2>
+            <span className="main-title">MAHARISHI</span><br />
+            <span className="sub-title">Cultivating Heritage, Harnessing Innovations</span><br />
+            <span className="sub-title">For People and Planet</span>
+          </h2>
       </div>
 
       {/* Latest Announcements */}
