@@ -1,49 +1,71 @@
 import React from 'react';
 import '../styles/structure.module.css';
-import Prime from '../assets/images/prime Minister.png';
-import Shivaraj from '../assets/images/DDG32.png';
-import devesh from '../assets/images/dr_devesh.jpg';
+import ET from '../assets/images/emty.jpg';
 import mangilal from '../assets/images/ml.jat_cc1.png';
+import Mandal from '../assets/images/B.Mandal.png';
+import Neeru from '../assets/images/neeru.jpg';
 import devender from '../assets/images/devender.jpg';
-import Director from '../assets/images/DIRECTOR.jpg';
+import Director from '../assets/images/DIR3.png';
+import pradhan from '../assets/images/sk_pradhan3.png';
+import Jaishankar from '../assets/images/jaishankar.jpg';
+
 
 
 const committeeMembers = [
   {
-    name: 'Shri Narendra Damodardas Modi',
-    description:
-      'Hon’ble Prime Minister of India',
-    image: Prime,
-  },
-  {
-    name: 'Shri Shivaraj Singh Chouhan',
-    description:
-      'Union Agriculture and Farmers Welfare Minister,Govt of India',
-    image: Shivaraj,
-  },
-  {
-    name: 'Shri. Devesh Chaturvedi',
-    description: 'Secretary, Department of Agriculture & Farmers Welfare (DA&FW), Govt of India',
-    image: devesh,
-  },
-  {
     name: 'Dr. Mangi Lal Jat',
     description:
-      'Director General, Indian Council of Agricultural Research and Secretary, Department of Agricultural Research and Education, Govt of India',
+      'Secretary, DARE & DG, ICAR Chairman',
     image: mangilal,
   },
   {
-    name: 'Dr Devendra Kumar Yadava',
+    name: '.......',
     description:
-      'Deputy Director General (Crop Science) of Indian Council of Agricultural Research',
+      'Additional Secretary (Crops), DA&FW, Ministry of Agriculture & Farmers Welfare Member',
+    image: ET,
+  },
+  {
+    name: 'Dr Devendra Kumar Yadava',
+    description: 'Deputy Director General (Crop Science), ICAR',
     image: devender,
   },
   {
-    name: 'Dr (Mrs) C Tara Satyavathi',
+    name: 'Dr. Sharat Kumar Pradhan',
     description:
-      'Director, ICAR-Indian Institute of Millet Research',
+      'Assistant Director General (Food & Fodder Crops), ICAR Member',
+    image: pradhan,
+  },
+  {
+    name: 'Dr. Bikash Mandal',
+    description:
+      'Assistant Director General (International Relations), ICAR',
+    image: Mandal,
+  },
+  {
+    name: 'Dr. Neeru Bhooshan',
+    description:
+      'Assistant Director General (Intellectual Property & Technology Management),ICAR',
+    image: Neeru,
+  },
+  {
+    name: '.....',
+    description:
+      'Director, Legal,ICAR Member',
+    image: ET,
+  },
+  {
+    name: 'Dr. S. Jaishankar',
+    description:
+      'Representative from Ministry of External Affairs Member',
+    image: Jaishankar,
+  },
+  {
+    name: 'Dr. (Mrs.) C. Tara Satyavathi',
+    description:
+      'Director, ICAR-lndian Institute of Millet Research, Hyderabad Member Secretary',
     image: Director,
   },
+  
 ];
 
 const CoordinationCommittee = () => {

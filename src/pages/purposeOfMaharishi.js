@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react'; // update this line if not already
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/purposeOfMaharishi.module.css';
 
+
+
 const PurposeOfMaharishi = () => {
+  const animationRef = useRef(null);
+  const [cardsInView, setCardsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !cardsInView) {
+          setCardsInView(true);
+          observer.disconnect(); // 🔥 Stop observing after first trigger
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (animationRef.current) {
+      observer.observe(animationRef.current);
+    }
+
+    return () => observer.disconnect(); // Clean up observer
+  }, [cardsInView]);
+
   return (
     <>
-      {/* Section 1: Purpose of Maharishi */}
+      {/* Section 1: Purpose of Maharishi  */}
       <section className={`py-5 ${styles.sectionBackground}`}>
         <div className={styles.purposeContainer}>
           {/* Block 1 */}
@@ -25,18 +48,7 @@ const PurposeOfMaharishi = () => {
             </div>
           </div>
            {/* Block 2 */}
-          <div className="row">
-            <div className="col-md-4">
-              <h2 className={styles.sectionHeading}>Vision</h2>
-            </div>
-            <div className="col-md-8">
-              <p>
-                To cultivate a globally connected and forward-looking research ecosystem that unlocks the full potential of millets and ancient grains through collaborative knowledge exchange, innovation, and inclusive partnerships - ensuring sustainable agriculture, resilient food systems, and healthier communities for generations to come.
-              </p>
-            </div>
-          </div>
-
-          {/* Block 3 */}
+    
           <div className="row">
             <div className="col-md-4">
               <h2 className={styles.sectionHeading}>WHAT WE AIM FOR</h2>
@@ -48,20 +60,8 @@ const PurposeOfMaharishi = () => {
              
             </div>
           </div>
-          {/* Block 4*/}
-
-          <div className="row">
-            <div className="col-md-4">
-              <h2 className={styles.sectionHeading}>Mission Statements</h2>
-            </div>
-            <div className="col-md-8">
-               <p>
-                To cultivate a globally connected and forward-looking research ecosystem that unlocks the full potential of millets and ancient grains through collaborative knowledge exchange, innovation, and inclusive partnerships - ensuring sustainable agriculture, resilient food systems, and healthier communities for generations to come.
-              </p>
-            </div>
-          </div>
-
-          {/* Block 5 */}
+  
+          {/* Block 3 */}
           <div className="row">
             <div className="col-md-4">
               <h2 className={styles.sectionHeading}>WHY MILLETS AND ANCIENT GRAINS</h2>
@@ -95,14 +95,14 @@ const PurposeOfMaharishi = () => {
           {/* Bottom Two Cards */}
           <div className={styles.bottomInfoRow}>
             <div className={styles.infoCard}>
-              <h3>Climate Resilience:</h3>
+              <h3>Climate Resilience</h3>
               <p>
                 Millets and ancient grains are climate-smart crops, especially vital in the face of intensifying climate change. As C4 plants, they exhibit exceptional water, nutrient, and radiation use efficiency, allowing them to thrive in arid and semi-arid conditions where other crops fail. Their resilience to heat, drought, and poor soils makes them indispensable for farmers in vulnerable regions grappling with erratic weather patterns and declining natural resources.
               </p>
             </div>
 
             <div className={styles.infoCard}>
-              <h3>Food Security:</h3>
+              <h3>Food Security</h3>
               <p>
                 In Asia and Africa, over 70% of sorghum and 95% of millets are consumed directly as food. Yet, many farm households still struggle to meet their own subsistence needs. These grains are vital for rural food and livelihood security, especially among resource-poor farmers and indigenous communities.
               </p>
@@ -110,7 +110,38 @@ const PurposeOfMaharishi = () => {
           </div>
         </div>
       </section>
+      <section
+          className={`${styles.animatedCardsSection} ${cardsInView ? styles.reveal : ''}`}
+          ref={animationRef}
+        >
+          <div className={`${styles.animatedCard} ${styles.card1}`}>
+            <div className={`${styles.overlay} ${styles.leftOverlay}`}></div>
+            <div className={styles.cardContent}>
+              <h2>Vision</h2>
+              <p>
+                 To cultivate a globally connected and forward-looking research ecosystem that 
+                 unlocks the full potential of millets and ancient grains through collaborative 
+                 knowledge exchange, innovation, and inclusive partnerships ensuring sustainable
+                 agriculture, resilient food systems, and healthier communities for generations to come.
 
+        </p>
+            </div>
+          </div>
+
+          <div className={`${styles.animatedCard} ${styles.card2}`}>
+            <div className={`${styles.overlay} ${styles.rightOverlay}`}></div>
+            <div className={styles.cardContent}>
+              <h2>Mission</h2>
+              <p>To establish robust mechanisms for connecting global researchers and institutions 
+                working on millets and ancient grains, enabling effective knowledge exchange, 
+                identification of research gaps, and dissemination of innovations. Through digital 
+                platforms, collaborative workshops, open-access publications, and recognition of young scientists, 
+                the initiative aims to accelerate research, build capacity, and raise awareness of the nutritional, 
+                cultural, and climate-resilient value of these crops empowering smallholder farmers and advancing 
+                sustainable food systems.</p>
+            </div>
+          </div>
+      </section>
       <section className={styles.statsSection}>
         <div className={styles.statsContainer}>
           {/* Top Stats Row */}
@@ -131,14 +162,14 @@ const PurposeOfMaharishi = () => {
           {/* Bottom Two Cards */}
           <div className={styles.bottomInfoRow}>
             <div className={styles.infoCard}>
-              <h3>Nutrition: </h3>
+              <h3>Nutrition </h3>
               <p>
                 Millets and Ancient  grains are rich in essential nutrients, fiber, and bioactive compounds. They help manage lifestyle diseases such as diabetes and cardiovascular conditions-issues increasingly prevalent worldwide. Their role in combating malnutrition, especially in low-income and food-insecure populations, aligns directly with global health and nutrition targets under the UN Sustainable Development Goals (SDGs).
               </p>
             </div>
 
             <div className={styles.infoCard}>
-              <h3>Sustainability and Soil Health: </h3>
+              <h3>Sustainability and Soil Health </h3>
               <p>
                Millets and ancient grains support low-input, eco-friendly agriculture. Their deep, fibrous roots improve soil structure and enhance nutrient cycling, making them ideal for organic farming and intercropping. Their cultivation reduces dependence on synthetic fertilizers and irrigation, lowering agriculture’s environmental footprint
               </p>
@@ -146,6 +177,8 @@ const PurposeOfMaharishi = () => {
           </div>
         </div>
       </section>
+      
+
     </>
   );
 };

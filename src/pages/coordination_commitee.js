@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/coordination_commitee.css';
 import DrMangilal from '../assets/images/ml.jat_cc1.png';
 import pradhan from '../assets/images/sk_pradhan3.png';
-import Mandal from '../assets/images/B.Mandal_cc25.png';
+import Mandal from '../assets/images/B.Mandal.png';
 import Satyavathi from '../assets/images/DIR3.png';
 import DeveshChaturvedi from '../assets/images/dr_devesh1.png';
 

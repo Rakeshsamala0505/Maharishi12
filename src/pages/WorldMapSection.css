@@ -62,7 +62,7 @@
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-family: 'Arial', sans-serif;
-  z-index: 99;
+  z-index: 1;
 }
 
 .info-box h2 {

@@ -28,6 +28,7 @@ import ResearchCommitee from "./pages/research_commitee";
 import ScientificCommitee from "./pages/scientific_commitee";
 import SecretariatCommitee from "./pages/secretariat"; // secretariat_commitee.js
 import WorldMapSection from "./pages/WorldMapSection"; // WorldMapSection.js 
+import ScrollToTop from "./pages/ScrollToTop"; // ScrollToTop.jsx
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />{/* Home page */}
           <Route path="/purpose" element={<Purpose />} />
@@ -60,8 +62,9 @@ function App() {
           <Route path="/scientific_commitee" element={<ScientificCommitee />} />
           <Route path="/secretariat_commitee" element={<SecretariatCommitee />} />
           <Route path="/world_map" element={<WorldMapSection />} /> {/* World Map Section */}
+          
           {/* Add more routes as needed */}
-
+        
    
         </Routes>
         <Footer />

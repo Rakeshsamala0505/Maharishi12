@@ -253,12 +253,12 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     IMAGC
                   </a>
                 </li>
                 <li>
-                  <a href="/nutrition_benefits" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Events
                   </a>
                 </li>
@@ -282,7 +282,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
                 <li>
-                  <a href="/IIMRResearch" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Research reports
                   </a>
                 </li>
@@ -316,7 +316,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
                 <li>
-                  <a href="newsletter" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Newsletter
                   </a>
                 </li>
@@ -355,17 +355,17 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop7}>
                 <li>
-                  <a href="https://www.millets.res.in/" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://www.millets.res.in/"  target="_blank" rel="noopener noreferrer" className="subheader" onClick={closeMenuOnLinkClick}>
                     IIMR
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.nutrihubiimr.com//" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://www.nutrihubiimr.com//" target="_blank" rel="noopener noreferrer" className="subheader" onClick={closeMenuOnLinkClick}>
                     NUTRIHUB
                   </a>
                 </li>
                 <li>
-                  <a href="https://icar.org.in/" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="https://icar.org.in/" target="_blank" rel="noopener noreferrer" className="subheader" onClick={closeMenuOnLinkClick}>
                     ICAR
                   </a>
                 </li>
