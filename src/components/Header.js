@@ -254,7 +254,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    IMAGC
+                    MAGIC
                   </a>
                 </li>
                 <li>

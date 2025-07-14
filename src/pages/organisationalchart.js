@@ -10,8 +10,6 @@ import Jaishankar from '../assets/images/jaishankar.jpg';
 import Director from '../assets/images/DIR3.png';
 
 
-
-
 const OrganisationChart = () => {
   return (
     <div className={styles.orgWrapper}>
@@ -52,7 +50,7 @@ const OrganisationChart = () => {
                    <div className={styles.member}>
                         <img src={devender} alt="Dr. A. K. Singh" className={styles.memberImg} />
                      <div className={styles.memberInfo}>
-                         <strong>Dr Devendra Kumar Yadava</strong><br /> Deputy Director General (Crop Science), ICAR
+                         <strong>Dr. Devendra Kumar Yadava</strong><br /> Deputy Director General (Crop Science), ICAR
                      </div>
                    </div><div className={styles.member}>
                         <img src={pradhan} alt="Dr. A. K. Singh" className={styles.memberImg} />
