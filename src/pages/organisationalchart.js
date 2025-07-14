@@ -67,12 +67,9 @@ const OrganisationChart = () => {
                      <div className={styles.memberInfo}>
                          <strong>Dr. Neeru Bhooshan</strong><br /> Assistant Director General (Intellectual Property & Technology Management),ICAR
                      </div>
-                   </div><div className={styles.member}>
-                        <img src={Jaishankar} alt="Dr. A. K. Singh" className={styles.memberImg} />
-                     <div className={styles.memberInfo}>
-                         <strong>Dr. S. Jaishankar</strong><br /> Representative from Ministry of External Affairs Member
-                     </div>
-                   </div><div className={styles.member}>
+                   </div>
+                   
+                   <div className={styles.member}>
                         <img src={Director} alt="Dr. A. K. Singh" className={styles.memberImg} />
                      <div className={styles.memberInfo}>
                          <strong>Dr. (Mrs.) C. Tara Satyavathi</strong><br /> Director, ICAR-lndian Institute of Millet Research, Hyderabad Member Secretary
