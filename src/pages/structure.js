@@ -10,7 +10,6 @@ import pradhan from '../assets/images/sk_pradhan3.png';
 import Jaishankar from '../assets/images/jaishankar.jpg';
 
 
-
 const committeeMembers = [
   {
     name: 'Dr. Mangi Lal Jat',

@@ -316,7 +316,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/NewsLetter" className="subheader" onClick={closeMenuOnLinkClick}>
                     Newsletter
                   </a>
                 </li>
@@ -326,7 +326,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/gallery" className="subheader" onClick={closeMenuOnLinkClick}>
                     Gallery
                   </a>
                 </li>
