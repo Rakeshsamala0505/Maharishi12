@@ -1,0 +1,142 @@
+.pressrelease-section {
+  padding-top: 8rem;
+  background-color: #f9f9f9;
+}
+
+.pressrelease-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.pressrelease-title {
+  font-size: 2rem;
+  font-weight: 550;
+  color: #996600;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.pressrelease-card {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: row;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.pressrelease-card:last-child {
+  margin-bottom: 0;
+}
+
+.pressrelease-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  height: auto;
+}
+
+.pressrelease-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pressrelease-content {
+  flex: 2;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pressrelease-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #996600;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.pressrelease-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.pressrelease-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.red {
+  background-color: #d93025;
+  color: white;
+}
+
+.btn.red:hover {
+  background-color: #b1241b;
+}
+
+/* 📱 Responsive Styling */
+@media (max-width: 992px) {
+  .pressrelease-title {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .pressrelease-card {
+    flex-direction: column;
+  }
+
+  .pressrelease-image {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .pressrelease-content {
+    padding: 1rem;
+  }
+
+  .pressrelease-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pressrelease-title {
+    font-size: 1.5rem;
+  }
+
+  .pressrelease-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .pressrelease-content p {
+    font-size: 0.95rem;
+  }
+}

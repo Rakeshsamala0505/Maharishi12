@@ -20,6 +20,7 @@ import Projects from "./pages/projects"; // projects.js
 import Partners from "./pages/partners"; // partners.js
 import IIMRResearch from "./pages/IIMRResearch"; // IIMR_research.js
 import AnnualReports from "./pages/annual_reports"; // annual_reports.js
+import MaharishiLibrary from "./pages/maharishilibrary"; // maharishilibrary.js
 import NewsLetter from "./pages/NewsLetter"; // newsletter.js
 import PressRelease from "./pages/PressReleases"; // pressrelease.js
 import Gallery from "./pages/gallery"; // gallery.js
@@ -54,6 +55,7 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/IIMR_research" element={<IIMRResearch />} />
           <Route path="/annual_reports" element={<AnnualReports />} />
+          <Route path="/maharishilibrary" element={<MaharishiLibrary />} /> 
           <Route path="/newsletter" element={<NewsLetter />} />
           <Route path="/pressrelease" element={<PressRelease />} />  
           <Route path="/gallery" element={<Gallery />} />

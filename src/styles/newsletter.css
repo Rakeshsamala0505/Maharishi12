@@ -17,7 +17,7 @@
   color: #996600;
   margin-bottom: 2rem;
   text-align: left;
-  padding-left: 0.5rem; /* Aligns with card content on mobile */
+  padding-left: 0.5rem; /* Aligns with card content on mobile.*/
 }
 
 /* Card container */
@@ -31,7 +31,14 @@
   flex-direction: row;
   transition: all 0.3s ease;
   gap: 0; /* remove spacing between image and text */
+    margin-bottom: 2rem; /* 👈 Add spacing between cards */
+
 }
+
+.newsletter-card:last-child {
+  margin-bottom: 0; /* 👈 Optional: remove bottom space from last card */
+}
+
 
 /* Image block */
 .newsletter-image {
