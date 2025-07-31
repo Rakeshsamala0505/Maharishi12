@@ -1,6 +1,6 @@
 // src/components/WorldMapSection.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { ReactComponent as WorldSVG } from '../assets/map_with_ids.svg';
+import { ReactComponent as WorldSVG } from '../assets/highlighted_map.svg';
 import './WorldMapSection.css';
 
 const countryData = {
@@ -78,7 +78,7 @@ const WorldMapSection = () => {
     const handleClickOutside = (e) => {
       if (infoBoxRef.current && !infoBoxRef.current.contains(e.target)) {
         setSelectedCountry(null);
-      }
+      } 
     };
 
     if (selectedCountry) {

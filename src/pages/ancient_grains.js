@@ -5,7 +5,7 @@ import styles from '../styles/ancient_grains.module.css'; // Import as 'st yles'
 // Import images
 import oats from '../assets/images/oatsimage.avif';
 import quinoa from '../assets/images/quinoa.avif';
-import wheat from '../assets/images/ancientwheat.avif';
+import barley from '../assets/images/barley_new.jpg';
 import fonio from '../assets/images/FONIO DEHULLED.avif';
 import jobstearspoon from '../assets/images/jobstearspoon.avif';
 import teff from '../assets/images/teff-grains.avif';
@@ -152,6 +152,27 @@ const milletData = [
       ['Fat (g)', '3.5'],
       ['Carbohydrate(g)', '71'],
       ['Ca (mg)', '18'],
+    ],
+  },{
+    image: barley,
+    title: 'Barley',
+    overlay: 'Essential in cooking and brewing, including beer, whiskey.',
+    scientific: 'Hordeum vulgare',
+    commonNames: 'Barley/ Jau / Jav / Barlibiyam',
+    description:
+      'Barley (Hordeum vulgare ssp. vulgare), the fourth most important cereal globally, was among the first crops domesticated by humans. Its adaptability has led to widespread cultivation across diverse climates and regions. At present, it is widely used as a primary livestock feed and a key ingredient in the brewing industry.',
+    climate:
+      'Barley prefers cool, dry climates with temperatures of 15–30°C and well-drained soils, tolerating drought, salinity, and frost but sensitive to heat and humidity. It grows best with 300–500 mm of rainfall and full sunlight, thriving in temperate and high-altitude tropical areas.',
+    Health:
+      'Barley is rich in functional compounds like resistant starch, β-glucans, unsaturated fatty acids, phytosterols, and essential amino acids. It also provides minerals and B vitamins such as thiamine, riboflavin, pyridoxine, and folate, boosting its nutritional value and health benefits.',
+      nutrition: [
+      ['Energy (Kcal)', '354'],
+      ['Protein (g)', '12.5'],
+      ['Fat (g)', '2.3'],
+      ['Carbohydrate(g)', '73.5'],
+      ['Ca (mg)', '33'],
+      ['Fiber (g)', '17.3'],
+
     ],
   },];
 
