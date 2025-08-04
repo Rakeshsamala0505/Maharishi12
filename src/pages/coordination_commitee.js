@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/coordination_commitee.css';
-import DrMangilal from '../assets/images/ml.jat_cc1.png';
+import mangilal from '../assets/images/mangilal_new.png';
 import pradhan from '../assets/images/sk_pradhan3.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Satyavathi from '../assets/images/DIR3.png';
@@ -11,7 +11,7 @@ const committeeMembers = [
     name: 'Dr. Mangi Lal Jat',
     description:
       'Department of Agricultural Research and Education (DARE) and Director General (DG) of ICAR',
-    image: DrMangilal,
+    image: mangilal,
     url: 'https://www.icrisat.org/about/team/dr-mangi-lal-jat',
   },
   {
