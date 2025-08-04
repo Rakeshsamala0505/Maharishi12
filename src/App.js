@@ -38,6 +38,7 @@ function App() {
       <div className="App">
         <Header />
         <ScrollToTop />
+        <main>
         <Routes>
           <Route path="/" element={<Home />} />{/* Home page */}
           <Route path="/purpose" element={<Purpose />} />
@@ -69,6 +70,7 @@ function App() {
         
    
         </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
