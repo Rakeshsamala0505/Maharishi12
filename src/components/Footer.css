@@ -89,6 +89,7 @@ p {
 
   /* Footer container styling */
   .footer-container {
+    gap: 10px; /* Reduced gap */
     display: flex;
     flex-direction: column; /* Changed to column for mobile view */
     justify-content: flex-start; /* Aligns items to the top */
@@ -115,6 +116,7 @@ p {
   /* Social Icons */
   .social-icons {
     justify-content: flex-start; /* Aligns icons to the left */
+    font-size: 7px;
   }
   .social-icons a {
     font-size: 4em !important; /* Decreased icon size */
