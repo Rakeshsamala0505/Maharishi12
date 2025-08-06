@@ -139,7 +139,6 @@ body {
   }
   .slider-title .main-title {
   font-size: 1.5rem;
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
   text-transform: uppercase;
   letter-spacing: 1px;
   }
