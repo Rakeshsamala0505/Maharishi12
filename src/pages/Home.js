@@ -62,10 +62,9 @@ const Home = () => {
           </h2>
       </div>
 
-      {/* Latest Announcements */}
+     {/* Latest Announcements */}
       <section className="latest-announcements">
              <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
-               <h2 className="latest-title">Latest Announcements</h2>
                <div className="announcement-wrapper">
                  <div className="announcement-card">
                    <span className="announcement-text">
@@ -80,7 +79,7 @@ const Home = () => {
              </div>
       </section>
 
-{/* World Map Section */}
+      {/* World Map Section */}
       <WorldMapSection />
       {/* Highlights Section */}
       <section
@@ -143,8 +142,8 @@ const Home = () => {
            <source src="images/millets_video2.mp4" type="video/mp4" />
          </video>
 
-  <div className="container position-relative z-2 py-5" data-aos="fade-up">
-    <div className="row align-items-center justify-content-center gap-md-custom">
+      <div className="container position-relative z-2 py-5" data-aos="fade-up">
+     <div className="row align-items-center justify-content-center gap-md-custom">
       {/* Left Column */}
       <div className="col-md-4 text-white">
         <div className="content-block">
@@ -167,9 +166,9 @@ const Home = () => {
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
+      </div>
+     </div>
+     </section>
 
 
       {/* Leader Messages */}

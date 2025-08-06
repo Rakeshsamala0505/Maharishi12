@@ -188,6 +188,7 @@ body {
   }
 }
 
+/* Highlights Section */
 .py-5 {
   padding-top: 0rem !important;
   padding-bottom: 3rem !important;
@@ -549,6 +550,7 @@ body {
   }
 }
 
+/*announcements */
 .latest-announcements {
   display: flex;
   justify-content: flex-end;
@@ -743,3 +745,7 @@ body {
     flex: 1;
   }
 }
+
+
+/*tailwind*/
+

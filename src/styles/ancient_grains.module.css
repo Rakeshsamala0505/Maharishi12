@@ -12,6 +12,7 @@
 }
 .title{
   font-size:25px;
+  text-align: center;
 }
 .card {
   width: calc(25% - 20px);
