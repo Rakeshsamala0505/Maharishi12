@@ -97,6 +97,7 @@ body {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 550;
 }
 
 .slider-title .sub-title {
@@ -138,7 +139,6 @@ body {
   }
   .slider-title .main-title {
   font-size: 1.5rem;
-  color: transparent;
   -webkit-text-stroke: 2px rgb(255, 255, 255);
   text-transform: uppercase;
   letter-spacing: 1px;
