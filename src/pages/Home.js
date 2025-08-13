@@ -10,15 +10,23 @@ import PM from "../assets/images/PM.avif";
 
 const images = [
   "/images/foxtail-home1.avif",
-  "/images/Foxtail_millet.avif",
+  "/images/Sorghum.jpg",
   "/images/Little-home.avif",
   "/images/foxtail-home1.avif",
-  "/images/BARNYARD.avif",
+  "/images/pearl-home.jpg",
 ];
 
 const announcements = [
-  "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote international research collaboration on climate-resilient and nutritious crops, including millets and other underutilized ancient grains",
+  {
+    text: "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote",
+    link: "https://example.com/maharishi-initiative"
+  },
+  {
+    text: "International research collaboration on climate-resilient and nutritious crops...",
+    link: "https://example.com/research-collaboration"
+  }
 ];
+
 
 const Home = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -45,41 +53,88 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Image Slider */}
-      <div className="image-slider">
-        {images.map((src, index) => (
-          <img
+   {/* Image Slider */}
+<div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+  {/* Images */}
+  {images.map((src, index) => (
+    <img
+      key={index}
+      src={src}
+      alt={`slide-${index}`}
+      className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
+        index === currentSlideIndex ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  ))}
+
+  {/* Full image overlay */}
+  <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+
+  {/* Centered Text */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center leading-none">
+    <h2
+      className="text-4xl md:text-6xl lg:text-7xl font-extrabold m-0 p-0"
+      style={{
+        fontFamily: "'Merriweather', serif",
+        color: "#FFFFFF",
+        textShadow: "0px 2px 6px rgba(0,0,0,0.6)",
+        letterSpacing: "2px",
+      }}
+    >
+      MAHARISHI
+    </h2>
+
+    <div className="m-0 p-0">
+      <p
+        className="text-sm md:text-lg lg:text-xl m-0 p-0"
+        style={{
+          fontFamily: "'Merriweather', serif",
+          color: "#FFFFFF",
+          textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
+        }}
+      >
+        Cultivating Heritage, Harnessing Innovations
+      </p>
+      <p
+        className="text-sm md:text-lg lg:text-xl m-0 p-0"
+        style={{
+          fontFamily: "'Merriweather', serif",
+          color: "#FFFFFF",
+          textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
+        }}
+      >
+        For People and Planet
+      </p>
+    </div>
+  </div>
+</div>
+
+{/* Latest Announcements */}
+<section className="bg-gray-100 py-3">
+  <div className="flex items-center w-full px-4">
+    <div className="w-full overflow-hidden relative">
+      <div className="inline-block animate-ticker whitespace-nowrap pl-[10%] pr-[10%]">
+        {announcements.concat(announcements).map((item, index) => (
+          <a
             key={index}
-            src={src}
-            alt={`slide-${index}`}
-            className={`slider-image ${index === currentSlideIndex ? "active" : ""}`}
-          />
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 font-medium hover:text-blue-600 transition-colors duration-200"
+          >
+            {item.text}
+            {index !== announcements.length * 2 - 1 && (
+              <strong className="mx-4">|</strong>
+            )}
+          </a>
         ))}
-          <h2 className="slider-title">
-            <span className="main-title">MAHARISHI</span><br />
-            <span className="sub-title">Cultivating Heritage, Harnessing Innovations</span><br />
-            <span className="sub-title">For People and Planet</span>
-          </h2>
       </div>
+    </div>
+  </div>
+</section>
 
-     {/* Latest Announcements */}
-      <section className="latest-announcements">
-             <div className="d-flex align-items-start flex-column flex-md-row w-100 gap-3">
-               <div className="announcement-wrapper">
-                 <div className="announcement-card">
-                   <span className="announcement-text">
-                           {announcements.map((text, index) => (
-                            <a key={index} href="#" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none", marginRight: "0.5rem" }}>
-                               {text} {index !== announcements.length - 1 && <strong style={{ fontWeight: 'bold', margin: '0 0.5rem' }}>|</strong>}
-                            </a>
-                          ))}
-                    </span>
-                 </div>
-               </div>
-             </div>
-      </section>
 
-      {/* World Map Section */}
+      {/* World Map Section  */}
       <WorldMapSection />
       {/* Highlights Section */}
       <section
