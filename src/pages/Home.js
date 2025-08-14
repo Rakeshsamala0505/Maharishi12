@@ -20,11 +20,14 @@ const announcements = [
   {
     text: "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote",
     link: "https://example.com/maharishi-initiative"
+  },{
+    text: "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote",
+    link: "https://example.com/maharishi-initiative"
+  },{
+    text: "The MAHARISHI Initiative, endorsed under India’s G20 Presidency, aims to promote",
+    link: "https://example.com/maharishi-initiative"
   },
-  {
-    text: "International research collaboration on climate-resilient and nutritious crops...",
-    link: "https://example.com/research-collaboration"
-  }
+  
 ];
 
 
@@ -110,21 +113,26 @@ const Home = () => {
 </div>
 
 {/* Latest Announcements */}
-<section className="bg-gray-100 py-3">
+<section className="bg-gray-100 py-2 md:py-4 lg:py-6">
   <div className="flex items-center w-full px-4">
     <div className="w-full overflow-hidden relative">
       <div className="inline-block animate-ticker whitespace-nowrap pl-[10%] pr-[10%]">
-        {announcements.concat(announcements).map((item, index) => (
+        {announcements.map((item, index) => (
           <a
             key={index}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 font-medium hover:text-blue-600 transition-colors duration-200"
+            className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-800 font-medium hover:text-blue-600 transition-colors duration-200"
           >
+            <span className="mx-2 sm:mx-3 md:mx-4 text-xs sm:text-sm md:text-base lg:text-lg font-normal text-gray-500">
+                |
+              </span>
             {item.text}
             {index !== announcements.length * 2 - 1 && (
-              <strong className="mx-4">|</strong>
+              <span className="mx-2 sm:mx-3 md:mx-4 text-xs sm:text-sm md:text-base lg:text-lg font-normal text-gray-500">
+                |
+              </span>
             )}
           </a>
         ))}
@@ -132,6 +140,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+
 
 
       {/* World Map Section  */}
