@@ -141,11 +141,11 @@ const Home = () => {
   </div>
 </section>
 
-
-
       {/* World Map Section  */}
       <WorldMapSection />
       {/* Highlights Section */}
+
+      
       <section
         id="latest-updates"
         className="py-5"

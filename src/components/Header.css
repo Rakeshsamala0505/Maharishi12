@@ -210,7 +210,8 @@ dl, ol, ul {
   border: none;
   outline: none;
   background: transparent;
-  padding-left: 2rem;
+  padding-left: 0;
+  margin: 0;
 }
 
 .wrapper .btn.close-btn {
