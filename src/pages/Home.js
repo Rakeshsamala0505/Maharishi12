@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WorldMapSection from "../pages/WorldMapSection";
 
-import President from "../assets/images/President.jpeg";
-import PM from "../assets/images/PM.avif";
+import President from "../assets/images/President2.jpeg";
+import PM from "../assets/images/PM1.jpg";
 
 const images = [
   "/images/foxtail-home1.avif",
