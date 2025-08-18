@@ -143,9 +143,9 @@ const Home = () => {
 
       {/* World Map Section  */}
       <WorldMapSection />
-      {/* Highlights Section */}
 
-      
+
+      {/* Highlights Section */}
       <section
         id="latest-updates"
         className="py-5"
@@ -156,7 +156,7 @@ const Home = () => {
           backgroundPosition: "center",
           width: "100%",
         }}
-      >
+         >
         <div className="container">
           <h2 className="text-dark fs-4 text-start title-shift" data-aos="fade-up">
             HIGHLIGHTS
@@ -200,39 +200,63 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section id="latest-news" className="no-hover-effect position-relative">
-         <video autoPlay muted loop className="bg-video">
-           <source src="images/millets_video2.mp4" type="video/mp4" />
-         </video>
+     {/* Latest News Section */}
+<section id="latest-news" className="relative overflow-hidden text-white">
+  {/* Background Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    className="absolute inset-0 w-full h-full object-cover blur-sm"
+  >
+    <source src="images/millets_video2.mp4" type="video/mp4" />
+  </video>
 
-      <div className="container position-relative z-2 py-5" data-aos="fade-up">
-     <div className="row align-items-center justify-content-center gap-md-custom">
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+      
       {/* Left Column */}
-      <div className="col-md-4 text-white">
-        <div className="content-block">
-          <h2 className="section-title">NEWSLETTER</h2>
-          <p className="section-description">
-            Sign Up to explore the World of Traditional Grains through our Quarterly Newsletter. Click below to know more.
-          </p>
-          <a href="newsletter.js" className="btn btn-primary mt-1">Learn More</a>
-        </div>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#FFF0E1] mb-4">
+          NEWSLETTER
+        </h2>
+        <p className="text-base md:text-lg max-w-md mb-6">
+          Sign Up to explore the World of Traditional Grains through our
+          Quarterly Newsletter. Click below to know more.
+        </p>
+        <a
+          href="newsletter.js"
+          className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black transition font-medium"
+        >
+          Learn More
+        </a>
       </div>
 
       {/* Right Column */}
-      <div className="col-md-4 text-white">
-        <div className="content-block">
-          <h2 className="section-title">LAUNCH EVENT</h2>
-          <p className="section-description">
-            Explore, Engage, and Discover Scientific Perspectives on Millets and Ancient Grains . Click below to join
-          </p>
-          <a href="nutrition_benefits.js" className="btn btn-primary mt-4">Learn More</a>
-        </div>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#FFF0E1] mb-4">
+          LAUNCH EVENT
+        </h2>
+        <p className="text-base md:text-lg max-w-md mb-6">
+          Explore, Engage, and Discover Scientific Perspectives on Millets and
+          Ancient Grains. Click below to join.
+        </p>
+        <a
+          href="nutrition_benefits.js"
+          className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black transition font-medium"
+        >
+          Learn More
+        </a>
       </div>
 
-      </div>
-     </div>
-     </section>
+    </div>
+  </div>
+</section>
+
 
 
       {/* Leader Messages */}

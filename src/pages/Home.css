@@ -325,6 +325,7 @@ body {
   }
 }
 
+/* Latest News Section */
 #latest-news {
   position: relative;
   overflow: hidden;
@@ -333,7 +334,9 @@ body {
  background: linear-gradient(183deg, rgba(0, 0, 0, 0.45) 32%, rgba(0, 0, 0, 0.45) 51%);
 
 }
-
+#latest-news a {
+  transition: all 0.3s ease-in-out;
+}
 .gx-4 {
   gap: 20%;
 }
@@ -367,7 +370,6 @@ body {
 #latest-news p {
   font-size: 1rem;
   text-align: center;
-  transition: all 1.5s ease-in-out;
 }
 .bg-video {
   position: absolute;
@@ -438,6 +440,7 @@ body {
     padding: 8px 16px;
   }
 }
+
 
 @media screen and (max-width: 1366px) {
   section {
