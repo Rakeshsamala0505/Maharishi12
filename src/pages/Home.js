@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import WorldMapSection from "../pages/WorldMapSection";
 
 import President from "../assets/images/President2.jpeg";
-import PM from "../assets/images/PM1.jpg";
+import PM from "../assets/images/new image PM3.png";
 
 const images = [
   "/images/foxtail-home1.avif",
