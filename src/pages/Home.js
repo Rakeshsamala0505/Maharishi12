@@ -204,13 +204,15 @@ const Home = () => {
 <section id="latest-news" className="relative overflow-hidden text-white">
   {/* Background Video */}
   <video
-    autoPlay
-    muted
-    loop
-    className="absolute inset-0 w-full h-full object-cover blur-sm"
-  >
-    <source src="images/millets_video2.mp4" type="video/mp4" />
-  </video>
+  autoPlay
+  muted
+  loop
+  className="bg-video"
+>
+  <source src="images/millets_video2.mp4" type="video/mp4" />
+</video>
+
+
 
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-black/50"></div>
@@ -230,7 +232,7 @@ const Home = () => {
         </p>
         <a
           href="newsletter.js"
-          className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black transition font-medium"
+          className="learn-more-btn"
         >
           Learn More
         </a>
@@ -247,7 +249,7 @@ const Home = () => {
         </p>
         <a
           href="nutrition_benefits.js"
-          className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black transition font-medium"
+          className="learn-more-btn"
         >
           Learn More
         </a>

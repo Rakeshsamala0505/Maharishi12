@@ -21,3 +21,9 @@ main {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* For laptop screens and above */
+@media (min-width: 1024px) {
+  #latest-news .z-10 {
+    margin-top: -10px;  /* move content upward */
+  }
+}

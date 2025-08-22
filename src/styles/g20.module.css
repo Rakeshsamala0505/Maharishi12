@@ -19,7 +19,7 @@
 /* Outer container with fixed aspect ratio */
 .chartContainer {
   position: relative;
-  width: 100%;
+  width: 105%;
   max-width: 1000px;
   margin: 0 auto;
   aspect-ratio: 16 / 10; /* Maintain fixed shape like an image */
