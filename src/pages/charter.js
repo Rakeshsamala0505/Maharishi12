@@ -25,7 +25,7 @@ const Maharishi = () => {
         <ul className="space-y-3">
           <li>
             <a href="#purpose-of-charter" className="text-blue-600 flex items-center font-medium hover:underline">
-              <FontAwesomeIcon icon={faGavel} className="mr-2" /> Purpose of the Charter
+              <FontAwesomeIcon icon={faGavel} className="mr-2" /> PRINCIPLES OF GOVERNANCE OF MAHARISHI 
             </a>
           </li>
           <li>

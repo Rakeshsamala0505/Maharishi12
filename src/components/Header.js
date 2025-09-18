@@ -108,7 +108,7 @@ const Header = () => {
             </li>
             <li>
               <a href="#" className="desktop-item">
-                About
+                About Us
               </a>
               <input
                 type="checkbox"
@@ -119,7 +119,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop1" className="mobile-item">
-                About  
+                About Us  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
@@ -135,7 +135,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="organisationalchart" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Organisational Chart
+                    Organisation Chart
                   </Link>
                 </li>
                 <li>
@@ -143,6 +143,11 @@ const Header = () => {
                     Charter
                   </Link>
                 </li>
+                {/* <li>
+                  <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Governance
+                  </Link>
+                </li> */}
               </ul>
             </li>
             <li>
@@ -162,11 +167,11 @@ const Header = () => {
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
-                <li>
+                {/* <li>
                   <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
                     Steering Committee
                   </Link>
-                </li>
+                </li> */}
                 <li className="nested-menu">
                   <span className="subheader desktop-subheader">
                     Associated  Programs <FontAwesomeIcon icon={faCaretDown} />
@@ -180,30 +185,30 @@ const Header = () => {
                     style={{ display: 'none' }}
                   />
                   <label htmlFor="showSubDrop1" className="mobile-item mobile-subheader" style={{ fontSize: '14px' }}>
-                  Associated Programs  
-                    <FontAwesomeIcon icon={faCaretDown} />
+                  Associated Programs
+                    {/* <FontAwesomeIcon icon={faCaretDown} /> */}
                   </label>
                   <ul
                     className={`nested-drop-menu ${dropdowns.showSubDrop1 ? 'visible' : ''}`}
                     ref={dropdownRefs.showSubDrop1}>
-                    <li><Link to="/coordination_commitee" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li>
-                    <li><Link to="/research_commitee" onClick={closeMenuOnLinkClick}>Research Committee</Link></li>
-                    <li><Link to="/scientific_commitee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li>
-                    <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li>
-                    <li><Link to="/secretariat_commitee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li>
+                    {/* <li><Link to="/coordination_commitee" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li> */}
+                    {/* <li><Link to="/research_commitee" onClick={closeMenuOnLinkClick}>Research Advisory Group</Link></li> */}
+                    {/* <li><Link to="/scientific_commitee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li> */}
+                    {/* <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li> */}
+                    {/* <li><Link to="/secretariat_commitee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li> */}
                   </ul>
                 </li>
                 <li>
-                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Opportunities</Link>
+                  <Link to="/#" className="subheader" onClick={closeMenuOnLinkClick}>Opportunities</Link>
                 </li>
                 <li>
-                  <Link to="/charter" className="subheader" onClick={closeMenuOnLinkClick}>Early Career Researchers</Link>
+                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>Early Career Researchers</Link>
                 </li>
               </ul>
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Millets
+                Crops
               </a>
               <input
                 type="checkbox"
@@ -214,7 +219,7 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop3" className="mobile-item">
-                Millets  
+                Crops  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop3}>
@@ -228,45 +233,17 @@ const Header = () => {
                     Ancient Grains
                   </a>
                 </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" className="desktop-item">
-                Millet Initiative
-              </a>
-              <input
-                type="checkbox"
-                id="showDrop4"
-                className="dropdown-toggle"
-                checked={dropdowns.showDrop4}
-                onChange={() => toggleDropdown('showDrop4')}
-                style={{ display: 'none' }}
-              />
-              <label htmlFor="showDrop4" className="mobile-item">
-                Millet Initiative  
-                <FontAwesomeIcon icon={faCaretDown} />
-              </label>
-              <ul className="drop-menu" ref={dropdownRefs.showDrop4}>
                 <li>
-                  <Link to="/sustainable_farming" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="/sustainable_farming" className="subheader" onClick={closeMenuOnLinkClick}>
                     Sustainable Farming
-                  </Link>
-                </li>
-                <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    MAGIC
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Events
                   </a>
                 </li>
               </ul>
             </li>
+            
             <li>
               <a href="#" className="desktop-item">
-                Publications
+                Our Impact
               </a>
               <input
                 type="checkbox"
@@ -277,30 +254,27 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop5" className="mobile-item">
-                Publications  
+                Our Impact  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop5}>
-                <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Research reports
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Annual Reports
-                  </a>
-                </li>
+                
+                
                 <li>
                   <a href="/maharishilibrary" className="subheader" onClick={closeMenuOnLinkClick}>
                     MAHARISHI Library
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Case Studies
                   </a>
                 </li>
               </ul>
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Media
+                MAGIC
               </a>
               <input
                 type="checkbox"
@@ -311,29 +285,63 @@ const Header = () => {
                 style={{ display: 'none' }}
               />
               <label htmlFor="showDrop6" className="mobile-item">
-                Media  
+                MAGIC  
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
+                {/* <li>
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Blog
+                  </a>
+                </li> */}
+              </ul>
+            </li>
+            <li>
+              <a href="#" className="desktop-item">
+                Outreach
+              </a>
+              <input
+                type="checkbox"
+                id="showDrop4"
+                className="dropdown-toggle"
+                checked={dropdowns.showDrop4}
+                onChange={() => toggleDropdown('showDrop4')}
+                style={{ display: 'none' }}
+              />
+              <label htmlFor="showDrop4" className="mobile-item">
+                Outreach
+                <FontAwesomeIcon icon={faCaretDown} />
+              </label>
+              <ul className="drop-menu" ref={dropdownRefs.showDrop4}>
                 <li>
-                  <a href="newsletter" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Newsletter
+                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Events
                   </a>
                 </li>
                 <li>
                   <a href="/pressrelease" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Press Releases
+                    Press Release
                   </a>
                 </li>
+                
                 <li>
-                  <a href="/gallery" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/newsletter" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Newsletter
+                  </Link>
+                </li><li>
+                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Annual Reports
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gallery" className="subheader" onClick={closeMenuOnLinkClick}>
                     Gallery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>
                     Blog
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>

@@ -187,5 +187,5 @@ const PurposeOfMaharishi = () => {
     </>
   );
 };
-
+  
 export default PurposeOfMaharishi;

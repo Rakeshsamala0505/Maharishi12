@@ -11,7 +11,7 @@ const ExpertWorkingGroup = () => {
           alt="Banner"
           className="banner-image"
         />
-        <div className="banner-title">Expert Working Group</div>
+        <div className="banner-title">Millets Expert Working Group</div>
       </div>
 
       <div className="content-section">

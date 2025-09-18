@@ -7,13 +7,14 @@
     margin: 0 auto;
     font-size: 14px;
     padding-top: 7%;
+    align-items:flex-start ;
 }
 
 /* Sidebar */
 .sidebar {
     width: 25%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-right: 20px;
@@ -51,8 +52,12 @@
 }
 
 .sidebar ul li a svg {
-    margin-right: 8px;
+    margin-right: 14px;
 }
+section {
+  scroll-margin-top: 100px; /* adjust value = header height */
+}
+
 
 /* Content */
 .content {
@@ -87,6 +92,17 @@
     color: #555;
     line-height: 1.6;
     margin: 10px;
+}
+.point ul {
+  list-style-type: disc;       /* bullet style */
+  list-style-position: outside;/* bullets outside text */
+  margin: 0;                   /* reset default margin */
+  padding-left: 1.5rem;        /* equal indent for bullets */
+}
+
+.point ul li {
+  margin-bottom: 8px;          /* spacing between points */
+  text-align: justify;         /* optional: makes wrapped lines align neatly */
 }
 
 /* Responsive Design for 480px */

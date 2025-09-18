@@ -8,6 +8,14 @@ import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';
 import Jaishankar from '../assets/images/jaishankar.jpg';
 import Director from '../assets/images/DIR3.png';
+import { Link } from "react-router-dom";
+
+<div className={`${styles.box}`} style={{ top: '250px', left: '220px' }}>
+  <Link to="/research" className={styles.label}>
+    Research<br />Advisory Group
+  </Link>
+</div>
+
 
 
 const OrganisationChart = () => {
@@ -20,8 +28,10 @@ const OrganisationChart = () => {
           
           {/* Top Row */}
           <div className={styles.box} style={{ top: '30px', left: '50px' }}>
-            <div className={styles.label}>MAHARISHI<br />Governing Board</div>
-                <div className={styles.popup}>
+<Link to="/scientific_commitee" className={styles.label}>
+              Maharishi<br />Governing Board
+            </Link>               
+             <div className={styles.popup}>
                 <div className={styles.popupTitle}>Maharishi Governing Board</div>
 
                   <div className={styles.member}>
@@ -38,7 +48,9 @@ const OrganisationChart = () => {
                </div>
           </div>
           <div className={`${styles.box} ${styles.centerBox}`} style={{ top: '30px', left: '400px' }}>
-            <div className={styles.label}>Steering<br />Committee</div>
+             <Link to="/Structure" className={styles.label}>
+              Steering<br />Committee
+            </Link>
             <div className={styles.popup}>
               <div className={styles.popupTitle}>Steering Committee</div>
                    <div className={styles.member}>
@@ -83,21 +95,30 @@ const OrganisationChart = () => {
 
           {/* Mid Row */}
           <div className={`${styles.box}`} style={{ top: '250px', left: '220px' }}>
-            <div className={styles.label}>Research<br />Advisory Group</div>
+            <Link to="/research_commitee" className={styles.label}>
+              Research<br />Advisory Group
+            </Link>
           </div>
           <div className={`${styles.box} ${styles.secretariat}`} style={{ top: '250px', left: '700px' }}>
-            <div className={styles.label}>Manager and<br />Secretariat</div>
+            <Link to="/secretariat_commitee" className={styles.label}>
+              Manager and<br />Secretariat
+            </Link>
           </div>
-
           {/* Bottom Row */}
           <div className={`${styles.box} ${styles.smallBox}`} style={{ top: '480px', left: '10px' }}>
-            <div className={styles.label}>Millets EWG</div>
+            <Link to="/millets_ewg" className={styles.label}>
+               Millets EWG
+               </Link>
           </div>
           <div className={`${styles.box} ${styles.smallBox}`} style={{ top: '480px', left: '220px' }}>
-            <div className={styles.label}>Ancient Grains EWG</div>
+           <Link to="/ancientgrains_ewg" className={styles.label}>
+               Ancient Grains EWG
+               </Link>
           </div>
           <div className={`${styles.box} ${styles.smallBox}`} style={{ top: '480px', left: '430px' }}>
-            <div className={styles.label}>Climate EWG</div>
+            <Link to="/climate_ewg" className={styles.label}>
+               Climate EWG
+               </Link>
           </div>
           <svg
              viewBox="0 0 1000 625"

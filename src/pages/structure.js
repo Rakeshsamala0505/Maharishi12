@@ -53,10 +53,10 @@ const committeeMembers = [
     image: ET,
   },
   {
-    name: 'Dr. S. Jaishankar',
+    name: 'Shibanka Das Biswas',
     description:
-      'Representative from Ministry of External Affairs Member',
-    image: Jaishankar,
+      'DS [G20-I], Ministry of External Affairs',
+    image: ET,
   },
   {
     name: 'Dr. (Mrs.) C. Tara Satyavathi',
