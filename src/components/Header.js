@@ -174,7 +174,7 @@ const Header = () => {
                 </li> */}
                 <li className="nested-menu">
                   <span className="subheader desktop-subheader">
-                    Associated  Programs <FontAwesomeIcon icon={faCaretDown} />
+                    Associated  Programs
                   </span>
                   <input
                     type="checkbox"
