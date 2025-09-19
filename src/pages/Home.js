@@ -248,7 +248,7 @@ const Home = () => {
           Ancient Grains. Click below to join.
         </p>
         <a
-          href="nutrition_benefits.js"
+          href="#"
           className="learn-more-btn"
         >
           Learn More

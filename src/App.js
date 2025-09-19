@@ -33,6 +33,7 @@ import CaseStudies from "./pages/casestudies"; // casestudies.js
 import Magic from "./pages/magic"; // partners.js
 import Events from "./pages/projects"; // events.js
 import Blog from "./pages/blog"; // blog.js
+import LaunchEvent from "./pages/launchevent"; // LaunchEvent.js
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           <Route path="/magic" element={<Magic />} />
           <Route path="/events" element={<Events />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="launchevent" element={<LaunchEvent />} />
           {/* Add more routes as needed */}
         
    
