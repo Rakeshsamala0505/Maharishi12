@@ -12,28 +12,10 @@ import barnyardMilletImage from '../assets/images/BARNYARD.avif';
 import kodoMilletImage    from '../assets/images/KODOMILLET.avif';
 import littleMilletImage  from '../assets/images/little_millet.avif';
 import prosoMilletImage   from '../assets/images/proso.avif';
+import browntop from '../assets/images/browntop.avif'
 
 /* ——— data ——— */
 const milletData = [
-  {
-    image: sorghumImage,
-    title: 'Sorghum',
-    overlay: 'Grain for a Sustainable Future',
-    scientific: 'Sorghum bicolor',
-    commonNames: 'Sorghum / Jowar / Great Millet',
-    description:
-      'Sorghum is a resilient, climate-smart grain that has been cultivated for thousands of years. Grown mostly in dry and arid regions, it thrives with minimal water and inputs, making it a powerful ally in the face of climate change.',
-    climate:
-      'Its deep roots improve soil health and reduce erosion. Sorghum requires less fertilizer and water, reducing the environmental footprint of farming.',
-    nutrition: [
-      ['Energy (Kcal)', '334'],
-      ['Protein (g)', '9.9'],
-      ['Fat (g)', '1.73'],
-      ['Carbohydrate(g)', '67.7'],
-      ['Ca (mg)', '27.6'],
-      ['Fe (mg)', '3.9'],
-    ],
-  },
   {
     image: pearlMilletImage,
     title: 'Pearl Millet',
@@ -53,6 +35,26 @@ const milletData = [
       ['Fe (mg)', '6.4'],
     ],
   },
+  {
+    image: sorghumImage,
+    title: 'Sorghum',
+    overlay: 'Grain for a Sustainable Future',
+    scientific: 'Sorghum bicolor',
+    commonNames: 'Sorghum / Jowar / Great Millet',
+    description:
+      'Sorghum is a resilient, climate-smart grain that has been cultivated for thousands of years. Grown mostly in dry and arid regions, it thrives with minimal water and inputs, making it a powerful ally in the face of climate change.',
+    climate:
+      'Its deep roots improve soil health and reduce erosion. Sorghum requires less fertilizer and water, reducing the environmental footprint of farming.',
+    nutrition: [
+      ['Energy (Kcal)', '334'],
+      ['Protein (g)', '9.9'],
+      ['Fat (g)', '1.73'],
+      ['Carbohydrate(g)', '67.7'],
+      ['Ca (mg)', '27.6'],
+      ['Fe (mg)', '3.9'],
+    ],
+  },
+  
   {
     image: fingerMilletImage,
     title: 'Finger Millet',
@@ -89,6 +91,26 @@ const milletData = [
       ['Carbohydrate(g)', '60.1'],
       ['Ca (mg)', '31'],
       ['Fe (mg)', '2.8'],
+    ],
+  },
+  
+  {
+    image: littleMilletImage,
+    title: 'Little Millet',
+    overlay: 'The Tiny Grain with Big Nutritional Value',
+    scientific: 'Panicum sumatrense',
+    commonNames: 'Little Millet / Kutki / Samai / Sama / Gajro',
+    description:
+      'Little millet is a tiny but mighty grain traditionally grown in India’s tribal and hilly regions. Though small in size, it is packed with nutrients and boasts strong resilience to harsh environmental conditions. It is gaining recognition as a versatile, climate-smart, and health-promoting crop.',
+    climate:
+      'Little millet is well-adapted to drought-prone, low-fertility, and rainfed areas. It requires very little water and can grow in upland soils where other crops struggle.  It is highly suited to climate-resilient farming systems and can serve as a fallback crop in times of rainfall uncertainty.',
+    nutrition: [
+      ['Energy (Kcal)', '346'],
+      ['Protein (g)', '10.1'],
+      ['Fat (g)', '5.89'],
+      ['Carbohydrate(g)', '65.5'],
+      ['Ca (mg)', '16.1'],
+      ['Fe (mg)', '1.2'],
     ],
   },
   {
@@ -130,25 +152,6 @@ const milletData = [
     ],
   },
 
-  {
-    image: littleMilletImage,
-    title: 'Little Millet',
-    overlay: 'The Tiny Grain with Big Nutritional Value',
-    scientific: 'Panicum sumatrense',
-    commonNames: 'Little Millet / Kutki / Samai / Sama / Gajro',
-    description:
-      'Little millet is a tiny but mighty grain traditionally grown in India’s tribal and hilly regions. Though small in size, it is packed with nutrients and boasts strong resilience to harsh environmental conditions. It is gaining recognition as a versatile, climate-smart, and health-promoting crop.',
-    climate:
-      'Little millet is well-adapted to drought-prone, low-fertility, and rainfed areas. It requires very little water and can grow in upland soils where other crops struggle.  It is highly suited to climate-resilient farming systems and can serve as a fallback crop in times of rainfall uncertainty.',
-    nutrition: [
-      ['Energy (Kcal)', '346'],
-      ['Protein (g)', '10.1'],
-      ['Fat (g)', '5.89'],
-      ['Carbohydrate(g)', '65.5'],
-      ['Ca (mg)', '16.1'],
-      ['Fe (mg)', '1.2'],
-    ],
-  },
 {
     image: prosoMilletImage,
     title: 'Proso Millet',
@@ -167,7 +170,27 @@ const milletData = [
       ['Ca (mg)', '14'],
       ['Fe (mg)', '0.2'],
     ],
-  },];
+  },
+  {
+    image: browntop,
+    title: 'Browntop Millet',
+    overlay: 'The Traditional Healer of Soil and Body ',
+    scientific: 'Brachiaria ramosa',
+    commonNames: 'Browntop Millet / Korale / Andakorra / Palapul / Manjulu',
+    description:
+      'Browntop millet is one of the fastest-maturing and climate-resilient ancient grains, traditionally cultivated in the semi-arid and hilly regions of India. With a growing cycle of just 60–75 days, it is ideal for quick harvests in areas with limited rainfall and degraded soils. This lesser-known millet is gaining recognition for its exceptional environmental adaptability and health-promoting properties.',
+    climate:
+      'Browntop millet is well-suited for dryland farming, requiring minimal water and inputs. Its short growth cycle allows it to escape drought periods, making it a strategic crop for climate-smart agriculture and crop diversification in fragile ecosystems.',
+    nutrition: [
+      ['Energy (Kcal)', '338'],
+      ['Protein (g)', '11.5'],
+      ['Fat (g)', '1.89'],
+      ['Carbohydrate(g)', '71.3'],
+      ['Ca (mg)', '0.01'],
+      ['Fe (mg)', '0.65'],
+    ],
+  },
+];
 
 const MilletsPage = () => {
   const [footerContent, setFooterContent] = useState('');

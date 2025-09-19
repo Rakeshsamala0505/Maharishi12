@@ -1,6 +1,6 @@
 import { FaExclamationCircle } from "react-icons/fa";
 
-const AnnualReports = () => {
+const Magic = () => {
   return (
     <div 
       style={{
@@ -18,4 +18,4 @@ const AnnualReports = () => {
     </div>
   );
 };
-export default AnnualReports;
+export default Magic;

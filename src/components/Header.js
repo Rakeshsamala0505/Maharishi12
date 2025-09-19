@@ -124,7 +124,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop1}>
                 <li>
-                  <Link to="Purpose" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="aboutmaharishi" className="subheader" onClick={closeMenuOnLinkClick}>
                     About Maharishi
                   </Link>
                 </li>
@@ -139,7 +139,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="Implementation" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="charter" className="subheader" onClick={closeMenuOnLinkClick}>
                     Charter
                   </Link>
                 </li>
@@ -167,42 +167,15 @@ const Header = () => {
                 <FontAwesomeIcon icon={faCaretDown} />
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop2}>
-                {/* <li>
-                  <Link to="Structure" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Steering Committee
-                  </Link>
-                </li> */}
-                <li className="nested-menu">
-                  <span className="subheader desktop-subheader">
-                    Associated  Programs
-                  </span>
-                  <input
-                    type="checkbox"
-                    id="showSubDrop1"
-                    className="dropdown-toggle"
-                    checked={dropdowns.showSubDrop1}
-                    onChange={() => toggleDropdown('showSubDrop1', true)}
-                    style={{ display: 'none' }}
-                  />
-                  <label htmlFor="showSubDrop1" className="mobile-item mobile-subheader" style={{ fontSize: '14px' }}>
-                  Associated Programs
-                    {/* <FontAwesomeIcon icon={faCaretDown} /> */}
-                  </label>
-                  <ul
-                    className={`nested-drop-menu ${dropdowns.showSubDrop1 ? 'visible' : ''}`}
-                    ref={dropdownRefs.showSubDrop1}>
-                    {/* <li><Link to="/coordination_commitee" onClick={closeMenuOnLinkClick}>Coordination Committee</Link></li> */}
-                    {/* <li><Link to="/research_commitee" onClick={closeMenuOnLinkClick}>Research Advisory Group</Link></li> */}
-                    {/* <li><Link to="/scientific_commitee" onClick={closeMenuOnLinkClick}>Scientific Board</Link></li> */}
-                    {/* <li><Link to="/expert_working_group" onClick={closeMenuOnLinkClick}>Expert Working Groups</Link></li> */}
-                    {/* <li><Link to="/secretariat_commitee" onClick={closeMenuOnLinkClick}>Secretariat</Link></li> */}
-                  </ul>
+                
+                <li>
+                  <Link to="/associated_programs" className="subheader" onClick={closeMenuOnLinkClick}>Associated programs</Link>
                 </li>
                 <li>
-                  <Link to="/#" className="subheader" onClick={closeMenuOnLinkClick}>Opportunities</Link>
+                  <Link to="/opportunities" className="subheader" onClick={closeMenuOnLinkClick}>Opportunities</Link>
                 </li>
                 <li>
-                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>Early Career Researchers</Link>
+                  <Link to="/earlycareerresearcher" className="subheader" onClick={closeMenuOnLinkClick}>Early Career Researchers</Link>
                 </li>
               </ul>
             </li>
@@ -266,35 +239,25 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="\casestudies" className="subheader" onClick={closeMenuOnLinkClick}>
                     Case Studies
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#" className="desktop-item">
+              <a href="/magic" className="desktop-item">
                 MAGIC
               </a>
-              <input
-                type="checkbox"
-                id="showDrop6"
-                className="dropdown-toggle"
-                checked={dropdowns.showDrop6}
-                onChange={() => toggleDropdown('showDrop6')}
-                style={{ display: 'none' }}
-              />
-              <label htmlFor="showDrop6" className="mobile-item">
-                MAGIC  
-                <FontAwesomeIcon icon={faCaretDown} />
-              </label>
-              <ul className="drop-menu" ref={dropdownRefs.showDrop6}>
-                {/* <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Blog
-                  </a>
-                </li> */}
-              </ul>
+              <a
+                 href="/magic"   // replace with your page/route
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="desktop-item mobile-item"
+                 onClick={closeMenuOnLinkClick} // optional: closes menu if in mobile
+               >
+                 MAGIC
+               </a>
             </li>
             <li>
               <a href="#" className="desktop-item">
@@ -314,7 +277,7 @@ const Header = () => {
               </label>
               <ul className="drop-menu" ref={dropdownRefs.showDrop4}>
                 <li>
-                  <a href="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <a href="events" className="subheader" onClick={closeMenuOnLinkClick}>
                     Events
                   </a>
                 </li>
@@ -329,7 +292,7 @@ const Header = () => {
                     Newsletter
                   </Link>
                 </li><li>
-                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/annual_reports" className="subheader" onClick={closeMenuOnLinkClick}>
                     Annual Reports
                   </Link>
                 </li>
@@ -339,7 +302,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="subheader" onClick={closeMenuOnLinkClick}>
+                  <Link to="/blog" className="subheader" onClick={closeMenuOnLinkClick}>
                     Blog
                   </Link>
                 </li>

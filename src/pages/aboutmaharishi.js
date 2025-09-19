@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'; // update this line if not already
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '../styles/purposeOfMaharishi.module.css';
+import styles from '../styles/aboutmaharishi.module.css';
 
 
 

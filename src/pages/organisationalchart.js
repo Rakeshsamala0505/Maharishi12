@@ -6,7 +6,6 @@ import devender from '../assets/images/devender.jpg';
 import pradhan from '../assets/images/sk_pradhan3.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';
-import Jaishankar from '../assets/images/jaishankar.jpg';
 import Director from '../assets/images/DIR3.png';
 import { Link } from "react-router-dom";
 
@@ -28,7 +27,7 @@ const OrganisationChart = () => {
           
           {/* Top Row */}
           <div className={styles.box} style={{ top: '30px', left: '50px' }}>
-<Link to="/scientific_commitee" className={styles.label}>
+<Link to="/governing_board" className={styles.label}>
               Maharishi<br />Governing Board
             </Link>               
              <div className={styles.popup}>
@@ -48,7 +47,7 @@ const OrganisationChart = () => {
                </div>
           </div>
           <div className={`${styles.box} ${styles.centerBox}`} style={{ top: '30px', left: '400px' }}>
-             <Link to="/Structure" className={styles.label}>
+             <Link to="/steering_commitee" className={styles.label}>
               Steering<br />Committee
             </Link>
             <div className={styles.popup}>
@@ -90,7 +89,7 @@ const OrganisationChart = () => {
                </div>
           </div>
           <div className={styles.box} style={{ top: '20px', left: '700px' }}>
-            <div className={styles.label}>Member secy<br />of Managing Institute<br />(ICAR-IIMR)</div>
+            <div className={styles.label}>Member secy<br />and Managing Director of Maharishi</div>
           </div>
 
           {/* Mid Row */}

@@ -5,9 +5,8 @@ import mangilal from '../assets/images/mangilal_new.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';
 import devender from '../assets/images/devender.jpg';
-import Director from '../assets/images/DIR3.png';
+import Director from '../assets/images/direct.png';
 import pradhan from '../assets/images/sk_pradhan3.png';
-import Jaishankar from '../assets/images/jaishankar.jpg';
 
 
 const committeeMembers = [
@@ -29,9 +28,9 @@ const committeeMembers = [
     image: devender,
   },
   {
-    name: 'Dr. Sharat Kumar Pradhan',
+    name: 'Dr. Sarat Kumar Pradhan',
     description:
-      'Assistant Director General (Food & Fodder Crops), ICAR Member',
+      'Indian Council of Agricultural Research New Delhi, India',
     image: pradhan,
   },
   {
