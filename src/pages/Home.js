@@ -248,7 +248,7 @@ const Home = () => {
           Ancient Grains. Click below to join.
         </p>
         <a
-          href="#"
+          href="\launchevent"
           className="learn-more-btn"
         >
           Learn More
