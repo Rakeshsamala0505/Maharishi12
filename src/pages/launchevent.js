@@ -34,6 +34,7 @@ const launchevent = () => {
           .header {
             text-align: center;
             padding: 100px 0;
+            padding-bottom:30px;
           }
 
           .header h1 {
@@ -209,13 +210,13 @@ const launchevent = () => {
             <div className="video-container">
               {/* This is a placeholder for your video. Replace the iframe src with your video URL. */}
               <video
-  src={launchVideo}
-  controls
-  autoPlay={false}
-  style={{ width: "100%", height: "100%" }}
->
-  Your browser does not support the video tag.
-</video>
+                    src={launchVideo}
+                    controls
+                    autoPlay={false}
+                    style={{ width: "100%", height: "100%" }}
+                  >
+                 Your browser does not support the video.
+               </video>
 
             </div>
 
