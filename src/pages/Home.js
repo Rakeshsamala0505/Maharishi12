@@ -7,6 +7,7 @@ import WorldMapSection from "../pages/WorldMapSection";
 
 import President from "../assets/images/President2.jpeg";
 import PM from "../assets/images/new image PM3.png";
+import Minister from "../assets/images/shiva1w.avif"
 
 const images = [
   "/images/foxtail-home1.avif",
@@ -78,7 +79,7 @@ const Home = () => {
     <h2
       className="text-4xl md:text-6xl lg:text-7xl font-extrabold m-0 p-0"
       style={{
-        fontFamily: "'Merriweather', serif",
+        fontFamily: "inherit",
         color: "#FFFFFF",
         textShadow: "0px 2px 6px rgba(0,0,0,0.6)",
         letterSpacing: "2px",
@@ -91,9 +92,10 @@ const Home = () => {
       <p
         className="text-sm md:text-lg lg:text-xl m-0 p-0"
         style={{
-          fontFamily: "'Merriweather', serif",
+          fontFamily:"cursive",
           color: "#FFFFFF",
           textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
+          
         }}
       >
         Cultivating Heritage, Harnessing Innovations
@@ -101,9 +103,10 @@ const Home = () => {
       <p
         className="text-sm md:text-lg lg:text-xl m-0 p-0"
         style={{
-          fontFamily: "'Merriweather', serif",
+          fontFamily: "cursive",
           color: "#FFFFFF",
           textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
+          
         }}
       >
         For People and Planet
@@ -263,18 +266,20 @@ const Home = () => {
 
       {/* Leader Messages */}
       <section className="section-container">
-        {[{
-          img: President,
-          quote: "Millets were essential ingredients of our diet and they are making a comeback among sections of society. Coarse grains like millets are eco-friendly as they require less water to grow and yet they provide high levels of nutrition. If more and more people turn to millets, it will help conserve ecology and also improve health.",
-          // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
-          author: "- Smt. Droupadi Murmu",
-          position: "Hon’ble President of India",
-        }, {
+        {[ {
           img: PM,
           quote: "'Shree Anna' has been a part of the lifestyle in India for centuries. In different regions of the country, many types of coarse grains like Jowar, Bajra, Ragi, Sama, Kangni, Cheena, Kodon, Kutki, Kuttu are prevalent. We want to share our agricultural practices and experiences related to 'Shree Anna' with the world. We also want to learn anything new and special that the world and other countries have to offer. We also intend to learn.",
           author: "- Shri Narendra Modi",
           position: "Hon’ble Prime Minister of India",
-        }].map((item, idx) => (
+        },
+        {
+          img: Minister,
+          quote: "We must ensure food and nutritional security for our 1.44 billion population, preserve our soil for future generations, and contribute to global food availability. While many countries are pursuing material progress at the cost of nature, India must choose a path of sustainable development that protects nature",
+          // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
+          author: "- Shivraj Singh Chouhan",
+          position: "Hon’ble Minister of Agriculture & Farmer's Welfare",
+        }
+      ].map((item, idx) => (
           <div className="card" data-aos="fade-up" key={idx}>
             <img src={item.img} alt={item.author} />
             <div className="card-content">

@@ -51,7 +51,7 @@ const timelineData = [
 const Timeline = () => {
   return (
     <div className="timeline">
-      <h1 className="journey-header">Genesis of Maharishi</h1>
+      <h1 className="journey-header">Genesis of MAHARISHI</h1>
       <div className="timeline-container">
         {timelineData.map((item, index) => (
           <div
