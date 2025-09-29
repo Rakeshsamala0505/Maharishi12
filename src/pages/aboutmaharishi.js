@@ -2,11 +2,10 @@ import React, { useRef, useState, useEffect } from 'react'; // update this line 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/aboutmaharishi.module.css';
 
-
-
 const PurposeOfMaharishi = () => {
   const animationRef = useRef(null);
   const [cardsInView, setCardsInView] = useState(false);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(

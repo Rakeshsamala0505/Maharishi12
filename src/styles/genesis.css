@@ -1,18 +1,18 @@
 .journey-header {
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    color: #568203;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
     text-align: center;
     width: 100%;
     z-index: 10;
     position: relative; /* Change from absolute to relative */
-    margin-bottom: 230px; /* Increase space between header and content */
+    margin-bottom: 250px; /* Increase space between header and content */
 }
 
 
 .timeline {
-    padding-top: 6%; /* Increase padding to accommodate header */
+    padding-top: 7%; /* Increase padding to accommodate header */
     padding-bottom: 10%;
 }
 
@@ -148,7 +148,7 @@
     }
     /* Adjust header spacing */
     .journey-header {
-        font-size: 20px;
+        font-size: 1.3rem;
         margin-bottom: 0px;
     }
 

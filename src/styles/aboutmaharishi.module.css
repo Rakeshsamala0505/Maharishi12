@@ -40,7 +40,7 @@ text-decoration: underline;
   text-align: justify;
   line-height: 1.7;
   margin-bottom: 1rem;
-  font-family: Atlassian Sans Extended, sans-serif;
+font-family: 'Atlassian Sans Extended', sans-serif;
 }
 
 /* Responsive adjustments */
@@ -268,6 +268,7 @@ text-decoration: underline;
   color: #000;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  font-family: cursive;
 
   padding: 80px; /* add inner spacing instead of margin */
   height: 100%;
@@ -282,7 +283,8 @@ text-decoration: underline;
 }
 
 .cardContent h2{
-  font-family: cursive;
+ font-family: cursive; /* use your imported font */
+  font-size: 2rem;  /* explicitly set size */
   padding-bottom: 20px;
 }
 

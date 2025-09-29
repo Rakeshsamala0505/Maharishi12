@@ -22,11 +22,13 @@
 }
 
 .sidebar h3 {
-    color: #003366;
-    font-size: 18px;
+     font-weight: 700;
+  color: #2c3e50;
     border-bottom: 2px solid #003366;
     padding-bottom: 5px;
     margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 .sidebar ul {
@@ -49,6 +51,7 @@
     display: flex;
     align-items: center;
     font-weight: 500;
+    text-align: left;
 }
 
 .sidebar ul li a svg {
@@ -65,7 +68,6 @@ section {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .content h2 {
@@ -86,13 +88,14 @@ section {
     color: #003366;
     font-size: 1rem;
 }
-.point p {
+.point p,li {
     font-size: 0.9rem;
     text-align: justify;
     color: #555;
     line-height: 1.6;
     margin: 10px;
 }
+
 .point ul {
   list-style-type: disc;       /* bullet style */
   list-style-position: outside;/* bullets outside text */
@@ -109,7 +112,7 @@ section {
 @media screen and (max-width: 480px) {
     .main-container {
         flex-direction: column;
-        padding: 10px;
+        padding: 20px;
         padding-top: 17%;
     }
 
@@ -120,7 +123,7 @@ section {
     }
 
     .sidebar h3 {
-        font-size: 1rem !important;
+        font-size: 1.3rem !important;
         text-align: center;
     }
 
@@ -142,7 +145,10 @@ section {
         font-size: 0.9rem;
     }
 
-    .point p {
+    .point p,li {
+        font-size: 0.7rem;
+    }
+    #steering-committee p{
         font-size: 0.7rem;
     }
 }

@@ -11,9 +11,9 @@
 
 
 .orgTitle {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #502B1B;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
 }
 
 /* Outer container with fixed aspect ratio */
@@ -21,7 +21,7 @@
   position: relative;
   width: 105%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 60px auto;
   aspect-ratio: 16 / 10; /* Maintain fixed shape like an image */
   background-color: #ffffff;
   overflow: hidden;
@@ -73,9 +73,9 @@
     transform: scale(0.45);
   }
   .orgTitle {
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 20px;
-    color: #502B1B;
+    color: #2c3e50;
   }
 }
 .lines {

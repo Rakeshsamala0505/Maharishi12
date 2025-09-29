@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "../styles/g20.module.css";
+import styles from "../styles/organisation.module.css";
 import ET from '../assets/images/emty.jpg';
 import mangilal from '../assets/images/ml.jat_cc1.png';
 import devender from '../assets/images/devender.jpg';
 import pradhan from '../assets/images/sk_pradhan3.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';
-import Director from '../assets/images/DIR3.png';
+import Director from '../assets/images/direct.png';
 import { Link } from "react-router-dom";
 
 <div className={`${styles.box}`} style={{ top: '250px', left: '220px' }}>

@@ -1,12 +1,12 @@
 import React from 'react';
-import '../styles/structure.css';
+import '../styles/steering_committe.css';
 import ET from '../assets/images/emty.jpg';
 import mangilal from '../assets/images/mangilal_new.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';
 import devender from '../assets/images/devender.jpg';
-import Director from '../assets/images/DIR3.png';
-import pradhan from '../assets/images/sk_pradhan3.png';
+import Director from '../assets/images/direct.png';
+import pradhan from '../assets/images/sk2.png';
 
 
 const committeeMembers = [

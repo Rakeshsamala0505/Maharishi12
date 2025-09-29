@@ -11,13 +11,15 @@
 .map-title {
   text-align: center;
   font-size: clamp(20px, 2.5vw, 32px);
-  font-weight: bold;
-  color: #5A3E1B;
+  font-weight: 700;
+  color: #2c3e50;
   margin: 20px 0;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-decoration: underline;
+  padding-bottom: 20px;
+
 }
 
 /* Map */

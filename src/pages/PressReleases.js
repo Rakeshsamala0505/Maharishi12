@@ -33,6 +33,31 @@ const PressRelease = () => {
             </div>
           </div>
         </div>
+        <div className="pressrelease-card">
+          <div className="pressrelease-image">
+            <img src={newsLetter1} alt="Press Release" />
+          </div>
+
+          <div className="pressrelease-content">
+            <h3>PIB Document</h3>
+            <p>
+              ICAR also initiated the Second National Gene Bank,
+              the MAHARISHI (Millets and other Ancient Grains International
+              Research Initiative), and the All India Network Project on Biotech
+              Crops and Emerging Pests, while advancing innovations to empower next-generation agriculture...
+            </p>
+            <div className="pressrelease-buttons">
+              <a
+                href="/Pdf/Press Release_Press_Maharishi.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn red"
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
