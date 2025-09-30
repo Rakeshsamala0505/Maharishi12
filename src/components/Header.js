@@ -206,11 +206,6 @@ const Header = () => {
                     Ancient Grains
                   </a>
                 </li>
-                <li>
-                  <a href="/events" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Sustainable Farming
-                  </a>
-                </li>
               </ul>
             </li>
             

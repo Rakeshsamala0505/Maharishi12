@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/pressrelease.css";
-import newsLetter1 from "../assets/images/news.avif";
+import newsLetter1 from "../assets/images/gallery2.avif";
+import newsLetter2 from "../assets/images/gallery1.avif";
 
 const PressRelease = () => {
   return (
@@ -23,7 +24,7 @@ const PressRelease = () => {
             </p>
             <div className="pressrelease-buttons">
               <a
-                href="/Pdf/Press Release_Press_Maharishi.pdf"
+                href="/Pdf/Press_Maharishi.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn red"
@@ -35,20 +36,20 @@ const PressRelease = () => {
         </div>
         <div className="pressrelease-card">
           <div className="pressrelease-image">
-            <img src={newsLetter1} alt="Press Release" />
+            <img src={newsLetter2} alt="Press Release" />
           </div>
 
           <div className="pressrelease-content">
-            <h3>PIB Document</h3>
+            <h3>Press Information Bureau</h3>
             <p>
-              ICAR also initiated the Second National Gene Bank,
-              the MAHARISHI (Millets and other Ancient Grains International
-              Research Initiative), and the All India Network Project on Biotech
-              Crops and Emerging Pests, while advancing innovations to empower next-generation agriculture...
+              The Indian Council of Agricultural Research will organise 97th Foundation Day, Awards
+ Ceremony, and Viksit Krishi Exhibition Tomorrow at the C. Subramaniam Hall, NASC Complex,
+ New Delhi. The event will be inaugurated by the Union Minister of Agriculture and Farmers
+ Welfare and Rural Development, Shri Shivraj Singh Chouhan.
             </p>
             <div className="pressrelease-buttons">
               <a
-                href="/Pdf/Press Release_Press_Maharishi.pdf"
+                href="/Pdf/PIB.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn red"

@@ -3,6 +3,84 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+/*Title */
+.maharishi-title {
+  font-family: inherit;
+  color: #ffffff;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-decoration-color:#ffffff;
+  text-decoration-thickness: 2px;  
+  text-underline-offset:20px;
+}
+/*#59400D #996600*/
+
+.maharishi-subtitle {
+  font-family: sans-serif;
+  color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  /* background-color: green;
+  color: white;
+  padding: 6px 12px;
+  font-weight: bold;
+  display: inline-block; */
+}
+.hero-content {
+  position: absolute;       /* sit inside the hero image container */
+  inset: 0;                 /* stretch to cover full area */
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* <-- perfect vertical centering */
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Main title */
+.maharishi-title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 0.95;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.75);
+  letter-spacing: 0.3px;
+  font-size: clamp(2.2rem, 7.5vw, 6.5rem); /* responsive font size */
+  word-wrap: break-word;
+}
+
+/* Subtitle */
+.maharishi-subtitle {
+  margin: 1rem 0 0;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  font-weight: 500;
+  font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+  max-width: 750px;
+}
+
+/* Single button */
+.btn-outline {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #000000;
+}
 
 .home-container {
   text-align: center;
@@ -17,7 +95,6 @@ body {
     transform: translateY(-50%);
   }
 }
-
 
 @keyframes slideUpFadeInSub {
   to {

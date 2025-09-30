@@ -57,63 +57,30 @@ const Home = () => {
 
   return (
     <div className="home-container">
-   {/* Image Slider */}
-<div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
-  {/* Images */}
-  {images.map((src, index) => (
-    <img
-      key={index}
-      src={src}
-      alt={`slide-${index}`}
-      className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-        index === currentSlideIndex ? "opacity-100" : "opacity-0"
-      }`}
-    />
-  ))}
-
-  {/* Full image overlay */}
-  <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
-
-  {/* Centered Text */}
-  <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center leading-none">
-    <h2
-      className="text-4xl md:text-6xl lg:text-7xl font-extrabold m-0 p-0"
-      style={{
-        fontFamily: "inherit",
-        color: "#FFFFFF",
-        textShadow: "0px 2px 6px rgba(0,0,0,0.6)",
-        letterSpacing: "2px",
-      }}
-    >
-      MAHARISHI
-    </h2>
-
-    <div className="m-0 p-0">
-      <p
-        className="text-sm md:text-lg lg:text-xl m-0 p-0"
-        style={{
-          fontFamily:"cursive",
-          color: "#FFFFFF",
-          textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
+       {/* Image Slider */}
+       <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+          {/* Images */}
+          {images.map((src, index) => (
+             <img
+               key={index}
+               src={src}
+               alt={`slide-${index}`}
+               className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
+                 index === currentSlideIndex ? "opacity-100" : "opacity-0"
+               }`}
+             />
+             ))}
           
-        }}
-      >
-        Cultivating Heritage, Harnessing Innovations
-      </p>
-      <p
-        className="text-sm md:text-lg lg:text-xl m-0 p-0"
-        style={{
-          fontFamily: "cursive",
-          color: "#FFFFFF",
-          textShadow: "0px 1px 4px rgba(0,0,0,0.5)",
-          
-        }}
-      >
-        For People and Planet
-      </p>
-    </div>
-  </div>
-</div>
+            {/* Full image overlay */}
+               <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+                  <div className="hero-content">
+                      <h2 className="maharishi-title">MAHARISHI</h2>
+                      <p className="maharishi-subtitle">
+                        Cultivating Heritage, Harnessing Innovations for People and Planet
+                      </p>
+                      <a href="\aboutmaharishi" className="btn-outline">About Us</a>
+                  </div>
+               </div>
 
 {/* Latest Announcements */}
 <section className="bg-gray-100 py-2 md:py-4 lg:py-6">

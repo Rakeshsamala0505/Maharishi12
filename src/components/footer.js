@@ -12,20 +12,22 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-section">
             <h4>About</h4>
-            <a href="#">About Maharishi</a>
-            <a href="Genesis.html">Genesis</a>
-            <a href="#">IIMR Leading the Maharishi Initiative</a>
-            <a href="g20.html">G20 Collaboration</a>
+            <a href="\aboutmaharishi">About Maharishi</a>
+            <a href="\genesis">Genesis</a>
+            <a href="\organisationalchart">Organisation Chart</a>
+            <a href="\charter">Charter</a>
           </div>
           <div className="footer-section">
-            <h4>Millets</h4>
-            <a href="millets.html">Millets</a>
-            <a href="ancientgrains.html">Ancient Grains</a>
+            <h4>Our Work</h4>
+            <a href="\associated_programs">Associated Programs</a>
+            <a href="\opportunities">Opportunities</a>
+            <a href="\earlycareerresearcher">Early career Researchers</a>
           </div>
           <div className="footer-section">
-            <h4>Millet Initiative</h4>
-            <a href="sustainable_farming.html">Sustainable Farming</a>
-            <a href="nutrition_benefits.html">Nutrition Benefits</a>
+            <h4>Crops</h4>
+            <a href="\millets">Millets</a>
+            <a href="\ancient_grains">Ancient Grains</a>
+            <a href="\events">Climate</a>
           </div>
           <div className="footer-section">
             <h4>Contact Us</h4>
