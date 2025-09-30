@@ -76,7 +76,7 @@ const Home = () => {
                   <div className="hero-content">
                       <h2 className="maharishi-title">MAHARISHI</h2>
                       <p className="maharishi-subtitle">
-                        Cultivating Heritage, Harnessing Innovations for People and Planet
+                        Cultivating Heritage, Harnessing Innovations <br></br>For People and Planet
                       </p>
                       <a href="\aboutmaharishi" className="btn-outline">About Us</a>
                   </div>
