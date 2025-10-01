@@ -406,3 +406,23 @@
     margin-top: 0.3rem;
   }
 }
+.modalBody {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.modalImageWrapper {
+  flex: 0 0 220px; /* fixed width for image column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImage {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}

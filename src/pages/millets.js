@@ -14,10 +14,18 @@ import littleMilletImage  from '../assets/images/little_millet.avif';
 import prosoMilletImage   from '../assets/images/proso.avif';
 import browntop from '../assets/images/browntop.avif'
 
+/*-----Png images -------*/
+import sorghumPng      from '../assets/images/sorghum.png';
+import pearlPng from '../assets/images/pearl.png';
+import fingerPng from '../assets/images/finger.png';
+import foxtailPng from '../assets/images/foxtail.png';
+import barnyardPng from '../assets/images/barnyard.png';
+
 /* ——— data ——— */
 const milletData = [
   {
     image: pearlMilletImage,
+    modalImage: pearlPng,
     title: 'Pearl Millet',
     overlay: 'A Smart Grain for a Healthier, Resilient World',
     scientific: 'Cenchrus americanus',
@@ -36,27 +44,28 @@ const milletData = [
     ],
   },
   {
-    image: sorghumImage,
-    title: 'Sorghum',
-    overlay: 'Grain for a Sustainable Future',
-    scientific: 'Sorghum bicolor',
-    commonNames: 'Sorghum / Jowar / Great Millet',
-    description:
-      'Sorghum is a resilient, climate-smart grain that has been cultivated for thousands of years. Grown mostly in dry and arid regions, it thrives with minimal water and inputs, making it a powerful ally in the face of climate change.',
-    climate:
-      'Its deep roots improve soil health and reduce erosion. Sorghum requires less fertilizer and water, reducing the environmental footprint of farming.',
-    nutrition: [
-      ['Energy (Kcal)', '334'],
-      ['Protein (g)', '9.9'],
-      ['Fat (g)', '1.73'],
-      ['Carbohydrate(g)', '67.7'],
-      ['Ca (mg)', '27.6'],
-      ['Fe (mg)', '3.9'],
-    ],
-  },
+  image: sorghumImage,          // used in grid card
+  modalImage: sorghumPng,       // used inside popup modal
+  title: 'Sorghum',
+  overlay: 'Grain for a Sustainable Future',
+  scientific: 'Sorghum bicolor',
+  commonNames: 'Sorghum / Jowar / Great Millet',
+  description: 'Sorghum is a resilient, climate-smart grain that has been cultivated for thousands of years. Grown mostly in dry and arid regions, it thrives with minimal water and inputs, making it a powerful ally in the face of climate change.',
+  climate: 'Its deep roots improve soil health and reduce erosion. Sorghum requires less fertilizer and water, reducing the environmental footprint of farming.',
+  nutrition: [
+    ['Energy (Kcal)', '334'],
+    ['Protein (g)', '9.9'],
+    ['Fat (g)', '1.73'],
+    ['Carbohydrate(g)', '67.7'],
+    ['Ca (mg)', '27.6'],
+    ['Fe (mg)', '3.9'],
+  ],
+}
+,
   
   {
     image: fingerMilletImage,
+    modalImage: fingerPng,
     title: 'Finger Millet',
     overlay: 'The Calcium Champion for Stronger Lives',
     scientific: 'Eleusine coracana',
@@ -76,6 +85,7 @@ const milletData = [
   },
   {
     image: foxtailMilletImage,
+    modalImage: foxtailPng,
     title: 'Foxtail Millet',
     overlay: 'The Balanced Grain for Modern Wellness',
     scientific: 'Setaria italica',
@@ -115,6 +125,7 @@ const milletData = [
   },
   {
     image: barnyardMilletImage,
+    modalImage: barnyardPng,
     title: 'Barnyard Millet',
     overlay: 'Grain for a Sustainable Future',
     scientific: 'Echinochloa esculenta',
@@ -245,9 +256,9 @@ const MilletsPage = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <h2>
-<span className={styles.modalName}>{selectedMillet.title}</span>
-  <span className={styles.modalTagline}>{selectedMillet.overlay}</span>            
-  </h2>
+                <span className={styles.modalName}>{selectedMillet.title}</span>
+                 <span className={styles.modalTagline}>{selectedMillet.overlay}</span>            
+            </h2>
 
             <div className={styles.modalBody}>
               {/* LEFT – details */}
@@ -264,7 +275,16 @@ const MilletsPage = () => {
                   <strong>🌍Climate Resilience</strong> {selectedMillet.climate}
                 </p>
               </div>
-
+                   {/* MIDDLE – image */}
+                   {selectedMillet.modalImage && (
+                     <div className={styles.modalImageWrapper}>
+                       <img
+                         src={selectedMillet.modalImage}
+                         alt={selectedMillet.title}
+                         className={styles.modalImage}
+                       />
+                     </div>
+                   )}
               {/* RIGHT – nutrition facts */}
               <div className={styles.nutritionCard}>
                 <h3>Nutrition Facts</h3>

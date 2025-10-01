@@ -9,6 +9,9 @@ import Neeru from '../assets/images/neeru.jpg';
 import Director from '../assets/images/direct.png';
 import { Link } from "react-router-dom";
 
+
+import governing from "../assets/images/governing board.png"
+
 <div className={`${styles.box}`} style={{ top: '250px', left: '220px' }}>
   <Link to="/research" className={styles.label}>
     Research<br />Advisory Group
