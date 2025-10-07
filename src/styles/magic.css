@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0ecff;
+}
+
+/* Page wrapper */
+.magic-page {
+  margin-top: 120px; 
+  margin-bottom: 100px;
+}
+
+/* Shared container for equal width + 20px spacing */
+.container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;   /* ✅ fixed 20px spacing on both sides */
+  box-sizing: border-box;
+}
+
+/* Title bar */
+.title-bar {
+  height: 100px;
+  background: rgb(119, 7, 7);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.title-bar h4 {
+  margin: 0;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 550;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+  height: 75vh;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://t4.ftcdn.net/jpg/04/46/37/07/360_F_446370727_PYlP1eFdEb9qT0hW0gUeW6L1ShwzP7Rf.jpg")
+    center/cover no-repeat;
+
+  color: white;
+  padding: 60px; 
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+/* Left content */
+.left-content {
+  flex: 1;
+  min-width: 250px;
+  margin-top: 20px;
+}
+
+.left-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  color: white;
+  
+}
+.divider {
+  border: none;
+  border-top: 4px solid rgb(255,255,255); /* strong white */
+  margin: 12px 0;
+  width: 50%;
+  opacity: 1; /* ensure no transparency */
+}
+
+
+.left-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Right side index menu */
+.right-menu {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(218, 215, 215, 1);
+  padding: 20px;
+  margin-top: 50px;
+
+  margin-right: 70px; /* ✅ adds space from the right side */
+}
+
+/* Right menu buttons */
+.right-menu button {
+  background: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s;
+  font-family:sans-serif;
+}
+
+.right-menu button:hover,
+.right-menu .active-btn {
+  color: #9b1226;
+}
+
+/* Bottom card */
+.bottom-card {
+  background: white;
+  color: #333;
+  padding: 24px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bottom-card p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+.learn-btn {
+  margin-top: 150px; /* ✅ space from top of the hero section / p tag */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.learn-btn:hover {
+  background: #a00a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* --- Responsive tweaks --- */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .right-menu {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .right-menu button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+}
