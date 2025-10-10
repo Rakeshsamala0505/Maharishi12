@@ -18,10 +18,10 @@ const MaharishiLibrary = () => {
             <h3>Maharishi Genesis</h3>
             <p>
               MAHARISHI (Millets And OtHer Ancient GRains International ReSearch
-Initiative), an initiative declared in India during G20 summit, aimed at global 
-spread of millets and ancient grains to ensure food, nutrition and livelihood 
-security at the global level. It was initially envisioned by Hon'ble Prime Minister 
-Shri Narendra Modi....
+              Initiative), an initiative declared in India during G20 summit, aimed at global 
+              spread of millets and ancient grains to ensure food, nutrition and livelihood 
+              security at the global level. It was initially envisioned by Hon'ble Prime Minister 
+              Shri Narendra Modi....
             </p>
             <div className="newsletter-buttons">
               <a
