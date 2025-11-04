@@ -13,9 +13,9 @@ body {
   text-decoration-color:#ffffff;
   text-decoration-thickness: 2px;  
   text-underline-offset:20px;
-  
 }
 /*#59400D #996600*/
+
 .maharishi-subtitle {
   font-family: sans-serif;
   color: #ffffff;
@@ -125,11 +125,15 @@ body {
   transition: transform 0.3s ease-in-out;
   height: 100%;
   transform: scale(0.9);
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 .card-body .btn-primary {
-  margin-top: auto !important;
-  align-self: flex-start;
+  align-self: center; /* centers the button horizontally */
+  margin-top: 1rem !important;
 }
 .card:hover {
   transform: scale(0.92) translateY(-5px);
@@ -138,18 +142,25 @@ body {
 .card-img-top1 {
   width: 80px;
   height: auto;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem auto 0 auto;
+  display: block;
   object-fit: contain;
 }
 
 .card-body {
-  text-align: left;
-  padding: 0.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
 }
 
 .card-title {
   font-size: 1rem;
   font-weight: bold;
+  color: #008cb3;
+  margin-top: 1rem;
 }
 
 .title-shift {
@@ -158,9 +169,12 @@ body {
 
 .card-text {
   font-size: 16px;
-  text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1000%;
+  text-justify: inter-word; /* makes spacing slightly more natural */
 }
+
 
 .custom-color {
   color: #008cb3;
@@ -183,6 +197,7 @@ body {
   color: #fff;
 }
 
+
 @media (max-width: 970px) {
   .container {
     padding: 30px 15px;
@@ -200,6 +215,8 @@ body {
   .card {
     width: 100%;
     margin: auto;
+      align-items: center;
+
   }
   .card-img-top1 {
     width: 60px;
@@ -228,9 +245,11 @@ body {
     margin-top: 1rem;
   }
   .card-img-top1 {
-    width: 60px;
-    height: 60px;
-    margin-left: 1rem;
+    display: block;
+    margin: 1rem auto 0 auto !important;
+    text-align: center !important;
+    width: 70px;       /* adjust if you want slightly smaller icons */
+    height: auto;
   }
   .card-title {
     font-size: 1rem;
@@ -243,6 +262,10 @@ body {
     font-size: 0.8rem;
     margin-top: 0.5rem;
     padding: 5px 10px;
+  }
+  .card{
+      align-items: center;
+
   }
 }
 
@@ -413,7 +436,7 @@ body {
 
 .section-container .card-content {
   width: 50%;
-  padding: 20px;
+  padding: 25px;
   background: #D2B48C;
   color: #000000;
   display: flex;
@@ -470,7 +493,6 @@ body {
     object-fit: contain;
     object-position: center;
     flex-shrink: 0;
-    margin-left: 6rem;
     margin-top: 2rem;
   }
   .section-container .card-content {

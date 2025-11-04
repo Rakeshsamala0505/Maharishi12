@@ -197,7 +197,7 @@ const Home = () => {
           NEWSLETTER
         </h2>
         <p className="text-base md:text-lg max-w-md mb-6">
-          Sign Up to explore the World of Traditional Grains through our
+          Sgn Up to explore the World of Traditional Grains through our
           Quarterly Newsletter. Click below to know more.
         </p>
         <a
