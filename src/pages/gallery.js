@@ -4,11 +4,25 @@ import "../styles/gallery.css";
 import img1 from "../assets/images/gallery1.avif";
 import img2 from "../assets/images/gallery2.avif";
 import img3 from "../assets/images/gallery3.avif";
+import img4 from "../assets/images/gallery4.avif";
+import img5 from "../assets/images/gallery5.avif";
+import img6 from "../assets/images/gallery6.avif";
+import img7 from "../assets/images/gallery7.avif";
+import img8 from "../assets/images/gallery8.webp";
+import img9 from "../assets/images/gallery9.webp";
+
 
 const galleryItems = [
   { type: "image", src: img1, alt: "Image 1", title: "Maharishi Launch" },
   { type: "image", src: img2, alt: "Image 2", title: "Maharishi Launch" },
   { type: "image", src: img3, alt: "Image 3", title: "Maharishi Launch" },
+  { type: "image", src: img4, alt: "Image 4", title: "International Symposium" },
+  { type: "image", src: img5, alt: "Image 5", title: "International Symposium" },
+  { type: "image", src: img6, alt: "Image 6", title: "International Symposium" },
+  {type: "image", src: img7, alt: "Image 7", title: "International Symposium" },
+  { type: "image", src: img8, alt: "Image 8", title: "International Symposium" },
+  { type: "image", src: img9, alt: "Image 9", title: "International Symposium" },
+
 ];
 
 const Gallery = () => {

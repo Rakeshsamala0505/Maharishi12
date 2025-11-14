@@ -74,7 +74,7 @@ dl, ol, ul {
 }
 
 .nav-links li a:hover {
-  background: #3A3B3C;
+  background: #9B2230;
   color: white;
 }
 
@@ -87,7 +87,7 @@ dl, ol, ul {
 /* Smooth dropdown with nested support */
 .nav-links .drop-menu {
   position: absolute;
-  top: 100%;
+  top: 30px;
   left: 0;
   background: #fff;
   z-index: 1000;
@@ -128,7 +128,7 @@ dl, ol, ul {
   font-weight: normal;
 }
 .drop-menu li a:hover {
-  background-color: #3A3B3C;
+  background-color: #9B2230;
   color: white;
 }
 .nested-menu {
