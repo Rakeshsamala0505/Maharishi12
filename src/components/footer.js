@@ -38,6 +38,7 @@ const Footer = () => {
             <h4>Address</h4>
             <p>C/o ICAR-Indian Institute of Millets Research</p>
             <p>Rajendranagar, Hyderabad, 500030</p>
+            <a href="mailto:maharishi.iimr@gmail.com">maharishi.iimr@gmail.com</a>
           </div>
           <div className="footer-section">
             <h4>Follow Us</h4>

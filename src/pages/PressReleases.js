@@ -34,6 +34,7 @@ const PressRelease = () => {
             </div>
           </div>
         </div>
+
         <div className="pressrelease-card">
           <div className="pressrelease-image">
             <img src={newsLetter2} alt="Press Release" />
@@ -43,9 +44,9 @@ const PressRelease = () => {
             <h3>Press Information Bureau</h3>
             <p>
               The Indian Council of Agricultural Research will organise 97th Foundation Day, Awards
- Ceremony, and Viksit Krishi Exhibition Tomorrow at the C. Subramaniam Hall, NASC Complex,
- New Delhi. The event will be inaugurated by the Union Minister of Agriculture and Farmers
- Welfare and Rural Development, Shri Shivraj Singh Chouhan.
+               Ceremony, and Viksit Krishi Exhibition Tomorrow at the C. Subramaniam Hall, NASC Complex,
+               New Delhi. The event will be inaugurated by the Union Minister of Agriculture and Farmers
+               Welfare and Rural Development, Shri Shivraj Singh Chouhan.
             </p>
             <div className="pressrelease-buttons">
               <a
