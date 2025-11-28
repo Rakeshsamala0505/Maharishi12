@@ -99,7 +99,7 @@ const WorldMapSection = () => {
 
       {selectedCountry && (
         <div className="info-box" ref={infoBoxRef}>
-          <button className="close-btn" onClick={() => setSelectedCountry(null)}>×</button>
+          <button className="close-btn1" onClick={() => setSelectedCountry(null)}>×</button>
           <h2>{selectedCountry.name}</h2>
           <div className="info-section">
             <h4>Millets:</h4>

@@ -119,3 +119,77 @@
     height: 200px;
   }
 }
+/* NAV BUTTONS AT SCREEN EDGES — RECTANGLE STYLE */
+.nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  padding: 18px 22px;
+  cursor: pointer;
+  border-radius: 6px;   /* box shape */
+  z-index: 1002;
+  transition: 0.25s;
+}
+
+/* Hover Style */
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+/* Left edge – touching screen */
+.screen-left {
+  left: 0;               /* EXACT screen edge */
+  border-radius: 0 6px 6px 0;  /* right-side rounding */
+}
+
+/* Right edge – touching screen */
+.screen-right {
+  right: 0;              /* EXACT screen edge */
+  border-radius: 6px 0 0 6px;  /* left-side rounding */
+}
+
+/* Popup image remains same */
+.popup-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  z-index: 1001;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-btn {
+    font-size: 1.6rem;
+    padding: 10px 12px;     /* much smaller */
+  }
+
+  .screen-left {
+    left: 0;
+  }
+
+  .screen-right {
+    right: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-btn {
+    font-size: 1.2rem;
+    padding: 6px 10px;      /* EVEN smaller */
+    border-radius: 4px;
+  }
+
+  .screen-left {
+    left: 0;
+  }
+
+  .screen-right {
+    right: 0;
+  }
+}

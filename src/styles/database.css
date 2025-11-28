@@ -1,0 +1,161 @@
+/* Page Container */
+.db-container {
+  width: 70%;
+  margin: auto;
+  padding: 80px 0;
+  font-family: sans-serif;
+  text-align: left;          /* Make entire section left aligned */
+  margin-top: 50px;
+}
+
+/* Headings */
+.db-title {
+  font-size: 35px;
+  margin-bottom: 18px;
+  color: #9b2230;
+  font-weight: 600;
+  text-align: left;          /* Align to left */
+}
+
+.db-subtitle {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;          /* Align to left */
+}
+
+/* Divider */
+.db-divider {
+  margin: 35px 0;
+  border: none;
+  border-top: 3px solid #000;    /* Thicker black line */
+  width: 100%;
+}
+
+/* Card Layout */
+.db-cards {
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.db-card {
+  flex: 1;
+  min-width: 300px;
+  border: none;
+  background: transparent;
+  text-align: left;              /* Align content left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;       /* Align items left */
+}
+
+/* Icon */
+.db-icon {
+  width: 250px;
+  margin-bottom: 25px;
+}
+
+/* Card Heading */
+.db-card-title {
+  font-size: 18px;
+  color: #9b2230;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Card Paragraph */
+.db-card-text {
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+
+/* Button */
+.db-btn {
+  background: none;
+  border: 1px solid #9B2230;
+  padding: 9px 18px;
+  border-radius: 4px;
+  color: #9b2230;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;             /* Button text left */
+}
+
+.db-btn:hover {
+  background: #9B2230;
+  color: white;
+}
+
+/* ======================================================
+RESPONSIVE DESIGN
+====================================================== */
+
+/* Medium laptops */
+@media (max-width: 1400px) {
+  .db-container {
+    width: 70%;
+    padding: 60px 0;
+    margin-top: 50px;
+  }
+  
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .db-cards {
+    gap: 35px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .db-container {
+    width: 70%;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+  
+
+  .db-title {
+    text-align: left;
+    
+  }
+
+ .db-subtitle {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;          /* Align to left */
+}
+
+  .db-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .db-card {
+    max-width: 100%;
+  }
+
+  .db-icon {
+    width: 120px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 450px) {
+  .db-title {
+    font-size: 25px;
+  }
+
+  .db-card-title {
+    font-size: 16px;
+  }
+}

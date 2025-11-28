@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/newsletter.css";
-import newsLetter1 from "../assets/images/news.avif";
 import newsLetter2 from "../assets/images/gallery2.avif"; // Assuming you have another image for the second newsletter 
 
 const MaharishiLibrary = () => {

@@ -94,7 +94,7 @@ const Header = () => {
       <div className="wrapper d-flex align-items-center justify-content-center">
         <div className="d-flex align-items-center">
           <Link to="/"><img
-            src="/icons/mylogo1.png"
+            src="/icons/my_logo2.png"
             alt="Logo"
             className="logo"/></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
@@ -299,6 +299,11 @@ const Header = () => {
                 <li>
                   <Link to="/blog" className="subheader" onClick={closeMenuOnLinkClick}>
                     Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/databases" className="subheader" onClick={closeMenuOnLinkClick}>
+                    Databases
                   </Link>
                 </li>
               </ul>
