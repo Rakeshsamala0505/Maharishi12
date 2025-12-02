@@ -7,7 +7,7 @@ import img3 from "../assets/images/gallery3.avif";
 import img4 from "../assets/images/gallery6.avif";
 import img5 from "../assets/images/gallery_11.avif";
 import img6 from "../assets/images/gallery_2.avif";
-import img7 from "../assets/images/gallery_3.avif";
+import img7 from "../assets/images/gallery_12.avif";
 
 const galleryItems = [
   { type: "image", src: img1, alt: "Image 1", title: "Maharishi Launch" },
@@ -16,7 +16,7 @@ const galleryItems = [
   { type: "image", src: img4, alt: "Image 6", title: "International Symposium" },
   { type: "image", src: img5, alt: "Image 5", title: "International Symposium"},
   { type: "image", src: img6, alt: "Image 6", title: "International Symposium" },
-  { type: "image", src: img7, alt: "Image 7", title: "International Symposium" },
+  { type: "image", src: img7, alt: "Image 7", title: "Maharishi Launch" },
 ];
 
 const Gallery = () => {
