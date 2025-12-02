@@ -10,7 +10,7 @@ import img3 from "../assets/images/gallery3.avif";
 import img4 from "../assets/images/gallery6.avif";
 import img5 from "../assets/images/gallery_11.avif";
 import img6 from "../assets/images/gallery_2.avif";
-import img7 from "../assets/images/gallery_12.avif";
+import img7 from "../assets/images/gallery_12.jpg";
 
 const galleryItems = [
   { type: "image", src: img1, alt: "Image 1", title: "Maharishi Launch" },
