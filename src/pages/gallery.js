@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import {useEffect} from "react";
+
+
 import "../styles/gallery.css";
 
 import img1 from "../assets/images/gallery1.avif";
@@ -13,13 +16,15 @@ const galleryItems = [
   { type: "image", src: img1, alt: "Image 1", title: "Maharishi Launch" },
   { type: "image", src: img2, alt: "Image 2", title: "Maharishi Launch" },
   { type: "image", src: img3, alt: "Image 3", title: "Maharishi Launch" },
-  { type: "image", src: img4, alt: "Image 6", title: "International Symposium" },
+  { type: "image", src: img4, alt: "Image 4", title: "International Symposium" },
   { type: "image", src: img5, alt: "Image 5", title: "International Symposium"},
   { type: "image", src: img6, alt: "Image 6", title: "International Symposium" },
   { type: "image", src: img7, alt: "Image 7", title: "Maharishi Launch" },
 ];
 
 const Gallery = () => {
+
+  
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handleOpen = (index) => setCurrentIndex(index);
@@ -37,6 +42,30 @@ const Gallery = () => {
       prev === 0 ? galleryItems.length - 1 : prev - 1
     );
   };
+
+  useEffect(() => {
+  if (currentIndex === null) return;
+
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowRight") {
+      setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
+    } 
+    else if (e.key === "ArrowLeft") {
+      setCurrentIndex((prev) =>
+        prev === 0 ? galleryItems.length - 1 : prev - 1
+      );
+    } 
+    else if (e.key === "Escape") {
+      setCurrentIndex(null); // Close popup with ESC
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  // cleanup
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [currentIndex]);
+
 
   return (
     <div className="gallery-wrapper">
