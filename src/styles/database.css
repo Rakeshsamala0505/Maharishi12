@@ -117,7 +117,7 @@ RESPONSIVE DESIGN
 /* Mobiles */
 @media (max-width: 768px) {
   .db-container {
-    width: 70%;
+    width: 90%;
     padding: 40px 0;
     margin-top: 50px;
   }
