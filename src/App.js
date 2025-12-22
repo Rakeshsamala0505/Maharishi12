@@ -35,6 +35,7 @@ import Events from "./pages/projects"; // events.js
 import Blog from "./pages/blog"; // blog.js
 import LaunchEvent from "./pages/launchevent"; // LaunchEvent.js
 import Databases from "./pages/database";
+import Results from "./pages/results";
 
 function App() {
   return (
@@ -74,6 +75,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="launchevent" element={<LaunchEvent />} />
           <Route path="/databases" element={<Databases />} />
+          <Route path="/results" element={<Results />} />
+          
           {/* Add more routes as needed */}
         
    

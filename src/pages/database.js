@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/database.css";
 
 export default function Databases() {
+  const navigate = useNavigate();
+  const [searchText, setSearchText] = useState("");
+
   const cards = [
     {
       title: "MILLETS NEWS",
@@ -11,7 +15,7 @@ export default function Databases() {
       and staff of the institute and appreciated the efforts being made for the promotion of millet cultivation
       and utilization in the country.`,
       button: "MILLETS NEWS",
-      icon: "/icons/DB_icon2.png",   // Replace with your icon/path
+      icon: "/icons/DB_icon2.png",
     },
     {
       title: "MILLET DATABASE",
@@ -20,29 +24,38 @@ export default function Databases() {
       aspects of millet/sorghum research and development under the auspicious of Indian Council 
       of Agricultural Research (ICAR).`,
       button: "MILLETS NEWS",
-      icon: "/icons/Database.png",   // Replace with your icon/path
+      icon: "/icons/Database.png",
     },
     {
       title: "OTHER DATABASES AND LINKS",
       text: `This section provides links to other online 
       tools, databases, and resources on Millets.`,
       button: "OTHER DATABASES",
-      icon: "/icons/DB_icon3.png",   // Replace with your icon/path
+      icon: "/icons/DB_icon3.png",
     },
   ];
+
+  // 🔍 Handle search + redirect
+  const handleSearch = () => {
+    if (!searchText.trim()) return;
+
+    navigate("/results", {
+      state: { query: searchText },
+    });
+  };
 
   return (
     <div className="db-container">
       <h1 className="db-title">DATABASES</h1>
 
       <p className="db-subtitle">
-        We are diligently working to facilitate access to information regarding 
-        leading researchers and international research projects concerning millet, 
+        We are diligently working to facilitate access to information regarding
+        leading researchers and international research projects concerning millet,
         sustainable development, and food security.
       </p>
 
       <p className="db-subtitle">
-        If you have questions regarding our databases, or need specific help, 
+        If you have questions regarding our databases, or need specific help,
         please contact us through the below options.
       </p>
 
@@ -58,8 +71,21 @@ export default function Databases() {
           </div>
         ))}
       </div>
-           
+
+      {/* 🔍 SEARCH BOX SECTION */}
+      <div className="db-search">
+        <input
+          type="text"
+          placeholder="Search researcher, country, publication, year..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSearch();
+          }}
+        />
+
+        <button onClick={handleSearch}>Search</button>
+      </div>
     </div>
-    
   );
 }
