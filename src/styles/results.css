@@ -19,6 +19,12 @@
   border-radius: 4px;
   cursor: pointer;
 }
+.results-keyword {
+  font-size: 15px;
+  font-weight: 400;
+  color: #666; /* light black */
+  margin-left: 6px;
+}
 
 
 /* Main container (safe with header & footer) */

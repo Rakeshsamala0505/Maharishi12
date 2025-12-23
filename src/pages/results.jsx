@@ -7,15 +7,22 @@ export default function Results() {
   const location = useLocation();
   const query = location.state?.query || "";
 
-  const [baseRows, setBaseRows] = useState([]);
   const [rows, setRows] = useState([]);
-  const [localSearch, setLocalSearch] = useState("");
+  const [searchText, setSearchText] = useState("");
 
   // 🔹 Initial search from Database page
   useEffect(() => {
-    const q = query.toLowerCase().trim();
+    if (query) {
+      handleSearch(query);
+      setSearchText("");
+    }
+  }, [query]);
+
+  // 🔹 Unified search (used by BOTH searches)
+  const handleSearch = (text) => {
+    const q = text.toLowerCase().trim();
+
     if (!q) {
-      setBaseRows([]);
       setRows([]);
       return;
     }
@@ -29,63 +36,43 @@ export default function Results() {
         r.publication,
         r.thematic,
         r.year?.toString()
-      ].some(
-        (val) =>
-          val &&
-          val.toLowerCase().includes(q)
-      )
-    );
-
-    setBaseRows(filtered);
-    setRows(filtered);
-    setLocalSearch("");
-  }, [query]);
-
-  // 🔹 Local search (EXACT same logic as Database)
-  const handleLocalSearch = () => {
-    const q = localSearch.toLowerCase().trim();
-
-    if (!q) {
-      setRows(baseRows);
-      return;
-    }
-
-    const filtered = baseRows.filter((r) =>
-      [
-        r.researcher,
-        r.institution,
-        r.country,
-        r.paper,
-        r.publication,
-        r.thematic,
-        r.year?.toString()
-      ].some(
-        (val) =>
-          val &&
-          val.toLowerCase().includes(q)
+      ].some((val) =>
+        String(val || "")
+          .toLowerCase()
+          .trim()
+          .includes(q)
       )
     );
 
     setRows(filtered);
   };
 
+  // Keyword beside title
+  const activeKeyword = searchText || query;
+
   return (
     <div className="results-container">
-      <h2 className="results-title">Search Results</h2>
+      <h2 className="results-title">
+        Search Results{" "}
+        {activeKeyword && (
+          <span className="results-keyword">"{activeKeyword}"</span>
+        )}
+      </h2>
+
       <hr className="results-divider" />
 
-      {/* 🔍 SEARCH BOX (SAME AS DATABASE) */}
+      {/* 🔍 SEARCH BOX (NOW WORKS LIKE DATABASE) */}
       <div className="db-searches">
         <input
           type="text"
-          placeholder="Search researcher, country, publication, year..."
-          value={localSearch}
-          onChange={(e) => setLocalSearch(e.target.value)}
+          placeholder="Search researcher, institution, country, publication, year..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") handleLocalSearch();
+            if (e.key === "Enter") handleSearch(searchText);
           }}
         />
-        <button onClick={handleLocalSearch}>Search</button>
+        <button onClick={() => handleSearch(searchText)}>Search</button>
       </div>
 
       {/* TABLE */}
@@ -93,9 +80,10 @@ export default function Results() {
         <table className="results-table">
           <thead>
             <tr>
+              <th>S.No</th>
               <th>Researcher</th>
               <th>Institution</th>
-              <th>Country</th>
+              <th>Research Country</th>
               <th>Paper / Article</th>
               <th>Publication</th>
               <th>Year</th>
@@ -108,6 +96,7 @@ export default function Results() {
             {rows.length > 0 ? (
               rows.map((r, i) => (
                 <tr key={i}>
+                  <td>{i + 1}</td>
                   <td>{r.researcher}</td>
                   <td>{r.institution}</td>
                   <td>{r.country}</td>
@@ -128,7 +117,7 @@ export default function Results() {
               ))
             ) : (
               <tr>
-                <td colSpan="8" className="no-results">
+                <td colSpan="9" className="no-results">
                   No results found
                 </td>
               </tr>
