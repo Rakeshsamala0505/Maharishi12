@@ -11,9 +11,7 @@ export default function Databases() {
       title: "MILLETS NEWS",
       text: `Secretary Department of agriculture research and exbhibition, (DARE) and Director General ICAR,
       Dr.Himanshu Pathak visited the ICAR-IIMR on 29.02.25 to review the progress of millet research and
-      development activities being carried out at the institute. During his visit, he interacted with the scientists
-      and staff of the institute and appreciated the efforts being made for the promotion of millet cultivation
-      and utilization in the country.`,
+      development activities being carried out at the institute.`,
       button: "MILLETS NEWS",
       icon: "/icons/DB_icon2.png",
     },
@@ -21,31 +19,49 @@ export default function Databases() {
       title: "MILLET DATABASE",
       text: `The Indian Institute of Millets Research (IIMR) formerly Directorate of Sorghum Research 
       (DSR) and National Research Centre for Sorghum (NRCS), is the central agency to work on all 
-      aspects of millet/sorghum research and development under the auspicious of Indian Council 
-      of Agricultural Research (ICAR).`,
+      aspects of millet research and development.`,
       button: "MILLETS NEWS",
       icon: "/icons/Database.png",
     },
     {
       title: "OTHER DATABASES AND LINKS",
-      text: `This section provides links to other online 
-      tools, databases, and resources on Millets.`,
+      text: `This section provides links to other online tools, databases, and resources on Millets.`,
       button: "OTHER DATABASES",
       icon: "/icons/DB_icon3.png",
     },
   ];
 
-  // 🔍 Handle search + redirect
   const handleSearch = () => {
     if (!searchText.trim()) return;
-
-    navigate("/results", {
-      state: { query: searchText },
-    });
+    navigate("/results", { state: { query: searchText } });
   };
 
   return (
     <div className="db-container">
+
+      {/* 🔍 PERMANENT SEARCH HEADER */}
+      <h2 className="db-search-title">
+        Search MAIS{" "}
+        <span className="db-search-keyword">
+          {searchText}
+        </span>
+      </h2>
+
+      {/* 🔍 SEARCH BOX */}
+      <div className="db-search">
+        <input
+          type="text"
+          placeholder="Search researcher, country, publication, year..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSearch();
+          }}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+
+      {/* PAGE TITLE */}
       <h1 className="db-title">DATABASES</h1>
 
       <p className="db-subtitle">
@@ -61,6 +77,7 @@ export default function Databases() {
 
       <hr className="db-divider" />
 
+      {/* CARDS */}
       <div className="db-cards">
         {cards.map((item, i) => (
           <div className="db-card" key={i}>
@@ -70,21 +87,6 @@ export default function Databases() {
             <button className="db-btn">{item.button}</button>
           </div>
         ))}
-      </div>
-
-      {/* 🔍 SEARCH BOX SECTION */}
-      <div className="db-search">
-        <input
-          type="text"
-          placeholder="Search researcher, country, publication, year..."
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") handleSearch();
-          }}
-        />
-
-        <button onClick={handleSearch}>Search</button>
       </div>
     </div>
   );

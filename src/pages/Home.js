@@ -111,6 +111,35 @@ const Home = () => {
   </div>
 </section>
 
+
+      {/* Leader Messages */}
+<section className="section-container">
+        {[ {
+          img: PM,
+          quote: "'Shree Anna' has been a part of the lifestyle in India for centuries. In different regions of the country, many types of coarse grains like Jowar, Bajra, Ragi, Sama, Kangni, Cheena, Kodon, Kutki, Kuttu are prevalent. We want to share our agricultural practices and experiences related to 'Shree Anna' with the world. We also want to learn anything new and special that the world and other countries have to offer. We also intend to learn.",
+          author: "- Shri Narendra Modi",
+          position: "Hon’ble Prime Minister of India",
+        },
+        {
+          img: Minister,
+          quote: "We must ensure food and nutritional security for our 1.44 billion population, preserve our soil for future generations, and contribute to global food availability. While many countries are pursuing material progress at the cost of nature, India must choose a path of sustainable development that protects nature",
+          // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
+          author: "- Shivraj Singh Chouhan",
+          position: "Hon’ble Minister of Agriculture & Farmer's Welfare",
+        }
+        ].map((item, idx) => (
+          <div className="card" data-aos="fade-up" key={idx}>
+            <img src={item.img} alt={item.author} />
+            <div className="card-content">
+              {item.quote && <p>{item.quote}</p>}
+              {item.link && <a href={item.link}>read more</a>}
+              <p className="quote-author">{item.author}</p>
+              <p className="quote-position">{item.position}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
       {/* World Map Section  */}
       <WorldMapSection />
 
@@ -232,33 +261,7 @@ const Home = () => {
 
 
 
-      {/* Leader Messages */}
-      <section className="section-container">
-        {[ {
-          img: PM,
-          quote: "'Shree Anna' has been a part of the lifestyle in India for centuries. In different regions of the country, many types of coarse grains like Jowar, Bajra, Ragi, Sama, Kangni, Cheena, Kodon, Kutki, Kuttu are prevalent. We want to share our agricultural practices and experiences related to 'Shree Anna' with the world. We also want to learn anything new and special that the world and other countries have to offer. We also intend to learn.",
-          author: "- Shri Narendra Modi",
-          position: "Hon’ble Prime Minister of India",
-        },
-        {
-          img: Minister,
-          quote: "We must ensure food and nutritional security for our 1.44 billion population, preserve our soil for future generations, and contribute to global food availability. While many countries are pursuing material progress at the cost of nature, India must choose a path of sustainable development that protects nature",
-          // link: "https://economictimes.indiatimes.com/news/india/millets-can-help-tackle-challenges-of-food-security-pm-modi/articleshow/98751033.cms?from=mdr",
-          author: "- Shivraj Singh Chouhan",
-          position: "Hon’ble Minister of Agriculture & Farmer's Welfare",
-        }
-      ].map((item, idx) => (
-          <div className="card" data-aos="fade-up" key={idx}>
-            <img src={item.img} alt={item.author} />
-            <div className="card-content">
-              {item.quote && <p>{item.quote}</p>}
-              {item.link && <a href={item.link}>read more</a>}
-              <p className="quote-author">{item.author}</p>
-              <p className="quote-position">{item.position}</p>
-            </div>
-          </div>
-        ))}
-      </section>
+      
     </div>
   );
 };

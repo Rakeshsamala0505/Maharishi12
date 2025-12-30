@@ -94,7 +94,7 @@ const Header = () => {
       <div className="wrapper d-flex align-items-center justify-content-center">
         <div className="d-flex align-items-center">
           <Link to="/"><img
-            src="/icons/my_logo2.png"
+            src="/icons/my_logo1.png"
             alt="Logo"
             className="logo"/></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
@@ -301,12 +301,21 @@ const Header = () => {
                     Blog
                   </Link>
                 </li>
-                <li>
-                  <Link to="/databases" className="subheader" onClick={closeMenuOnLinkClick}>
-                    Databases
-                  </Link>
-                </li>
               </ul>
+            </li>
+            <li>
+              <a href="/databases" className="desktop-item">
+                Databases
+              </a>
+              <a
+                 href="/databases"   // replace with your page/route
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="desktop-item mobile-item"
+                 onClick={closeMenuOnLinkClick} // optional: closes menu if in mobile
+               >
+                 MAGIC
+               </a>
             </li>
             <li>
               <a href="#" className="desktop-item">

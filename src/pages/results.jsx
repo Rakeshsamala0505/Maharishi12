@@ -53,7 +53,7 @@ export default function Results() {
   return (
     <div className="results-container">
       <h2 className="results-title">
-        Search Results{" "}
+        Search MAIS{" "}
         {activeKeyword && (
           <span className="results-keyword">"{activeKeyword}"</span>
         )}
