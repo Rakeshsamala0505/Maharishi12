@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/steering_committe.css';
 import ET from '../assets/images/emty.jpg';
-import mangilal from '../assets/images/mangilal_new.png';
+import mangilal from '../assets/images/mangilal_new1.png';
 import Mandal from '../assets/images/B.Mandal.png';
-import Neeru from '../assets/images/neeru.jpg';
-import devender from '../assets/images/devender.jpg';
+import Neeru from '../assets/images/neeru1.png';
+import devender from '../assets/images/devender.png';
 import Director from '../assets/images/direct.png';
 import pradhan from '../assets/images/sk2.png';
 

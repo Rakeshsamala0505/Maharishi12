@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WorldMapSection from "../pages/WorldMapSection";
 
-import President from "../assets/images/President2.jpeg";
 import PM from "../assets/images/new image PM3.png";
 import Minister from "../assets/images/shiva1w.avif"
 

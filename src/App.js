@@ -15,7 +15,7 @@ import ClimateEwg from "./pages/climate_ewg"; // climate_ewg.js
 import Charter from "./pages/charter"; // charter.js
 import Millets from "./pages/millets"; // millets.js
 import AncientGrains from "./pages/ancient_grains"; // ancient_grains.js
-import SustainableFarming from "./pages/sustainable_farming"; // sustainable_farming.js
+// import SustainableFarming from "./pages/sustainable_farming"; // sustainable_farming.js
 import AssociatedPrograms from "./pages/associated_programs"; // associated_programs.js
 import AnnualReports from "./pages/annual_reports"; // annual_reports.js
 import MaharishiLibrary from "./pages/maharishilibrary"; // maharishilibrary.js
@@ -56,7 +56,7 @@ function App() {
           <Route path="/charter" element={<Charter />} />
           <Route path="/millets" element={<Millets />} />
           <Route path="/ancient_grains" element={<AncientGrains />} />
-          <Route path="/sustainable_farming" element={<SustainableFarming />} />
+          {/* <Route path="/sustainable_farming" element={<SustainableFarming />} /> */}
           <Route path="/annual_reports" element={<AnnualReports />} />
           <Route path="/maharishilibrary" element={<MaharishiLibrary />} /> 
           <Route path="/newsletter" element={<NewsLetter />} />
