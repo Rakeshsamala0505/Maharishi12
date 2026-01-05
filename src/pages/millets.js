@@ -28,7 +28,7 @@ const milletData = [
     modalImage: pearlPng,
     title: 'Pearl Millet',
     overlay: 'A Smart Grain for a Healthier, Resilient World',
-    scientific: 'Cenchrus americanus',
+    scientific: 'Pennisetum glaucum',
     commonNames: 'Pearl Millet',
     description:
       'Pearl millet thrives in poor, sandy, and low-fertility soils with very little rainfall. It matures quickly and supports farming in regions prone to drought and heat stress, ensuring food production even under extreme conditions. pearl millet is more than just a traditional staple.',
