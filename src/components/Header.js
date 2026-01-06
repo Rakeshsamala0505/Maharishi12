@@ -349,6 +349,11 @@ const Header = () => {
                     ICAR
                   </a>
                 </li>
+                <li>
+                  <a href="https://www.icrisat.org/" target="_blank" rel="noopener noreferrer" className="subheader" onClick={closeMenuOnLinkClick}>
+                    ICRISAT
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
