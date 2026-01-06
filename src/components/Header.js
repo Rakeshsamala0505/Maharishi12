@@ -314,7 +314,7 @@ const Header = () => {
                  className="desktop-item mobile-item"
                  onClick={closeMenuOnLinkClick} // optional: closes menu if in mobile
                >
-                 MAGIC
+                 Databases
                </a>
             </li>
             <li>
