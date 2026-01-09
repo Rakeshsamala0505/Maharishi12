@@ -13,6 +13,7 @@ import img6 from "../assets/images/gallery_2.avif";
 import img7 from "../assets/images/gallery_12.jpg";
 import img8 from "../assets/images/images_gal.jpeg";
 import img9 from "../assets/images/images_gallery2.jpeg";
+import img10 from "../assets/images/gallery_image.jpeg";
 
 const galleryItems = [
   { type: "image", src: img1, alt: "Image 1", title: "Maharishi Launch" },
@@ -24,6 +25,7 @@ const galleryItems = [
   { type: "image", src: img7, alt: "Image 7", title: "Maharishi Launch" },
   { type: "image", src: img8, alt: "Image 8", title: "" },
   { type: "image", src: img9, alt: "Image 9", title: "" },
+  { type: "image", src: img10, alt: "Image 10", title: "" },
 ];
 
 const Gallery = () => {
