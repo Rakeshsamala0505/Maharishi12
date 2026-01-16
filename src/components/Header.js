@@ -94,7 +94,7 @@ const Header = () => {
       <div className="wrapper d-flex align-items-center justify-content-center">
         <div className="d-flex align-items-center">
           <Link to="/"><img
-            src="/icons/maharishi_logo.png"
+            src="/icons/maharishi_log.png"
             alt="Logo"
             className="logo"/></Link>
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
