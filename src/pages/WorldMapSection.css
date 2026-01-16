@@ -10,18 +10,41 @@
 
 /* Title */
 .map-title {
+  position: relative;            /* required for ::after */
   text-align: center;
   font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 700;
-  color: #2c3e50;
-  margin: 20px 0;
+  font-family:jacques francois, serif;
+  color: #9b2230;
+  margin: 35px 0;
   width: 100%;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-decoration: underline;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 
+  /* REMOVE normal underline */
+  text-decoration: none;
 }
+
+/* Fade underline */
+.map-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: 700px;                  /* underline length */
+  height: 3px;                   /* underline thickness */
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #2c3e50,
+    transparent
+  );
+}
+
 
 /* Map */
 .map-container {

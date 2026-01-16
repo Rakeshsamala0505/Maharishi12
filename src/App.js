@@ -37,7 +37,21 @@ import LaunchEvent from "./pages/launchevent"; // LaunchEvent.js
 import Databases from "./pages/database";
 import Results from "./pages/results";
 
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 function App() {
+   useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 500,
+      easing: "ease-out-cubic",
+      offset: 120,
+    });
+  }, []);
   return (
     <Router>
       <div className="App">

@@ -112,7 +112,7 @@ const Home = () => {
 
 
       {/* Leader Messages */}
-<section className="section-container">
+      <section className="section-container">
         {[ {
           img: PM,
           quote: "'Shree Anna' has been a part of the lifestyle in India for centuries. In different regions of the country, many types of coarse grains like Jowar, Bajra, Ragi, Sama, Kangni, Cheena, Kodon, Kutki, Kuttu are prevalent. We want to share our agricultural practices and experiences related to 'Shree Anna' with the world. We also want to learn anything new and special that the world and other countries have to offer. We also intend to learn.",
@@ -139,64 +139,74 @@ const Home = () => {
         ))}
       </section>
 
+      {/* Highlights Section */}
+<section
+  id="latest-updates"
+  className="py-5 highlights-section"
+>
+  <div className="container">
+    <h2
+      className="fs-4 text-start title-shift highlights-title"
+        // title from LEFT
+    >
+      HIGHLIGHTS
+    </h2>
+
+    <div className="row">
+      {[
+        {
+          img: "images/employee.png",
+          title: "EXPERT WORKING GROUPS",
+          text:
+            "Working groups are established by bringing together experts with a focus on a topic of relevance with broader vision and specific objectives. It provides a platform for knowledge sharing on specific research and organizational development.",
+        },
+        {
+          img: "images/crop_image.png",
+          title: "AHEAD",
+          text:
+            "Conducting regular progress and coordination meetings to ensure the project stays on track and to address any challenges.Stakeholders meet, EWG meeting, formulation of consultative groups for implementation of MAHARISHI.",
+        },
+        {
+          img: "images/video_image.png",
+          title: "VIDEOS",
+          text:
+            "Our Expert Working Groups record presentations and webinars as well as they hold video competitions. All video recordings are available here.",
+        },
+      ].map((item, idx) => (
+        <div
+          className="col-md-4 mb-2"
+          data-aos="fade-right"       // cards from LEFT
+          data-aos-delay={idx * 1000} // 1s gap
+          key={idx}
+        >
+          <div className="card h-100">
+            <img
+              src={item.img}
+              className="card-img-top1"
+              alt={`Update ${idx + 1}`}
+            />
+            <div className="card-body">
+              <h5 className="card-title fs-5 fw-bold custom-color">
+                {item.title}
+              </h5>
+              <p className="card-text">{item.text}</p>
+              <a href="#" className="btn btn-primary py-2 px-4 fs-5">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       {/* World Map Section  */}
       <WorldMapSection />
 
 
-      {/* Highlights Section */}
-      <section
-        id="latest-updates"
-        className="py-5"
-        style={{
-          backgroundImage: "url('/images/bg1.jpg')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
-        }}
-         >
-        <div className="container">
-          <h2 className="text-dark fs-4 text-start title-shift" data-aos="fade-up">
-            HIGHLIGHTS
-          </h2>
-          <div className="row">
-            {[
-              {
-                img: "images/employee.png",
-                title: "EXPERT WORKING GROUPS",
-                text:
-                  "Working groups are established by bringing together experts with a focus on a topic of relevance with broader vision and specific objectives. It provides a platform for knowledge sharing on specific research and organizational development.",
-                  // link: "/highlights/ewg",
-              },
-              {
-                img: "images/crop_image.png",
-                title: "AHEAD",
-                text:
-                  "Conducting regular progress and coordination meetings to ensure the project stays on track and to address any challenges.Stakeholders meet, EWG meeting, formulation of consultative groups for implementation of MAHARISHI.",
-                  // link: "/highlights/ewg",
-              },
-              {
-                img: "images/video_image.png",
-                title: "VIDEOS",
-                text:
-                  "Our Expert Working Groups record presentations and webinars as well as they hold video competitions. All video recordings are available here.",
-                  // link: "/highlights/ewg",
-              },
-            ].map((item, idx) => (
-              <div className="col-md-4 mb-2" data-aos="fade-up" key={idx}>
-                <div className="card h-100">
-                  <img src={item.img} className="card-img-top1" alt={`Update ${idx + 1}`} />
-                  <div className="card-body">
-                    <h5 className="card-title fs-5 fw-bold custom-color">{item.title}</h5>
-                    <p className="card-text">{item.text}</p>
-                    <a href="#" className="btn btn-primary py-2 px-4 fs-5">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
      {/* Latest News Section */}
 <section id="latest-news" className="relative overflow-hidden text-white">

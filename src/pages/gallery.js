@@ -26,6 +26,7 @@ const galleryItems = [
   { type: "image", src: img8, alt: "Image 8", title: "" },
   { type: "image", src: img9, alt: "Image 9", title: "" },
   { type: "image", src: img10, alt: "Image 10", title: "" },
+  
 ];
 
 const Gallery = () => {
@@ -77,7 +78,7 @@ const Gallery = () => {
     <div className="gallery-wrapper">
       <div className="gallery-inner">
         <h2 className="gallery-heading">Gallery</h2>
-        <div className="gallery-grid">
+        <div className="gallery-masonry">
           {galleryItems.map((item, index) => (
             <div
               key={index}

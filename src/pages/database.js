@@ -20,7 +20,7 @@ export default function Databases() {
       text: `The Indian Institute of Millets Research (IIMR) formerly Directorate of Sorghum Research 
       (DSR) and National Research Centre for Sorghum (NRCS), is the central agency to work on all 
       aspects of millet research and development.`,
-      button: "MILLETS NEWS",
+      button: "MILLET DATABASE",
       icon: "/icons/Database.png",
     },
     {
@@ -62,7 +62,7 @@ export default function Databases() {
       </div>
 
       {/* PAGE TITLE */}
-      <h1 className="db-title">DATABASES</h1>
+      <h1 className="db-title">MILLETS AND ANCIENT INFORMATION SYSTEM</h1>
 
       <p className="db-subtitle">
         We are diligently working to facilitate access to information regarding
