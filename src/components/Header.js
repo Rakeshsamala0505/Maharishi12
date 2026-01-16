@@ -305,7 +305,7 @@ const Header = () => {
             </li>
             <li>
               <a href="/databases" className="desktop-item">
-                Databases
+                MAIS
               </a>
               <a
                  href="/databases"   // replace with your page/route
@@ -314,7 +314,7 @@ const Header = () => {
                  className="desktop-item mobile-item"
                  onClick={closeMenuOnLinkClick} // optional: closes menu if in mobile
                >
-                 Databases
+                 MAIS
                </a>
             </li>
             <li>
