@@ -262,7 +262,7 @@ dl, ol, ul {
     max-width: 17rem;
     top: 0;
     left: -100%;
-    background: #242526;
+    background: #9b2230;
     display: block;
     padding: 50px 10px;
     line-height: 40px;
@@ -355,7 +355,7 @@ dl, ol, ul {
   }
 
   .nav-links .mobile-item:hover {
-    background: #0582ff;
+    background: #477516;
   }
 
   .drop-menu li {
@@ -452,6 +452,54 @@ dl, ol, ul {
   .drop-menu li:hover > .nested-drop-menu {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+/* Header brand (logos + title) */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0px;              /* reduced spacing */
+  text-decoration: none;
+}
+
+/* Individual logos */
+.header-logo {
+  height: 55px;
+  width: auto;
+}
+
+/* Website title image */
+.header-title {
+  height: 60px;
+  width: auto;
+}
+
+/* Fine spacing control between logos */
+.logo-left {
+  margin-right: 0px;
+  height: 55px;
+  width: auto;
+}
+
+.logo-middle {
+  margin-right: 0px;
+  height: 65px;
+  width: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 970px) {
+  .header-brand {
+    gap: 4px;            /* tighter on mobile */
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  .header-title {
+    height: 32px;
   }
 }
 

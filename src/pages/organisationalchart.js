@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/organisation.module.css";
 import ET from '../assets/images/emty.jpg';
 import mangilal from '../assets/images/ml.jat_cc1.png';
-import devender from '../assets/images/devender.jpg';
+import devender from '../assets/images/devender.png';
 import pradhan from '../assets/images/sk_pradhan3.png';
 import Mandal from '../assets/images/B.Mandal.png';
 import Neeru from '../assets/images/neeru.jpg';

@@ -67,7 +67,9 @@ const WorldMapSection = () => {
       if (el) {
         el.classList.add('highlighted-country');
         el.style.cursor = 'pointer';
-        el.onclick = () => setSelectedCountry(countryData[code]);
+        el.addEventListener('click', () => {
+        setSelectedCountry(countryData[code]);
+    });
       } else {
         console.warn(`❌ Country ID '${code}' not found in SVG`);
       }
