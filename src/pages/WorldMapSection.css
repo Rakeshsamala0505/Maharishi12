@@ -45,6 +45,26 @@
   );
 }
 
+@media (max-width: 970px) {
+  .map-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: 250px;                  /* underline length */
+  height: 3px;                   /* underline thickness */
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #2c3e50,
+    transparent
+  );
+}
+}
+
 
 /* Map */
 .map-container {
