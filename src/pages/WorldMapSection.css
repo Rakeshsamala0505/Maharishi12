@@ -34,7 +34,6 @@
   bottom: 0;
   transform: translateX(-50%);
 
-  width: 700px;                  /* underline length */
   height: 3px;                   /* underline thickness */
 
   background: linear-gradient(
