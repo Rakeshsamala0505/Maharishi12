@@ -219,7 +219,7 @@ dl, ol, ul {
   position: absolute;
   left: 0%;
   top: 10px;
-  padding-left: 15rem !important;
+  padding-left: 10rem !important;
 }
 
 @media screen and (max-width: 970px) {
