@@ -94,24 +94,24 @@ const Header = () => {
       <div className="wrapper d-flex align-items-center justify-content-center">
         <div className="d-flex align-items-center">
          <Link to="/" className="header-brand">
-  <img
-    src="/icons/indian_logo.png"
-    alt="Logo 1"
-    className="header-logo logo-left"
-  />
-
-  <img
-    src="/icons/ICAR_LOGO.png"
-    alt="Logo 2"
-    className="header-logo logo-middle"
-  />
-
-  <img
-    src="/icons/maharishi_logo.png"
-    alt="Website Title"
-    className="header-title"
-  />
-</Link>
+           <img
+             src="/icons/indian_logo.png"
+             alt="Logo 1"
+             className="header-logo logo-left"
+           />
+         
+           <img
+             src="/icons/ICAR_LOGO.png"
+             alt="Logo 2"
+             className="header-logo logo-middle"
+           />
+         
+           <img
+             src="/icons/maharishi_logo.png"
+             alt="Website Title"
+             className="header-title"
+           />
+         </Link>
 
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`} ref={sidebarRef}>
             <label htmlFor="close-btn" className="btn close-btn">

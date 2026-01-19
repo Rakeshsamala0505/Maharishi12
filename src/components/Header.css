@@ -227,7 +227,7 @@ dl, ol, ul {
   position: relative;
   max-width: 1800px;
   padding: 0px 15px;
-  height: 75px;
+  height: 60px;
   line-height: 70px;
   margin: auto;
   display: flex;
@@ -490,16 +490,33 @@ dl, ol, ul {
 
 /* Responsive adjustments */
 @media screen and (max-width: 970px) {
-  .header-brand {
-    gap: 4px;            /* tighter on mobile */
+  /* Position header brand exactly like old single logo */
+  nav .wrapper .header-brand {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0px; /* very tight spacing */
   }
 
-  .header-logo {
-    height: 40px;
+  /* First and second logos */
+  nav .wrapper .header-logo {
+    height: 38px;
+    width: auto;
   }
 
-  .header-title {
-    height: 32px;
+  /* Website title image */
+  nav .wrapper .header-title {
+    height: 38px;
+    width: auto;
+  }
+
+  /* Optional fine tuning */
+  nav .wrapper .logo-left,
+  nav .wrapper .logo-middle {
+    margin-right: 0px;
   }
 }
 
