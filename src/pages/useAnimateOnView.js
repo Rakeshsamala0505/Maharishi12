@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const useAnimateOnView = (threshold = 0.3) => {
+const useAnimateOnView = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -9,21 +9,22 @@ const useAnimateOnView = (threshold = 0.3) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // animate once
+          observer.unobserve(entry.target); // safer than disconnect
         }
       },
       {
-        threshold,
-        rootMargin: "0px 0px -40% 0px", // 🔥 CRITICAL FIX
+        threshold: 0.15,                // 🔥 LOWER threshold for mobile
+        rootMargin: "0px 0px -10% 0px", // 🔥 mobile-safe margin
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    const node = ref.current;
+    if (node) observer.observe(node);
 
-    return () => observer.disconnect();
-  }, [threshold]);
+    return () => {
+      if (node) observer.unobserve(node);
+    };
+  }, []);
 
   return { ref, visible };
 };
