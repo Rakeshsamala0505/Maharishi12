@@ -245,7 +245,7 @@
 
 @media (max-width: 480px) {
   .map-title {
-    font-size: clamp(16px, 5vw, 20px);
+    font-size: 13px;
     margin: 10px 0;
   }
   .info-box {
